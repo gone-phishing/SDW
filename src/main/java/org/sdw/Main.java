@@ -1,26 +1,22 @@
-package sdw;
+package org.sdw;
 
-import org.apache.flink.api.java.ExecutionEnvironment;
-import org.apache.flink.api.java.DataSet;
 import org.apache.flink.api.common.functions.FlatMapFunction;
+import org.apache.flink.api.java.ExecutionEnvironment;
 import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.util.Collector;
-import org.slf4j.LoggerFactory;
 import org.slf4j.Logger;
-import java.util.HashMap;
+import org.slf4j.LoggerFactory;
 
-public class Job 
+public class Main
 {
-
-	public static Logger LOG = LoggerFactory.getLogger(Job.class);
+	public static Logger LOG = LoggerFactory.getLogger(Main.class);
 
 	public static void main(String[] args) throws Exception 
 	{
-		ConfigLoader configLoader = new ConfigLoader("config.properties");
-		DataLoader dataLoader = new DataLoader(configLoader);
-		HashMap<String, String> dsWithType = dataLoader.getDatasetWithType();
-
-		final ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
+		System.out.println("Hallo world");
+		new Bootstrap();
+		System.out.println("Error after this point");
+		//final ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
 		//DataSet<String> union_dataset1 = env.readTextFile("/home/gonephishing/aksw/geoquery/custom1.nt").setParallelism(4);
 		//DataSet<Tuple2<String, Integer>> counts = text.flatMap(new LineSplitter()).groupBy(0).sum(1).setParallelism(4);
 		//union_dataset1.print();

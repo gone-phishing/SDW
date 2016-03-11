@@ -6,9 +6,7 @@ regarding copyright ownership.  The ASF licenses this file
 to you under the Apache License, Version 2.0 (the
 "License"); you may not use this file except in compliance
 with the License.  You may obtain a copy of the License at
-
   http://www.apache.org/licenses/LICENSE-2.0
-
 Unless required by applicable law or agreed to in writing,
 software distributed under the License is distributed on an
 "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
@@ -25,47 +23,28 @@ under the License.
 	<version>1.0</version>
 	<packaging>jar</packaging>
 
-	<name>Flink Quickstart Job</name>
-	<url>http://www.myorganization.org</url>
+	<url>http://www.smartdataweb.de</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<flink.version>1.0-SNAPSHOT</flink.version>
 	</properties>
 
-	<repositories>
-		<repository>
-			<id>apache.snapshots</id>
-			<name>Apache Development Snapshot Repository</name>
-			<url>https://repository.apache.org/content/repositories/snapshots/</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
 	
 	<!-- 
 		
 		Execute "mvn clean package -Pbuild-jar"
 		to build a jar file out of this project!
-
 		How to use the Flink Quickstart pom:
-
 		a) Adding new dependencies:
 			You can add dependencies to the list below.
 			Please check if the maven-shade-plugin below is filtering out your dependency
 			and remove the exclude from there.
-
 		b) Build a jar for running on the cluster:
 			There are two options for creating a jar from this project
-
 			b.1) "mvn clean package" -> this will create a fat jar which contains all
 					dependencies necessary for running the jar created by this pom in a cluster.
 					The "maven-shade-plugin" excludes everything that is provided on a running Flink cluster.
-
 			b.2) "mvn clean package -Pbuild-jar" -> This will also create a fat-jar, but with much
 					nicer dependency exclusion handling. This approach is preferred and leads to
 					much cleaner jar files.
@@ -86,6 +65,13 @@ under the License.
 			<groupId>org.apache.flink</groupId>
 			<artifactId>flink-clients</artifactId>
 			<version>${flink.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-configuration2</artifactId>
+			<version>2.0-beta2</version>
+			<scope>system</scope>
+			<systemPath>/home/kilt/Downloads/commons-configuration2-2.0-beta2/commons-configuration2-2.0-beta2.jar</systemPath>
 		</dependency>
 	</dependencies>
 
@@ -125,10 +111,8 @@ under the License.
 									<exclude>org.apache.flink:flink-streaming-java</exclude>
 
 									<!-- Also exclude very big transitive dependencies of Flink
-
 									WARNING: You have to remove these excludes if your code relies on other
 									versions of these dependencies.
-
 									-->
 									<exclude>org.scala-lang:scala-library</exclude>
 									<exclude>org.scala-lang:scala-compiler</exclude>
@@ -202,7 +186,7 @@ under the License.
 							<transformers>
 								<!-- add Main-Class to manifest file -->
 								<transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-									<mainClass>sdw.Job</mainClass>
+									<mainClass>org.sdw.Main</mainClass>
 								</transformer>
 							</transformers>
 							<createDependencyReducedPom>false</createDependencyReducedPom>
@@ -219,7 +203,7 @@ under the License.
 				<configuration>
 					<archive>
 						<manifestEntries>
-							<Main-Class>sdw.Job</Main-Class>
+							<Main-Class>org.sdw.Main</Main-Class>
 						</manifestEntries>
 					</archive>
 				</configuration>
@@ -330,4 +314,9 @@ under the License.
 			</dependencies>
 		</profile>
 	</profiles>
+	<name>Smart Data Web</name>
+	<organization>
+		<name>AKSW/KILT Research Group</name>
+		<url>http://aksw.org</url>
+	</organization>
 </project>
