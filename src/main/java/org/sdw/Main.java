@@ -15,7 +15,6 @@ public class Main
 	{
 		System.out.println("Hallo world");
 		new Bootstrap();
-		System.out.println("Error after this point");
 		//final ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
 		//DataSet<String> union_dataset1 = env.readTextFile("/home/gonephishing/aksw/geoquery/custom1.nt").setParallelism(4);
 		//DataSet<Tuple2<String, Integer>> counts = text.flatMap(new LineSplitter()).groupBy(0).sum(1).setParallelism(4);
