@@ -9,6 +9,7 @@ public class Bootstrap
 		/**
 		 * TODO : Check system requirements and memory available
 		 */
+		System.out.println("In Bootstrap class");
 		DatasetLoader datasetLoader = new DatasetLoader();
 	}
 }

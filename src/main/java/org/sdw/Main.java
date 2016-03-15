@@ -13,7 +13,7 @@ public class Main
 
 	public static void main(String[] args) throws Exception 
 	{
-		System.out.println("Hallo world");
+		System.out.println("In main classs");
 		new Bootstrap();
 		//final ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
 		//DataSet<String> union_dataset1 = env.readTextFile("/home/gonephishing/aksw/geoquery/custom1.nt").setParallelism(4);
