@@ -1,7 +1,0 @@
-#!/bin/bash
-echo [INFO] Loading project setup ...
-mvn -q clean package -Pbuild-jar
-echo [INFO] Initiating components ...
-sleep 1
-figlet Smart Data Web
-flink run target/sdw-1.0.jar
