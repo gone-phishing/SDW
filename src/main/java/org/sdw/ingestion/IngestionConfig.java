@@ -29,6 +29,11 @@ public class IngestionConfig extends ConfigReader
 //		printArray(validTypes);
 //		printArray(updateIntervals);
 	}
+	
+	/**
+	 * Print elements of a string array
+	 * @param str : String array as input
+	 */
 	private void printArray(String[] str)
 	{
 		int i = 1;
