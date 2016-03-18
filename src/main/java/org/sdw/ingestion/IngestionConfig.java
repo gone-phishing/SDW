@@ -25,9 +25,6 @@ public class IngestionConfig extends ConfigReader
 		hashFile = config.getString("hashFile");
 		mappingLanguage = config.getString("mappingLanguage").split(",");
 		updateIntervals = config.getString("updateIntervals").split(",");
-//		printArray(datasetPaths);
-//		printArray(validTypes);
-//		printArray(updateIntervals);
 	}
 	
 	/**

@@ -165,6 +165,11 @@ public class DatasetLoader
 		return false;
 	}
 	
+	/**
+	 * Filter datasets already hashed
+	 * @param path : Path of the dataset whose hash is to be found
+	 * @return : Boolean indicating the hash is already scanned or not
+	 */
 	private boolean filter(String path)
 	{
 		String hash = hf.getContentHash(path);
@@ -176,6 +181,11 @@ public class DatasetLoader
 		return false;
 	}
 	
+	/**
+	 * Load old content hashes stored in src/main/resources/hash_file
+	 * @param path : Path of the hash_file
+	 * @param oldHashes : Hashset to load the hashes
+	 */
 	private void loadOldHashes(String path, HashSet<String> oldHashes)
 	{
 		String str = null;
@@ -195,6 +205,11 @@ public class DatasetLoader
 		}
 	}
 	
+	/**
+	 * Write the new found content hashes
+	 * @param path : path of the hash_file
+	 * @param newHashes : hashset to add the new hash values
+	 */
 	private void writeNewHashes(String path, HashSet<String> newHashes)
 	{
 		try

@@ -1,6 +1,7 @@
 package org.sdw;
 
 import org.sdw.ingestion.DatasetLoader;
+import org.sdw.scheduler.PeriodicScheduler;
 
 public class Bootstrap
 {
@@ -11,5 +12,7 @@ public class Bootstrap
 		 */
 		System.out.println("In Bootstrap class");
 		DatasetLoader datasetLoader = new DatasetLoader();
+		PeriodicScheduler periodicScheduler = new PeriodicScheduler();
+		periodicScheduler.pushToQueue(datasetLoader.validDatasets);
 	}
 }
