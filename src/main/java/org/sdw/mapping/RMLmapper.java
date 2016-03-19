@@ -12,7 +12,7 @@ public class RMLmapper implements RDFmapper
 	
 	public RMLmapper(Configuration cfg)
 	{
-	
+		new RMLmapper(cfg.getString("sourceFile"), cfg.getString("mappingFile"), cfg.getString("outputFile"));
 	}
 	
 	public RMLmapper(String sourceFile, String mappingFile, String outputFile)

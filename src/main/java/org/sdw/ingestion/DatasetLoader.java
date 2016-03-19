@@ -4,6 +4,7 @@ import org.sdw.util.HashFilter;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -32,7 +33,6 @@ public class DatasetLoader
 		String datasetPaths[] = ic.datasetPaths;
 		for(String str : datasetPaths)
 		{
-			//System.out.println("path: "+str);
 			ConfigReader cfg = new ConfigReader(str);
 			configurationList.add(cfg.getConfig());
 		}
@@ -45,9 +45,9 @@ public class DatasetLoader
 		{
 			if(validate(cfg, invalidDatasets))
 			{
-				if(filter(cfg.getString("dataset_path")))
+				if(filter(cfg.getString("sourceFile")))
 				{
-					validDatasets.put(cfg, cfg.getString("dataset_path"));
+					validDatasets.put(cfg, cfg.getString("sourceFile"));
 				}
 				else
 				{
@@ -82,9 +82,10 @@ public class DatasetLoader
 			invalidDatasets.put(cfg, "Source format not supported");
 			return false;
 		}
-		if(!validatePath(cfg.getString("dataset_path")))
+		if(!validatePath(cfg.getString("sourceFile")))
 		{
-			invalidDatasets.put(cfg, "Invalid path"+cfg.getString("dataset_path") );
+			
+			invalidDatasets.put(cfg, "Invalid path: "+cfg.getString("sourceFile") );
 			return false;
 		}
 		if(!validateSchema(cfg))
@@ -107,6 +108,10 @@ public class DatasetLoader
 	 */
 	private boolean validateType(String type)
 	{
+		if(type == null)
+		{
+			return false;
+		}
 		for(String str : ic.validTypes)
 		{
 			if(type.equals(str))
@@ -122,17 +127,17 @@ public class DatasetLoader
 	 * @param dataset_path : Path of the dataset
 	 * @return Boolean indicataing path is valid or not
 	 */
-	private boolean validatePath(String dataset_path)
+	private boolean validatePath(String sourceFile)
 	{
-		try
+		File file = new File(sourceFile);
+		if(file.exists())
 		{
-			Paths.get(dataset_path);
+			return true;
 		}
-		catch(InvalidPathException | NullPointerException ex)
+		else 
 		{
 			return false;
 		}
-		return true;
 	}
 	
 	/**
