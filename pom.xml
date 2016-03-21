@@ -73,14 +73,15 @@ under the License.
 			<groupId>org.apache.flink</groupId>
 			<artifactId>flink-clients</artifactId>
 			<version>${flink.version}</version>
-		</dependency>
+		</dependency>	
 		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-configuration2</artifactId>
-			<version>2.0-beta2</version>
-			<scope>system</scope>
-			<systemPath>/home/kilt/Downloads/commons-configuration2-2.0-beta2/commons-configuration2-2.0-beta2.jar</systemPath>
+  			<groupId>org.apache.commons</groupId>
+  			<artifactId>commons-configuration2</artifactId>
+  			<version>2.0-beta2</version>
+  			<scope>system</scope>
+  			<systemPath>${project.basedir}/lib/commons-configuration2-2.0-beta2.jar</systemPath>
 		</dependency>
+		
 		<dependency>
 			<groupId>commons-beanutils</groupId>
 			<artifactId>commons-beanutils</artifactId>
