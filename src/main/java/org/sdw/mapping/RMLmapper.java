@@ -9,17 +9,19 @@ public class RMLmapper implements RDFmapper
 	public String sourceFile;
 	public String mappingFile;
 	public String outputFile;
+	public String sourceFormat;
 	
 	public RMLmapper(Configuration cfg)
 	{
-		new RMLmapper(cfg.getString("sourceFile"), cfg.getString("mappingFile"), cfg.getString("outputFile"));
+		new RMLmapper(cfg.getString("sourceFile"), cfg.getString("mappingFile"), cfg.getString("outputFile"), cfg.getString("sourceFormat"));
 	}
 	
-	public RMLmapper(String sourceFile, String mappingFile, String outputFile)
+	public RMLmapper(String sourceFile, String mappingFile, String outputFile, String sourceFormat)
 	{
 		this.sourceFile = sourceFile;
 		this.mappingFile = mappingFile;
 		this.outputFile = outputFile;
+		this.sourceFormat = sourceFormat;
 	}
 	
 	public void execute(String sourceFile, String mappingFile, String outputFile)

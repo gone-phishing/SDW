@@ -13,7 +13,6 @@ public class Bootstrap
 		/**
 		 * TODO : Check system requirements and memory available
 		 */
-		System.out.println("In Bootstrap class");
 		DatasetLoader datasetLoader = new DatasetLoader();
 		printStats(datasetLoader.validDatasets.size(), datasetLoader.invalidDatasets.size());
 		PeriodicScheduler periodicScheduler = new PeriodicScheduler();

@@ -26,7 +26,7 @@ public class DatasetLoader
 	public HashFilter hf = new HashFilter("MD5");
 	public HashSet<String> oldHashes = new HashSet<String>();
 	public HashSet<String> newHashes = new HashSet<String>();
-	
+	public int countNewDatasets = 0;
 	public DatasetLoader()
 	{
 		System.out.println("In dataset loader class");
@@ -48,6 +48,7 @@ public class DatasetLoader
 				if(filter(cfg.getString("sourceFile")))
 				{
 					validDatasets.put(cfg, cfg.getString("sourceFile"));
+					countNewDatasets++;
 				}
 				else
 				{
@@ -77,7 +78,7 @@ public class DatasetLoader
 	 */
 	private boolean validate(Configuration cfg, HashMap<Configuration, String> invalidDatasets)
 	{
-		if(!validateType(cfg.getString("type")))
+		if(!validateType(cfg.getString("sourceFormat")))
 		{
 			invalidDatasets.put(cfg, "Source format not supported");
 			return false;
