@@ -24,9 +24,23 @@ public class RMLmapper implements RDFmapper
 	
 	public void execute(String sourceFile, String mappingFile, String outputFile)
 	{
-		
+		String command = "$RML_HOME/bin/RML-Mapper -m "+mappingFile+" -o "+outputFile;
+		String res[] = executeCommandShell(command);
+		if(Integer.parseInt(res[0]) != 0)
+		{
+			System.out.println("ERROR : Could not convert the file to rdf format");
+		}
+		else
+		{
+			System.out.println(res[1]);
+		}
 	}
 	
+	/**
+	 * Execute command on local shell
+	 * @param command : Command to be executed
+	 * @return : A string array with exit code and output of execution
+	 */
 	private String[] executeCommandShell(String command) 
 	{
 		StringBuffer op = new StringBuffer();
@@ -53,5 +67,4 @@ public class RMLmapper implements RDFmapper
 
 		return out;
 	}
-
 }
