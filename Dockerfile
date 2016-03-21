@@ -8,7 +8,9 @@ MAINTAINER gonephishing <riteshoneinamillion@gmail.com>
 
 # Update and install necessary tools
 RUN apt-get update
-RUN apt-get install -y wget unzip maven
+RUN apt-get install -y wget 
+RUN apt-get install -y unzip 
+RUN apt-get install -y maven
 RUN apt-get install -y openjdk-7-jdk && rm -rf /var/lib/apt/lists/*
 ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
 
