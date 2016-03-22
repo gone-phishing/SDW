@@ -27,6 +27,10 @@ public class DatasetLoader
 	public HashSet<String> oldHashes = new HashSet<String>();
 	public HashSet<String> newHashes = new HashSet<String>();
 	public int countNewDatasets = 0;
+	
+	/**
+	 * Default constructor that separates the valid datasets from invalid ones
+	 */
 	public DatasetLoader()
 	{
 		System.out.println("In dataset loader class");

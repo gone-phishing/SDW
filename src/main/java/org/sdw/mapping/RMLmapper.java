@@ -1,9 +1,34 @@
 package org.sdw.mapping;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.InputStreamReader;
 import org.apache.commons.configuration2.Configuration;
 
+/**
+ * @author kilt
+ *
+ */
+/**
+ * @author kilt
+ *
+ */
+/**
+ * @author kilt
+ *
+ */
+/**
+ * @author kilt
+ *
+ */
+/**
+ * @author kilt
+ *
+ */
+/**
+ * @author kilt
+ *
+ */
 public class RMLmapper implements RDFmapper
 {
 	public String sourceFile;
@@ -24,8 +49,11 @@ public class RMLmapper implements RDFmapper
 		this.sourceFormat = sourceFormat;
 	}
 	
+	
 	public void execute(String sourceFile, String mappingFile, String outputFile)
 	{
+		deleteOutputIfExists(outputFile);
+		
 		String command = "$RML_HOME/bin/RML-Mapper -m "+mappingFile+" -o "+outputFile;
 		String res[] = executeCommandShell(command);
 		if(Integer.parseInt(res[0]) != 0)
@@ -68,5 +96,22 @@ public class RMLmapper implements RDFmapper
 		}
 
 		return out;
+	}
+	
+	/**
+	 * @param outputFile : delete this file if already exists
+	 */
+	public void deleteOutputIfExists(String outputFile)
+	{
+		File file = new File(outputFile);
+		if(file.exists())
+		{
+			String command = "rm "+outputFile;
+			String res[] = executeCommandShell(command);
+			if(Integer.parseInt(res[0]) != 0)
+			{
+				System.out.println("ERROR: Could not delete file: "+outputFile);
+			}
+		}
 	}
 }

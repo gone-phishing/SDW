@@ -12,11 +12,10 @@ public class Bootstrap
 	{
 		/**
 		 * TODO : Check system requirements and memory available
+		 * TODO : Check if RML_HOME is set
+		 * TODO : Check if FLINK_HOME is set
 		 */
-		DatasetLoader datasetLoader = new DatasetLoader();
-		printStats(datasetLoader.validDatasets.size(), datasetLoader.invalidDatasets.size());
-		PeriodicScheduler periodicScheduler = new PeriodicScheduler();
-		periodicScheduler.pushToQueue(datasetLoader.validDatasets);
+		
 	}
 	
 	/**

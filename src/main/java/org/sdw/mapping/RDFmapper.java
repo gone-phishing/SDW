@@ -9,4 +9,6 @@ public interface RDFmapper
 	 * @param outputFile : Path of output converted file
 	 */
 	public void execute(String sourceFile, String mappingFile, String outputFile);
+	
+	public void deleteOutputIfExists(String outputFile);
 }
