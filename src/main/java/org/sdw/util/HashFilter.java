@@ -9,6 +9,7 @@ public class HashFilter
 	private final String hashFunction;
 
 	/**
+	 * Parametrized constructor with hash function as input
 	 * @param hashFunction : Initialize the hashFunction string
 	 */
 	public HashFilter(String hashFunction)
@@ -73,5 +74,4 @@ public class HashFilter
 		fis.close();
 		return complete.digest();
 	}
-
 }

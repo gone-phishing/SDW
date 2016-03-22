@@ -4,22 +4,51 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.InputStreamReader;
 
+import org.apache.commons.configuration2.Configuration;
+
 public class R2RMLmapper implements RDFmapper
 {
 	public String sourceFile;
 	public String mappingFile;
 	public String outputFile;
+	public String sourceFormat;
 	
-	public R2RMLmapper(String sourceFile, String mappingFile, String outputFile)
+	/**
+	 * Parametrized constructor with single input
+	 * @param cfg : Configuration file for the dataset
+	 */
+	public R2RMLmapper(Configuration cfg)
+	{
+		new R2RMLmapper(cfg.getString("sourceFile"), cfg.getString("mappingFile"), cfg.getString("outputFile"), cfg.getString("sourceFormat"));
+	}
+	
+	/**
+	 * Parametrized constructor for setting the fields
+	 * @param sourceFile : path to source file
+	 * @param mappingFile : rml mapping file
+	 * @param outputFile : file to create after conversion
+	 * @param sourceFormat : file format of source dataset
+	 */
+	public R2RMLmapper(String sourceFile, String mappingFile, String outputFile, String sourceFormat)
 	{
 		this.sourceFile = sourceFile;
 		this.mappingFile = mappingFile;
 		this.outputFile = outputFile;
+		this.sourceFormat = sourceFormat;
 	}
 	
+	/**
+	 * Implemented from the interface
+	 * @param sourceFile : path to source file
+	 * @param mappingFile : rml mapping file
+	 * @param outputFile : file to create after conversion
+	 */
 	public void execute(String sourceFile, String mappingFile, String outputFile)
 	{
 		deleteOutputIfExists(outputFile);
+		/**
+		 * TODO : Add implementation for this
+		 */
 	}
 	
 	/**

@@ -5,30 +5,6 @@ import java.io.File;
 import java.io.InputStreamReader;
 import org.apache.commons.configuration2.Configuration;
 
-/**
- * @author kilt
- *
- */
-/**
- * @author kilt
- *
- */
-/**
- * @author kilt
- *
- */
-/**
- * @author kilt
- *
- */
-/**
- * @author kilt
- *
- */
-/**
- * @author kilt
- *
- */
 public class RMLmapper implements RDFmapper
 {
 	public String sourceFile;
@@ -36,11 +12,22 @@ public class RMLmapper implements RDFmapper
 	public String outputFile;
 	public String sourceFormat;
 	
+	/**
+	 * Parametrized constructor with single input
+	 * @param cfg : Configuration file for the dataset
+	 */
 	public RMLmapper(Configuration cfg)
 	{
 		new RMLmapper(cfg.getString("sourceFile"), cfg.getString("mappingFile"), cfg.getString("outputFile"), cfg.getString("sourceFormat"));
 	}
 	
+	/**
+	 * Parametrized constructor for setting the fields
+	 * @param sourceFile : path to source file
+	 * @param mappingFile : rml mapping file
+	 * @param outputFile : file to create after conversion
+	 * @param sourceFormat : file format of source dataset
+	 */
 	public RMLmapper(String sourceFile, String mappingFile, String outputFile, String sourceFormat)
 	{
 		this.sourceFile = sourceFile;
@@ -49,7 +36,12 @@ public class RMLmapper implements RDFmapper
 		this.sourceFormat = sourceFormat;
 	}
 	
-	
+	/**
+	 * Implemented from the interface
+	 * @param sourceFile : path to source file
+	 * @param mappingFile : rml mapping file
+	 * @param outputFile : file to create after conversion
+	 */
 	public void execute(String sourceFile, String mappingFile, String outputFile)
 	{
 		deleteOutputIfExists(outputFile);

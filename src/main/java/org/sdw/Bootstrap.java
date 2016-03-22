@@ -8,6 +8,9 @@ import org.sdw.scheduler.PeriodicScheduler;
 
 public class Bootstrap
 {
+	/**
+	 * Default constructor to test the project setup
+	 */
 	public Bootstrap()
 	{
 		/**

@@ -14,6 +14,9 @@ public class IngestionConfig extends ConfigReader
 	public final String[] updateIntervals;
 	public final String[] validTypes;
 	
+	/**
+	 * Default constructor to set the fields
+	 */
 	public IngestionConfig()
 	{
 		super("ingestion.properties");
