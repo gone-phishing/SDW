@@ -1,6 +1,8 @@
 package org.sdw.ingestion;
 
 import org.sdw.util.HashFilter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -14,11 +16,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 
+import org.sdw.Main;
 import org.sdw.util.ConfigReader;
 import org.apache.commons.configuration2.Configuration;
 
 public class DatasetLoader
 {
+	public static Logger LOG = LoggerFactory.getLogger(DatasetLoader.class);
 	public ArrayList<Configuration> configurationList = new ArrayList<Configuration>();
 	public HashMap<Configuration, String> invalidDatasets = new HashMap<Configuration, String>();
 	public HashMap<Configuration, String> validDatasets = new HashMap<Configuration, String>();
@@ -33,7 +37,7 @@ public class DatasetLoader
 	 */
 	public DatasetLoader()
 	{
-		System.out.println("In dataset loader class");
+		LOG.info("In dataset loader class");
 		String datasetPaths[] = ic.datasetPaths;
 		for(String str : datasetPaths)
 		{
@@ -44,6 +48,7 @@ public class DatasetLoader
 		 * 1. Validate
 		 * 2. Filter
 		 */
+		LOG.info("Old file hashes loaded");
 		loadOldHashes(ic.hashFile, oldHashes);
 		for(Configuration cfg : configurationList)
 		{

@@ -15,6 +15,10 @@ public class PeriodicScheduler
 		scheduleQueue = new LinkedList<Configuration>();
 	}
 	
+	/**
+	 * Add the valid datasets to the queue
+	 * @param validDatasets : A hashmap containing configuration for datasets to be loaded
+	 */
 	public void pushToQueue(HashMap<Configuration, String> validDatasets)
 	{
 		for(Configuration cfg : validDatasets.keySet())
