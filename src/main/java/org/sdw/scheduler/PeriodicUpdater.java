@@ -1,8 +1,15 @@
 package org.sdw.scheduler;
 
+import java.util.HashMap;
+import java.util.Map;
 import org.quartz.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import com.rabbitmq.client.Channel;
+import com.rabbitmq.client.Connection;
+import com.rabbitmq.client.ConnectionFactory;
+import com.rabbitmq.client.MessageProperties;
+import org.sdw.scheduler.PeriodicScheduler;
 
 public class PeriodicUpdater implements Job
 {
@@ -11,6 +18,23 @@ public class PeriodicUpdater implements Job
 	@Override
     public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException 
 	{
-		LOG.info("HelloJob executed");
+		try
+		{
+			Connection connection = PeriodicScheduler.factory.newConnection();
+			Channel channel = connection.createChannel();
+			String queueName = "work-queue-1";
+			Map<String, Object> params = new HashMap<String, Object>();
+			params.put("x-ha-policy", "all");
+			channel.queueDeclare(queueName, true, false, false, params);
+			String mesg = "Sent at: "+ System.currentTimeMillis();
+			byte[] body = mesg.getBytes("UTF-8");
+			channel.basicPublish("", queueName, MessageProperties.PERSISTENT_TEXT_PLAIN, body);
+			LOG.info("Message sent: "+mesg);
+			connection.close();
+		}
+		catch(Exception ex)
+		{
+			LOG.error(ex.getMessage(), ex);
+		}
     }
 }

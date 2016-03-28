@@ -6,6 +6,7 @@ import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.util.Collector;
 import org.sdw.ingestion.DatasetLoader;
 import org.sdw.scheduler.PeriodicScheduler;
+import org.sdw.scheduler.QueueProcessor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,6 +22,7 @@ public class Main
 		
 		PeriodicScheduler periodicScheduler = new PeriodicScheduler();
 		periodicScheduler.pushToQueue(datasetLoader.validDatasets);
-			
+		QueueProcessor qp = new QueueProcessor();
+		qp.processQueue();
 	}
 }
