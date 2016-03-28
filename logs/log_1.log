@@ -1,2 +1,117 @@
 2016-03-23 17:11:55 INFO  DatasetLoader:40 - In dataset loader class
 2016-03-23 17:11:55 INFO  DatasetLoader:51 - Old file hashes loaded
+2016-03-28 21:33:23 INFO  DatasetLoader:40 - In dataset loader class
+2016-03-28 21:33:23 INFO  DatasetLoader:51 - Old file hashes loaded
+2016-03-28 21:33:23 INFO  StdSchedulerFactory:1184 - Using default implementation for ThreadExecutor
+2016-03-28 21:33:23 INFO  SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2016-03-28 21:33:23 INFO  QuartzScheduler:240 - Quartz Scheduler v.2.2.1 created.
+2016-03-28 21:33:23 INFO  RAMJobStore:155 - RAMJobStore initialized.
+2016-03-28 21:33:23 INFO  QuartzScheduler:305 - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'MyScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 4 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2016-03-28 21:33:23 INFO  StdSchedulerFactory:1339 - Quartz scheduler 'MyScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2016-03-28 21:33:23 INFO  StdSchedulerFactory:1343 - Quartz scheduler version: 2.2.1
+2016-03-28 21:33:23 INFO  QuartzScheduler:575 - Scheduler MyScheduler_$_NON_CLUSTERED started.
+2016-03-28 21:33:23 ERROR ErrorLogger:2425 - An error occured instantiating job to be executed. job= 'DEFAULT.6da64b5bd2ee-b246bcd3-afee-4652-9da6-d6b02086a1ba'
+org.quartz.SchedulerException: Problem instantiating class 'org.sdw.scheduler.PeriodicUpdater' [See nested exception: java.lang.IllegalAccessException: Class org.quartz.simpl.SimpleJobFactory can not access a member of class org.sdw.scheduler.PeriodicUpdater with modifiers ""]
+	at org.quartz.simpl.SimpleJobFactory.newJob(SimpleJobFactory.java:58)
+	at org.quartz.simpl.PropertySettingJobFactory.newJob(PropertySettingJobFactory.java:69)
+	at org.quartz.core.JobRunShell.initialize(JobRunShell.java:127)
+	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:375)
+Caused by: java.lang.IllegalAccessException: Class org.quartz.simpl.SimpleJobFactory can not access a member of class org.sdw.scheduler.PeriodicUpdater with modifiers ""
+	at sun.reflect.Reflection.ensureMemberAccess(Reflection.java:110)
+	at java.lang.Class.newInstance(Class.java:377)
+	at org.quartz.simpl.SimpleJobFactory.newJob(SimpleJobFactory.java:56)
+	... 3 more
+2016-03-28 21:33:23 INFO  RAMJobStore:1615 - All triggers of Job DEFAULT.6da64b5bd2ee-b246bcd3-afee-4652-9da6-d6b02086a1ba set to ERROR state.
+2016-03-28 21:35:54 INFO  DatasetLoader:40 - In dataset loader class
+2016-03-28 21:35:54 INFO  DatasetLoader:51 - Old file hashes loaded
+2016-03-28 21:35:55 INFO  StdSchedulerFactory:1184 - Using default implementation for ThreadExecutor
+2016-03-28 21:35:55 INFO  SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2016-03-28 21:35:55 INFO  QuartzScheduler:240 - Quartz Scheduler v.2.2.1 created.
+2016-03-28 21:35:55 INFO  RAMJobStore:155 - RAMJobStore initialized.
+2016-03-28 21:35:55 INFO  QuartzScheduler:305 - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'MyScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 4 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2016-03-28 21:35:55 INFO  StdSchedulerFactory:1339 - Quartz scheduler 'MyScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2016-03-28 21:35:55 INFO  StdSchedulerFactory:1343 - Quartz scheduler version: 2.2.1
+2016-03-28 21:35:55 INFO  QuartzScheduler:575 - Scheduler MyScheduler_$_NON_CLUSTERED started.
+2016-03-28 21:35:55 ERROR ErrorLogger:2425 - An error occured instantiating job to be executed. job= 'DEFAULT.6da64b5bd2ee-fe0e598d-778c-4c66-ab21-aa1831cc4b05'
+org.quartz.SchedulerException: Problem instantiating class 'org.sdw.scheduler.PeriodicUpdater' [See nested exception: java.lang.IllegalAccessException: Class org.quartz.simpl.SimpleJobFactory can not access a member of class org.sdw.scheduler.PeriodicUpdater with modifiers ""]
+	at org.quartz.simpl.SimpleJobFactory.newJob(SimpleJobFactory.java:58)
+	at org.quartz.simpl.PropertySettingJobFactory.newJob(PropertySettingJobFactory.java:69)
+	at org.quartz.core.JobRunShell.initialize(JobRunShell.java:127)
+	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:375)
+Caused by: java.lang.IllegalAccessException: Class org.quartz.simpl.SimpleJobFactory can not access a member of class org.sdw.scheduler.PeriodicUpdater with modifiers ""
+	at sun.reflect.Reflection.ensureMemberAccess(Reflection.java:110)
+	at java.lang.Class.newInstance(Class.java:377)
+	at org.quartz.simpl.SimpleJobFactory.newJob(SimpleJobFactory.java:56)
+	... 3 more
+2016-03-28 21:35:55 INFO  RAMJobStore:1615 - All triggers of Job DEFAULT.6da64b5bd2ee-fe0e598d-778c-4c66-ab21-aa1831cc4b05 set to ERROR state.
+2016-03-28 21:42:40 INFO  DatasetLoader:40 - In dataset loader class
+2016-03-28 21:42:40 INFO  DatasetLoader:51 - Old file hashes loaded
+2016-03-28 21:42:41 INFO  StdSchedulerFactory:1184 - Using default implementation for ThreadExecutor
+2016-03-28 21:42:41 INFO  SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2016-03-28 21:42:41 INFO  QuartzScheduler:240 - Quartz Scheduler v.2.2.1 created.
+2016-03-28 21:42:41 INFO  RAMJobStore:155 - RAMJobStore initialized.
+2016-03-28 21:42:41 INFO  QuartzScheduler:305 - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'MyScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 4 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2016-03-28 21:42:41 INFO  StdSchedulerFactory:1339 - Quartz scheduler 'MyScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2016-03-28 21:42:41 INFO  StdSchedulerFactory:1343 - Quartz scheduler version: 2.2.1
+2016-03-28 21:42:41 INFO  QuartzScheduler:575 - Scheduler MyScheduler_$_NON_CLUSTERED started.
+2016-03-28 21:42:41 ERROR ErrorLogger:2425 - An error occured instantiating job to be executed. job= 'DEFAULT.6da64b5bd2ee-cbd3eb1e-8190-4590-964c-5844993df930'
+org.quartz.SchedulerException: Problem instantiating class 'org.sdw.scheduler.PeriodicUpdater' [See nested exception: java.lang.IllegalAccessException: Class org.quartz.simpl.SimpleJobFactory can not access a member of class org.sdw.scheduler.PeriodicUpdater with modifiers ""]
+	at org.quartz.simpl.SimpleJobFactory.newJob(SimpleJobFactory.java:58)
+	at org.quartz.simpl.PropertySettingJobFactory.newJob(PropertySettingJobFactory.java:69)
+	at org.quartz.core.JobRunShell.initialize(JobRunShell.java:127)
+	at org.quartz.core.QuartzSchedulerThread.run(QuartzSchedulerThread.java:375)
+Caused by: java.lang.IllegalAccessException: Class org.quartz.simpl.SimpleJobFactory can not access a member of class org.sdw.scheduler.PeriodicUpdater with modifiers ""
+	at sun.reflect.Reflection.ensureMemberAccess(Reflection.java:110)
+	at java.lang.Class.newInstance(Class.java:377)
+	at org.quartz.simpl.SimpleJobFactory.newJob(SimpleJobFactory.java:56)
+	... 3 more
+2016-03-28 21:42:41 INFO  RAMJobStore:1615 - All triggers of Job DEFAULT.6da64b5bd2ee-cbd3eb1e-8190-4590-964c-5844993df930 set to ERROR state.
+2016-03-28 21:46:19 INFO  DatasetLoader:40 - In dataset loader class
+2016-03-28 21:46:19 INFO  DatasetLoader:51 - Old file hashes loaded
+2016-03-28 21:46:19 INFO  StdSchedulerFactory:1184 - Using default implementation for ThreadExecutor
+2016-03-28 21:46:19 INFO  SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2016-03-28 21:46:19 INFO  QuartzScheduler:240 - Quartz Scheduler v.2.2.1 created.
+2016-03-28 21:46:19 INFO  RAMJobStore:155 - RAMJobStore initialized.
+2016-03-28 21:46:19 INFO  QuartzScheduler:305 - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'MyScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 4 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2016-03-28 21:46:19 INFO  StdSchedulerFactory:1339 - Quartz scheduler 'MyScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2016-03-28 21:46:19 INFO  StdSchedulerFactory:1343 - Quartz scheduler version: 2.2.1
+2016-03-28 21:46:19 INFO  QuartzScheduler:575 - Scheduler MyScheduler_$_NON_CLUSTERED started.
+2016-03-28 21:46:20 INFO  PeriodicUpdater:14 - HelloJob executed
+2016-03-28 21:46:21 INFO  PeriodicUpdater:14 - HelloJob executed
+2016-03-28 21:46:23 INFO  PeriodicUpdater:14 - HelloJob executed
+2016-03-28 21:46:25 INFO  PeriodicUpdater:14 - HelloJob executed
+2016-03-28 21:46:27 INFO  PeriodicUpdater:14 - HelloJob executed
+2016-03-28 21:46:29 INFO  PeriodicUpdater:14 - HelloJob executed
+2016-03-28 21:46:31 INFO  PeriodicUpdater:14 - HelloJob executed
+2016-03-28 21:46:33 INFO  PeriodicUpdater:14 - HelloJob executed
+2016-03-28 21:46:35 INFO  PeriodicUpdater:14 - HelloJob executed
+2016-03-28 21:46:37 INFO  PeriodicUpdater:14 - HelloJob executed
+2016-03-28 21:46:39 INFO  PeriodicUpdater:14 - HelloJob executed
