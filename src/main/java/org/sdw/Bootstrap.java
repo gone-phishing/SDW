@@ -17,6 +17,7 @@ public class Bootstrap
 		 * TODO : Check system requirements and memory available
 		 * TODO : Check if RML_HOME is set
 		 * TODO : Check if FLINK_HOME is set
+		 * TODO : Check if CLOUDAMPQ_URL is set
 		 */
 		
 	}

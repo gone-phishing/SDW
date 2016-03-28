@@ -14,9 +14,9 @@ import org.sdw.scheduler.PeriodicScheduler;
 public class PeriodicUpdater implements Job
 {
 	public static Logger LOG = LoggerFactory.getLogger(PeriodicUpdater.class);
-	
+
 	@Override
-    public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException 
+	public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException 
 	{
 		try
 		{
@@ -36,5 +36,5 @@ public class PeriodicUpdater implements Job
 		{
 			LOG.error(ex.getMessage(), ex);
 		}
-    }
+	}
 }

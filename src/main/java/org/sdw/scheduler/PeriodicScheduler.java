@@ -24,26 +24,26 @@ public class PeriodicScheduler
 	public final static Logger LOG = LoggerFactory.getLogger(PeriodicScheduler.class);
 	public final static ConnectionFactory factory = new ConnectionFactory();
 	public Queue<Configuration> scheduleQueue;
-	
+
 	public PeriodicScheduler()
 	{
 		scheduleQueue = new LinkedList<Configuration>();
-		
+
 		try
 		{
 			factory.setUri(System.getenv("CLOUDAMQP_URL"));
 			Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
-	        scheduler.start();
-	        JobDetail jobDetail = newJob(PeriodicUpdater.class).build();
-	        Trigger trigger = newTrigger().startNow().withSchedule(repeatSecondlyForever(5)).build();
-	        scheduler.scheduleJob(jobDetail, trigger);
+			scheduler.start();
+			JobDetail jobDetail = newJob(PeriodicUpdater.class).build();
+			Trigger trigger = newTrigger().startNow().withSchedule(repeatSecondlyForever(5)).build();
+			scheduler.scheduleJob(jobDetail, trigger);
 		}
 		catch(SchedulerException | KeyManagementException | NoSuchAlgorithmException | URISyntaxException schedex)
 		{
 			schedex.printStackTrace();
 		}
 	}
-	
+
 	/**
 	 * Add the valid datasets to the queue
 	 * @param validDatasets : A hashmap containing configuration for datasets to be loaded
