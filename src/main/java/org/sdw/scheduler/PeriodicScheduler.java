@@ -3,8 +3,8 @@ package org.sdw.scheduler;
 import java.net.URISyntaxException;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
-import java.util.HashMap;
 import java.util.LinkedList;
+import java.util.Map;
 import java.util.Queue;
 import org.apache.commons.configuration2.Configuration;
 import org.quartz.*;
@@ -14,15 +14,12 @@ import org.slf4j.LoggerFactory;
 import static org.quartz.JobBuilder.newJob;
 import static org.quartz.SimpleScheduleBuilder.repeatSecondlyForever;
 import static org.quartz.TriggerBuilder.newTrigger;
-import com.rabbitmq.client.Channel;
-import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
-import com.rabbitmq.client.MessageProperties;
 
 public class PeriodicScheduler
 {
-	public final static Logger LOG = LoggerFactory.getLogger(PeriodicScheduler.class);
-	public final static ConnectionFactory factory = new ConnectionFactory();
+	public static final Logger LOG = LoggerFactory.getLogger(PeriodicScheduler.class);
+	public static final ConnectionFactory factory = new ConnectionFactory();
 	public Queue<Configuration> scheduleQueue;
 
 	public PeriodicScheduler()
@@ -40,7 +37,7 @@ public class PeriodicScheduler
 		}
 		catch(SchedulerException | KeyManagementException | NoSuchAlgorithmException | URISyntaxException schedex)
 		{
-			schedex.printStackTrace();
+			LOG.error(schedex.getMessage(), schedex);
 		}
 	}
 
@@ -48,7 +45,7 @@ public class PeriodicScheduler
 	 * Add the valid datasets to the queue
 	 * @param validDatasets : A hashmap containing configuration for datasets to be loaded
 	 */
-	public void pushToQueue(HashMap<Configuration, String> validDatasets)
+	public void pushToQueue(Map<Configuration, String> validDatasets)
 	{
 		for(Configuration cfg : validDatasets.keySet())
 		{

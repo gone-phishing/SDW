@@ -3,24 +3,27 @@ package org.sdw.mapping;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.InputStreamReader;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import org.apache.commons.configuration2.Configuration;
 
 public class R2RMLmapper implements RDFmapper
 {
-	public String sourceFile;
-	public String mappingFile;
-	public String outputFile;
-	public String sourceFormat;
+	public static final Logger LOG = LoggerFactory.getLogger(R2RMLmapper.class);
+	private final String sourceFile;
+	private final String mappingFile;
+	private final String outputFile;
+	private final String sourceFormat;
 	
 	/**
 	 * Parametrized constructor with single input
 	 * @param cfg : Configuration file for the dataset
 	 */
-	public R2RMLmapper(Configuration cfg)
-	{
-		new R2RMLmapper(cfg.getString("sourceFile"), cfg.getString("mappingFile"), cfg.getString("outputFile"), cfg.getString("sourceFormat"));
-	}
+//	public R2RMLmapper(Configuration cfg)
+//	{
+//		new R2RMLmapper(cfg.getString("sourceFile"), cfg.getString("mappingFile"), cfg.getString("outputFile"), cfg.getString("sourceFormat"));
+//	}
 	
 	/**
 	 * Parametrized constructor for setting the fields
@@ -77,7 +80,7 @@ public class R2RMLmapper implements RDFmapper
 		} 
 		catch (Exception e) 
 		{
-			e.printStackTrace();
+			LOG.error(e.getMessage(), e);
 		}
 		return out;
 	}

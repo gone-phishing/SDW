@@ -241,3 +241,116 @@ Caused by: java.lang.IllegalAccessException: Class org.quartz.simpl.SimpleJobFac
 2016-03-28 23:56:27 INFO  QueueProcessor:37 - Message Received: Sent at: 1459202187803
 2016-03-28 23:56:32 INFO  PeriodicUpdater:32 - Message sent: Sent at: 1459202192802
 2016-03-28 23:56:32 INFO  QueueProcessor:37 - Message Received: Sent at: 1459202192802
+2016-03-29 14:50:20 INFO  DatasetLoader:36 - In dataset loader class
+2016-03-29 14:50:20 INFO  DatasetLoader:47 - Old file hashes loaded
+2016-03-29 14:50:20 INFO  Bootstrap:32 - -------------Stats-------------
+2016-03-29 14:50:20 INFO  Bootstrap:34 - Total datasets tried loading: 3
+2016-03-29 14:50:20 INFO  Bootstrap:35 - Success: 0	Fail: 3
+2016-03-29 14:50:20 INFO  Bootstrap:39 - Success rate: 0 %
+2016-03-29 14:50:21 INFO  StdSchedulerFactory:1184 - Using default implementation for ThreadExecutor
+2016-03-29 14:50:21 INFO  SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2016-03-29 14:50:21 INFO  QuartzScheduler:240 - Quartz Scheduler v.2.2.1 created.
+2016-03-29 14:50:21 INFO  RAMJobStore:155 - RAMJobStore initialized.
+2016-03-29 14:50:21 INFO  QuartzScheduler:305 - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'MyScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 4 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2016-03-29 14:50:21 INFO  StdSchedulerFactory:1339 - Quartz scheduler 'MyScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2016-03-29 14:50:21 INFO  StdSchedulerFactory:1343 - Quartz scheduler version: 2.2.1
+2016-03-29 14:50:21 INFO  QuartzScheduler:575 - Scheduler MyScheduler_$_NON_CLUSTERED started.
+2016-03-29 14:50:21 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459255821731
+2016-03-29 14:50:21 INFO  QueueProcessor:35 - Message Received: Sent at: 1459255821731
+2016-03-29 14:50:26 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459255826345
+2016-03-29 14:50:26 INFO  QueueProcessor:35 - Message Received: Sent at: 1459255826345
+2016-03-29 14:50:31 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459255831344
+2016-03-29 14:50:31 INFO  QueueProcessor:35 - Message Received: Sent at: 1459255831344
+2016-03-29 14:50:36 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459255836344
+2016-03-29 14:50:36 INFO  QueueProcessor:35 - Message Received: Sent at: 1459255836344
+2016-03-29 14:50:41 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459255841344
+2016-03-29 14:50:41 INFO  QueueProcessor:35 - Message Received: Sent at: 1459255841344
+2016-03-29 14:50:46 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459255846344
+2016-03-29 14:50:46 INFO  QueueProcessor:35 - Message Received: Sent at: 1459255846344
+2016-03-29 14:50:51 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459255851343
+2016-03-29 14:50:51 INFO  QueueProcessor:35 - Message Received: Sent at: 1459255851343
+2016-03-29 14:50:56 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459255856344
+2016-03-29 14:50:56 INFO  QueueProcessor:35 - Message Received: Sent at: 1459255856344
+2016-03-29 14:51:01 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459255861345
+2016-03-29 14:51:01 INFO  QueueProcessor:35 - Message Received: Sent at: 1459255861345
+2016-03-29 15:15:32 INFO  DatasetLoader:38 - In dataset loader class
+2016-03-29 15:15:32 INFO  DatasetLoader:49 - Old file hashes loaded
+2016-03-29 15:15:32 INFO  DatasetLoader:77 - New hashes written
+2016-03-29 15:15:32 INFO  Bootstrap:32 - -------------Stats-------------
+2016-03-29 15:15:32 INFO  Bootstrap:34 - Total datasets tried loading: 3
+2016-03-29 15:15:32 INFO  Bootstrap:35 - Success: 1	Fail: 2
+2016-03-29 15:15:32 INFO  Bootstrap:39 - Success rate: 33.334 %
+2016-03-29 15:15:32 INFO  StdSchedulerFactory:1184 - Using default implementation for ThreadExecutor
+2016-03-29 15:15:32 INFO  SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2016-03-29 15:15:32 INFO  QuartzScheduler:240 - Quartz Scheduler v.2.2.1 created.
+2016-03-29 15:15:32 INFO  RAMJobStore:155 - RAMJobStore initialized.
+2016-03-29 15:15:32 INFO  QuartzScheduler:305 - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'MyScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 4 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2016-03-29 15:15:32 INFO  StdSchedulerFactory:1339 - Quartz scheduler 'MyScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2016-03-29 15:15:32 INFO  StdSchedulerFactory:1343 - Quartz scheduler version: 2.2.1
+2016-03-29 15:15:32 INFO  QuartzScheduler:575 - Scheduler MyScheduler_$_NON_CLUSTERED started.
+2016-03-29 15:15:33 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459257333162
+2016-03-29 15:15:33 INFO  QueueProcessor:35 - Message Received: Sent at: 1459257333162
+2016-03-29 15:15:37 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459257337752
+2016-03-29 15:15:37 INFO  QueueProcessor:35 - Message Received: Sent at: 1459257337752
+2016-03-29 15:15:42 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459257342750
+2016-03-29 15:15:42 INFO  QueueProcessor:35 - Message Received: Sent at: 1459257342750
+2016-03-29 15:15:47 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459257347750
+2016-03-29 15:15:47 INFO  QueueProcessor:35 - Message Received: Sent at: 1459257347750
+2016-03-29 15:15:52 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459257352750
+2016-03-29 15:15:52 INFO  QueueProcessor:35 - Message Received: Sent at: 1459257352750
+2016-03-29 15:15:57 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459257357750
+2016-03-29 15:15:57 INFO  QueueProcessor:35 - Message Received: Sent at: 1459257357750
+2016-03-29 15:16:02 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459257362749
+2016-03-29 15:16:02 INFO  QueueProcessor:35 - Message Received: Sent at: 1459257362749
+2016-03-29 15:16:07 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459257367750
+2016-03-29 15:16:07 INFO  QueueProcessor:35 - Message Received: Sent at: 1459257367750
+2016-03-29 15:16:12 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459257372750
+2016-03-29 15:16:12 INFO  QueueProcessor:35 - Message Received: Sent at: 1459257372750
+2016-03-29 15:16:17 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459257377749
+2016-03-29 15:16:17 INFO  QueueProcessor:35 - Message Received: Sent at: 1459257377749
+2016-03-29 15:16:22 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459257382750
+2016-03-29 15:16:22 INFO  QueueProcessor:35 - Message Received: Sent at: 1459257382750
+2016-03-30 01:30:31 INFO  DatasetLoader:39 - In dataset loader class
+2016-03-30 01:30:31 INFO  DatasetLoader:50 - Old file hashes loaded
+2016-03-30 01:30:31 INFO  DatasetLoader:69 - [ERROR] custom1 : Dataset already loaded
+2016-03-30 01:30:31 INFO  DatasetLoader:69 - [ERROR] custom3 : Dataset already loaded
+2016-03-30 01:30:31 INFO  DatasetLoader:69 - [ERROR] custom2 : Dataset already loaded
+2016-03-30 01:30:31 INFO  Bootstrap:32 - -------------Stats-------------
+2016-03-30 01:30:31 INFO  Bootstrap:34 - Total datasets tried loading: 3
+2016-03-30 01:30:31 INFO  Bootstrap:35 - Success: 0	Fail: 3
+2016-03-30 01:30:31 INFO  Bootstrap:39 - Success rate: 0 %
+2016-03-30 01:30:31 INFO  StdSchedulerFactory:1184 - Using default implementation for ThreadExecutor
+2016-03-30 01:30:31 INFO  SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2016-03-30 01:30:31 INFO  QuartzScheduler:240 - Quartz Scheduler v.2.2.1 created.
+2016-03-30 01:30:31 INFO  RAMJobStore:155 - RAMJobStore initialized.
+2016-03-30 01:30:31 INFO  QuartzScheduler:305 - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'MyScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 4 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2016-03-30 01:30:31 INFO  StdSchedulerFactory:1339 - Quartz scheduler 'MyScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2016-03-30 01:30:31 INFO  StdSchedulerFactory:1343 - Quartz scheduler version: 2.2.1
+2016-03-30 01:30:31 INFO  QuartzScheduler:575 - Scheduler MyScheduler_$_NON_CLUSTERED started.
+2016-03-30 01:30:32 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459294232416
+2016-03-30 01:30:32 INFO  QueueProcessor:43 - Message Received: Sent at: 1459294232416
+2016-03-30 01:30:36 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459294236979
+2016-03-30 01:30:36 INFO  QueueProcessor:43 - Message Received: Sent at: 1459294236979
+2016-03-30 01:30:41 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459294241980
+2016-03-30 01:30:41 INFO  QueueProcessor:43 - Message Received: Sent at: 1459294241980

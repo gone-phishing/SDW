@@ -2,12 +2,12 @@ package org.sdw;
 
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
-
-import org.sdw.ingestion.DatasetLoader;
-import org.sdw.scheduler.PeriodicScheduler;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Bootstrap
 {
+	public static final Logger LOG = LoggerFactory.getLogger(Bootstrap.class);
 	/**
 	 * Default constructor to test the project setup
 	 */
@@ -29,13 +29,13 @@ public class Bootstrap
 	 */
 	public void printStats(int success, int fail)
 	{
-		System.out.println("-------------Stats-------------");
+		LOG.info("-------------Stats-------------");
 		int total = success+fail;
-		System.out.println("Total datasets tried loading: "+total);
-		System.out.println("Success: "+success+"\tFail: "+fail);
+		LOG.info("Total datasets tried loading: "+total);
+		LOG.info("Success: "+success+"\tFail: "+fail);
 		DecimalFormat df = new DecimalFormat("#.###");
 		df.setRoundingMode(RoundingMode.CEILING);
 		
-		System.out.println("Success rate: "+df.format(((success*100.0)/total))+" %");
+		LOG.info("Success rate: "+df.format((success*100.0)/total)+" %");
 	}
 }

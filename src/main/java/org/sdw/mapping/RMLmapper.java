@@ -4,9 +4,12 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.InputStreamReader;
 import org.apache.commons.configuration2.Configuration;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class RMLmapper implements RDFmapper
 {
+	public static final Logger LOG = LoggerFactory.getLogger(RMLmapper.class);
 	public String sourceFile;
 	public String mappingFile;
 	public String outputFile;
@@ -16,10 +19,10 @@ public class RMLmapper implements RDFmapper
 	 * Parametrized constructor with single input
 	 * @param cfg : Configuration file for the dataset
 	 */
-	public RMLmapper(Configuration cfg)
-	{
-		new RMLmapper(cfg.getString("sourceFile"), cfg.getString("mappingFile"), cfg.getString("outputFile"), cfg.getString("sourceFormat"));
-	}
+//	public RMLmapper(Configuration cfg)
+//	{
+//		new RMLmapper(cfg.getString("sourceFile"), cfg.getString("mappingFile"), cfg.getString("outputFile"), cfg.getString("sourceFormat"));
+//	}
 	
 	/**
 	 * Parametrized constructor for setting the fields
@@ -50,11 +53,11 @@ public class RMLmapper implements RDFmapper
 		String res[] = executeCommandShell(command);
 		if(Integer.parseInt(res[0]) != 0)
 		{
-			System.out.println("ERROR : Could not convert the file to rdf format");
+			LOG.error("ERROR : Could not convert the file to rdf format");
 		}
 		else
 		{
-			System.out.println(res[1]);
+			LOG.info(res[1]);
 		}
 	}
 	
@@ -73,9 +76,9 @@ public class RMLmapper implements RDFmapper
 			process = Runtime.getRuntime().exec(command);
 			process.waitFor();
 			int exitStatus = process.exitValue();
-			out[0] = "" + exitStatus;
+			out[0] = Integer.toString(exitStatus);
 			BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-			String line = "";
+			String line = null;
 			while ((line = reader.readLine()) != null) 
 			{
 				op.append(line + "\n");
@@ -84,7 +87,7 @@ public class RMLmapper implements RDFmapper
 		} 
 		catch (Exception e) 
 		{
-			e.printStackTrace();
+			LOG.error(e.getMessage(), e);
 		}
 
 		return out;

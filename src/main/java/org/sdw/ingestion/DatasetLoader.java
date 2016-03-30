@@ -3,42 +3,41 @@ package org.sdw.ingestion;
 import org.sdw.util.HashFilter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.file.InvalidPathException;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
-
-import org.sdw.Main;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import org.sdw.util.ConfigReader;
 import org.apache.commons.configuration2.Configuration;
 
 public class DatasetLoader
 {
-	public static Logger LOG = LoggerFactory.getLogger(DatasetLoader.class);
-	public ArrayList<Configuration> configurationList = new ArrayList<Configuration>();
-	public HashMap<Configuration, String> invalidDatasets = new HashMap<Configuration, String>();
-	public HashMap<Configuration, String> validDatasets = new HashMap<Configuration, String>();
-	public IngestionConfig ic = new IngestionConfig();
-	public HashFilter hf = new HashFilter("MD5");
-	public HashSet<String> oldHashes = new HashSet<String>();
-	public HashSet<String> newHashes = new HashSet<String>();
-	public int countNewDatasets = 0;
+	public static final Logger LOG = LoggerFactory.getLogger(DatasetLoader.class);
+	public final List<Configuration> configurationList = new ArrayList<>();
+	public final Map<Configuration, String> invalidDatasets = new HashMap<>();
+	public final Map<Configuration, String> validDatasets = new HashMap<>();
+	private final IngestionConfig ic = new IngestionConfig();
+	private final HashFilter hf = new HashFilter("MD5");
+	private final Set<String> oldHashes = new HashSet<>();
+	private final Set<String> newHashes = new HashSet<>();
 	
 	/**
 	 * Default constructor that separates the valid datasets from invalid ones
 	 */
 	public DatasetLoader()
 	{
+		//ConfigReader.getInstance().getParamAsString(ConfigParams.BASE_DIR);
+		
 		LOG.info("In dataset loader class");
-		String datasetPaths[] = ic.datasetPaths;
+		String[] datasetPaths = ic.datasetPaths;
 		for(String str : datasetPaths)
 		{
 			ConfigReader cfg = new ConfigReader(str);
@@ -50,14 +49,12 @@ public class DatasetLoader
 		 */
 		LOG.info("Old file hashes loaded");
 		loadOldHashes(ic.hashFile, oldHashes);
-		for(Configuration cfg : configurationList)
-		{
+		for (Configuration cfg : configurationList) {
 			if(validate(cfg, invalidDatasets))
 			{
 				if(filter(cfg.getString("sourceFile")))
 				{
 					validDatasets.put(cfg, cfg.getString("sourceFile"));
-					countNewDatasets++;
 				}
 				else
 				{
@@ -69,13 +66,14 @@ public class DatasetLoader
 		{
 			for(Configuration cfg : invalidDatasets.keySet())
 			{
-				System.out.println("[ERROR] "+cfg.getString("name")+" : "+invalidDatasets.get(cfg));
+				LOG.info("[ERROR] "+cfg.getString("name")+" : "+invalidDatasets.get(cfg));
 			}
 		}
 		
-		if(newHashes.size() > 0) 
+		if(!newHashes.isEmpty()) 
 		{
 			writeNewHashes(ic.hashFile, newHashes);
+			LOG.info("New hashes written");
 		}
 	}
 	
@@ -85,7 +83,7 @@ public class DatasetLoader
 	 * @param invalidDatasets : Invalid datasets will be added to this hashmap with their error message
 	 * @return : Boolean indicating validity of the dataset config file
 	 */
-	private boolean validate(Configuration cfg, HashMap<Configuration, String> invalidDatasets)
+	private boolean validate(Configuration cfg, Map<Configuration, String> invalidDatasets)
 	{
 		if(!validateType(cfg.getString("sourceFormat")))
 		{
@@ -144,10 +142,7 @@ public class DatasetLoader
 		{
 			return true;
 		}
-		else 
-		{
-			return false;
-		}
+		return false;
 	}
 	
 	/**
@@ -201,7 +196,7 @@ public class DatasetLoader
 	 * @param path : Path of the hash_file
 	 * @param oldHashes : Hashset to load the hashes
 	 */
-	private void loadOldHashes(String path, HashSet<String> oldHashes)
+	private void loadOldHashes(String path, Set<String> oldHashes)
 	{
 		String str = null;
 		try
@@ -216,7 +211,7 @@ public class DatasetLoader
 		}
 		catch(IOException iex)
 		{
-			iex.printStackTrace();
+			LOG.error(iex.getMessage(), iex);
 		}
 	}
 	
@@ -225,7 +220,7 @@ public class DatasetLoader
 	 * @param path : path of the hash_file
 	 * @param newHashes : hashset to add the new hash values
 	 */
-	private void writeNewHashes(String path, HashSet<String> newHashes)
+	private void writeNewHashes(String path, Set<String> newHashes)
 	{
 		try
 		(
@@ -240,7 +235,7 @@ public class DatasetLoader
 		}
 		catch(IOException iex)
 		{
-			iex.printStackTrace();
+			LOG.error(iex.getMessage(), iex);;
 		}
 	}
 }

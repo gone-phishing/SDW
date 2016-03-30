@@ -1,11 +1,17 @@
 package org.sdw.util;
 
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class HashFilter
 {
+	public static final Logger LOG = LoggerFactory.getLogger(HashFilter.class);
 	private final String hashFunction;
 
 	/**
@@ -35,7 +41,7 @@ public class HashFilter
 		}
 		catch(Exception ex)
 		{
-			ex.printStackTrace();
+			LOG.error(ex.getMessage(), ex);
 		}
 		return result;
 	}
@@ -54,9 +60,10 @@ public class HashFilter
 	 * @param filename : Path of the file for which checksum value is to be calculated
 	 * @param hashFunction : hashing function to be used for the purpose
 	 * @return A hashed byte array
-	 * @throws Exception generated because of i/o
+	 * @throws NoSuchAlgorithmException 
+	 * @throws IOException 
 	 */
-	public byte[] createChecksum(String filename, String hashFunction) throws Exception
+	public byte[] createChecksum(String filename, String hashFunction) throws NoSuchAlgorithmException, IOException
 	{
 		InputStream fis =  new FileInputStream(filename);
 

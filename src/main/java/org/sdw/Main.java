@@ -1,10 +1,12 @@
 package org.sdw;
 
+import org.apache.commons.configuration2.Configuration;
 import org.apache.flink.api.common.functions.FlatMapFunction;
 import org.apache.flink.api.java.ExecutionEnvironment;
 import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.util.Collector;
 import org.sdw.ingestion.DatasetLoader;
+import org.sdw.mapping.RMLmapper;
 import org.sdw.scheduler.PeriodicScheduler;
 import org.sdw.scheduler.QueueProcessor;
 import org.slf4j.Logger;
@@ -12,7 +14,12 @@ import org.slf4j.LoggerFactory;
 
 public class Main
 {
-	public static Logger LOG = LoggerFactory.getLogger(Main.class);
+	public static final Logger LOG = LoggerFactory.getLogger(Main.class);
+	
+	private Main()
+	{
+		
+	}
 
 	public static void main(String[] args) throws Exception 
 	{

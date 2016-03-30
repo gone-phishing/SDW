@@ -30,18 +30,4 @@ public class IngestionConfig extends ConfigReader
 		updateIntervals = config.getString("updateIntervals").split(",");
 	}
 	
-	/**
-	 * Print elements of a string array
-	 * @param str : String array as input
-	 */
-	private void printArray(String[] str)
-	{
-		int i = 1;
-		for(String s : str)
-		{
-			System.out.println(i+": "+s);
-			i++;
-		}
-	}
-	
 }
