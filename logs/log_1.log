@@ -528,3 +528,159 @@ Caused by: java.io.IOException: error=2, No such file or directory
 2016-03-31 14:48:28 INFO  QueueProcessor:43 - Message Received: Sent at: 1459428508517
 2016-03-31 14:48:32 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459428512993
 2016-03-31 14:48:32 INFO  QueueProcessor:43 - Message Received: Sent at: 1459428512993
+2016-03-31 17:09:52 INFO  DatasetLoader:39 - In dataset loader class
+2016-03-31 17:09:52 INFO  DatasetLoader:50 - Old file hashes loaded
+2016-03-31 17:09:52 ERROR DatasetLoader:69 - [ERROR] grid : Invalid path: /home/kilt/datasets/grid.json
+2016-03-31 17:09:52 INFO  Bootstrap:32 - -------------Stats-------------
+2016-03-31 17:09:52 INFO  Bootstrap:34 - Total datasets tried loading: 1
+2016-03-31 17:09:52 INFO  Bootstrap:35 - Success: 0	Fail: 1
+2016-03-31 17:09:52 INFO  Bootstrap:39 - Success rate: 0 %
+2016-03-31 17:09:52 INFO  StdSchedulerFactory:1184 - Using default implementation for ThreadExecutor
+2016-03-31 17:09:52 INFO  SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2016-03-31 17:09:52 INFO  QuartzScheduler:240 - Quartz Scheduler v.2.2.1 created.
+2016-03-31 17:09:52 INFO  RAMJobStore:155 - RAMJobStore initialized.
+2016-03-31 17:09:52 INFO  QuartzScheduler:305 - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'MyScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 4 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2016-03-31 17:09:52 INFO  StdSchedulerFactory:1339 - Quartz scheduler 'MyScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2016-03-31 17:09:52 INFO  StdSchedulerFactory:1343 - Quartz scheduler version: 2.2.1
+2016-03-31 17:09:52 INFO  QuartzScheduler:575 - Scheduler MyScheduler_$_NON_CLUSTERED started.
+2016-03-31 17:09:53 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459436993389
+2016-03-31 17:09:53 INFO  QueueProcessor:43 - Message Received: Sent at: 1459436993389
+2016-03-31 17:09:57 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459436997926
+2016-03-31 17:09:57 INFO  QueueProcessor:43 - Message Received: Sent at: 1459436997926
+2016-03-31 17:31:07 INFO  DatasetLoader:39 - In dataset loader class
+2016-03-31 17:31:07 INFO  DatasetLoader:50 - Old file hashes loaded
+2016-03-31 17:31:07 ERROR DatasetLoader:69 - [ERROR] grid : Invalid path: /home/kilt/datasets/grid.json
+2016-03-31 17:31:07 INFO  Bootstrap:32 - -------------Stats-------------
+2016-03-31 17:31:07 INFO  Bootstrap:34 - Total datasets tried loading: 1
+2016-03-31 17:31:07 INFO  Bootstrap:35 - Success: 0	Fail: 1
+2016-03-31 17:31:07 INFO  Bootstrap:39 - Success rate: 0 %
+2016-03-31 17:31:07 INFO  StdSchedulerFactory:1184 - Using default implementation for ThreadExecutor
+2016-03-31 17:31:07 INFO  SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2016-03-31 17:31:07 INFO  QuartzScheduler:240 - Quartz Scheduler v.2.2.1 created.
+2016-03-31 17:31:07 INFO  RAMJobStore:155 - RAMJobStore initialized.
+2016-03-31 17:31:07 INFO  QuartzScheduler:305 - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'MyScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 4 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2016-03-31 17:31:07 INFO  StdSchedulerFactory:1339 - Quartz scheduler 'MyScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2016-03-31 17:31:07 INFO  StdSchedulerFactory:1343 - Quartz scheduler version: 2.2.1
+2016-03-31 17:31:07 INFO  QuartzScheduler:575 - Scheduler MyScheduler_$_NON_CLUSTERED started.
+2016-03-31 17:31:08 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459438268310
+2016-03-31 17:31:08 INFO  QueueProcessor:43 - Message Received: Sent at: 1459438268310
+2016-03-31 17:45:15 INFO  DatasetLoader:39 - In dataset loader class
+2016-03-31 17:45:15 INFO  DatasetLoader:50 - Old file hashes loaded
+2016-03-31 17:45:16 INFO  DatasetLoader:76 - New hashes written
+2016-03-31 17:45:16 INFO  Bootstrap:32 - -------------Stats-------------
+2016-03-31 17:45:16 INFO  Bootstrap:34 - Total datasets tried loading: 1
+2016-03-31 17:45:16 INFO  Bootstrap:35 - Success: 1	Fail: 0
+2016-03-31 17:45:16 INFO  Bootstrap:39 - Success rate: 100 %
+2016-03-31 17:45:17 INFO  StdSchedulerFactory:1184 - Using default implementation for ThreadExecutor
+2016-03-31 17:45:17 INFO  SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2016-03-31 17:45:17 INFO  QuartzScheduler:240 - Quartz Scheduler v.2.2.1 created.
+2016-03-31 17:45:17 INFO  RAMJobStore:155 - RAMJobStore initialized.
+2016-03-31 17:45:17 INFO  QuartzScheduler:305 - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'MyScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 4 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2016-03-31 17:45:17 INFO  StdSchedulerFactory:1339 - Quartz scheduler 'MyScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2016-03-31 17:45:17 INFO  StdSchedulerFactory:1343 - Quartz scheduler version: 2.2.1
+2016-03-31 17:45:17 INFO  QuartzScheduler:575 - Scheduler MyScheduler_$_NON_CLUSTERED started.
+2016-03-31 17:45:17 INFO  RMLmapper:103 - Deleting old output file to replace with new one
+2016-03-31 17:45:17 ERROR RMLmapper:92 - Cannot run program "$RML_HOME/bin/RML-Mapper": error=2, No such file or directory
+java.io.IOException: Cannot run program "$RML_HOME/bin/RML-Mapper": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1047)
+	at java.lang.Runtime.exec(Runtime.java:617)
+	at java.lang.Runtime.exec(Runtime.java:450)
+	at java.lang.Runtime.exec(Runtime.java:347)
+	at org.sdw.mapping.RMLmapper.executeCommandShell(RMLmapper.java:78)
+	at org.sdw.mapping.RMLmapper.execute(RMLmapper.java:55)
+	at org.sdw.mapping.RMLmapper.<init>(RMLmapper.java:41)
+	at org.sdw.mapping.RMLmapper.<init>(RMLmapper.java:24)
+	at org.sdw.Main.main(Main.java:34)
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:187)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:130)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1028)
+	... 8 more
+2016-03-31 17:45:17 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459439117788
+2016-03-31 17:45:22 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459439122372
+2016-03-31 17:45:27 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459439127371
+2016-03-31 17:45:32 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459439132372
+2016-03-31 17:45:37 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459439137373
+2016-03-31 17:45:42 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459439142372
+2016-03-31 17:45:47 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459439147370
+2016-03-31 19:04:12 INFO  DatasetLoader:39 - In dataset loader class
+2016-03-31 19:04:12 INFO  DatasetLoader:50 - Old file hashes loaded
+2016-03-31 19:04:13 ERROR DatasetLoader:69 - [ERROR] grid : Dataset already loaded
+2016-03-31 19:04:13 INFO  Bootstrap:32 - -------------Stats-------------
+2016-03-31 19:04:13 INFO  Bootstrap:34 - Total datasets tried loading: 1
+2016-03-31 19:04:13 INFO  Bootstrap:35 - Success: 0	Fail: 1
+2016-03-31 19:04:13 INFO  Bootstrap:39 - Success rate: 0 %
+2016-03-31 19:04:13 INFO  StdSchedulerFactory:1184 - Using default implementation for ThreadExecutor
+2016-03-31 19:04:13 INFO  SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2016-03-31 19:04:13 INFO  QuartzScheduler:240 - Quartz Scheduler v.2.2.1 created.
+2016-03-31 19:04:13 INFO  RAMJobStore:155 - RAMJobStore initialized.
+2016-03-31 19:04:13 INFO  QuartzScheduler:305 - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'MyScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 4 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2016-03-31 19:04:13 INFO  StdSchedulerFactory:1339 - Quartz scheduler 'MyScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2016-03-31 19:04:13 INFO  StdSchedulerFactory:1343 - Quartz scheduler version: 2.2.1
+2016-03-31 19:04:13 INFO  QuartzScheduler:575 - Scheduler MyScheduler_$_NON_CLUSTERED started.
+2016-03-31 19:04:14 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459443854468
+2016-03-31 19:04:14 INFO  QueueProcessor:43 - Message Received: Sent at: 1459439117788
+2016-03-31 19:04:14 INFO  QueueProcessor:43 - Message Received: Sent at: 1459439122372
+2016-03-31 19:04:14 INFO  QueueProcessor:43 - Message Received: Sent at: 1459439127371
+2016-03-31 19:04:14 INFO  QueueProcessor:43 - Message Received: Sent at: 1459439132372
+2016-03-31 19:04:14 INFO  QueueProcessor:43 - Message Received: Sent at: 1459439137373
+2016-03-31 19:04:14 INFO  QueueProcessor:43 - Message Received: Sent at: 1459439142372
+2016-03-31 19:04:14 INFO  QueueProcessor:43 - Message Received: Sent at: 1459439147370
+2016-03-31 19:04:14 INFO  QueueProcessor:43 - Message Received: Sent at: 1459443854468
+2016-03-31 19:07:19 INFO  DatasetLoader:39 - In dataset loader class
+2016-03-31 19:07:19 INFO  DatasetLoader:50 - Old file hashes loaded
+2016-03-31 19:07:20 INFO  DatasetLoader:76 - New hashes written
+2016-03-31 19:07:20 INFO  Bootstrap:32 - -------------Stats-------------
+2016-03-31 19:07:20 INFO  Bootstrap:34 - Total datasets tried loading: 1
+2016-03-31 19:07:20 INFO  Bootstrap:35 - Success: 1	Fail: 0
+2016-03-31 19:07:20 INFO  Bootstrap:39 - Success rate: 100 %
+2016-03-31 19:07:20 INFO  StdSchedulerFactory:1184 - Using default implementation for ThreadExecutor
+2016-03-31 19:07:20 INFO  SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2016-03-31 19:07:20 INFO  QuartzScheduler:240 - Quartz Scheduler v.2.2.1 created.
+2016-03-31 19:07:20 INFO  RAMJobStore:155 - RAMJobStore initialized.
+2016-03-31 19:07:20 INFO  QuartzScheduler:305 - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'MyScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 4 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2016-03-31 19:07:20 INFO  StdSchedulerFactory:1339 - Quartz scheduler 'MyScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2016-03-31 19:07:20 INFO  StdSchedulerFactory:1343 - Quartz scheduler version: 2.2.1
+2016-03-31 19:07:20 INFO  QuartzScheduler:575 - Scheduler MyScheduler_$_NON_CLUSTERED started.
+2016-03-31 19:07:21 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459444041451
+2016-03-31 19:07:21 INFO  QueueProcessor:43 - Message Received: Sent at: 1459444041451
+2016-03-31 19:07:25 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459444045972
+2016-03-31 19:07:25 INFO  QueueProcessor:43 - Message Received: Sent at: 1459444045972
+2016-03-31 19:07:30 INFO  PeriodicUpdater:31 - Message sent: Sent at: 1459444050973
+2016-03-31 19:07:30 INFO  QueueProcessor:43 - Message Received: Sent at: 1459444050973

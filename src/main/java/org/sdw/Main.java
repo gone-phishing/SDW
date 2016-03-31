@@ -29,11 +29,12 @@ public class Main
 		
 		PeriodicScheduler periodicScheduler = new PeriodicScheduler();
 		periodicScheduler.pushToQueue(datasetLoader.validDatasets);
+		QueueProcessor qp = new QueueProcessor();
+		qp.processQueue();
 		for (Configuration cfg : periodicScheduler.scheduleQueue)
 		{
 			new RMLmapper(cfg);
 		}
-		QueueProcessor qp = new QueueProcessor();
-		qp.processQueue();
+		
 	}
 }

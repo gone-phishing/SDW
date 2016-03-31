@@ -90,7 +90,7 @@ public class DatasetLoader
 			invalidDatasets.put(cfg, "Source format not supported");
 			return false;
 		}
-		String[] filePaths = {cfg.getString("sourceFile"), cfg.getString("mappingFile"), cfg.getString("outputFile")};
+		String[] filePaths = {cfg.getString("sourceFile"), cfg.getString("mappingFile")};
 		if(!validatePath(filePaths))
 		{
 			invalidDatasets.put(cfg, "Invalid path: "+cfg.getString("sourceFile") );

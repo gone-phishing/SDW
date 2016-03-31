@@ -50,8 +50,8 @@ public class RMLmapper implements RDFmapper
 	public void execute(String sourceFile, String mappingFile, String outputFile)
 	{
 		deleteOutputIfExists(outputFile);
-		
-		String command = "$RML_HOME/bin/RML-Mapper -m "+mappingFile+" -o "+outputFile;
+		String rmlHome = System.getenv("RML_HOME");
+		String command = "java -jar "+rmlHome+"RML-Mapper.jar -m "+mappingFile+" -o "+outputFile;
 		String res[] = executeCommandShell(command);
 		if(Integer.parseInt(res[0]) != 0)
 		{
