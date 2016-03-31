@@ -32,7 +32,7 @@ public class PeriodicScheduler
 			Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
 			scheduler.start();
 			JobDetail jobDetail = newJob(PeriodicUpdater.class).build();
-			Trigger trigger = newTrigger().startNow().withSchedule(repeatSecondlyForever(5)).build();
+			Trigger trigger = newTrigger().startNow().withSchedule(repeatSecondlyForever(3)).build();
 			scheduler.scheduleJob(jobDetail, trigger);
 		}
 		catch(SchedulerException | KeyManagementException | NoSuchAlgorithmException | URISyntaxException schedex)

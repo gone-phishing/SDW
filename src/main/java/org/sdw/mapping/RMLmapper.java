@@ -13,15 +13,15 @@ public class RMLmapper implements RDFmapper
 	public String sourceFile;
 	public String mappingFile;
 	public String outputFile;
-	public String sourceFormat;
+	public String commonRdfFormat;
 	
 	/**
 	 * Parametrized constructor with single input
 	 * @param cfg : Configuration file for the dataset
 	 */
-	public RMLmapper(Configuration cfg)
+	public RMLmapper(Configuration cfg, String commonRdfFormat)
 	{
-		new RMLmapper(cfg.getString("sourceFile"), cfg.getString("mappingFile"), cfg.getString("outputFile"), cfg.getString("sourceFormat"));
+		this(cfg.getString("sourceFile"), cfg.getString("mappingFile"), cfg.getString("outputFile"), commonRdfFormat);
 	}
 	
 	/**
@@ -31,12 +31,12 @@ public class RMLmapper implements RDFmapper
 	 * @param outputFile : file to create after conversion
 	 * @param sourceFormat : file format of source dataset
 	 */
-	public RMLmapper(String sourceFile, String mappingFile, String outputFile, String sourceFormat)
+	public RMLmapper(String sourceFile, String mappingFile, String outputFile, String commonRdfFormat)
 	{
 		this.sourceFile = sourceFile;
 		this.mappingFile = mappingFile;
 		this.outputFile = outputFile;
-		this.sourceFormat = sourceFormat;
+		this.commonRdfFormat = commonRdfFormat;
 		
 		execute(sourceFile, mappingFile, outputFile);
 	}
@@ -51,7 +51,7 @@ public class RMLmapper implements RDFmapper
 	{
 		deleteOutputIfExists(outputFile);
 		String rmlHome = System.getenv("RML_HOME");
-		String command = "java -jar "+rmlHome+"RML-Mapper.jar -m "+mappingFile+" -o "+outputFile;
+		String command = "java -jar "+rmlHome+"RML-Mapper.jar -m "+mappingFile+" -o "+outputFile+" -f "+commonRdfFormat;
 		String res[] = executeCommandShell(command);
 		if(Integer.parseInt(res[0]) != 0)
 		{
@@ -70,6 +70,7 @@ public class RMLmapper implements RDFmapper
 	 */
 	private String[] executeCommandShell(String command) 
 	{
+		LOG.info("Shell command: $"+command);
 		StringBuffer op = new StringBuffer();
 		String out[] = new String[2];
 		Process process;

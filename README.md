@@ -14,10 +14,13 @@ Tools and Dependencies :
  - Sonarqube
  
 **Project build:**
+
 `mvn clean package -Pbuild-jar -Dmaven.test.skip=true -Psonar sonar:sonar`
 
 **Docker build:** 
+
 `sudo docker build -t gonephishing/sdw` 
 
-**Code Quality** 
+**Code Quality:**
+
 Sonarqube has been used for dependency analysis and maintaining the code quality. If the sonarqube server is running during maven build time, the quality report generated can be accessed on [http://localhost:9000](http://localhost:9000)

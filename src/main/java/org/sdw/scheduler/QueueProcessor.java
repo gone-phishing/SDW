@@ -15,11 +15,17 @@ import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class QueueProcessor 
+public class QueueProcessor implements Runnable 
 {
 	public final static Logger LOG = LoggerFactory.getLogger(QueueProcessor.class);
+	
+	public QueueProcessor()
+	{
+		
+	}
 
-	public void processQueue()  
+	@Override
+	public void run() 
 	{
 		try
 		{
@@ -49,7 +55,6 @@ public class QueueProcessor
 		{
 			LOG.error(ex.getMessage(), ex);
 		}
-
 	}
 
 }

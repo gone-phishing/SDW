@@ -24,18 +24,17 @@ public class DatasetLoader
 	public final List<Configuration> configurationList = new ArrayList<>();
 	public final Map<Configuration, String> invalidDatasets = new HashMap<>();
 	public final Map<Configuration, String> validDatasets = new HashMap<>();
-	private final IngestionConfig ic = new IngestionConfig();
 	private final HashFilter hf = new HashFilter("MD5");
 	private final Set<String> oldHashes = new HashSet<>();
 	private final Set<String> newHashes = new HashSet<>();
-	
+	private final IngestionConfig ic;
 	/**
 	 * Default constructor that separates the valid datasets from invalid ones
 	 */
-	public DatasetLoader()
+	public DatasetLoader(IngestionConfig ic)
 	{
 		//ConfigReader.getInstance().getParamAsString(ConfigParams.BASE_DIR);
-		
+		this.ic = ic;
 		LOG.info("In dataset loader class");
 		String[] datasetPaths = ic.datasetPaths;
 		for(String str : datasetPaths)
@@ -66,7 +65,7 @@ public class DatasetLoader
 		{
 			for(Configuration cfg : invalidDatasets.keySet())
 			{
-				LOG.error("[ERROR] "+cfg.getString("name")+" : "+invalidDatasets.get(cfg));
+				LOG.warn("[WARN] "+cfg.getString("name")+" : "+invalidDatasets.get(cfg));
 			}
 		}
 		
