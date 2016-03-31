@@ -66,7 +66,7 @@ public class DatasetLoader
 		{
 			for(Configuration cfg : invalidDatasets.keySet())
 			{
-				LOG.info("[ERROR] "+cfg.getString("name")+" : "+invalidDatasets.get(cfg));
+				LOG.error("[ERROR] "+cfg.getString("name")+" : "+invalidDatasets.get(cfg));
 			}
 		}
 		
@@ -90,9 +90,9 @@ public class DatasetLoader
 			invalidDatasets.put(cfg, "Source format not supported");
 			return false;
 		}
-		if(!validatePath(cfg.getString("sourceFile")))
+		String[] filePaths = {cfg.getString("sourceFile"), cfg.getString("mappingFile"), cfg.getString("outputFile")};
+		if(!validatePath(filePaths))
 		{
-			
 			invalidDatasets.put(cfg, "Invalid path: "+cfg.getString("sourceFile") );
 			return false;
 		}
@@ -135,14 +135,17 @@ public class DatasetLoader
 	 * @param dataset_path : Path of the dataset
 	 * @return Boolean indicataing path is valid or not
 	 */
-	private boolean validatePath(String sourceFile)
+	private boolean validatePath(String[] filePaths)
 	{
-		File file = new File(sourceFile);
-		if(file.exists())
+		for(String str : filePaths)
 		{
-			return true;
+			File file = new File(str);
+			if(!file.exists())
+			{
+				return false;
+			}
 		}
-		return false;
+		return true;
 	}
 	
 	/**

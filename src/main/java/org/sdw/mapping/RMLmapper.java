@@ -19,10 +19,10 @@ public class RMLmapper implements RDFmapper
 	 * Parametrized constructor with single input
 	 * @param cfg : Configuration file for the dataset
 	 */
-//	public RMLmapper(Configuration cfg)
-//	{
-//		new RMLmapper(cfg.getString("sourceFile"), cfg.getString("mappingFile"), cfg.getString("outputFile"), cfg.getString("sourceFormat"));
-//	}
+	public RMLmapper(Configuration cfg)
+	{
+		new RMLmapper(cfg.getString("sourceFile"), cfg.getString("mappingFile"), cfg.getString("outputFile"), cfg.getString("sourceFormat"));
+	}
 	
 	/**
 	 * Parametrized constructor for setting the fields
@@ -37,6 +37,8 @@ public class RMLmapper implements RDFmapper
 		this.mappingFile = mappingFile;
 		this.outputFile = outputFile;
 		this.sourceFormat = sourceFormat;
+		
+		execute(sourceFile, mappingFile, outputFile);
 	}
 	
 	/**
@@ -98,6 +100,7 @@ public class RMLmapper implements RDFmapper
 	 */
 	public void deleteOutputIfExists(String outputFile)
 	{
+		LOG.info("Deleting old output file to replace with new one");
 		File file = new File(outputFile);
 		if(file.exists())
 		{
@@ -105,7 +108,7 @@ public class RMLmapper implements RDFmapper
 			String res[] = executeCommandShell(command);
 			if(Integer.parseInt(res[0]) != 0)
 			{
-				System.out.println("ERROR: Could not delete file: "+outputFile);
+				LOG.error("ERROR: Could not delete file: "+outputFile);
 			}
 		}
 	}
