@@ -18,8 +18,24 @@ public class Bootstrap
 		 * TODO : Check if RML_HOME is set
 		 * TODO : Check if FLINK_HOME is set
 		 * TODO : Check if CLOUDAMPQ_URL is set
+		 * TODO : Check if JENA_HOME is set
 		 */
-		
+		if(System.getenv("RML_HOME") == null)
+		{
+			LOG.error("$RML_HOME is not set");
+		}
+		if(System.getenv("FLINK_HOME") == null)
+		{
+			LOG.error("$FLINK_HOME is not set");
+		}
+		if(System.getenv("CLOUDAMPQ_URL") == null)
+		{
+			LOG.error("$CLOUDAMPQ_URL is not set");
+		}
+		if(System.getenv("JENA_HOME") == null)
+		{
+			LOG.error("$JENA_HOME is not set");
+		}
 	}
 	
 	/**
