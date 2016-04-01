@@ -13,7 +13,8 @@ public class IngestionConfig extends ConfigReader
 	public final String[] mappingLanguage;
 	public final String[] updateIntervals;
 	public final String[] validTypes;
-	public static IngestionConfig instance = null;
+	private static IngestionConfig instance = null;
+	
 	/**
 	 * Default constructor to set the fields
 	 */
@@ -30,6 +31,10 @@ public class IngestionConfig extends ConfigReader
 		updateIntervals = config.getString("updateIntervals").split(",");
 	}
 	
+	/**
+	 * Making it a singleton class
+	 * @return IngestionConfig Can be initialized only once throughout the programme
+	 */
 	public static IngestionConfig getInstance()
 	{
 		if(instance == null)

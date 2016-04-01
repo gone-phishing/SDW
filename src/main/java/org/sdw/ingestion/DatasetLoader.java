@@ -28,6 +28,7 @@ public class DatasetLoader
 	private final Set<String> oldHashes = new HashSet<>();
 	private final Set<String> newHashes = new HashSet<>();
 	private final IngestionConfig ic;
+	
 	/**
 	 * Default constructor that separates the valid datasets from invalid ones
 	 */

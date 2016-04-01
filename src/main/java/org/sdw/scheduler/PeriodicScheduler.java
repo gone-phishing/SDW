@@ -20,12 +20,14 @@ public class PeriodicScheduler
 {
 	public static final Logger LOG = LoggerFactory.getLogger(PeriodicScheduler.class);
 	public static final ConnectionFactory factory = new ConnectionFactory();
-	public Queue<Configuration> scheduleQueue;
+	public static Queue<Configuration> scheduleQueue;
 
+	/**
+	 * Default constructor to set the triggers
+	 */
 	public PeriodicScheduler()
 	{
-		scheduleQueue = new LinkedList<Configuration>();
-
+		scheduleQueue = new LinkedList<>();
 		try
 		{
 			factory.setUri(System.getenv("CLOUDAMQP_URL"));

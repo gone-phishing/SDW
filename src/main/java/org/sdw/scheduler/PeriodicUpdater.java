@@ -14,8 +14,13 @@ public class PeriodicUpdater implements Job
 {
 	public static final Logger LOG = LoggerFactory.getLogger(PeriodicUpdater.class);
 
+	/**
+	 * Pushes messages to the shared queue on execution of triggers
+	 * @param JobExecutionContext Job execution context
+	 * @throws JobExecutionException 
+	 */
 	@Override
-	public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException 
+	public void execute(JobExecutionContext jobExecutionContext) 
 	{
 		try
 		{

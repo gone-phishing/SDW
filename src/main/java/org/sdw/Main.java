@@ -17,11 +17,19 @@ public class Main
 {
 	public static final Logger LOG = LoggerFactory.getLogger(Main.class);
 	
+	/**
+	 * Default constructor
+	 */
 	private Main()
 	{
 		
 	}
 
+	/**
+	 * Main method to execute the code sequentially
+	 * @param args
+	 * @throws Exception
+	 */
 	public static void main(String[] args) throws Exception 
 	{
 		Bootstrap bs = new Bootstrap();
@@ -31,10 +39,12 @@ public class Main
 		
 		PeriodicScheduler periodicScheduler = new PeriodicScheduler();
 		periodicScheduler.pushToQueue(datasetLoader.validDatasets);
-		new Thread(new QueueProcessor()).start();;
+		new Thread(new QueueProcessor()).start();
+		
+		RMLmapper rmlMapper = new RMLmapper(ingestionConfig.commonRdfFormat);
 		for (Configuration cfg : periodicScheduler.scheduleQueue)
 		{
-			new RMLmapper(cfg, ingestionConfig.commonRdfFormat);
+			rmlMapper.execute(cfg);
 		}
 		LOG.info("Success!");
 	}

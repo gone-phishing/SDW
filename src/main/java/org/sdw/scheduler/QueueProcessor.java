@@ -19,11 +19,18 @@ public class QueueProcessor implements Runnable
 {
 	public final static Logger LOG = LoggerFactory.getLogger(QueueProcessor.class);
 	
+	/**
+	 * Default constructor for initialization purpose
+	 */
 	public QueueProcessor()
 	{
 		
 	}
 
+	/**
+	 * Implementation of the Runnable interface's run method
+	 * Polls for messages in the shared queue and logs the results on arrival of message
+	 */
 	@Override
 	public void run() 
 	{

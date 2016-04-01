@@ -10,37 +10,25 @@ import org.slf4j.LoggerFactory;
 public class RMLmapper implements RDFmapper
 {
 	public static final Logger LOG = LoggerFactory.getLogger(RMLmapper.class);
-	public String sourceFile;
-	public String mappingFile;
-	public String outputFile;
-	public String commonRdfFormat;
+	private static String commonRdfFormat;
 	
 	/**
 	 * Parametrized constructor with single input
 	 * @param cfg : Configuration file for the dataset
 	 */
-	public RMLmapper(Configuration cfg, String commonRdfFormat)
+	public RMLmapper(String commonRdfFormat)
 	{
-		this(cfg.getString("sourceFile"), cfg.getString("mappingFile"), cfg.getString("outputFile"), commonRdfFormat);
+		this.commonRdfFormat = commonRdfFormat;
 	}
 	
 	/**
-	 * Parametrized constructor for setting the fields
-	 * @param sourceFile : path to source file
-	 * @param mappingFile : rml mapping file
-	 * @param outputFile : file to create after conversion
-	 * @param sourceFormat : file format of source dataset
+	 * Calls the interface's execute method with params set
+	 * @param config : Config of the dataset
 	 */
-	public RMLmapper(String sourceFile, String mappingFile, String outputFile, String commonRdfFormat)
+	public void execute(Configuration config)
 	{
-		this.sourceFile = sourceFile;
-		this.mappingFile = mappingFile;
-		this.outputFile = outputFile;
-		this.commonRdfFormat = commonRdfFormat;
-		
-		execute(sourceFile, mappingFile, outputFile);
+		execute(config.getString("sourceFile"), config.getString("mappingFile"), config.getString("outputFile"));
 	}
-	
 	/**
 	 * Implemented from the interface
 	 * @param sourceFile : path to source file
@@ -97,6 +85,7 @@ public class RMLmapper implements RDFmapper
 	}
 	
 	/**
+	 * Deletes the output file if it already exists
 	 * @param outputFile : delete this file if already exists
 	 */
 	public void deleteOutputIfExists(String outputFile)

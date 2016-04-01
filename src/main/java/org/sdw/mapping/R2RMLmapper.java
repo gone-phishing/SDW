@@ -11,35 +11,25 @@ import org.apache.commons.configuration2.Configuration;
 public class R2RMLmapper implements RDFmapper
 {
 	public static final Logger LOG = LoggerFactory.getLogger(R2RMLmapper.class);
-	private final String sourceFile;
-	private final String mappingFile;
-	private final String outputFile;
-	private final String sourceFormat;
+	private final String commonRdfFormat;
 	
 	/**
 	 * Parametrized constructor with single input
 	 * @param cfg : Configuration file for the dataset
 	 */
-//	public R2RMLmapper(Configuration cfg)
-//	{
-//		new R2RMLmapper(cfg.getString("sourceFile"), cfg.getString("mappingFile"), cfg.getString("outputFile"), cfg.getString("sourceFormat"));
-//	}
-	
-	/**
-	 * Parametrized constructor for setting the fields
-	 * @param sourceFile : path to source file
-	 * @param mappingFile : rml mapping file
-	 * @param outputFile : file to create after conversion
-	 * @param sourceFormat : file format of source dataset
-	 */
-	public R2RMLmapper(String sourceFile, String mappingFile, String outputFile, String sourceFormat)
+	public R2RMLmapper(String commonRdfFormat)
 	{
-		this.sourceFile = sourceFile;
-		this.mappingFile = mappingFile;
-		this.outputFile = outputFile;
-		this.sourceFormat = sourceFormat;
+		this.commonRdfFormat = commonRdfFormat;
 	}
 	
+	/**
+	 * Calls the interface's execute method with the params set
+	 * @param cfg : Comfiguration of the dataset
+	 */
+	public void execute(Configuration cfg)
+	{
+		execute(cfg.getString("sourceFile"), cfg.getString("mappingFile"), cfg.getString("outputFile"));
+	}
 	/**
 	 * Implemented from the interface
 	 * @param sourceFile : path to source file
