@@ -1,0 +1,47 @@
+2016-04-01 08:07:45 ERROR Bootstrap:33 - $CLOUDAMPQ_URL is not set
+2016-04-01 08:07:45 ERROR Bootstrap:37 - $JENA_HOME is not set
+2016-04-01 08:07:46 INFO  DatasetLoader:39 - In dataset loader class
+2016-04-01 08:07:46 INFO  DatasetLoader:50 - Old file hashes loaded
+2016-04-01 08:07:46 WARN  DatasetLoader:69 - [WARN] Grid20 Dataset : Dataset already loaded
+2016-04-01 08:07:46 INFO  Bootstrap:48 - -------------Stats-------------
+2016-04-01 08:07:46 INFO  Bootstrap:50 - Total datasets tried loading: 1
+2016-04-01 08:07:46 INFO  Bootstrap:51 - Success: 0	Fail: 1
+2016-04-01 08:07:46 INFO  Bootstrap:55 - Success rate: 0 %
+2016-04-01 08:07:46 INFO  StdSchedulerFactory:1184 - Using default implementation for ThreadExecutor
+2016-04-01 08:07:46 INFO  SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2016-04-01 08:07:46 INFO  QuartzScheduler:240 - Quartz Scheduler v.2.2.1 created.
+2016-04-01 08:07:46 INFO  RAMJobStore:155 - RAMJobStore initialized.
+2016-04-01 08:07:46 INFO  QuartzScheduler:305 - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'MyScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 4 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2016-04-01 08:07:46 INFO  StdSchedulerFactory:1339 - Quartz scheduler 'MyScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2016-04-01 08:07:46 INFO  StdSchedulerFactory:1343 - Quartz scheduler version: 2.2.1
+2016-04-01 08:07:46 INFO  QuartzScheduler:575 - Scheduler MyScheduler_$_NON_CLUSTERED started.
+2016-04-01 08:07:46 INFO  Main:49 - Success!
+2016-04-01 08:07:47 INFO  PeriodicUpdater:36 - Message sent: Sent at: 1459490867625
+2016-04-01 08:07:47 INFO  QueueProcessor:56 - Message Received: Sent at: 1459490867625
+2016-04-01 08:07:49 INFO  PeriodicUpdater:36 - Message sent: Sent at: 1459490869720
+2016-04-01 08:07:49 INFO  QueueProcessor:56 - Message Received: Sent at: 1459490869720
+2016-04-01 08:07:52 INFO  PeriodicUpdater:36 - Message sent: Sent at: 1459490872720
+2016-04-01 08:07:52 INFO  QueueProcessor:56 - Message Received: Sent at: 1459490872720
+2016-04-01 08:07:55 INFO  PeriodicUpdater:36 - Message sent: Sent at: 1459490875721
+2016-04-01 08:07:55 INFO  QueueProcessor:56 - Message Received: Sent at: 1459490875721
+2016-04-01 08:07:58 INFO  PeriodicUpdater:36 - Message sent: Sent at: 1459490878721
+2016-04-01 08:07:58 INFO  QueueProcessor:56 - Message Received: Sent at: 1459490878721
+2016-04-01 08:08:01 INFO  PeriodicUpdater:36 - Message sent: Sent at: 1459490881721
+2016-04-01 08:08:01 INFO  QueueProcessor:56 - Message Received: Sent at: 1459490881721
+2016-04-01 08:08:04 INFO  PeriodicUpdater:36 - Message sent: Sent at: 1459490884720
+2016-04-01 08:08:04 INFO  QueueProcessor:56 - Message Received: Sent at: 1459490884720
+2016-04-01 08:08:07 INFO  PeriodicUpdater:36 - Message sent: Sent at: 1459490887720
+2016-04-01 08:08:07 INFO  QueueProcessor:56 - Message Received: Sent at: 1459490887720
+2016-04-01 08:08:10 INFO  PeriodicUpdater:36 - Message sent: Sent at: 1459490890719
+2016-04-01 08:08:10 INFO  QueueProcessor:56 - Message Received: Sent at: 1459490890719
+2016-04-01 08:08:13 INFO  PeriodicUpdater:36 - Message sent: Sent at: 1459490893721
+2016-04-01 08:08:13 INFO  QueueProcessor:56 - Message Received: Sent at: 1459490893721
+2016-04-01 08:08:16 INFO  PeriodicUpdater:36 - Message sent: Sent at: 1459490896721
+2016-04-01 08:08:16 INFO  QueueProcessor:56 - Message Received: Sent at: 1459490896721
