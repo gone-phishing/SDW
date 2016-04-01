@@ -45,3 +45,104 @@
 2016-04-01 08:08:13 INFO  QueueProcessor:56 - Message Received: Sent at: 1459490893721
 2016-04-01 08:08:16 INFO  PeriodicUpdater:36 - Message sent: Sent at: 1459490896721
 2016-04-01 08:08:16 INFO  QueueProcessor:56 - Message Received: Sent at: 1459490896721
+2016-04-01 08:20:47 ERROR Bootstrap:37 - $JENA_HOME is not set. Memory model can't be created
+2016-04-01 08:20:48 INFO  DatasetLoader:39 - In dataset loader class
+2016-04-01 08:20:48 INFO  DatasetLoader:50 - Old file hashes loaded
+2016-04-01 08:20:48 WARN  DatasetLoader:69 - [WARN] Grid20 Dataset : Dataset already loaded
+2016-04-01 08:20:48 INFO  Bootstrap:48 - -------------Stats-------------
+2016-04-01 08:20:48 INFO  Bootstrap:50 - Total datasets tried loading: 1
+2016-04-01 08:20:48 INFO  Bootstrap:51 - Success: 0	Fail: 1
+2016-04-01 08:20:48 INFO  Bootstrap:55 - Success rate: 0 %
+2016-04-01 08:20:48 INFO  StdSchedulerFactory:1184 - Using default implementation for ThreadExecutor
+2016-04-01 08:20:48 INFO  SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2016-04-01 08:20:48 INFO  QuartzScheduler:240 - Quartz Scheduler v.2.2.1 created.
+2016-04-01 08:20:48 INFO  RAMJobStore:155 - RAMJobStore initialized.
+2016-04-01 08:20:48 INFO  QuartzScheduler:305 - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'MyScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 4 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2016-04-01 08:20:48 INFO  StdSchedulerFactory:1339 - Quartz scheduler 'MyScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2016-04-01 08:20:48 INFO  StdSchedulerFactory:1343 - Quartz scheduler version: 2.2.1
+2016-04-01 08:20:48 INFO  QuartzScheduler:575 - Scheduler MyScheduler_$_NON_CLUSTERED started.
+2016-04-01 08:20:48 INFO  Main:49 - Success!
+2016-04-01 08:20:49 INFO  PeriodicUpdater:36 - Message sent: Sent at: 1459491649310
+2016-04-01 08:20:49 INFO  QueueProcessor:56 - Message Received: Sent at: 1459491649310
+2016-04-01 08:20:51 INFO  PeriodicUpdater:36 - Message sent: Sent at: 1459491651891
+2016-04-01 08:20:51 INFO  QueueProcessor:56 - Message Received: Sent at: 1459491651891
+2016-04-01 08:20:54 INFO  PeriodicUpdater:36 - Message sent: Sent at: 1459491654891
+2016-04-01 08:20:54 INFO  QueueProcessor:56 - Message Received: Sent at: 1459491654891
+2016-04-01 08:20:57 INFO  PeriodicUpdater:36 - Message sent: Sent at: 1459491657892
+2016-04-01 08:20:57 INFO  QueueProcessor:56 - Message Received: Sent at: 1459491657892
+2016-04-01 08:21:00 INFO  PeriodicUpdater:36 - Message sent: Sent at: 1459491660892
+2016-04-01 08:21:00 INFO  QueueProcessor:56 - Message Received: Sent at: 1459491660892
+2016-04-01 08:21:03 INFO  PeriodicUpdater:36 - Message sent: Sent at: 1459491663895
+2016-04-01 08:21:03 INFO  QueueProcessor:56 - Message Received: Sent at: 1459491663895
+2016-04-01 08:21:06 INFO  PeriodicUpdater:36 - Message sent: Sent at: 1459491666890
+2016-04-01 08:21:06 INFO  QueueProcessor:56 - Message Received: Sent at: 1459491666890
+2016-04-01 08:21:09 INFO  PeriodicUpdater:36 - Message sent: Sent at: 1459491669889
+2016-04-01 08:21:09 INFO  QueueProcessor:56 - Message Received: Sent at: 1459491669889
+2016-04-01 08:21:12 INFO  PeriodicUpdater:36 - Message sent: Sent at: 1459491672889
+2016-04-01 08:21:12 INFO  QueueProcessor:56 - Message Received: Sent at: 1459491672889
+2016-04-01 08:21:15 INFO  PeriodicUpdater:36 - Message sent: Sent at: 1459491675891
+2016-04-01 08:21:15 INFO  QueueProcessor:56 - Message Received: Sent at: 1459491675891
+2016-04-01 08:21:18 INFO  PeriodicUpdater:36 - Message sent: Sent at: 1459491678890
+2016-04-01 08:21:18 INFO  QueueProcessor:56 - Message Received: Sent at: 1459491678890
+2016-04-01 08:21:21 INFO  PeriodicUpdater:36 - Message sent: Sent at: 1459491681890
+2016-04-01 08:21:21 INFO  QueueProcessor:56 - Message Received: Sent at: 1459491681890
+2016-04-01 08:21:24 INFO  PeriodicUpdater:36 - Message sent: Sent at: 1459491684890
+2016-04-01 08:21:24 INFO  QueueProcessor:56 - Message Received: Sent at: 1459491684890
+2016-04-01 08:21:27 INFO  PeriodicUpdater:36 - Message sent: Sent at: 1459491687891
+2016-04-01 08:21:27 INFO  QueueProcessor:56 - Message Received: Sent at: 1459491687891
+2016-04-01 08:21:30 INFO  PeriodicUpdater:36 - Message sent: Sent at: 1459491690890
+2016-04-01 08:21:30 INFO  QueueProcessor:56 - Message Received: Sent at: 1459491690890
+2016-04-01 08:21:33 INFO  PeriodicUpdater:36 - Message sent: Sent at: 1459491693892
+2016-04-01 08:21:33 INFO  QueueProcessor:56 - Message Received: Sent at: 1459491693892
+2016-04-01 08:21:36 INFO  PeriodicUpdater:36 - Message sent: Sent at: 1459491696889
+2016-04-01 08:21:36 INFO  QueueProcessor:56 - Message Received: Sent at: 1459491696889
+2016-04-01 08:23:26 INFO  DatasetLoader:39 - In dataset loader class
+2016-04-01 08:23:26 INFO  DatasetLoader:50 - Old file hashes loaded
+2016-04-01 08:23:26 WARN  DatasetLoader:69 - [WARN] Grid20 Dataset : Dataset already loaded
+2016-04-01 08:23:26 INFO  Bootstrap:48 - -------------Stats-------------
+2016-04-01 08:23:26 INFO  Bootstrap:50 - Total datasets tried loading: 1
+2016-04-01 08:23:26 INFO  Bootstrap:51 - Success: 0	Fail: 1
+2016-04-01 08:23:26 INFO  Bootstrap:55 - Success rate: 0 %
+2016-04-01 08:23:56 INFO  DatasetLoader:39 - In dataset loader class
+2016-04-01 08:23:56 INFO  DatasetLoader:50 - Old file hashes loaded
+2016-04-01 08:23:56 WARN  DatasetLoader:69 - [WARN] Grid20 Dataset : Dataset already loaded
+2016-04-01 08:23:56 INFO  Bootstrap:48 - -------------Stats-------------
+2016-04-01 08:23:56 INFO  Bootstrap:50 - Total datasets tried loading: 1
+2016-04-01 08:23:56 INFO  Bootstrap:51 - Success: 0	Fail: 1
+2016-04-01 08:23:56 INFO  Bootstrap:55 - Success rate: 0 %
+2016-04-01 08:29:27 INFO  DatasetLoader:39 - In dataset loader class
+2016-04-01 08:29:27 INFO  DatasetLoader:50 - Old file hashes loaded
+2016-04-01 08:29:27 WARN  DatasetLoader:69 - [WARN] Grid20 Dataset : Dataset already loaded
+2016-04-01 08:29:27 INFO  Bootstrap:48 - -------------Stats-------------
+2016-04-01 08:29:27 INFO  Bootstrap:50 - Total datasets tried loading: 1
+2016-04-01 08:29:27 INFO  Bootstrap:51 - Success: 0	Fail: 1
+2016-04-01 08:29:27 INFO  Bootstrap:55 - Success rate: 0 %
+2016-04-01 08:29:28 INFO  StdSchedulerFactory:1184 - Using default implementation for ThreadExecutor
+2016-04-01 08:29:28 INFO  SchedulerSignalerImpl:61 - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2016-04-01 08:29:28 INFO  QuartzScheduler:240 - Quartz Scheduler v.2.2.1 created.
+2016-04-01 08:29:28 INFO  RAMJobStore:155 - RAMJobStore initialized.
+2016-04-01 08:29:28 INFO  QuartzScheduler:305 - Scheduler meta-data: Quartz Scheduler (v2.2.1) 'MyScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 4 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2016-04-01 08:29:28 INFO  StdSchedulerFactory:1339 - Quartz scheduler 'MyScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2016-04-01 08:29:28 INFO  StdSchedulerFactory:1343 - Quartz scheduler version: 2.2.1
+2016-04-01 08:29:28 INFO  QuartzScheduler:575 - Scheduler MyScheduler_$_NON_CLUSTERED started.
+2016-04-01 08:29:28 INFO  Main:49 - Success!
+2016-04-01 08:29:28 INFO  PeriodicUpdater:36 - Message sent: Sent at: 1459492168820
+2016-04-01 08:29:28 INFO  QueueProcessor:56 - Message Received: Sent at: 1459492168820
+2016-04-01 08:29:31 INFO  PeriodicUpdater:36 - Message sent: Sent at: 1459492171373
+2016-04-01 08:29:31 INFO  QueueProcessor:56 - Message Received: Sent at: 1459492171373
+2016-04-01 08:29:34 INFO  PeriodicUpdater:36 - Message sent: Sent at: 1459492174372
+2016-04-01 08:29:34 INFO  QueueProcessor:56 - Message Received: Sent at: 1459492174372

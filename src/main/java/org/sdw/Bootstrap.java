@@ -22,19 +22,19 @@ public class Bootstrap
 		 */
 		if(System.getenv("RML_HOME") == null)
 		{
-			LOG.error("$RML_HOME is not set");
+			LOG.error("$RML_HOME is not set. Expect mapping failure");
 		}
 		if(System.getenv("FLINK_HOME") == null)
 		{
-			LOG.error("$FLINK_HOME is not set");
+			LOG.error("$FLINK_HOME is not set. Flow operatos can't work");
 		}
-		if(System.getenv("CLOUDAMPQ_URL") == null)
+		if(System.getenv("CLOUDAMQP_URL") == null)
 		{
-			LOG.error("$CLOUDAMPQ_URL is not set");
+			LOG.error("$CLOUDAMQP_URL is not set. RabbitMQ shared queue can't be created");
 		}
 		if(System.getenv("JENA_HOME") == null)
 		{
-			LOG.error("$JENA_HOME is not set");
+			LOG.error("$JENA_HOME is not set. Memory model can't be created");
 		}
 	}
 	
