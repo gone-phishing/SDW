@@ -8,6 +8,7 @@ import org.apache.flink.util.Collector;
 import org.sdw.ingestion.DatasetLoader;
 import org.sdw.ingestion.IngestionConfig;
 import org.sdw.mapping.RMLmapper;
+import org.sdw.model.JenaModel;
 import org.sdw.scheduler.PeriodicScheduler;
 import org.sdw.scheduler.QueueProcessor;
 import org.slf4j.Logger;
@@ -46,6 +47,8 @@ public class Main
 		{
 			rmlMapper.execute(cfg);
 		}
+		JenaModel jenaModel = new JenaModel();
+		jenaModel.loadDirectory("/home/kilt/datasets/database/");
 		LOG.info("Success!");
 	}
 }
