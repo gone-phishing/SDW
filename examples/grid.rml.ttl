@@ -20,4 +20,11 @@
     	rr:objectMap [
     		rml:reference "links"
     	]
+    ];
+
+    rr:predicateObjectMap [
+    	rr:predicate schema:name;
+    	rr:objectMap [
+    		rml:reference "name"
+    	]
     ].

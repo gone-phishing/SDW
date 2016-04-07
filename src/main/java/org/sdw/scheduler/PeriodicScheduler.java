@@ -35,7 +35,7 @@ public class PeriodicScheduler
 			scheduler.start();
 			JobDetail jobDetail = newJob(PeriodicUpdater.class).build();
 			Trigger trigger = newTrigger().startNow().withSchedule(repeatSecondlyForever(10)).build();
-			scheduler.scheduleJob(jobDetail, trigger);
+			//scheduler.scheduleJob(jobDetail, trigger);
 		}
 		catch(SchedulerException | KeyManagementException | NoSuchAlgorithmException | URISyntaxException schedex)
 		{

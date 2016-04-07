@@ -1,10 +1,6 @@
 package org.sdw;
 
 import org.apache.commons.configuration2.Configuration;
-import org.apache.flink.api.common.functions.FlatMapFunction;
-import org.apache.flink.api.java.ExecutionEnvironment;
-import org.apache.flink.api.java.tuple.Tuple2;
-import org.apache.flink.util.Collector;
 import org.sdw.ingestion.DatasetLoader;
 import org.sdw.ingestion.IngestionConfig;
 import org.sdw.mapping.RMLmapper;
@@ -43,12 +39,18 @@ public class Main
 		new Thread(new QueueProcessor()).start();
 		
 		RMLmapper rmlMapper = new RMLmapper(ingestionConfig.commonRdfFormat);
-		for (Configuration cfg : periodicScheduler.scheduleQueue)
+		for (Configuration cfg : PeriodicScheduler.scheduleQueue)
 		{
 			rmlMapper.execute(cfg);
 		}
-		JenaModel jenaModel = new JenaModel();
-		jenaModel.loadDirectory("/home/kilt/datasets/database/");
-		LOG.info("Success!");
+		LOG.info("Mapping stage complete!");
+		
+		for (Configuration cfg : PeriodicScheduler.scheduleQueue)
+		{
+			rmlMapper.execute(cfg);
+			JenaModel jenaModel = new JenaModel();
+			jenaModel.loadDirectory("/home/kilt/datasets/database/", cfg.getString("outputFile"));
+			jenaModel.execQuery("SELECT * WHERE {?s <http://schema.org/name> ?o}");
+		}
 	}
 }
