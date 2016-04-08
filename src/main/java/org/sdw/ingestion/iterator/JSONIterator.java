@@ -7,9 +7,9 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class CSVIterator extends Iterator 
+public class JSONIterator 
 {
-	public static final Logger LOG = LoggerFactory.getLogger(CSVIterator.class);
+	public static final Logger LOG = LoggerFactory.getLogger(JSONIterator.class);
 	
 	public List<String> extractEntities(String path, String expression)
 	{
