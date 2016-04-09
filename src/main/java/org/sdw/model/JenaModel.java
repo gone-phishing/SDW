@@ -1,3 +1,21 @@
+/*******************************************************************************
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ *******************************************************************************/
 package org.sdw.model;
 
 import java.io.BufferedReader;
@@ -16,16 +34,20 @@ import org.apache.jena.tdb.TDBFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author Ritesh Kumar Singh
+ *
+ */
 public class JenaModel 
 {
 	public static final Logger LOG = LoggerFactory.getLogger(JenaModel.class);
 	private String directoryPath;
-	
+
 	public JenaModel()
 	{
-		
+
 	}
-	
+
 	public void loadDirectory(String directoryPath, String outputFile)
 	{
 		this.directoryPath = directoryPath;
@@ -42,16 +64,16 @@ public class JenaModel
 			LOG.error(res[1]);
 		}
 	}
-	
+
 	public void execQuery(String sparqlQuery)
 	{
 		Dataset dataset = TDBFactory.createDataset(directoryPath);
 		dataset.begin(ReadWrite.READ);
-		
+
 		try
 		(
-			QueryExecution qexec = QueryExecutionFactory.create(sparqlQuery, dataset)
-		)
+				QueryExecution qexec = QueryExecutionFactory.create(sparqlQuery, dataset)
+				)
 		{
 			ResultSet results = qexec.execSelect() ;
 			ResultSetFormatter.out(results) ;
@@ -59,20 +81,20 @@ public class JenaModel
 	}
 
 	public void countRows(String sparqlQueryString, Dataset dataset)
-    {
-        Query query = QueryFactory.create(sparqlQueryString) ;
-        QueryExecution qexec = QueryExecutionFactory.create(query, dataset) ;
-        try {
-            ResultSet results = qexec.execSelect() ;
-            for ( ; results.hasNext() ; )
-            {
-                QuerySolution soln = results.nextSolution() ;
-                int count = soln.getLiteral("count").getInt() ;
-                System.out.println("count = "+count) ;
-            }
-          } finally { qexec.close() ; }
-    }
-	
+	{
+		Query query = QueryFactory.create(sparqlQueryString) ;
+		QueryExecution qexec = QueryExecutionFactory.create(query, dataset) ;
+		try {
+			ResultSet results = qexec.execSelect() ;
+			for ( ; results.hasNext() ; )
+			{
+				QuerySolution soln = results.nextSolution() ;
+				int count = soln.getLiteral("count").getInt() ;
+				System.out.println("count = "+count) ;
+			}
+		} finally { qexec.close() ; }
+	}
+
 	private String[] executeCommandShell(String command) 
 	{
 		LOG.info("Shell command: $"+command);
