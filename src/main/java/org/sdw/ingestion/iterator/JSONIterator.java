@@ -18,39 +18,52 @@
  *******************************************************************************/
 package org.sdw.ingestion.iterator;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
+import java.io.File;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import com.jayway.jsonpath.JsonPath;
+import net.minidev.json.JSONArray;
 
 /**
  * @author Ritesh Kumar Singh
  *
  */
-public class JSONIterator 
+public class JSONIterator implements EntityResolver
 {
 	public static final Logger LOG = LoggerFactory.getLogger(JSONIterator.class);
 	
+	@Override
 	public List<String> extractEntities(String path, String expression)
 	{
-		List<String> entity = new ArrayList<>();
-		try
-		(
-			BufferedReader br = new BufferedReader(new FileReader(path));
-		)
+		try 
 		{
-			String line = null;
-			while( (line = br.readLine()) != null)
-			{
-				entity.add(line);
-			}
-		}
-		catch(Exception ex)
+            if(expression.contains(" "))
+            {
+                expression = ".[\'" + expression + "\']";
+            }
+            File jsonFile = new File(path);
+            Object val = JsonPath.read(jsonFile, expression);
+            List<String> list = new ArrayList<>();
+            if (val instanceof JSONArray) 
+            {
+                JSONArray arr = (JSONArray) val;
+                return Arrays.asList(arr.toArray(new String[0]));
+            }
+            list.add((String) val.toString());
+            return list;
+        } 
+		catch (com.jayway.jsonpath.InvalidPathException ex) 
 		{
-			LOG.error(ex.getMessage(), ex);
-		}
-		return entity;
+            LOG.debug("InvalidPathException " + ex + "for " + expression);
+            return new ArrayList<>();
+        } 
+		catch (Exception ex) 
+		{
+            LOG.error("Exception: " + ex);
+            return null;
+        }
 	}
 }

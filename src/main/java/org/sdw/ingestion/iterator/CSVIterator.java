@@ -29,10 +29,11 @@ import org.slf4j.LoggerFactory;
  * @author Ritesh Kumar Singh
  *
  */
-public class CSVIterator extends Iterator 
+public class CSVIterator implements EntityResolver
 {
 	public static final Logger LOG = LoggerFactory.getLogger(CSVIterator.class);
 	
+	@Override
 	public List<String> extractEntities(String path, String expression)
 	{
 		List<String> entity = new ArrayList<>();

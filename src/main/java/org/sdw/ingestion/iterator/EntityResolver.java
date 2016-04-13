@@ -25,7 +25,7 @@ import java.util.List;
  * @author Ritesh Kumar Singh
  *
  */
-public abstract class Iterator 
+public interface EntityResolver 
 {
-	public abstract List<String> extractEntities(String path, String expression);
+	public List<String> extractEntities(String path, String expression);
 }
