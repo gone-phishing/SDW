@@ -20,6 +20,7 @@ package org.sdw.model;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+import java.util.List;
 
 import org.apache.jena.query.Dataset;
 import org.apache.jena.query.Query;
@@ -30,6 +31,7 @@ import org.apache.jena.query.QuerySolution;
 import org.apache.jena.query.ReadWrite;
 import org.apache.jena.query.ResultSet;
 import org.apache.jena.query.ResultSetFormatter;
+import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.tdb.TDBFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -42,12 +44,20 @@ public class JenaModel
 {
 	public static final Logger LOG = LoggerFactory.getLogger(JenaModel.class);
 	private String directoryPath;
-
+	
+	/**
+	 * Default constructor
+	 */
 	public JenaModel()
 	{
 
 	}
-
+	
+	/**
+	 * Load rdf dataset as a graph in specified empty directory path
+	 * @param directoryPath : Directory to be used to build the graph
+	 * @param outputFile : Path to rdf dataset
+	 */
 	public void loadDirectory(String directoryPath, String outputFile)
 	{
 		this.directoryPath = directoryPath;
@@ -64,37 +74,51 @@ public class JenaModel
 			LOG.error(res[1]);
 		}
 	}
-
+	
+	/**
+	 * Execute a SPARQL query
+	 * @param sparqlQuery : SPARQL query string
+	 */
 	public void execQuery(String sparqlQuery)
 	{
 		Dataset dataset = TDBFactory.createDataset(directoryPath);
 		dataset.begin(ReadWrite.READ);
-
-		try
-		(
-				QueryExecution qexec = QueryExecutionFactory.create(sparqlQuery, dataset)
-				)
-		{
-			ResultSet results = qexec.execSelect() ;
-			ResultSetFormatter.out(results) ;
-		}
+		QueryExecution qexec = QueryExecutionFactory.create(sparqlQuery, dataset);
+		ResultSet results = qexec.execSelect() ;
+		
+		System.out.println(results.toString());
+		ResultSetFormatter.out(results);
+		
+		
 	}
-
+	
+	/**
+	 * Count number of rows in the output of SPARQL query
+	 * @param sparqlQueryString : SPARQL query string
+	 * @param dataset : Dataset on which the query is to be executed
+	 */
 	public void countRows(String sparqlQueryString, Dataset dataset)
 	{
 		Query query = QueryFactory.create(sparqlQueryString) ;
 		QueryExecution qexec = QueryExecutionFactory.create(query, dataset) ;
-		try {
-			ResultSet results = qexec.execSelect() ;
+		try 
+		{
+			ResultSet results = qexec.execSelect();
 			for ( ; results.hasNext() ; )
 			{
 				QuerySolution soln = results.nextSolution() ;
 				int count = soln.getLiteral("count").getInt() ;
 				System.out.println("count = "+count) ;
 			}
-		} finally { qexec.close() ; }
+		} 
+		finally { qexec.close() ; }
 	}
-
+	
+	/**
+	 * Execute a command on local shell
+	 * @param command : The command to be executed
+	 * @return : String array with index 0 showing exit code and index 1 showing the output of the command
+	 */
 	private String[] executeCommandShell(String command) 
 	{
 		LOG.info("Shell command: $"+command);

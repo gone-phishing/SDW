@@ -34,36 +34,36 @@ import net.minidev.json.JSONArray;
 public class JSONIterator implements EntityResolver
 {
 	public static final Logger LOG = LoggerFactory.getLogger(JSONIterator.class);
-	
+
 	@Override
 	public List<String> extractEntities(String path, String expression)
 	{
 		try 
 		{
-            if(expression.contains(" "))
-            {
-                expression = ".[\'" + expression + "\']";
-            }
-            File jsonFile = new File(path);
-            Object val = JsonPath.read(jsonFile, expression);
-            List<String> list = new ArrayList<>();
-            if (val instanceof JSONArray) 
-            {
-                JSONArray arr = (JSONArray) val;
-                return Arrays.asList(arr.toArray(new String[0]));
-            }
-            list.add((String) val.toString());
-            return list;
-        } 
+			if(expression.contains(" "))
+			{
+				expression = ".[\'" + expression + "\']";
+			}
+			File jsonFile = new File(path);
+			Object val = JsonPath.read(jsonFile, expression);
+			List<String> list = new ArrayList<>();
+			if (val instanceof JSONArray) 
+			{
+				JSONArray arr = (JSONArray) val;
+				return Arrays.asList(arr.toArray(new String[0]));
+			}
+			list.add((String) val.toString());
+			return list;
+		} 
 		catch (com.jayway.jsonpath.InvalidPathException ex) 
 		{
-            LOG.debug("InvalidPathException " + ex + "for " + expression);
-            return new ArrayList<>();
-        } 
+			LOG.debug("InvalidPathException " + ex + "for " + expression);
+			return new ArrayList<>();
+		} 
 		catch (Exception ex) 
 		{
-            LOG.error("Exception: " + ex);
-            return null;
-        }
+			LOG.error("Exception: " + ex);
+			return null;
+		}
 	}
 }

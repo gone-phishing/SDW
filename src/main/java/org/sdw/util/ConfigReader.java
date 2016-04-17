@@ -23,8 +23,8 @@ import org.apache.commons.configuration2.FileBasedConfiguration;
 import org.apache.commons.configuration2.PropertiesConfiguration;
 import org.apache.commons.configuration2.builder.FileBasedConfigurationBuilder;
 import org.apache.commons.configuration2.builder.fluent.Parameters;
+import org.apache.commons.configuration2.convert.DefaultListDelimiterHandler;
 import org.apache.commons.configuration2.ex.ConfigurationException;
-import org.sdw.Main;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -35,7 +35,7 @@ import org.slf4j.LoggerFactory;
 public class ConfigReader
 {
 	public static final Logger LOG = LoggerFactory.getLogger(ConfigReader.class);
-	private final FileBasedConfigurationBuilder<FileBasedConfiguration> builder;
+	public FileBasedConfigurationBuilder<FileBasedConfiguration> builder;
 	private Configuration config;
 	
 	/**
@@ -45,7 +45,7 @@ public class ConfigReader
 	public ConfigReader(String propertyFile)
 	{
 		Parameters params = new Parameters();
-		builder = new FileBasedConfigurationBuilder<FileBasedConfiguration>(PropertiesConfiguration.class).configure(params.properties().setFileName(propertyFile));
+		builder = new FileBasedConfigurationBuilder<FileBasedConfiguration>(PropertiesConfiguration.class).configure(params.properties().setFileName(propertyFile).setListDelimiterHandler(new DefaultListDelimiterHandler(',')));
 	}
 	
 	/**

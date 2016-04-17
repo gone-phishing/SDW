@@ -43,14 +43,16 @@ public class IngestionConfig extends ConfigReader
 	private IngestionConfig()
 	{
 		super("ingestion.properties");
+		
 		config = getConfig();
-		datasetPaths = config.getString("paths").split(",");
-		validTypes = config.getString("validTypes").split(",");
+		
+		datasetPaths = config.getStringArray("paths");
+		validTypes = config.getStringArray("validTypes");
 		commonRdfFormat = config.getString("commonRdfFormat");
 		hashFunction = config.getString("hashFunction");
 		hashFile = config.getString("hashFile");
-		mappingLanguage = config.getString("mappingLanguage").split(",");
-		updateIntervals = config.getString("updateIntervals").split(",");
+		mappingLanguage = config.getStringArray("mappingLanguage");
+		updateIntervals = config.getStringArray("updateIntervals");
 	}
 	
 	/**
@@ -65,5 +67,4 @@ public class IngestionConfig extends ConfigReader
 		}
 		return instance;
 	}
-	
 }

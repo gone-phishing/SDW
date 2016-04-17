@@ -19,9 +19,13 @@
 package org.sdw.plugins;
 
 import org.apache.flink.api.common.functions.FlatMapFunction;
+import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.api.java.ExecutionEnvironment;
-import org.apache.flink.api.java.tuple.Tuple2;
+import org.apache.flink.api.java.tuple.Tuple3;
 import org.apache.flink.util.Collector;
+import org.sdw.Main;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author Ritesh Kumar Singh
@@ -29,5 +33,16 @@ import org.apache.flink.util.Collector;
  */
 public class NameResolution 
 {
-
+	public static final Logger LOG = LoggerFactory.getLogger(NameResolution.class);
+	public NameResolution()
+	{
+		
+	}
+	
+	public void run(String filePath)
+	{
+		ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
+		//DataStream<Tuple3<String, String, String>> datastream = env.readCsvFile(filePath).ignoreFirstLine();
+		LOG.info("Reflection successfull");
+	}
 }

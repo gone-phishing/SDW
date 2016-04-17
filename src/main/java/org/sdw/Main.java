@@ -27,6 +27,7 @@ import org.sdw.scheduler.PeriodicScheduler;
 import org.sdw.scheduler.QueueProcessor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import java.lang.reflect.Method;
 
 /**
  * @author Ritesh Kumar Singh
@@ -69,10 +70,17 @@ public class Main
 		
 		for (Configuration cfg : PeriodicScheduler.scheduleQueue)
 		{
-			rmlMapper.execute(cfg);
-			JenaModel jenaModel = new JenaModel();
-			jenaModel.loadDirectory("/home/kilt/datasets/database/", cfg.getString("outputFile"));
-			jenaModel.execQuery("SELECT * WHERE {?s <http://schema.org/name> ?o}");
+//			rmlMapper.execute(cfg);
+//			JenaModel jenaModel = new JenaModel();
+//			jenaModel.loadDirectory("/home/kilt/datasets/database/", cfg.getString("outputFile"));
+//			jenaModel.execQuery("SELECT * WHERE {?s <http://schema.org/name> ?o}");
+			String[] flowOperators = cfg.getStringArray("flow");
+			Class params[] = new Class[1];
+			params[0] = String.class;
+			for(String str : flowOperators)
+			{
+				System.out.println("str: "+str);
+			}
 		}
 	}
 }

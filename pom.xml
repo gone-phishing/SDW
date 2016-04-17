@@ -119,7 +119,13 @@ under the License.
 			<artifactId>xom</artifactId>
 			<version>1.2.5</version>
 		</dependency>
-			
+		
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.21</version>
+		</dependency>
+		
 	</dependencies>
 
 	<build>
@@ -193,9 +199,9 @@ under the License.
 									<exclude>de.javakaffee:kryo-serializers</exclude>
 									<exclude>joda-time:joda-time</exclude>
 									<exclude>org.apache.commons:commons-lang3</exclude>
-									<exclude>org.slf4j:slf4j-api</exclude>
+									<!--  <exclude>org.slf4j:slf4j-api</exclude>
 									<exclude>org.slf4j:slf4j-log4j12</exclude>
-									<exclude>log4j:log4j</exclude>
+									<exclude>log4j:log4j</exclude> -->
 									<exclude>org.apache.commons:commons-math</exclude>
 									<exclude>org.apache.sling:org.apache.sling.commons.json</exclude>
 									<exclude>commons-logging:commons-logging</exclude>

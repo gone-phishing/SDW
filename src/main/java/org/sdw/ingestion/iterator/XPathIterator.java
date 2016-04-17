@@ -41,7 +41,7 @@ public class XPathIterator implements EntityResolver
 {
 	public static final Logger LOG = LoggerFactory.getLogger(XPathIterator.class);
 	public XPathContext nsContext = new XPathContext();
-	
+
 	/* (non-Javadoc)
 	 * @see org.sdw.ingestion.iterator.EntityResolver#extractEntities(java.lang.String, java.lang.String)
 	 */
@@ -63,32 +63,32 @@ public class XPathIterator implements EntityResolver
 	}
 
 	/**
-     * Process a XPath expression against an XML node
-     * @param node
-     * @param expression
-     * @return value that matches expression
-     */
-    private List<String> extractEntities(Node node, String expression) 
-    {
-        List<String> list = new ArrayList<>();
-        Nodes nodes = node.query(expression, nsContext);
+	 * Process a XPath expression against an XML node
+	 * @param node
+	 * @param expression
+	 * @return value that matches expression
+	 */
+	private List<String> extractEntities(Node node, String expression) 
+	{
+		List<String> list = new ArrayList<>();
+		Nodes nodes = node.query(expression, nsContext);
 
-        for (int i = 0; i < nodes.size(); i++) 
-        {
-            Node n = nodes.get(i);
-            if (!n.getValue().isEmpty() || (n.getChildCount() != 0)) 
-            {
-                if (!(n instanceof Attribute) && n.getChildCount() > 1) 
-                {
-                    list.add(n.getValue().trim().replaceAll("[\\t\\n\\r]", " ").replaceAll(" +", " ").replaceAll("\\( ", "\\(").replaceAll(" \\)", "\\)").replaceAll(" :", ":").replaceAll(" ,", ","));
-                } 
-                else 
-                {
-                    list.add(n.getValue().toString());
-                }
-            }
-        }
+		for (int i = 0; i < nodes.size(); i++) 
+		{
+			Node n = nodes.get(i);
+			if (!n.getValue().isEmpty() || (n.getChildCount() != 0)) 
+			{
+				if (!(n instanceof Attribute) && n.getChildCount() > 1) 
+				{
+					list.add(n.getValue().trim().replaceAll("[\\t\\n\\r]", " ").replaceAll(" +", " ").replaceAll("\\( ", "\\(").replaceAll(" \\)", "\\)").replaceAll(" :", ":").replaceAll(" ,", ","));
+				} 
+				else 
+				{
+					list.add(n.getValue().toString());
+				}
+			}
+		}
 
-        return list;
-    }
+		return list;
+	}
 }
