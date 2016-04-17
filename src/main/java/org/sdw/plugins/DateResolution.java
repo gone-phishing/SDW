@@ -18,11 +18,23 @@
  *******************************************************************************/
 package org.sdw.plugins;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * @author Ritesh Kumar Singh
  *
  */
 public class DateResolution 
 {
-
+	public static final Logger LOG = LoggerFactory.getLogger(DateResolution.class);
+	public DateResolution()
+	{
+		
+	}
+	
+	public void run(String path)
+	{
+		LOG.info("Inside DateResolution");
+	}
 }

@@ -43,6 +43,6 @@ public class NameResolution
 	{
 		ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
 		//DataStream<Tuple3<String, String, String>> datastream = env.readCsvFile(filePath).ignoreFirstLine();
-		LOG.info("Reflection successfull");
+		LOG.info("Inside NameResolution");
 	}
 }

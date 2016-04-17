@@ -70,16 +70,19 @@ public class Main
 		
 		for (Configuration cfg : PeriodicScheduler.scheduleQueue)
 		{
-//			rmlMapper.execute(cfg);
-//			JenaModel jenaModel = new JenaModel();
-//			jenaModel.loadDirectory("/home/kilt/datasets/database/", cfg.getString("outputFile"));
-//			jenaModel.execQuery("SELECT * WHERE {?s <http://schema.org/name> ?o}");
+			rmlMapper.execute(cfg);
+			JenaModel jenaModel = new JenaModel();
+			jenaModel.loadDirectory("/home/kilt/datasets/database/", cfg.getString("outputFile"));
+			jenaModel.execQuery("SELECT * WHERE {?s <http://schema.org/name> ?o}");
 			String[] flowOperators = cfg.getStringArray("flow");
 			Class params[] = new Class[1];
 			params[0] = String.class;
 			for(String str : flowOperators)
 			{
-				System.out.println("str: "+str);
+				Class c = Class.forName("org.sdw.plugins."+str);
+				Object obj = c.newInstance();
+				Method method = c.getDeclaredMethod("run", params);
+				method.invoke(obj, "asdf");
 			}
 		}
 	}
