@@ -19,6 +19,8 @@
 package org.sdw.model;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.InputStreamReader;
 import java.util.List;
 
@@ -28,11 +30,10 @@ import org.apache.jena.query.QueryExecution;
 import org.apache.jena.query.QueryExecutionFactory;
 import org.apache.jena.query.QueryFactory;
 import org.apache.jena.query.QuerySolution;
-import org.apache.jena.query.ReadWrite;
 import org.apache.jena.query.ResultSet;
 import org.apache.jena.query.ResultSetFormatter;
 import org.apache.jena.rdf.model.Model;
-import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.sparql.resultset.CSVOutput;
 import org.apache.jena.tdb.TDBFactory;
 import org.apache.jena.util.FileManager;
 import org.slf4j.Logger;
@@ -76,14 +77,14 @@ public class JenaModel
 	 * Execute a SPARQL query
 	 * @param sparqlQuery : SPARQL query string
 	 */
-	public void execQuery(String sparqlQuery)
+	public void execQuery(String sparqlQuery, String outputPath) throws FileNotFoundException
 	{
 		Dataset dataset = TDBFactory.createDataset(directoryPath);
 		Model tdb = dataset.getDefaultModel();
 		Query query = QueryFactory.create(sparqlQuery);
 		QueryExecution qexec = QueryExecutionFactory.create(sparqlQuery, tdb);
 		ResultSet results = qexec.execSelect();
-		ResultSetFormatter.out(System.out, results);
+		ResultSetFormatter.outputAsCSV(new FileOutputStream(outputPath), results);
 		qexec.close();
 		tdb.close();
 		

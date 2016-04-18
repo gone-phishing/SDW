@@ -18,6 +18,9 @@
  *******************************************************************************/
 package org.sdw.plugins;
 
+import org.apache.flink.api.java.DataSet;
+import org.apache.flink.api.java.ExecutionEnvironment;
+import org.apache.flink.api.java.tuple.Tuple2;
 import org.sdw.model.JenaModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,8 +37,11 @@ public class DateResolution
 		
 	}
 	
-	public void run(String path, JenaModel jenaModel)
+	public void run(String filePath, JenaModel jenaModel) throws Exception
 	{
 		LOG.info("Inside DateResolution");
+		jenaModel.execQuery("SELECT ?s ?o WHERE {?s <http://schema.org/name> ?o}", "/home/kilt/Desktop/res.csv");
+		ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
+		DataSet<Tuple2<String, String>> nameset = env.readCsvFile(filePath).ignoreFirstLine().types(String.class, String.class);
 	}
 }

@@ -20,8 +20,9 @@ package org.sdw.plugins;
 
 import org.apache.flink.api.common.functions.FlatMapFunction;
 import org.apache.flink.streaming.api.datastream.DataStream;
+import org.apache.flink.api.java.DataSet;
 import org.apache.flink.api.java.ExecutionEnvironment;
-import org.apache.flink.api.java.tuple.Tuple3;
+import org.apache.flink.api.java.tuple.Tuple2;
 import org.apache.flink.util.Collector;
 import org.sdw.Main;
 import org.sdw.model.JenaModel;
@@ -40,11 +41,11 @@ public class NameResolution
 		
 	}
 	
-	public void run(String filePath, JenaModel jenaModel)
+	public void run(String filePath, JenaModel jenaModel) throws Exception
 	{
-		jenaModel.execQuery("SELECT ?s ?o WHERE {?s <http://schema.org/name> ?o}");
-		ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
-		//DataStream<Tuple3<String, String, String>> datastream = env.readCsvFile(filePath).ignoreFirstLine();
 		LOG.info("Inside NameResolution");
+		jenaModel.execQuery("SELECT ?s ?o WHERE {?s <http://schema.org/name> ?o}", "/home/kilt/Desktop/res.csv");
+		ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
+		DataSet<Tuple2<String, String>> nameset = env.readCsvFile(filePath).ignoreFirstLine().types(String.class, String.class);
 	}
 }
