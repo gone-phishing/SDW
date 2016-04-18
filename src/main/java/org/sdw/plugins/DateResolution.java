@@ -18,6 +18,7 @@
  *******************************************************************************/
 package org.sdw.plugins;
 
+import org.sdw.model.JenaModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -33,7 +34,7 @@ public class DateResolution
 		
 	}
 	
-	public void run(String path)
+	public void run(String path, JenaModel jenaModel)
 	{
 		LOG.info("Inside DateResolution");
 	}

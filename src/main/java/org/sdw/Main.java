@@ -27,6 +27,8 @@ import org.sdw.scheduler.PeriodicScheduler;
 import org.sdw.scheduler.QueueProcessor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**
@@ -70,19 +72,26 @@ public class Main
 		
 		for (Configuration cfg : PeriodicScheduler.scheduleQueue)
 		{
-			rmlMapper.execute(cfg);
-			JenaModel jenaModel = new JenaModel();
-			jenaModel.loadDirectory("/home/kilt/datasets/database/", cfg.getString("outputFile"));
-			jenaModel.execQuery("SELECT * WHERE {?s <http://schema.org/name> ?o}");
+			JenaModel jenaModel = new JenaModel("/home/kilt/datasets/database/");
+			jenaModel.loadDirectory(cfg.getString("outputFile"));
+			//jenaModel.execQuery("SELECT * WHERE {?s <http://schema.org/name> ?o}");
 			String[] flowOperators = cfg.getStringArray("flow");
-			Class params[] = new Class[1];
+			Class params[] = new Class[2];
 			params[0] = String.class;
+			params[1] = jenaModel.getClass();
 			for(String str : flowOperators)
 			{
-				Class c = Class.forName("org.sdw.plugins."+str);
-				Object obj = c.newInstance();
-				Method method = c.getDeclaredMethod("run", params);
-				method.invoke(obj, "asdf");
+				try
+				{
+					Class c = Class.forName("org.sdw.plugins."+str);
+					Object obj = c.newInstance();
+					Method method = c.getDeclaredMethod("run", params);
+					method.invoke(obj, "asdf", jenaModel);
+				}
+				catch(SecurityException | NoSuchMethodException | IllegalArgumentException | IllegalAccessException | InvocationTargetException ex)
+				{
+					LOG.error(ex.getMessage(), ex);
+				}
 			}
 		}
 	}

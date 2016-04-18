@@ -31,8 +31,10 @@ import org.apache.jena.query.QuerySolution;
 import org.apache.jena.query.ReadWrite;
 import org.apache.jena.query.ResultSet;
 import org.apache.jena.query.ResultSetFormatter;
+import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.tdb.TDBFactory;
+import org.apache.jena.util.FileManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -48,9 +50,11 @@ public class JenaModel
 	/**
 	 * Default constructor
 	 */
-	public JenaModel()
+	public JenaModel(String directoryPath)
 	{
-
+		this.directoryPath = directoryPath;
+		executeCommandShell("rm -rf "+ directoryPath);
+		executeCommandShell("mkdir -P "+ directoryPath);
 	}
 	
 	/**
@@ -58,21 +62,14 @@ public class JenaModel
 	 * @param directoryPath : Directory to be used to build the graph
 	 * @param outputFile : Path to rdf dataset
 	 */
-	public void loadDirectory(String directoryPath, String outputFile)
+	public void loadDirectory(String outputFile)
 	{
-		this.directoryPath = directoryPath;
-		executeCommandShell("rm -rf "+ directoryPath);
-		executeCommandShell("mkdir -P "+ directoryPath);
-		String command = "tdbloader2 -l "+directoryPath+" "+outputFile;
-		String[] res = executeCommandShell(command);
-		if(Integer.parseInt(res[0]) == 0)
-		{
-			LOG.info(res[1]);
-		}
-		else
-		{
-			LOG.error(res[1]);
-		}
+		Dataset dataset = TDBFactory.createDataset(directoryPath);
+		Model tdb = dataset.getDefaultModel();
+		FileManager.get().readModel(tdb, outputFile);
+		tdb.close();
+		dataset.close();
+		LOG.info("RDF dataset loaded to memory");
 	}
 	
 	/**
@@ -82,13 +79,13 @@ public class JenaModel
 	public void execQuery(String sparqlQuery)
 	{
 		Dataset dataset = TDBFactory.createDataset(directoryPath);
-		dataset.begin(ReadWrite.READ);
-		QueryExecution qexec = QueryExecutionFactory.create(sparqlQuery, dataset);
-		ResultSet results = qexec.execSelect() ;
-		
-		System.out.println(results.toString());
-		ResultSetFormatter.out(results);
-		
+		Model tdb = dataset.getDefaultModel();
+		Query query = QueryFactory.create(sparqlQuery);
+		QueryExecution qexec = QueryExecutionFactory.create(sparqlQuery, tdb);
+		ResultSet results = qexec.execSelect();
+		ResultSetFormatter.out(System.out, results);
+		qexec.close();
+		tdb.close();
 		
 	}
 	

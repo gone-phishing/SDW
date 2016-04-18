@@ -24,6 +24,7 @@ import org.apache.flink.api.java.ExecutionEnvironment;
 import org.apache.flink.api.java.tuple.Tuple3;
 import org.apache.flink.util.Collector;
 import org.sdw.Main;
+import org.sdw.model.JenaModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -39,8 +40,9 @@ public class NameResolution
 		
 	}
 	
-	public void run(String filePath)
+	public void run(String filePath, JenaModel jenaModel)
 	{
+		jenaModel.execQuery("SELECT ?s ?o WHERE {?s <http://schema.org/name> ?o}");
 		ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
 		//DataStream<Tuple3<String, String, String>> datastream = env.readCsvFile(filePath).ignoreFirstLine();
 		LOG.info("Inside NameResolution");
