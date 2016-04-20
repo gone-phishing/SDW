@@ -18,6 +18,8 @@
  *******************************************************************************/
 package org.sdw.util;
 
+import java.lang.reflect.InvocationTargetException;
+
 import org.apache.commons.configuration2.Configuration;
 import org.apache.commons.configuration2.FileBasedConfiguration;
 import org.apache.commons.configuration2.PropertiesConfiguration;
@@ -42,10 +44,12 @@ public class ConfigReader
 	 * Single parameter constructor
 	 * @param propertyFile : Absolute/ Relative path of property file to be read
 	 */
-	public ConfigReader(String propertyFile)
+	public ConfigReader(String propertyFile) 
 	{
 		Parameters params = new Parameters();
-		builder = new FileBasedConfigurationBuilder<FileBasedConfiguration>(PropertiesConfiguration.class).configure(params.properties().setFileName(propertyFile).setListDelimiterHandler(new DefaultListDelimiterHandler(',')));
+		builder = new FileBasedConfigurationBuilder<FileBasedConfiguration>(PropertiesConfiguration.class);
+		builder.configure(params.properties().setFileName(propertyFile).setListDelimiterHandler(new DefaultListDelimiterHandler(',')));
+		
 	}
 	
 	/**

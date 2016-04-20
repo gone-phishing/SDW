@@ -86,7 +86,7 @@ public class Main
 					Class c = Class.forName("org.sdw.plugins."+str);
 					Object obj = c.newInstance();
 					Method method = c.getDeclaredMethod("run", params);
-					method.invoke(obj, "asdf", jenaModel);
+					method.invoke(obj, "/home/kilt/Desktop/res.csv", jenaModel);
 				}
 				catch(SecurityException | NoSuchMethodException | IllegalArgumentException | IllegalAccessException | InvocationTargetException ex)
 				{

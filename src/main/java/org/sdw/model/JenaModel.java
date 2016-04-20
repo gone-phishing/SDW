@@ -55,7 +55,7 @@ public class JenaModel
 	{
 		this.directoryPath = directoryPath;
 		executeCommandShell("rm -rf "+ directoryPath);
-		executeCommandShell("mkdir -P "+ directoryPath);
+		executeCommandShell("mkdir -p "+ directoryPath);
 	}
 	
 	/**

@@ -15,7 +15,7 @@ Tools and Dependencies :
  
 **Project build:**
 
-`mvn clean package -Pbuild-jar -Dmaven.test.skip=true -Psonar sonar:sonar`
+`mvn clean install -Pbuild-jar -Dmaven.test.skip=true`
 
 **Docker build:** 
 

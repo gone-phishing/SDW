@@ -84,6 +84,12 @@ under the License.
 		</dependency>
 		
 		<dependency>
+			<groupId>org.apache.commons</groupId>
+  			<artifactId>commons-lang3</artifactId>
+  			<version>3.4</version>
+  		</dependency>
+		
+		<dependency>
 			<groupId>commons-beanutils</groupId>
 			<artifactId>commons-beanutils</artifactId>
 			<version>1.9.2</version>
@@ -198,8 +204,8 @@ under the License.
 									<exclude>junit:junit</exclude>
 									<exclude>de.javakaffee:kryo-serializers</exclude>
 									<exclude>joda-time:joda-time</exclude>
-									<exclude>org.apache.commons:commons-lang3</exclude>
-									<!--  <exclude>org.slf4j:slf4j-api</exclude>
+									<!-- <exclude>org.apache.commons:commons-lang3</exclude>
+									 <exclude>org.slf4j:slf4j-api</exclude>
 									<exclude>org.slf4j:slf4j-log4j12</exclude>
 									<exclude>log4j:log4j</exclude> -->
 									<exclude>org.apache.commons:commons-math</exclude>
@@ -275,7 +281,7 @@ under the License.
 		
 			
 		<!-- If you want to use Java 8 Lambda Expressions uncomment the following lines -->
-		<!--
+		
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -334,7 +340,7 @@ under the License.
 				</plugin>
 			</plugins>
 		</pluginManagement>
-		-->
+		
 		
 	</build>
 	<profiles>

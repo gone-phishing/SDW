@@ -43,5 +43,6 @@ public class DateResolution
 		jenaModel.execQuery("SELECT ?s ?o WHERE {?s <http://schema.org/name> ?o}", "/home/kilt/Desktop/res.csv");
 		ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
 		DataSet<Tuple2<String, String>> nameset = env.readCsvFile(filePath).ignoreFirstLine().types(String.class, String.class);
+		//nameset.map(mapper)
 	}
 }

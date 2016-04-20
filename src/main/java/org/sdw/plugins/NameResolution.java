@@ -19,6 +19,7 @@
 package org.sdw.plugins;
 
 import org.apache.flink.api.common.functions.FlatMapFunction;
+import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.api.java.DataSet;
 import org.apache.flink.api.java.ExecutionEnvironment;
@@ -44,8 +45,21 @@ public class NameResolution
 	public void run(String filePath, JenaModel jenaModel) throws Exception
 	{
 		LOG.info("Inside NameResolution");
-		jenaModel.execQuery("SELECT ?s ?o WHERE {?s <http://schema.org/name> ?o}", "/home/kilt/Desktop/res.csv");
+		jenaModel.execQuery("SELECT ?s ?o WHERE {?s <http://schema.org/name> ?o}", filePath);
 		ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
+		env.setParallelism(8);
 		DataSet<Tuple2<String, String>> nameset = env.readCsvFile(filePath).ignoreFirstLine().types(String.class, String.class);
+		nameset.map(new NameExtractor()).print();
+		//env.execute("Name Resolution");
+	}
+}
+
+class NameExtractor implements MapFunction<Tuple2<String, String>, Tuple2<String, String>> 
+{
+	@Override
+	public Tuple2<String, String> map(Tuple2<String, String> so) throws Exception 
+	{
+		String name = so.f1.toUpperCase();
+		return new Tuple2<>(so.f0, name);
 	}
 }

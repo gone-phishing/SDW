@@ -20,6 +20,7 @@ package org.sdw.ingestion;
 
 import org.sdw.util.ConfigReader;
 import org.apache.commons.configuration2.Configuration;
+import org.apache.commons.configuration2.ex.ConfigurationException;
 
 /**
  * @author Ritesh Kumar Singh

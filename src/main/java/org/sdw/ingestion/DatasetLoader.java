@@ -35,6 +35,7 @@ import java.util.Map;
 import java.util.Set;
 import org.sdw.util.ConfigReader;
 import org.apache.commons.configuration2.Configuration;
+import org.apache.commons.configuration2.ex.ConfigurationException;
 
 /**
  * @author Ritesh Kumar Singh
@@ -56,7 +57,6 @@ public class DatasetLoader
 	 */
 	public DatasetLoader(IngestionConfig ic)
 	{
-		//ConfigReader.getInstance().getParamAsString(ConfigParams.BASE_DIR);
 		this.ic = ic;
 		LOG.info("In dataset loader class");
 		String[] datasetPaths = ic.datasetPaths;
@@ -71,7 +71,8 @@ public class DatasetLoader
 		 */
 		LOG.info("Old file hashes loaded");
 		loadOldHashes(ic.hashFile, oldHashes);
-		for (Configuration cfg : configurationList) {
+		for (Configuration cfg : configurationList) 
+		{
 			if(validate(cfg, invalidDatasets))
 			{
 //				if(filter(cfg.getString("sourceFile")))
