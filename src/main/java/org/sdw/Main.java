@@ -72,7 +72,7 @@ public class Main
 		
 		for (Configuration cfg : PeriodicScheduler.scheduleQueue)
 		{
-			JenaModel jenaModel = new JenaModel("/home/kilt/datasets/database/");
+			JenaModel jenaModel = new JenaModel("/home/kilt/datasets/database");
 			jenaModel.loadDirectory(cfg.getString("outputFile"));
 			//jenaModel.execQuery("SELECT * WHERE {?s <http://schema.org/name> ?o}");
 			String[] flowOperators = cfg.getStringArray("flow");

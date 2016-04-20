@@ -36,6 +36,7 @@ public class IngestionConfig extends ConfigReader
 	public final String[] mappingLanguage;
 	public final String[] updateIntervals;
 	public final String[] validTypes;
+	public final String jenaTDBDatabase;
 	private static IngestionConfig instance = null;
 	
 	/**
@@ -52,6 +53,7 @@ public class IngestionConfig extends ConfigReader
 		commonRdfFormat = config.getString("commonRdfFormat");
 		hashFunction = config.getString("hashFunction");
 		hashFile = config.getString("hashFile");
+		jenaTDBDatabase = config.getString("jenTDBDatabase");
 		mappingLanguage = config.getStringArray("mappingLanguage");
 		updateIntervals = config.getStringArray("updateIntervals");
 	}
