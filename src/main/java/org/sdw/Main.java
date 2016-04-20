@@ -61,7 +61,7 @@ public class Main
 		
 		PeriodicScheduler periodicScheduler = new PeriodicScheduler();
 		periodicScheduler.pushToQueue(datasetLoader.validDatasets);
-		new Thread(new QueueProcessor()).start();
+		//new Thread(new QueueProcessor()).start();
 		
 		RMLmapper rmlMapper = new RMLmapper(ingestionConfig.commonRdfFormat);
 		for (Configuration cfg : PeriodicScheduler.scheduleQueue)
