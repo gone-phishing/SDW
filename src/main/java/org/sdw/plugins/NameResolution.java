@@ -42,9 +42,10 @@ public class NameResolution
 		
 	}
 	
-	public void run(String filePath, JenaModel jenaModel) throws Exception
+	public void run(String directoryPath, JenaModel jenaModel) throws Exception
 	{
 		LOG.info("Inside NameResolution");
+		String filePath = directoryPath+"res1.csv";
 		jenaModel.execQuery("SELECT ?s ?o WHERE {?s <http://schema.org/name> ?o}", filePath);
 		ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
 		env.setParallelism(8);

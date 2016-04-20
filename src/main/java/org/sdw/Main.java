@@ -69,10 +69,9 @@ public class Main
 			rmlMapper.execute(cfg);
 		}
 		LOG.info("Mapping stage complete!");
-		
 		for (Configuration cfg : PeriodicScheduler.scheduleQueue)
 		{
-			JenaModel jenaModel = new JenaModel("/home/kilt/datasets/database");
+			JenaModel jenaModel = new JenaModel(ingestionConfig.jenaTDBDatabase);
 			jenaModel.loadDirectory(cfg.getString("outputFile"));
 			//jenaModel.execQuery("SELECT * WHERE {?s <http://schema.org/name> ?o}");
 			String[] flowOperators = cfg.getStringArray("flow");
@@ -86,7 +85,7 @@ public class Main
 					Class c = Class.forName("org.sdw.plugins."+str);
 					Object obj = c.newInstance();
 					Method method = c.getDeclaredMethod("run", params);
-					method.invoke(obj, "/home/kilt/Desktop/res.csv", jenaModel);
+					method.invoke(obj, ingestionConfig.queryDumpDirectory, jenaModel);
 				}
 				catch(SecurityException | NoSuchMethodException | IllegalArgumentException | IllegalAccessException | InvocationTargetException ex)
 				{
