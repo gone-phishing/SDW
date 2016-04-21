@@ -34,7 +34,13 @@ import net.minidev.json.JSONArray;
 public class JSONIterator implements EntityResolver
 {
 	public static final Logger LOG = LoggerFactory.getLogger(JSONIterator.class);
-
+	
+	/**
+	 * Iterate over JSON entities
+	 * @param path : path to the source file
+	 * @param expression : Expression to be used to locate the entities
+	 * @return : A list of strings representing the entities
+	 */
 	@Override
 	public List<String> extractEntities(String path, String expression)
 	{

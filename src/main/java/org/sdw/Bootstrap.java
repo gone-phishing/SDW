@@ -30,6 +30,7 @@ import org.slf4j.LoggerFactory;
 public class Bootstrap
 {
 	public static final Logger LOG = LoggerFactory.getLogger(Bootstrap.class);
+	
 	/**
 	 * Default constructor to test the project setup
 	 */

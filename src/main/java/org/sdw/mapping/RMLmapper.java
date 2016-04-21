@@ -51,6 +51,7 @@ public class RMLmapper implements RDFmapper
 	{
 		execute(config.getString("sourceFile"), config.getString("mappingFile"), config.getString("outputFile"));
 	}
+	
 	/**
 	 * Implemented from the interface
 	 * @param sourceFile : path to source file

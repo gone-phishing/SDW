@@ -27,5 +27,11 @@ import java.util.List;
  */
 public interface EntityResolver 
 {
+	/**
+	 * Extract entites by iterating over them
+	 * @param path : Path to the source file
+	 * @param expression : Expression to be used to locate the entities
+	 * @return : A list of strings representing the entities
+	 */
 	public List<String> extractEntities(String path, String expression);
 }

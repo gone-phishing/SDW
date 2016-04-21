@@ -37,11 +37,21 @@ import org.slf4j.LoggerFactory;
 public class NameResolution 
 {
 	public static final Logger LOG = LoggerFactory.getLogger(NameResolution.class);
+	
+	/**
+	 * Default Constructor
+	 */
 	public NameResolution()
 	{
 		
 	}
 	
+	/**
+	 * Run method called at runtime using java reflection api
+	 * @param directoryPath : Directory location to store the query dump files
+	 * @param jenaModel : Jena model to perform SPARQL queries upon
+	 * @throws Exception : Exception generated while execution
+	 */
 	public void run(String directoryPath, JenaModel jenaModel) throws Exception
 	{
 		LOG.info("Inside NameResolution");
@@ -51,12 +61,16 @@ public class NameResolution
 		env.setParallelism(8);
 		DataSet<Tuple2<String, String>> nameset = env.readCsvFile(filePath).ignoreFirstLine().types(String.class, String.class);
 		nameset.map(new NameExtractor()).print();
-		//env.execute("Name Resolution");
 	}
 }
 
 class NameExtractor implements MapFunction<Tuple2<String, String>, Tuple2<String, String>> 
 {
+	/**
+	 * Map function for the dataset
+	 * @param so : A tuple2 consisting of subject and object
+	 * @return : Modified input Tuple2 to update the dataset
+	 */
 	@Override
 	public Tuple2<String, String> map(Tuple2<String, String> so) throws Exception 
 	{

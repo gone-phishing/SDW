@@ -33,6 +33,12 @@ public class CSVIterator implements EntityResolver
 {
 	public static final Logger LOG = LoggerFactory.getLogger(CSVIterator.class);
 	
+	/**
+	 * Iterate over CSV entities
+	 * @param path : Path to the source file
+	 * @param expression : Expression to be used to locate the entities
+	 * @return : A list of strings representing the entities
+	 */
 	@Override
 	public List<String> extractEntities(String path, String expression)
 	{

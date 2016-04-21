@@ -32,17 +32,27 @@ import org.slf4j.LoggerFactory;
 public class DateResolution 
 {
 	public static final Logger LOG = LoggerFactory.getLogger(DateResolution.class);
+	
+	/**
+	 * Default Constructor
+	 */
 	public DateResolution()
 	{
 		
 	}
 	
+	/**
+	 * Run method called at runtime using java reflection api
+	 * @param directoryPath : Directory location to store the query dump files
+	 * @param jenaModel : Jena model to perform SPARQL queries upon
+	 * @throws Exception : Exception generated while execution
+	 */
 	public void run(String filePath, JenaModel jenaModel) throws Exception
 	{
 		LOG.info("Inside DateResolution");
-		jenaModel.execQuery("SELECT ?s ?o WHERE {?s <http://schema.org/name> ?o}", "/home/kilt/Desktop/res.csv");
-		ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
-		DataSet<Tuple2<String, String>> nameset = env.readCsvFile(filePath).ignoreFirstLine().types(String.class, String.class);
+		//jenaModel.execQuery("SELECT ?s ?o WHERE {?s <http://schema.org/name> ?o}", "/home/kilt/Desktop/res.csv");
+		//ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
+		//DataSet<Tuple2<String, String>> nameset = env.readCsvFile(filePath).ignoreFirstLine().types(String.class, String.class);
 		//nameset.map(mapper)
 	}
 }

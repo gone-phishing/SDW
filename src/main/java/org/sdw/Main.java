@@ -54,30 +54,43 @@ public class Main
 	 */
 	public static void main(String[] args) throws Exception 
 	{
+		// Check for project setup
 		Bootstrap bs = new Bootstrap();
+		
+		// Get instance of IngestionConfig singleton class
 		IngestionConfig ingestionConfig = IngestionConfig.getInstance();
+		
+		// Load configs for all the datasets
 		DatasetLoader datasetLoader = new DatasetLoader(ingestionConfig);
+		
+		// Display stats for Dataset Loader
 		bs.printStats(datasetLoader.validDatasets.size(), datasetLoader.invalidDatasets.size());
 		
+		// Push valid datasets to the schedule queue processed by RabbitMQ
 		PeriodicScheduler periodicScheduler = new PeriodicScheduler();
 		periodicScheduler.pushToQueue(datasetLoader.validDatasets);
 		//new Thread(new QueueProcessor()).start();
 		
+		//Convert datasets to RDF format using RML mapper
 		RMLmapper rmlMapper = new RMLmapper(ingestionConfig.commonRdfFormat);
 		for (Configuration cfg : PeriodicScheduler.scheduleQueue)
 		{
 			rmlMapper.execute(cfg);
 		}
 		LOG.info("Mapping stage complete!");
+		
+		// Load datasets to memory using Jena model
 		for (Configuration cfg : PeriodicScheduler.scheduleQueue)
 		{
 			JenaModel jenaModel = new JenaModel(ingestionConfig.jenaTDBDatabase);
 			jenaModel.loadDirectory(cfg.getString("outputFile"));
-			//jenaModel.execQuery("SELECT * WHERE {?s <http://schema.org/name> ?o}");
 			String[] flowOperators = cfg.getStringArray("flow");
+			
+			// Use java reflection api to resolve flow operators directly at run time
 			Class params[] = new Class[2];
 			params[0] = String.class;
 			params[1] = jenaModel.getClass();
+			
 			for(String str : flowOperators)
 			{
 				try
