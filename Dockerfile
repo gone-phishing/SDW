@@ -9,12 +9,13 @@ MAINTAINER gonephishing <riteshoneinamillion@gmail.com>
 # Update and install necessary tools
 RUN apt-get update -y
 RUN apt-get install -y software-properties-common
-RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections
 RUN add-apt-repository -y ppa:webupd8team/java
 RUN apt-get update
+RUN echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections
+#RUN apt-get install -y oracle-java8-installer && rm -rf /var/lib/apt/lists/* && rm -rf /var/cache/oracle-jdk8-installer
 RUN apt-get install -y wget 
+RUN apt-get install -y git
 RUN apt-get install -y unzip 
-RUN apt-get install -y oracle-java8-installer && rm -rf /var/lib/apt/lists/* && rm -rf /var/cache/oracle-jdk8-installer
 RUN apt-get install -y maven
 
 # Get the flink release from github and build it on the image
