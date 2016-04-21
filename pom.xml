@@ -74,7 +74,9 @@ under the License.
 			<groupId>org.apache.flink</groupId>
 			<artifactId>flink-clients_2.11</artifactId>
 			<version>${flink.version}</version>
-		</dependency>	
+		</dependency>
+		
+
 		<dependency>
   			<groupId>org.apache.commons</groupId>
   			<artifactId>commons-configuration2</artifactId>
@@ -157,23 +159,24 @@ under the License.
 									<!-- This list contains all dependencies of flink-dist
 									Everything else will be packaged into the fat-jar
 									-->
-									<exclude>org.apache.flink:flink-shaded-*</exclude>
+									<!-- <exclude>org.apache.flink:flink-shaded-*</exclude>
 									<exclude>org.apache.flink:flink-core</exclude>
 									<exclude>org.apache.flink:flink-java</exclude>
 									<exclude>org.apache.flink:flink-scala</exclude>
 									<exclude>org.apache.flink:flink-runtime</exclude>
 									<exclude>org.apache.flink:flink-optimizer</exclude>
-									<exclude>org.apache.flink:flink-clients</exclude>
+									<exclude>org.apache.flink:flink-clients</exclude> 
 									<exclude>org.apache.flink:flink-avro</exclude>
 									<exclude>org.apache.flink:flink-java-examples</exclude>
 									<exclude>org.apache.flink:flink-scala-examples</exclude>
 									<exclude>org.apache.flink:flink-streaming-examples</exclude>
-									<exclude>org.apache.flink:flink-streaming-java</exclude>
+									<exclude>org.apache.flink:flink-streaming-java</exclude> -->
 
 									<!-- Also exclude very big transitive dependencies of Flink
 									WARNING: You have to remove these excludes if your code relies on other
 									versions of these dependencies.
 									-->
+									<!-- 
 									<exclude>org.scala-lang:scala-library</exclude>
 									<exclude>org.scala-lang:scala-compiler</exclude>
 									<exclude>org.scala-lang:scala-reflect</exclude>
@@ -205,10 +208,7 @@ under the License.
 									<exclude>junit:junit</exclude>
 									<exclude>de.javakaffee:kryo-serializers</exclude>
 									<exclude>joda-time:joda-time</exclude>
-									<!-- <exclude>org.apache.commons:commons-lang3</exclude>
-									 <exclude>org.slf4j:slf4j-api</exclude>
-									<exclude>org.slf4j:slf4j-log4j12</exclude>
-									<exclude>log4j:log4j</exclude> -->
+									
 									<exclude>org.apache.commons:commons-math</exclude>
 									<exclude>org.apache.sling:org.apache.sling.commons.json</exclude>
 									<exclude>commons-logging:commons-logging</exclude>
@@ -221,17 +221,17 @@ under the License.
 									<exclude>org.uncommons.maths:uncommons-maths</exclude>
 									<exclude>com.github.scopt:scopt_*</exclude>
 									<exclude>commons-io:commons-io</exclude>
-									<exclude>commons-cli:commons-cli</exclude>
+									<exclude>commons-cli:commons-cli</exclude> -->
 								</excludes>
 							</artifactSet>
 							<filters>
-								<filter>
+								<!-- <filter>
 									<artifact>org.apache.flink:*</artifact>
 									<excludes>
 										<exclude>org/apache/flink/shaded/**</exclude>
 										<exclude>web-docs/**</exclude>
 									</excludes>
-								</filter>
+								</filter>  -->
 								<filter>
 									<!-- Do not copy the signatures in the META-INF folder.
 									Otherwise, this might cause SecurityExceptions when using the JAR. -->
@@ -248,6 +248,11 @@ under the License.
 								<transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
 									<mainClass>org.sdw.Main</mainClass>
 								</transformer>
+								<transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
+            					<transformer implementation="org.apache.maven.plugins.shade.resource.ApacheLicenseResourceTransformer" />
+            					<transformer implementation="org.apache.maven.plugins.shade.resource.ApacheNoticeResourceTransformer">
+              						<addHeader>false</addHeader>
+              					</transformer>
 							</transformers>
 							<createDependencyReducedPom>false</createDependencyReducedPom>
 						</configuration>
@@ -344,36 +349,7 @@ under the License.
 		
 		
 	</build>
-	<profiles>
-		<profile>
-			<!-- A profile that does everyting correctly:
-			We set the Flink dependencies to provided -->
-			<id>build-jar</id>
-			<activation>
-				<activeByDefault>false</activeByDefault>
-			</activation>
-			<dependencies>
-				<dependency>
-					<groupId>org.apache.flink</groupId>
-					<artifactId>flink-java</artifactId>
-					<version>${flink.version}</version>
-					<scope>provided</scope>
-				</dependency>
-				<dependency>
-					<groupId>org.apache.flink</groupId>
-					<artifactId>flink-streaming-java_2.11</artifactId>
-					<version>${flink.version}</version>
-					<scope>provided</scope>
-				</dependency>
-				<dependency>
-					<groupId>org.apache.flink</groupId>
-					<artifactId>flink-clients_2.11</artifactId>
-					<version>${flink.version}</version>
-					<scope>provided</scope>
-				</dependency>
-			</dependencies>
-		</profile>
-	</profiles>
+	
 	<name>Smart Data Web</name>
 	<organization>
 		<name>AKSW/KILT Research Group</name>

@@ -33,7 +33,6 @@ import org.apache.jena.query.QuerySolution;
 import org.apache.jena.query.ResultSet;
 import org.apache.jena.query.ResultSetFormatter;
 import org.apache.jena.rdf.model.Model;
-import org.apache.jena.sparql.resultset.CSVOutput;
 import org.apache.jena.tdb.TDBFactory;
 import org.apache.jena.util.FileManager;
 import org.slf4j.Logger;
@@ -65,17 +64,25 @@ public class JenaModel
 	 */
 	public void loadDirectory(String outputFile)
 	{
-		Dataset dataset = TDBFactory.createDataset(directoryPath);
-		Model tdb = dataset.getDefaultModel();
-		FileManager.get().readModel(tdb, outputFile);
-		tdb.close();
-		dataset.close();
+		try
+		{
+			Dataset dataset = TDBFactory.createDataset(directoryPath);
+			Model tdb = dataset.getDefaultModel();
+			FileManager.get().readModel(tdb, outputFile);
+			tdb.close();
+			dataset.close();
+		}
+		catch(Exception ex)
+		{
+			LOG.error(ex.getMessage(), ex);
+		}
 		LOG.info("RDF dataset loaded to memory");
 	}
 	
 	/**
 	 * Execute a SPARQL query
 	 * @param sparqlQuery : SPARQL query string
+	 * @param outputPath : Location to write the result of the query
 	 */
 	public void execQuery(String sparqlQuery, String outputPath) throws FileNotFoundException
 	{
