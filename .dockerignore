@@ -1,0 +1,12 @@
+conf/
+examples/
+lib/
+src/
+target/
+logs/
+.git/
+LICENSE
+pom.xml
+pom.xml.cluster
+README.md
+sonar-project.properties
