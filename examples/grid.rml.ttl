@@ -5,7 +5,7 @@
 
 <#InstituteMapping>
 	rml:logicalSource [
-    	rml:source "/home/kilt/datasets/grid20.json";
+    	rml:source "examples/grid20.json";
     	rml:referenceFormulation ql:JSONPath;
     	rml:iterator "$.institutes.[*]" 
     ];
