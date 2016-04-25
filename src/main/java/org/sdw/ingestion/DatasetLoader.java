@@ -75,15 +75,15 @@ public class DatasetLoader
 		{
 			if(validate(cfg, invalidDatasets))
 			{
-//				if(filter(cfg.getString("sourceFile")))
-//				{
-//					validDatasets.put(cfg, cfg.getString("sourceFile"));
-//				}
-//				else
-//				{
-//					invalidDatasets.put(cfg, "Dataset already loaded");
-//				}
-				validDatasets.put(cfg, cfg.getString("sourceFile"));
+				if(filter(cfg.getString("sourceFile")))
+				{
+					validDatasets.put(cfg, cfg.getString("sourceFile"));
+				}
+				else
+				{
+					invalidDatasets.put(cfg, "Dataset already loaded");
+				}
+				//validDatasets.put(cfg, cfg.getString("sourceFile"));
 			}
 		}
 		if(invalidDatasets.size() > 0) 

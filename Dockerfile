@@ -1,5 +1,5 @@
 ############################################
-## Apache Flink 1.0.0 using scala_2.11.4 ##
+## Smart Data Web Framework ##
 ############################################
 
 # Set base image as ubuntu
