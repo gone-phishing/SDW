@@ -18,11 +18,32 @@
  *******************************************************************************/
 package org.sdw;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * @author Ritesh Kumar Singh
  *
  */
 public class Recovery 
 {
+	public static final Logger LOG = LoggerFactory.getLogger(Main.class);
+	
+	/**
+	 * Default Constructor
+	 */
+	public Recovery()
+	{
+		
+	}
+	
+	/**
+	 * Action to be performed to recover from the error message
+	 * @param errorMessage
+	 */
+	public void checkAlternates(String errorMessage)
+	{
+		LOG.warn(errorMessage);
+	}
 
 }

@@ -29,7 +29,7 @@ import org.slf4j.LoggerFactory;
  * @author Ritesh Kumar Singh
  *
  */
-public class DateResolution 
+public class DateResolution implements XEnhancer
 {
 	public static final Logger LOG = LoggerFactory.getLogger(DateResolution.class);
 	
@@ -47,6 +47,7 @@ public class DateResolution
 	 * @param jenaModel : Jena model to perform SPARQL queries upon
 	 * @throws Exception : Exception generated while execution
 	 */
+	@Override
 	public void run(String filePath, JenaModel jenaModel) throws Exception
 	{
 		LOG.info("Inside DateResolution");

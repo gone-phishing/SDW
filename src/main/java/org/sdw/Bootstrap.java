@@ -43,21 +43,22 @@ public class Bootstrap
 		 * TODO : Check if CLOUDAMPQ_URL is set
 		 * TODO : Check if JENA_HOME is set
 		 */
+		Recovery rc = new Recovery();
 		if(System.getenv("RML_HOME") == null)
 		{
-			LOG.error("$RML_HOME is not set. Expect mapping failure");
+			rc.checkAlternates("$RML_HOME is not set. Expect mapping failure");
 		}
 		if(System.getenv("FLINK_HOME") == null)
 		{
-			LOG.error("$FLINK_HOME is not set. Flow operatos can't work");
+			rc.checkAlternates("$FLINK_HOME is not set. Flow operatos can't work");
 		}
 		if(System.getenv("CLOUDAMQP_URL") == null)
 		{
-			LOG.error("$CLOUDAMQP_URL is not set. RabbitMQ shared queue can't be created");
+			rc.checkAlternates("$CLOUDAMQP_URL is not set. RabbitMQ shared queue can't be created");
 		}
 		if(System.getenv("JENA_HOME") == null)
 		{
-			LOG.error("$JENA_HOME is not set. Memory model can't be created");
+			rc.checkAlternates("$JENA_HOME is not set. Memory model can't be created");
 		}
 	}
 	

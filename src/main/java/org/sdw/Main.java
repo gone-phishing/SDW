@@ -69,7 +69,7 @@ public class Main
 		// Push valid datasets to the schedule queue processed by RabbitMQ
 		PeriodicScheduler periodicScheduler = new PeriodicScheduler();
 		periodicScheduler.pushToQueue(datasetLoader.validDatasets);
-		//new Thread(new QueueProcessor()).start();
+		new Thread(new QueueProcessor()).start();
 		
 		//Convert datasets to RDF format using RML mapper
 		RMLmapper rmlMapper = new RMLmapper(ingestionConfig.commonRdfFormat);
