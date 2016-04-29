@@ -30,5 +30,5 @@ RUN ["java", "-version"]
 RUN git clone https://github.com/gone-phishing/SDW.git
 WORKDIR SDW/
 RUN ["mvn", "clean", "install", "-Dmaven.test.skip=true"]
-RUN java -cp ".:target/sdw-1.0.jar:./lib/*" org.sdw.Main
+#RUN java -cp ".:target/sdw-1.0.jar:./lib/*" org.sdw.Main
 
