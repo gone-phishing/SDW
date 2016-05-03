@@ -59,7 +59,6 @@ public class JenaModel
 	
 	/**
 	 * Load rdf dataset as a graph in specified empty directory path
-	 * @param directoryPath : Directory to be used to build the graph
 	 * @param outputFile : Path to rdf dataset
 	 */
 	public void loadDirectory(String outputFile)

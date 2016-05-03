@@ -67,6 +67,7 @@ class NameExtractor implements MapFunction<Tuple2<String, String>, Tuple2<String
 	 * Map function for the dataset
 	 * @param so : A tuple2 consisting of subject and object
 	 * @return : Modified input Tuple2 to update the dataset
+	 * @throws Exception: Exception thrown if any by the method
 	 */
 	@Override
 	public Tuple2<String, String> map(Tuple2<String, String> so) throws Exception 
