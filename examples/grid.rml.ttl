@@ -2,6 +2,9 @@
 @prefix rml:    <http://semweb.mmlab.be/ns/rml#> .
 @prefix ql:     <http://semweb.mmlab.be/ns/ql#> .
 @prefix schema: <http://schema.org/>.
+@prefix grid: <http://grid.com/#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix ex: <http://www.example.com/#> .
 
 <#InstituteMapping>
 	rml:logicalSource [
@@ -12,19 +15,39 @@
 
     rr:subjectMap [
     	rr:template "http://sdw.org/{id}";
-    	rr:class schema:Education
+    	rr:class schema:Education;
+    	rr:graphMap [ rr:constant ex:Graph ];
     ];
 
     rr:predicateObjectMap [
-    	rr:predicate "http://link.com/";
+    	rr:predicate grid:website;
     	rr:objectMap [
     		rml:reference "links"
-    	]
+    	];
+    	rr:graphMap [ rr:constant ex:Graph ];
     ];
 
+	rr:predicateObjectMap [
+    	rr:predicate grid:wikipedia;
+    	rr:objectMap [
+    		rml:reference "wikipedia_url"
+    	];
+    	rr:graphMap [ rr:constant ex:Graph ];
+    ];
+    
+    rr:predicateObjectMap [
+    	rr:predicate grid:establishment;
+    	rr:objectMap [
+    		rml:reference "established";
+    		rr:datatype xsd:gYear;
+    	];
+    	rr:graphMap [ rr:constant ex:Graph ];
+    ];
+    
     rr:predicateObjectMap [
     	rr:predicate schema:name;
     	rr:objectMap [
     		rml:reference "name"
-    	]
+    	];
+    	rr:graphMap [ rr:constant ex:Graph ];
     ].

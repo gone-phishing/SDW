@@ -50,19 +50,21 @@ public class PeriodicScheduler
 	public PeriodicScheduler()
 	{
 		scheduleQueue = new LinkedList<>();
-		try
-		{
-			factory.setUri(System.getenv("CLOUDAMQP_URL"));
-			Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
-			scheduler.start();
-			JobDetail jobDetail = newJob(PeriodicUpdater.class).build();
-			Trigger trigger = newTrigger().startNow().withSchedule(repeatSecondlyForever(10)).build();
-			scheduler.scheduleJob(jobDetail, trigger);
-		}
-		catch(SchedulerException | KeyManagementException | NoSuchAlgorithmException | URISyntaxException schedex)
-		{
-			LOG.error(schedex.getMessage(), schedex);
-		}
+//		try
+//		{
+//			LOG.info("trying to get url");
+//			factory.setUri(System.getenv("CLOUDAMQP_URL"));
+//			LOG.info("got url");
+//			Scheduler scheduler = StdSchedulerFactory.getDefaultScheduler();
+//			scheduler.start();
+//			JobDetail jobDetail = newJob(PeriodicUpdater.class).build();
+//			Trigger trigger = newTrigger().startNow().withSchedule(repeatSecondlyForever(10)).build();
+//			scheduler.scheduleJob(jobDetail, trigger);
+//		}
+//		catch(SchedulerException | KeyManagementException | NoSuchAlgorithmException | URISyntaxException schedex)
+//		{
+//			LOG.error(schedex.getMessage(), schedex);
+//		}
 	}
 
 	/**

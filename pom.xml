@@ -76,15 +76,13 @@ under the License.
 			<version>${flink.version}</version>
 		</dependency>
 		
-
+		<!-- http://mvnrepository.com/artifact/org.apache.commons/commons-configuration2 -->
 		<dependency>
-  			<groupId>org.apache.commons</groupId>
-  			<artifactId>commons-configuration2</artifactId>
-  			<version>2.0-beta2</version>
-  			<scope>system</scope>
-  			<systemPath>${project.basedir}/lib/commons-configuration2-2.0-beta2.jar</systemPath>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-configuration2</artifactId>
+		    <version>2.0</version>
 		</dependency>
-		
+				
 		<dependency>
 			<groupId>org.apache.commons</groupId>
   			<artifactId>commons-lang3</artifactId>
@@ -159,7 +157,7 @@ under the License.
 									<!-- This list contains all dependencies of flink-dist
 									Everything else will be packaged into the fat-jar
 									-->
-									<!-- <exclude>org.apache.flink:flink-shaded-*</exclude>
+									<exclude>org.apache.flink:flink-shaded-*</exclude>
 									<exclude>org.apache.flink:flink-core</exclude>
 									<exclude>org.apache.flink:flink-java</exclude>
 									<exclude>org.apache.flink:flink-scala</exclude>
@@ -170,13 +168,13 @@ under the License.
 									<exclude>org.apache.flink:flink-java-examples</exclude>
 									<exclude>org.apache.flink:flink-scala-examples</exclude>
 									<exclude>org.apache.flink:flink-streaming-examples</exclude>
-									<exclude>org.apache.flink:flink-streaming-java</exclude> -->
+									<exclude>org.apache.flink:flink-streaming-java</exclude> 
 
 									<!-- Also exclude very big transitive dependencies of Flink
 									WARNING: You have to remove these excludes if your code relies on other
 									versions of these dependencies.
 									-->
-									<!-- 
+									
 									<exclude>org.scala-lang:scala-library</exclude>
 									<exclude>org.scala-lang:scala-compiler</exclude>
 									<exclude>org.scala-lang:scala-reflect</exclude>
@@ -221,7 +219,7 @@ under the License.
 									<exclude>org.uncommons.maths:uncommons-maths</exclude>
 									<exclude>com.github.scopt:scopt_*</exclude>
 									<exclude>commons-io:commons-io</exclude>
-									<exclude>commons-cli:commons-cli</exclude> -->
+									<exclude>commons-cli:commons-cli</exclude> 
 								</excludes>
 							</artifactSet>
 							<filters>

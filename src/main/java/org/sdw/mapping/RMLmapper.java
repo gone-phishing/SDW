@@ -64,7 +64,7 @@ public class RMLmapper implements RDFmapper
 		String rmlHome = System.getenv("RML_HOME");
 		String baseDir = System.getProperty("user.dir");
 		rmlHome = baseDir + "/lib/";
-		String command = "java -jar "+rmlHome+"RML-Mapper.jar -m " + mappingFile + " -o "+outputFile+" -f "+commonRdfFormat;
+		String command = "java -jar "+rmlHome+"RML-Mapper.jar -m " + mappingFile + " -o "+outputFile+" -f " + commonRdfFormat;
 		String res[] = executeCommandShell(command);
 		if(Integer.parseInt(res[0]) != 0)
 		{
