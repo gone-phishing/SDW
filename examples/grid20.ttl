@@ -1,90 +1,36 @@
 <http://sdw.org/grid.1001.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Education> .
 <http://sdw.org/grid.1001.0> <http://schema.org/name> "Australian National University" .
-<http://sdw.org/grid.1001.0> <http://grid.com/#website> "http://www.anu.edu.au/" .
-<http://sdw.org/grid.1001.0> <http://grid.com/#wikipedia> "http://en.wikipedia.org/wiki/Australian_National_University" .
-<http://sdw.org/grid.1001.0> <http://grid.com/#establishment> "1946"^^<http://www.w3.org/2001/XMLSchema#gYear> .
 <http://sdw.org/grid.1002.3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Education> .
 <http://sdw.org/grid.1002.3> <http://schema.org/name> "Monash University" .
-<http://sdw.org/grid.1002.3> <http://grid.com/#website> "http://www.monash.edu/" .
-<http://sdw.org/grid.1002.3> <http://grid.com/#wikipedia> "http://en.wikipedia.org/wiki/Monash_University" .
-<http://sdw.org/grid.1002.3> <http://grid.com/#establishment> "1958"^^<http://www.w3.org/2001/XMLSchema#gYear> .
 <http://sdw.org/grid.1003.2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Education> .
 <http://sdw.org/grid.1003.2> <http://schema.org/name> "University of Queensland" .
-<http://sdw.org/grid.1003.2> <http://grid.com/#website> "http://www.uq.edu.au/" .
-<http://sdw.org/grid.1003.2> <http://grid.com/#wikipedia> "http://en.wikipedia.org/wiki/University_of_Queensland" .
-<http://sdw.org/grid.1003.2> <http://grid.com/#establishment> "1909"^^<http://www.w3.org/2001/XMLSchema#gYear> .
 <http://sdw.org/grid.1004.5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Education> .
 <http://sdw.org/grid.1004.5> <http://schema.org/name> "Macquarie University" .
-<http://sdw.org/grid.1004.5> <http://grid.com/#website> "http://mq.edu.au/" .
-<http://sdw.org/grid.1004.5> <http://grid.com/#wikipedia> "http://en.wikipedia.org/wiki/Macquarie_University" .
-<http://sdw.org/grid.1004.5> <http://grid.com/#establishment> "1964"^^<http://www.w3.org/2001/XMLSchema#gYear> .
 <http://sdw.org/grid.1005.4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Education> .
 <http://sdw.org/grid.1005.4> <http://schema.org/name> "UNSW Australia" .
-<http://sdw.org/grid.1005.4> <http://grid.com/#website> "https://www.unsw.edu.au/" .
-<http://sdw.org/grid.1005.4> <http://grid.com/#wikipedia> "http://en.wikipedia.org/wiki/University_of_New_South_Wales" .
-<http://sdw.org/grid.1005.4> <http://grid.com/#establishment> "1949"^^<http://www.w3.org/2001/XMLSchema#gYear> .
 <http://sdw.org/grid.1006.7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Education> .
 <http://sdw.org/grid.1006.7> <http://schema.org/name> "Newcastle University" .
-<http://sdw.org/grid.1006.7> <http://grid.com/#website> "http://www.ncl.ac.uk/" .
-<http://sdw.org/grid.1006.7> <http://grid.com/#wikipedia> "http://en.wikipedia.org/wiki/Newcastle_University" .
-<http://sdw.org/grid.1006.7> <http://grid.com/#establishment> "1834"^^<http://www.w3.org/2001/XMLSchema#gYear> .
 <http://sdw.org/grid.1007.6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Education> .
 <http://sdw.org/grid.1007.6> <http://schema.org/name> "University of Wollongong" .
-<http://sdw.org/grid.1007.6> <http://grid.com/#website> "https://www.uow.edu.au/index.html" .
-<http://sdw.org/grid.1007.6> <http://grid.com/#wikipedia> "http://en.wikipedia.org/wiki/University_of_Wollongong" .
-<http://sdw.org/grid.1007.6> <http://grid.com/#establishment> "1951"^^<http://www.w3.org/2001/XMLSchema#gYear> .
 <http://sdw.org/grid.1008.9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Education> .
 <http://sdw.org/grid.1008.9> <http://schema.org/name> "University of Melbourne" .
-<http://sdw.org/grid.1008.9> <http://grid.com/#website> "http://www.unimelb.edu.au/" .
-<http://sdw.org/grid.1008.9> <http://grid.com/#wikipedia> "http://en.wikipedia.org/wiki/University_of_Melbourne" .
-<http://sdw.org/grid.1008.9> <http://grid.com/#establishment> "1853"^^<http://www.w3.org/2001/XMLSchema#gYear> .
 <http://sdw.org/grid.1009.8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Education> .
 <http://sdw.org/grid.1009.8> <http://schema.org/name> "University of Tasmania" .
-<http://sdw.org/grid.1009.8> <http://grid.com/#website> "http://www.utas.edu.au/" .
-<http://sdw.org/grid.1009.8> <http://grid.com/#wikipedia> "http://en.wikipedia.org/wiki/University_of_Tasmania" .
-<http://sdw.org/grid.1009.8> <http://grid.com/#establishment> "1890"^^<http://www.w3.org/2001/XMLSchema#gYear> .
 <http://sdw.org/grid.1010.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Education> .
 <http://sdw.org/grid.1010.0> <http://schema.org/name> "University of Adelaide" .
-<http://sdw.org/grid.1010.0> <http://grid.com/#website> "http://www.adelaide.edu.au/" .
-<http://sdw.org/grid.1010.0> <http://grid.com/#wikipedia> "http://en.wikipedia.org/wiki/University_of_Adelaide" .
-<http://sdw.org/grid.1010.0> <http://grid.com/#establishment> "1874"^^<http://www.w3.org/2001/XMLSchema#gYear> .
 <http://sdw.org/grid.1011.1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Education> .
 <http://sdw.org/grid.1011.1> <http://schema.org/name> "James Cook University" .
-<http://sdw.org/grid.1011.1> <http://grid.com/#website> "http://www.jcu.edu.au/" .
-<http://sdw.org/grid.1011.1> <http://grid.com/#wikipedia> "http://en.wikipedia.org/wiki/James_Cook_University" .
-<http://sdw.org/grid.1011.1> <http://grid.com/#establishment> "1961"^^<http://www.w3.org/2001/XMLSchema#gYear> .
 <http://sdw.org/grid.1012.2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Education> .
 <http://sdw.org/grid.1012.2> <http://schema.org/name> "University of Western Australia" .
-<http://sdw.org/grid.1012.2> <http://grid.com/#website> "http://www.uwa.edu.au/" .
-<http://sdw.org/grid.1012.2> <http://grid.com/#wikipedia> "http://en.wikipedia.org/wiki/University_of_Western_Australia" .
-<http://sdw.org/grid.1012.2> <http://grid.com/#establishment> "1911"^^<http://www.w3.org/2001/XMLSchema#gYear> .
 <http://sdw.org/grid.1013.3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Education> .
 <http://sdw.org/grid.1013.3> <http://schema.org/name> "University of Sydney" .
-<http://sdw.org/grid.1013.3> <http://grid.com/#website> "http://sydney.edu.au/" .
-<http://sdw.org/grid.1013.3> <http://grid.com/#wikipedia> "http://en.wikipedia.org/wiki/University_of_Sydney" .
-<http://sdw.org/grid.1013.3> <http://grid.com/#establishment> "1850"^^<http://www.w3.org/2001/XMLSchema#gYear> .
 <http://sdw.org/grid.1014.4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Education> .
 <http://sdw.org/grid.1014.4> <http://schema.org/name> "Flinders University" .
-<http://sdw.org/grid.1014.4> <http://grid.com/#website> "http://www.flinders.edu.au/" .
-<http://sdw.org/grid.1014.4> <http://grid.com/#wikipedia> "http://en.wikipedia.org/wiki/Flinders_University" .
-<http://sdw.org/grid.1014.4> <http://grid.com/#establishment> "1966"^^<http://www.w3.org/2001/XMLSchema#gYear> .
 <http://sdw.org/grid.1016.6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Education> .
 <http://sdw.org/grid.1016.6> <http://schema.org/name> "Commonwealth Scientific and Industrial Research Organisation (CSIRO)" .
-<http://sdw.org/grid.1016.6> <http://grid.com/#website> "http://www.csiro.au/" .
-<http://sdw.org/grid.1016.6> <http://grid.com/#wikipedia> "http://en.wikipedia.org/wiki/Commonwealth_Scientific_and_Industrial_Research_Organisation" .
-<http://sdw.org/grid.1016.6> <http://grid.com/#establishment> "1926"^^<http://www.w3.org/2001/XMLSchema#gYear> .
 <http://sdw.org/grid.1017.7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Education> .
 <http://sdw.org/grid.1017.7> <http://schema.org/name> "Royal Melbourne Institute of Technology University" .
-<http://sdw.org/grid.1017.7> <http://grid.com/#website> "https://www.rmit.edu.au/" .
-<http://sdw.org/grid.1017.7> <http://grid.com/#wikipedia> "http://en.wikipedia.org/wiki/RMIT_University" .
-<http://sdw.org/grid.1017.7> <http://grid.com/#establishment> "1887"^^<http://www.w3.org/2001/XMLSchema#gYear> .
 <http://sdw.org/grid.1018.8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Education> .
 <http://sdw.org/grid.1018.8> <http://schema.org/name> "La Trobe University" .
-<http://sdw.org/grid.1018.8> <http://grid.com/#website> "http://www.latrobe.edu.au/" .
-<http://sdw.org/grid.1018.8> <http://grid.com/#wikipedia> "http://en.wikipedia.org/wiki/La_Trobe_University" .
-<http://sdw.org/grid.1018.8> <http://grid.com/#establishment> "1964"^^<http://www.w3.org/2001/XMLSchema#gYear> .
 <http://sdw.org/grid.1019.9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Education> .
 <http://sdw.org/grid.1019.9> <http://schema.org/name> "Victoria University" .
-<http://sdw.org/grid.1019.9> <http://grid.com/#website> "http://www.vu.edu.au/" .
-<http://sdw.org/grid.1019.9> <http://grid.com/#wikipedia> "http://en.wikipedia.org/wiki/Victoria_University,_Australia" .
-<http://sdw.org/grid.1019.9> <http://grid.com/#establishment> "1916"^^<http://www.w3.org/2001/XMLSchema#gYear> .

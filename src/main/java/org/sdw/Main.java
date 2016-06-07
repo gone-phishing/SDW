@@ -75,7 +75,7 @@ public class Main
 		RMLmapper rmlMapper = new RMLmapper(ingestionConfig.commonRdfFormat);
 		for (Configuration cfg : PeriodicScheduler.scheduleQueue)
 		{
-			rmlMapper.execute(cfg);
+			rmlMapper.parallelExecutor(cfg,1);
 		}
 		LOG.info("Mapping stage complete!");
 		

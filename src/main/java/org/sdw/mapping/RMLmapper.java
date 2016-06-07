@@ -21,6 +21,9 @@ package org.sdw.mapping;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.InputStreamReader;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 import org.apache.commons.configuration2.Configuration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -47,9 +50,20 @@ public class RMLmapper implements RDFmapper
 	 * Calls the interface's execute method with params set
 	 * @param config : Config of the dataset
 	 */
-	public void execute(Configuration config)
+	public void parallelExecutor(Configuration config, int numThreads)
 	{
-		execute(config.getString("sourceFile"), config.getString("mappingFile"), config.getString("outputFile"));
+		ExecutorService executor = Executors.newCachedThreadPool();
+		for(int i=0; i< numThreads; i++)
+		{
+			executor.execute(new Runnable() 
+			{
+				@Override
+				public void run()
+				{
+					execute(config.getString("sourceFile"), config.getString("mappingFile"), config.getString("outputFile"));
+				}
+			});
+		}
 	}
 	
 	/**
@@ -74,6 +88,7 @@ public class RMLmapper implements RDFmapper
 		{
 			LOG.info(res[1]);
 		}
+		
 	}
 	
 	/**

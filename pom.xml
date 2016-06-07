@@ -133,6 +133,12 @@ under the License.
 			<version>1.7.21</version>
 		</dependency>
 		
+		<dependency>
+  			<groupId>biz.paluch.redis</groupId>
+  			<artifactId>lettuce</artifactId>
+  			<version>4.1.2.Final</version>
+		</dependency>
+		
 	</dependencies>
 
 	<build>

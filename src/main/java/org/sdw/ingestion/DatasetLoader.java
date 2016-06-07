@@ -53,6 +53,7 @@ public class DatasetLoader
 	
 	/**
 	 * Default constructor that separates the valid datasets from invalid ones
+	 * @param ic : Ingestion configuration parameters
 	 */
 	public DatasetLoader(IngestionConfig ic)
 	{

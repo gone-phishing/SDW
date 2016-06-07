@@ -18,31 +18,6 @@
     	rr:class schema:Education;
     	rr:graphMap [ rr:constant ex:Graph ];
     ];
-
-    rr:predicateObjectMap [
-    	rr:predicate grid:website;
-    	rr:objectMap [
-    		rml:reference "links"
-    	];
-    	rr:graphMap [ rr:constant ex:Graph ];
-    ];
-
-	rr:predicateObjectMap [
-    	rr:predicate grid:wikipedia;
-    	rr:objectMap [
-    		rml:reference "wikipedia_url"
-    	];
-    	rr:graphMap [ rr:constant ex:Graph ];
-    ];
-    
-    rr:predicateObjectMap [
-    	rr:predicate grid:establishment;
-    	rr:objectMap [
-    		rml:reference "established";
-    		rr:datatype xsd:gYear;
-    	];
-    	rr:graphMap [ rr:constant ex:Graph ];
-    ];
     
     rr:predicateObjectMap [
     	rr:predicate schema:name;
