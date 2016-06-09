@@ -36,3 +36,7 @@ Smart Data Web is a BMWi funded project. The central goal of the Smart Data Web 
 **Code Quality:**
 
 Sonarqube has been used for dependency analysis and maintaining the code quality. If the sonarqube server is running during maven build time, the quality report generated can be accessed on [http://localhost:9000](http://localhost:9000)
+
+**License:**
+
+The project has been released under Apache Software License 2.0
