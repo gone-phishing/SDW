@@ -229,13 +229,13 @@ under the License.
 								</excludes>
 							</artifactSet>
 							<filters>
-								<!-- <filter>
+								 <filter>
 									<artifact>org.apache.flink:*</artifact>
 									<excludes>
 										<exclude>org/apache/flink/shaded/**</exclude>
 										<exclude>web-docs/**</exclude>
 									</excludes>
-								</filter>  -->
+								</filter>  
 								<filter>
 									<!-- Do not copy the signatures in the META-INF folder.
 									Otherwise, this might cause SecurityExceptions when using the JAR. -->

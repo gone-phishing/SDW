@@ -50,6 +50,7 @@ public class PeriodicScheduler
 	public PeriodicScheduler()
 	{
 		scheduleQueue = new LinkedList<>();
+		// TODO Add switch to disable scheduler
 //		try
 //		{
 //			LOG.info("trying to get url");

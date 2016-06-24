@@ -1,318 +1,850 @@
-2016-06-07 16:06:12 INFO  JenaModel:78 - RDF dataset loaded to memory
-2016-06-07 16:06:12 INFO  NameResolution:54 - Inside NameResolution
-2016-06-07 16:06:12 INFO  ExecutionEnvironment:1037 - The job has 0 registered types and 0 default Kryo serializers
-2016-06-07 16:06:13 INFO  FlinkMiniCluster:240 - Starting FlinkMiniCluster.
-2016-06-07 16:06:13 INFO  Slf4jLogger:80 - Slf4jLogger started
-2016-06-07 16:06:13 INFO  BlobServer:97 - Created BLOB server storage directory /tmp/blobStore-03125508-851d-4ac6-b912-918e0540ab19
-2016-06-07 16:06:13 INFO  BlobServer:164 - Started BLOB server at 0.0.0.0:48649 - max concurrent requests: 50 - max backlog: 1000
-2016-06-07 16:06:13 INFO  SavepointStoreFactory:63 - Using job manager savepoint state backend.
-2016-06-07 16:06:13 INFO  MemoryArchivist:128 - Started memory archivist akka://flink/user/archive_1
-2016-06-07 16:06:13 INFO  JobManager:128 - Starting JobManager at akka://flink/user/jobmanager_1.
-2016-06-07 16:06:13 INFO  JobManager:128 - JobManager akka://flink/user/jobmanager_1 was granted leadership with leader session ID None.
-2016-06-07 16:06:13 INFO  TaskManager:128 - Messages between TaskManager and JobManager have a max timeout of 10000 milliseconds
-2016-06-07 16:06:13 INFO  TaskManager:128 - Temporary file directory '/tmp': total 226 GB, usable 181 GB (80.09% usable)
-2016-06-07 16:06:13 INFO  NetworkBufferPool:121 - Allocated 64 MB for network buffer pool (number of memory segments: 2048, bytes per segment: 32768).
-2016-06-07 16:06:13 INFO  TaskManager:128 - Limiting managed memory to 565 MB, memory will be allocated lazily.
-2016-06-07 16:06:13 INFO  IOManager:94 - I/O manager uses directory /tmp/flink-io-37c5aea0-ac07-4791-8e32-18eba7894c95 for spill files.
-2016-06-07 16:06:13 INFO  FileCache:88 - User file cache uses directory /tmp/flink-dist-cache-cf5ea2f2-dc66-4ece-ae38-9aeede1b854c
-2016-06-07 16:06:13 INFO  TaskManager:128 - Starting TaskManager actor at akka://flink/user/taskmanager_1#1007010377.
-2016-06-07 16:06:13 INFO  TaskManager:128 - TaskManager data connection information: localhost (dataPort=39358)
-2016-06-07 16:06:13 INFO  TaskManager:128 - TaskManager has 8 task slot(s).
-2016-06-07 16:06:13 INFO  TaskManager:128 - Memory usage stats: [HEAP: 103/142/1755 MB, NON HEAP: 43/44/-1 MB (used/committed/max)]
-2016-06-07 16:06:13 INFO  TaskManager:128 - Trying to register at JobManager akka://flink/user/jobmanager_1 (attempt 1, timeout: 500 milliseconds)
-2016-06-07 16:06:13 INFO  InstanceManager:179 - Registered TaskManager at localhost (akka://flink/user/taskmanager_1) as eac6241562c1eda20d1176518a2d71d4. Current number of registered hosts is 1. Current number of alive task slots is 8.
-2016-06-07 16:06:13 INFO  TaskManager:128 - Successful registration at JobManager (akka://flink/user/jobmanager_1), starting network stack and library cache.
-2016-06-07 16:06:13 INFO  TaskManager:128 - Determined BLOB server address to be localhost/127.0.0.1:48649. Starting BLOB cache.
-2016-06-07 16:06:13 INFO  BlobCache:70 - Created BLOB cache storage directory /tmp/blobStore-c3268e3b-2633-415d-a0a4-8a193e97500a
-2016-06-07 16:06:13 INFO  JobClientActor:318 - Disconnect from JobManager null.
-2016-06-07 16:06:13 INFO  JobClientActor:168 - Received job Flink Java Job at Tue Jun 07 16:06:12 CEST 2016 (dec3629cbc33feb024fb618ca758f3b4).
-2016-06-07 16:06:13 INFO  JobClientActor:389 - Could not submit job Flink Java Job at Tue Jun 07 16:06:12 CEST 2016 (dec3629cbc33feb024fb618ca758f3b4), because there is no connection to a JobManager.
-2016-06-07 16:06:13 INFO  JobClientActor:326 - Connect to JobManager Actor[akka://flink/user/jobmanager_1#1093114394].
-2016-06-07 16:06:13 INFO  JobClientActor:331 - Connected to new JobManager akka://flink/user/jobmanager_1.
-2016-06-07 16:06:13 INFO  JobClientActor:341 - Sending message to JobManager akka://flink/user/jobmanager_1 to submit job Flink Java Job at Tue Jun 07 16:06:12 CEST 2016 (dec3629cbc33feb024fb618ca758f3b4) and wait for progress
-2016-06-07 16:06:13 INFO  JobClientActor:349 - Upload jar files to job manager akka://flink/user/jobmanager_1.
-2016-06-07 16:06:13 INFO  JobClientActor:367 - Submit job to the job manager akka://flink/user/jobmanager_1.
-2016-06-07 16:06:13 INFO  JobManager:128 - Submitting job dec3629cbc33feb024fb618ca758f3b4 (Flink Java Job at Tue Jun 07 16:06:12 CEST 2016).
-2016-06-07 16:06:13 INFO  JobManager:128 - Using restart strategy NoRestartStrategy for dec3629cbc33feb024fb618ca758f3b4.
-2016-06-07 16:06:13 INFO  JobManager:128 - Scheduling job dec3629cbc33feb024fb618ca758f3b4 (Flink Java Job at Tue Jun 07 16:06:12 CEST 2016).
-2016-06-07 16:06:13 INFO  JobClientActor:211 - Job was successfully submitted to the JobManager akka://flink/user/jobmanager_1.
-2016-06-07 16:06:13 INFO  JobClientActor:291 - 06/07/2016 16:06:13	Job execution switched to status RUNNING.
-2016-06-07 16:06:13 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (1/8) (d49ce8b5bdf6f9ab23e810960528fdc1) switched from CREATED to SCHEDULED
-2016-06-07 16:06:13 INFO  JobClientActor:281 - 06/07/2016 16:06:13	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(1/8) switched to SCHEDULED 
-2016-06-07 16:06:13 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (1/8) (d49ce8b5bdf6f9ab23e810960528fdc1) switched from SCHEDULED to DEPLOYING
-2016-06-07 16:06:13 INFO  ExecutionGraph:363 - Deploying CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (1/8) (attempt #0) to localhost
-2016-06-07 16:06:13 INFO  JobClientActor:281 - 06/07/2016 16:06:13	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(1/8) switched to DEPLOYING 
-2016-06-07 16:06:13 INFO  JobManager:137 - Status of job dec3629cbc33feb024fb618ca758f3b4 (Flink Java Job at Tue Jun 07 16:06:12 CEST 2016) changed to RUNNING.
-2016-06-07 16:06:13 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (2/8) (923cf4c8058d986b5068ad37cd30c66e) switched from CREATED to SCHEDULED
-2016-06-07 16:06:13 INFO  JobClientActor:281 - 06/07/2016 16:06:13	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(2/8) switched to SCHEDULED 
-2016-06-07 16:06:13 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (2/8) (923cf4c8058d986b5068ad37cd30c66e) switched from SCHEDULED to DEPLOYING
-2016-06-07 16:06:13 INFO  ExecutionGraph:363 - Deploying CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (2/8) (attempt #0) to localhost
-2016-06-07 16:06:13 INFO  JobClientActor:281 - 06/07/2016 16:06:13	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(2/8) switched to DEPLOYING 
-2016-06-07 16:06:13 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (3/8) (266d73d8dcbae03cf96e4763e2f8f1c5) switched from CREATED to SCHEDULED
-2016-06-07 16:06:13 INFO  JobClientActor:281 - 06/07/2016 16:06:13	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(3/8) switched to SCHEDULED 
-2016-06-07 16:06:13 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (3/8) (266d73d8dcbae03cf96e4763e2f8f1c5) switched from SCHEDULED to DEPLOYING
-2016-06-07 16:06:13 INFO  ExecutionGraph:363 - Deploying CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (3/8) (attempt #0) to localhost
-2016-06-07 16:06:13 INFO  JobClientActor:281 - 06/07/2016 16:06:13	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(3/8) switched to DEPLOYING 
-2016-06-07 16:06:13 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (4/8) (d3e421289a5c01d0f1ef3d44580d63ac) switched from CREATED to SCHEDULED
-2016-06-07 16:06:13 INFO  JobClientActor:281 - 06/07/2016 16:06:13	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(4/8) switched to SCHEDULED 
-2016-06-07 16:06:13 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (4/8) (d3e421289a5c01d0f1ef3d44580d63ac) switched from SCHEDULED to DEPLOYING
-2016-06-07 16:06:13 INFO  JobClientActor:281 - 06/07/2016 16:06:13	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(4/8) switched to DEPLOYING 
-2016-06-07 16:06:13 INFO  ExecutionGraph:363 - Deploying CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (4/8) (attempt #0) to localhost
-2016-06-07 16:06:13 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (5/8) (e638028fdeabe6da85b34bb830250aae) switched from CREATED to SCHEDULED
-2016-06-07 16:06:13 INFO  JobClientActor:281 - 06/07/2016 16:06:13	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(5/8) switched to SCHEDULED 
-2016-06-07 16:06:13 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (5/8) (e638028fdeabe6da85b34bb830250aae) switched from SCHEDULED to DEPLOYING
-2016-06-07 16:06:13 INFO  ExecutionGraph:363 - Deploying CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (5/8) (attempt #0) to localhost
-2016-06-07 16:06:13 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6/8) (6ec0a6f72e77ce96195530d1c7d31078) switched from CREATED to SCHEDULED
-2016-06-07 16:06:13 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6/8) (6ec0a6f72e77ce96195530d1c7d31078) switched from SCHEDULED to DEPLOYING
-2016-06-07 16:06:13 INFO  JobClientActor:281 - 06/07/2016 16:06:13	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(5/8) switched to DEPLOYING 
-2016-06-07 16:06:13 INFO  ExecutionGraph:363 - Deploying CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6/8) (attempt #0) to localhost
-2016-06-07 16:06:13 INFO  JobClientActor:281 - 06/07/2016 16:06:13	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(6/8) switched to SCHEDULED 
-2016-06-07 16:06:13 INFO  JobClientActor:281 - 06/07/2016 16:06:13	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(6/8) switched to DEPLOYING 
-2016-06-07 16:06:13 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (7/8) (cdaeb4d9c09afa3ecae61e58a0fd9a5c) switched from CREATED to SCHEDULED
-2016-06-07 16:06:13 INFO  JobClientActor:281 - 06/07/2016 16:06:13	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(7/8) switched to SCHEDULED 
-2016-06-07 16:06:13 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (7/8) (cdaeb4d9c09afa3ecae61e58a0fd9a5c) switched from SCHEDULED to DEPLOYING
-2016-06-07 16:06:13 INFO  JobClientActor:281 - 06/07/2016 16:06:13	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(7/8) switched to DEPLOYING 
-2016-06-07 16:06:13 INFO  ExecutionGraph:363 - Deploying CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (7/8) (attempt #0) to localhost
-2016-06-07 16:06:13 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (8/8) (b737c8cd39936996b79cfc46d23c19d1) switched from CREATED to SCHEDULED
-2016-06-07 16:06:13 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (8/8) (b737c8cd39936996b79cfc46d23c19d1) switched from SCHEDULED to DEPLOYING
-2016-06-07 16:06:13 INFO  JobClientActor:281 - 06/07/2016 16:06:13	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(8/8) switched to SCHEDULED 
-2016-06-07 16:06:13 INFO  ExecutionGraph:363 - Deploying CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (8/8) (attempt #0) to localhost
-2016-06-07 16:06:13 INFO  JobClientActor:281 - 06/07/2016 16:06:13	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(8/8) switched to DEPLOYING 
-2016-06-07 16:06:13 INFO  TaskManager:128 - Received task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (1/8)
-2016-06-07 16:06:13 INFO  Task:451 - Loading JAR files for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (1/8)
-2016-06-07 16:06:13 INFO  Task:468 - Registering task at network: CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (1/8) [DEPLOYING]
-2016-06-07 16:06:13 INFO  TaskManager:128 - Received task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (2/8)
-2016-06-07 16:06:13 INFO  Task:451 - Loading JAR files for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (2/8)
-2016-06-07 16:06:13 INFO  TaskManager:128 - Received task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (3/8)
-2016-06-07 16:06:13 INFO  Task:468 - Registering task at network: CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (2/8) [DEPLOYING]
-2016-06-07 16:06:13 INFO  TaskManager:128 - Received task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (4/8)
-2016-06-07 16:06:13 INFO  Task:451 - Loading JAR files for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (4/8)
-2016-06-07 16:06:13 INFO  Task:468 - Registering task at network: CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (4/8) [DEPLOYING]
-2016-06-07 16:06:13 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (1/8) switched to RUNNING
-2016-06-07 16:06:13 INFO  TaskManager:128 - Received task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (5/8)
-2016-06-07 16:06:13 INFO  TaskManager:128 - Received task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6/8)
-2016-06-07 16:06:13 INFO  Task:451 - Loading JAR files for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (5/8)
-2016-06-07 16:06:13 INFO  Task:468 - Registering task at network: CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (5/8) [DEPLOYING]
-2016-06-07 16:06:13 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (5/8) switched to RUNNING
-2016-06-07 16:06:13 INFO  Task:451 - Loading JAR files for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6/8)
-2016-06-07 16:06:13 INFO  Task:468 - Registering task at network: CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6/8) [DEPLOYING]
-2016-06-07 16:06:13 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6/8) switched to RUNNING
-2016-06-07 16:06:13 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (2/8) switched to RUNNING
-2016-06-07 16:06:13 INFO  Task:451 - Loading JAR files for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (3/8)
-2016-06-07 16:06:13 INFO  TaskManager:128 - Received task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (7/8)
-2016-06-07 16:06:13 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (4/8) switched to RUNNING
-2016-06-07 16:06:13 INFO  Task:451 - Loading JAR files for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (7/8)
-2016-06-07 16:06:13 INFO  TaskManager:128 - Received task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (8/8)
-2016-06-07 16:06:13 INFO  Task:451 - Loading JAR files for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (8/8)
-2016-06-07 16:06:13 INFO  Task:468 - Registering task at network: CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (8/8) [DEPLOYING]
-2016-06-07 16:06:13 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (8/8) switched to RUNNING
-2016-06-07 16:06:13 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (1/8) (d49ce8b5bdf6f9ab23e810960528fdc1) switched from DEPLOYING to RUNNING
-2016-06-07 16:06:13 INFO  JobClientActor:281 - 06/07/2016 16:06:13	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(1/8) switched to RUNNING 
-2016-06-07 16:06:13 INFO  Task:468 - Registering task at network: CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (3/8) [DEPLOYING]
-2016-06-07 16:06:13 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (3/8) switched to RUNNING
-2016-06-07 16:06:13 INFO  Task:468 - Registering task at network: CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (7/8) [DEPLOYING]
-2016-06-07 16:06:13 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (7/8) switched to RUNNING
-2016-06-07 16:06:13 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (5/8) (e638028fdeabe6da85b34bb830250aae) switched from DEPLOYING to RUNNING
-2016-06-07 16:06:13 INFO  JobClientActor:281 - 06/07/2016 16:06:13	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(5/8) switched to RUNNING 
-2016-06-07 16:06:13 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6/8) (6ec0a6f72e77ce96195530d1c7d31078) switched from DEPLOYING to RUNNING
-2016-06-07 16:06:13 INFO  JobClientActor:281 - 06/07/2016 16:06:13	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(6/8) switched to RUNNING 
-2016-06-07 16:06:13 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (7/8) (cdaeb4d9c09afa3ecae61e58a0fd9a5c) switched from DEPLOYING to RUNNING
-2016-06-07 16:06:13 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (4/8) (d3e421289a5c01d0f1ef3d44580d63ac) switched from DEPLOYING to RUNNING
-2016-06-07 16:06:13 INFO  LocatableInputSplitAssigner:186 - Assigning remote split to host localhost
-2016-06-07 16:06:13 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (2/8) (923cf4c8058d986b5068ad37cd30c66e) switched from DEPLOYING to RUNNING
-2016-06-07 16:06:13 INFO  JobClientActor:281 - 06/07/2016 16:06:13	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(7/8) switched to RUNNING 
-2016-06-07 16:06:13 INFO  JobClientActor:281 - 06/07/2016 16:06:13	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(4/8) switched to RUNNING 
-2016-06-07 16:06:13 INFO  JobClientActor:281 - 06/07/2016 16:06:13	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(2/8) switched to RUNNING 
-2016-06-07 16:06:13 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (3/8) (266d73d8dcbae03cf96e4763e2f8f1c5) switched from DEPLOYING to RUNNING
-2016-06-07 16:06:13 INFO  LocatableInputSplitAssigner:186 - Assigning remote split to host localhost
-2016-06-07 16:06:13 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (8/8) (b737c8cd39936996b79cfc46d23c19d1) switched from DEPLOYING to RUNNING
-2016-06-07 16:06:13 INFO  JobClientActor:281 - 06/07/2016 16:06:13	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(3/8) switched to RUNNING 
-2016-06-07 16:06:13 INFO  LocatableInputSplitAssigner:186 - Assigning remote split to host localhost
-2016-06-07 16:06:13 INFO  JobClientActor:281 - 06/07/2016 16:06:13	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(8/8) switched to RUNNING 
-2016-06-07 16:06:13 INFO  LocatableInputSplitAssigner:186 - Assigning remote split to host localhost
-2016-06-07 16:06:13 INFO  LocatableInputSplitAssigner:186 - Assigning remote split to host localhost
-2016-06-07 16:06:13 INFO  LocatableInputSplitAssigner:186 - Assigning remote split to host localhost
-2016-06-07 16:06:13 INFO  LocatableInputSplitAssigner:186 - Assigning remote split to host localhost
-2016-06-07 16:06:13 INFO  LocatableInputSplitAssigner:186 - Assigning remote split to host localhost
-2016-06-07 16:06:13 INFO  ExecutionGraph:978 - DataSink (collect()) (1/8) (ae5d220ff1b5c327167b88fed7315b34) switched from CREATED to SCHEDULED
-2016-06-07 16:06:13 INFO  ExecutionGraph:978 - DataSink (collect()) (2/8) (c5efa3f3f941a761ee3b7b4b187f2cf0) switched from CREATED to SCHEDULED
-2016-06-07 16:06:13 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (4/8) switched to FINISHED
-2016-06-07 16:06:13 INFO  ExecutionGraph:978 - DataSink (collect()) (1/8) (ae5d220ff1b5c327167b88fed7315b34) switched from SCHEDULED to DEPLOYING
-2016-06-07 16:06:13 INFO  JobClientActor:281 - 06/07/2016 16:06:13	DataSink (collect())(1/8) switched to SCHEDULED 
-2016-06-07 16:06:13 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (3/8) switched to FINISHED
-2016-06-07 16:06:13 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (5/8) switched to FINISHED
-2016-06-07 16:06:13 INFO  JobClientActor:281 - 06/07/2016 16:06:13	DataSink (collect())(2/8) switched to SCHEDULED 
-2016-06-07 16:06:13 INFO  Task:647 - Freeing task resources for CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (3/8)
-2016-06-07 16:06:13 INFO  ExecutionGraph:363 - Deploying DataSink (collect()) (1/8) (attempt #0) to localhost
-2016-06-07 16:06:13 INFO  ExecutionGraph:978 - DataSink (collect()) (2/8) (c5efa3f3f941a761ee3b7b4b187f2cf0) switched from SCHEDULED to DEPLOYING
-2016-06-07 16:06:13 INFO  Task:647 - Freeing task resources for CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (4/8)
-2016-06-07 16:06:13 INFO  ExecutionGraph:363 - Deploying DataSink (collect()) (2/8) (attempt #0) to localhost
-2016-06-07 16:06:13 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (266d73d8dcbae03cf96e4763e2f8f1c5)
-2016-06-07 16:06:13 INFO  ExecutionGraph:978 - DataSink (collect()) (5/8) (7538dd3323e6c6d873f59a546dec243b) switched from CREATED to SCHEDULED
-2016-06-07 16:06:13 INFO  ExecutionGraph:978 - DataSink (collect()) (5/8) (7538dd3323e6c6d873f59a546dec243b) switched from SCHEDULED to DEPLOYING
-2016-06-07 16:06:13 INFO  ExecutionGraph:363 - Deploying DataSink (collect()) (5/8) (attempt #0) to localhost
-2016-06-07 16:06:13 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (1/8) switched to FINISHED
-2016-06-07 16:06:13 INFO  Task:647 - Freeing task resources for CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (1/8)
-2016-06-07 16:06:13 INFO  ExecutionGraph:978 - DataSink (collect()) (4/8) (f4a8aa894f25a5e9a112f74854a40ef9) switched from CREATED to SCHEDULED
-2016-06-07 16:06:14 INFO  ExecutionGraph:978 - DataSink (collect()) (4/8) (f4a8aa894f25a5e9a112f74854a40ef9) switched from SCHEDULED to DEPLOYING
-2016-06-07 16:06:14 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6/8) switched to FINISHED
-2016-06-07 16:06:13 INFO  JobClientActor:281 - 06/07/2016 16:06:13	DataSink (collect())(1/8) switched to DEPLOYING 
-2016-06-07 16:06:14 INFO  ExecutionGraph:978 - DataSink (collect()) (8/8) (24a72146d5544ee8ec8cacb983dcd171) switched from CREATED to SCHEDULED
-2016-06-07 16:06:13 INFO  Task:647 - Freeing task resources for CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (5/8)
-2016-06-07 16:06:14 INFO  ExecutionGraph:978 - DataSink (collect()) (8/8) (24a72146d5544ee8ec8cacb983dcd171) switched from SCHEDULED to DEPLOYING
-2016-06-07 16:06:14 INFO  ExecutionGraph:978 - DataSink (collect()) (6/8) (8b75b25961aaab7bddd329d410d598cc) switched from CREATED to SCHEDULED
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:13	DataSink (collect())(2/8) switched to DEPLOYING 
-2016-06-07 16:06:14 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (8/8) switched to FINISHED
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:13	DataSink (collect())(5/8) switched to SCHEDULED 
-2016-06-07 16:06:14 INFO  Task:647 - Freeing task resources for CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6/8)
-2016-06-07 16:06:14 INFO  ExecutionGraph:363 - Deploying DataSink (collect()) (4/8) (attempt #0) to localhost
-2016-06-07 16:06:13 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (7/8) switched to FINISHED
-2016-06-07 16:06:14 INFO  Task:647 - Freeing task resources for CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (7/8)
-2016-06-07 16:06:13 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (2/8) switched to FINISHED
-2016-06-07 16:06:13 INFO  ExecutionGraph:978 - DataSink (collect()) (3/8) (d55ad3947d021a027d090c4692b906b9) switched from CREATED to SCHEDULED
-2016-06-07 16:06:14 INFO  Task:647 - Freeing task resources for CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (2/8)
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:13	DataSink (collect())(5/8) switched to DEPLOYING 
-2016-06-07 16:06:14 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (d3e421289a5c01d0f1ef3d44580d63ac)
-2016-06-07 16:06:14 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (d49ce8b5bdf6f9ab23e810960528fdc1)
-2016-06-07 16:06:14 INFO  Task:647 - Freeing task resources for CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (8/8)
-2016-06-07 16:06:14 INFO  ExecutionGraph:978 - DataSink (collect()) (6/8) (8b75b25961aaab7bddd329d410d598cc) switched from SCHEDULED to DEPLOYING
-2016-06-07 16:06:14 INFO  ExecutionGraph:363 - Deploying DataSink (collect()) (8/8) (attempt #0) to localhost
-2016-06-07 16:06:14 INFO  ExecutionGraph:978 - DataSink (collect()) (7/8) (89463ff391bb93a9e40eeb883fdc849f) switched from CREATED to SCHEDULED
-2016-06-07 16:06:14 INFO  ExecutionGraph:978 - DataSink (collect()) (7/8) (89463ff391bb93a9e40eeb883fdc849f) switched from SCHEDULED to DEPLOYING
-2016-06-07 16:06:14 INFO  ExecutionGraph:363 - Deploying DataSink (collect()) (7/8) (attempt #0) to localhost
-2016-06-07 16:06:14 INFO  ExecutionGraph:363 - Deploying DataSink (collect()) (6/8) (attempt #0) to localhost
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	DataSink (collect())(4/8) switched to SCHEDULED 
-2016-06-07 16:06:14 INFO  ExecutionGraph:978 - DataSink (collect()) (3/8) (d55ad3947d021a027d090c4692b906b9) switched from SCHEDULED to DEPLOYING
-2016-06-07 16:06:14 INFO  ExecutionGraph:363 - Deploying DataSink (collect()) (3/8) (attempt #0) to localhost
-2016-06-07 16:06:14 INFO  TaskManager:128 - Received task DataSink (collect()) (2/8)
-2016-06-07 16:06:14 INFO  Task:451 - Loading JAR files for task DataSink (collect()) (2/8)
-2016-06-07 16:06:14 INFO  TaskManager:128 - Received task DataSink (collect()) (5/8)
-2016-06-07 16:06:14 INFO  Task:451 - Loading JAR files for task DataSink (collect()) (5/8)
-2016-06-07 16:06:14 INFO  TaskManager:128 - Received task DataSink (collect()) (1/8)
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	DataSink (collect())(4/8) switched to DEPLOYING 
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	DataSink (collect())(8/8) switched to SCHEDULED 
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	DataSink (collect())(8/8) switched to DEPLOYING 
-2016-06-07 16:06:14 INFO  Task:468 - Registering task at network: DataSink (collect()) (5/8) [DEPLOYING]
-2016-06-07 16:06:14 INFO  Task:468 - Registering task at network: DataSink (collect()) (2/8) [DEPLOYING]
-2016-06-07 16:06:14 INFO  Task:859 - DataSink (collect()) (2/8) switched to RUNNING
-2016-06-07 16:06:14 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (e638028fdeabe6da85b34bb830250aae)
-2016-06-07 16:06:14 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (3/8) (266d73d8dcbae03cf96e4763e2f8f1c5) switched from RUNNING to FINISHED
-2016-06-07 16:06:14 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6ec0a6f72e77ce96195530d1c7d31078)
-2016-06-07 16:06:14 INFO  TaskManager:128 - Received task DataSink (collect()) (4/8)
-2016-06-07 16:06:14 INFO  Task:859 - DataSink (collect()) (5/8) switched to RUNNING
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	DataSink (collect())(6/8) switched to SCHEDULED 
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	DataSink (collect())(3/8) switched to SCHEDULED 
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	DataSink (collect())(6/8) switched to DEPLOYING 
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	DataSink (collect())(7/8) switched to SCHEDULED 
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	DataSink (collect())(7/8) switched to DEPLOYING 
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	DataSink (collect())(3/8) switched to DEPLOYING 
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(3/8) switched to FINISHED 
-2016-06-07 16:06:14 INFO  Task:451 - Loading JAR files for task DataSink (collect()) (1/8)
-2016-06-07 16:06:14 INFO  Task:468 - Registering task at network: DataSink (collect()) (1/8) [DEPLOYING]
-2016-06-07 16:06:14 INFO  Task:859 - DataSink (collect()) (1/8) switched to RUNNING
-2016-06-07 16:06:14 INFO  Task:451 - Loading JAR files for task DataSink (collect()) (4/8)
-2016-06-07 16:06:14 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (cdaeb4d9c09afa3ecae61e58a0fd9a5c)
-2016-06-07 16:06:14 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (923cf4c8058d986b5068ad37cd30c66e)
-2016-06-07 16:06:14 INFO  Task:468 - Registering task at network: DataSink (collect()) (4/8) [DEPLOYING]
-2016-06-07 16:06:14 INFO  Task:859 - DataSink (collect()) (4/8) switched to RUNNING
-2016-06-07 16:06:14 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (4/8) (d3e421289a5c01d0f1ef3d44580d63ac) switched from RUNNING to FINISHED
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(4/8) switched to FINISHED 
-2016-06-07 16:06:14 INFO  Task:859 - DataSink (collect()) (5/8) switched to FINISHED
-2016-06-07 16:06:14 INFO  Task:859 - DataSink (collect()) (1/8) switched to FINISHED
-2016-06-07 16:06:14 INFO  Task:647 - Freeing task resources for DataSink (collect()) (1/8)
-2016-06-07 16:06:14 INFO  Task:859 - DataSink (collect()) (4/8) switched to FINISHED
-2016-06-07 16:06:14 INFO  Task:647 - Freeing task resources for DataSink (collect()) (5/8)
-2016-06-07 16:06:14 INFO  Task:647 - Freeing task resources for DataSink (collect()) (4/8)
-2016-06-07 16:06:14 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (1/8) (d49ce8b5bdf6f9ab23e810960528fdc1) switched from RUNNING to FINISHED
-2016-06-07 16:06:14 INFO  Task:859 - DataSink (collect()) (2/8) switched to FINISHED
-2016-06-07 16:06:14 INFO  Task:647 - Freeing task resources for DataSink (collect()) (2/8)
-2016-06-07 16:06:14 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (b737c8cd39936996b79cfc46d23c19d1)
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(1/8) switched to FINISHED 
-2016-06-07 16:06:14 INFO  TaskManager:128 - Received task DataSink (collect()) (8/8)
-2016-06-07 16:06:14 INFO  Task:451 - Loading JAR files for task DataSink (collect()) (8/8)
-2016-06-07 16:06:14 INFO  TaskManager:128 - Received task DataSink (collect()) (7/8)
-2016-06-07 16:06:14 INFO  Task:468 - Registering task at network: DataSink (collect()) (8/8) [DEPLOYING]
-2016-06-07 16:06:14 INFO  Task:451 - Loading JAR files for task DataSink (collect()) (7/8)
-2016-06-07 16:06:14 INFO  TaskManager:128 - Received task DataSink (collect()) (6/8)
-2016-06-07 16:06:14 INFO  Task:859 - DataSink (collect()) (8/8) switched to RUNNING
-2016-06-07 16:06:14 INFO  Task:451 - Loading JAR files for task DataSink (collect()) (6/8)
-2016-06-07 16:06:14 INFO  Task:468 - Registering task at network: DataSink (collect()) (7/8) [DEPLOYING]
-2016-06-07 16:06:14 INFO  Task:468 - Registering task at network: DataSink (collect()) (6/8) [DEPLOYING]
-2016-06-07 16:06:14 INFO  TaskManager:128 - Received task DataSink (collect()) (3/8)
-2016-06-07 16:06:14 INFO  Task:859 - DataSink (collect()) (6/8) switched to RUNNING
-2016-06-07 16:06:14 INFO  Task:859 - DataSink (collect()) (7/8) switched to RUNNING
-2016-06-07 16:06:14 INFO  ExecutionGraph:978 - DataSink (collect()) (2/8) (c5efa3f3f941a761ee3b7b4b187f2cf0) switched from DEPLOYING to RUNNING
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	DataSink (collect())(2/8) switched to RUNNING 
-2016-06-07 16:06:14 INFO  Task:859 - DataSink (collect()) (8/8) switched to FINISHED
-2016-06-07 16:06:14 INFO  Task:647 - Freeing task resources for DataSink (collect()) (8/8)
-2016-06-07 16:06:14 INFO  Task:451 - Loading JAR files for task DataSink (collect()) (3/8)
-2016-06-07 16:06:14 INFO  Task:859 - DataSink (collect()) (7/8) switched to FINISHED
-2016-06-07 16:06:14 INFO  Task:647 - Freeing task resources for DataSink (collect()) (7/8)
-2016-06-07 16:06:14 INFO  Task:468 - Registering task at network: DataSink (collect()) (3/8) [DEPLOYING]
-2016-06-07 16:06:14 INFO  Task:859 - DataSink (collect()) (3/8) switched to RUNNING
-2016-06-07 16:06:14 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (5/8) (e638028fdeabe6da85b34bb830250aae) switched from RUNNING to FINISHED
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(5/8) switched to FINISHED 
-2016-06-07 16:06:14 INFO  ExecutionGraph:978 - DataSink (collect()) (1/8) (ae5d220ff1b5c327167b88fed7315b34) switched from DEPLOYING to RUNNING
-2016-06-07 16:06:14 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6/8) (6ec0a6f72e77ce96195530d1c7d31078) switched from RUNNING to FINISHED
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	DataSink (collect())(1/8) switched to RUNNING 
-2016-06-07 16:06:14 INFO  Task:859 - DataSink (collect()) (3/8) switched to FINISHED
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(6/8) switched to FINISHED 
-2016-06-07 16:06:14 INFO  Task:647 - Freeing task resources for DataSink (collect()) (3/8)
-2016-06-07 16:06:14 INFO  ExecutionGraph:978 - DataSink (collect()) (5/8) (7538dd3323e6c6d873f59a546dec243b) switched from DEPLOYING to RUNNING
-2016-06-07 16:06:14 INFO  Task:859 - DataSink (collect()) (6/8) switched to FINISHED
-2016-06-07 16:06:14 INFO  Task:647 - Freeing task resources for DataSink (collect()) (6/8)
-2016-06-07 16:06:14 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (7/8) (cdaeb4d9c09afa3ecae61e58a0fd9a5c) switched from RUNNING to FINISHED
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	DataSink (collect())(5/8) switched to RUNNING 
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(7/8) switched to FINISHED 
-2016-06-07 16:06:14 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (2/8) (923cf4c8058d986b5068ad37cd30c66e) switched from RUNNING to FINISHED
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(2/8) switched to FINISHED 
-2016-06-07 16:06:14 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task DataSink (collect()) (ae5d220ff1b5c327167b88fed7315b34)
-2016-06-07 16:06:14 INFO  ExecutionGraph:978 - DataSink (collect()) (4/8) (f4a8aa894f25a5e9a112f74854a40ef9) switched from DEPLOYING to RUNNING
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	DataSink (collect())(4/8) switched to RUNNING 
-2016-06-07 16:06:14 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task DataSink (collect()) (7538dd3323e6c6d873f59a546dec243b)
-2016-06-07 16:06:14 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task DataSink (collect()) (f4a8aa894f25a5e9a112f74854a40ef9)
-2016-06-07 16:06:14 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task DataSink (collect()) (c5efa3f3f941a761ee3b7b4b187f2cf0)
-2016-06-07 16:06:14 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (8/8) (b737c8cd39936996b79cfc46d23c19d1) switched from RUNNING to FINISHED
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(8/8) switched to FINISHED 
-2016-06-07 16:06:14 INFO  ExecutionGraph:978 - DataSink (collect()) (8/8) (24a72146d5544ee8ec8cacb983dcd171) switched from DEPLOYING to RUNNING
-2016-06-07 16:06:14 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task DataSink (collect()) (24a72146d5544ee8ec8cacb983dcd171)
-2016-06-07 16:06:14 INFO  ExecutionGraph:978 - DataSink (collect()) (7/8) (89463ff391bb93a9e40eeb883fdc849f) switched from DEPLOYING to RUNNING
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	DataSink (collect())(8/8) switched to RUNNING 
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	DataSink (collect())(7/8) switched to RUNNING 
-2016-06-07 16:06:14 INFO  ExecutionGraph:978 - DataSink (collect()) (6/8) (8b75b25961aaab7bddd329d410d598cc) switched from DEPLOYING to RUNNING
-2016-06-07 16:06:14 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task DataSink (collect()) (89463ff391bb93a9e40eeb883fdc849f)
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	DataSink (collect())(6/8) switched to RUNNING 
-2016-06-07 16:06:14 INFO  ExecutionGraph:978 - DataSink (collect()) (3/8) (d55ad3947d021a027d090c4692b906b9) switched from DEPLOYING to RUNNING
-2016-06-07 16:06:14 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task DataSink (collect()) (8b75b25961aaab7bddd329d410d598cc)
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	DataSink (collect())(3/8) switched to RUNNING 
-2016-06-07 16:06:14 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task DataSink (collect()) (d55ad3947d021a027d090c4692b906b9)
-2016-06-07 16:06:14 INFO  ExecutionGraph:978 - DataSink (collect()) (5/8) (7538dd3323e6c6d873f59a546dec243b) switched from RUNNING to FINISHED
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	DataSink (collect())(5/8) switched to FINISHED 
-2016-06-07 16:06:14 INFO  ExecutionGraph:978 - DataSink (collect()) (4/8) (f4a8aa894f25a5e9a112f74854a40ef9) switched from RUNNING to FINISHED
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	DataSink (collect())(4/8) switched to FINISHED 
-2016-06-07 16:06:14 INFO  ExecutionGraph:978 - DataSink (collect()) (1/8) (ae5d220ff1b5c327167b88fed7315b34) switched from RUNNING to FINISHED
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	DataSink (collect())(1/8) switched to FINISHED 
-2016-06-07 16:06:14 INFO  ExecutionGraph:978 - DataSink (collect()) (8/8) (24a72146d5544ee8ec8cacb983dcd171) switched from RUNNING to FINISHED
-2016-06-07 16:06:14 INFO  ExecutionGraph:978 - DataSink (collect()) (2/8) (c5efa3f3f941a761ee3b7b4b187f2cf0) switched from RUNNING to FINISHED
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	DataSink (collect())(8/8) switched to FINISHED 
-2016-06-07 16:06:14 INFO  ExecutionGraph:978 - DataSink (collect()) (7/8) (89463ff391bb93a9e40eeb883fdc849f) switched from RUNNING to FINISHED
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	DataSink (collect())(2/8) switched to FINISHED 
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	DataSink (collect())(7/8) switched to FINISHED 
-2016-06-07 16:06:14 INFO  ExecutionGraph:978 - DataSink (collect()) (3/8) (d55ad3947d021a027d090c4692b906b9) switched from RUNNING to FINISHED
-2016-06-07 16:06:14 INFO  ExecutionGraph:978 - DataSink (collect()) (6/8) (8b75b25961aaab7bddd329d410d598cc) switched from RUNNING to FINISHED
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	DataSink (collect())(3/8) switched to FINISHED 
-2016-06-07 16:06:14 INFO  JobClientActor:281 - 06/07/2016 16:06:14	DataSink (collect())(6/8) switched to FINISHED 
-2016-06-07 16:06:14 INFO  JobClientActor:291 - 06/07/2016 16:06:14	Job execution switched to status FINISHED.
-2016-06-07 16:06:14 INFO  JobManager:137 - Status of job dec3629cbc33feb024fb618ca758f3b4 (Flink Java Job at Tue Jun 07 16:06:12 CEST 2016) changed to FINISHED.
-2016-06-07 16:06:14 INFO  JobClientActor:406 - Terminate JobClientActor.
-2016-06-07 16:06:14 INFO  JobClient:150 - Job execution complete
-2016-06-07 16:06:14 INFO  JobClientActor:318 - Disconnect from JobManager Actor[akka://flink/user/jobmanager_1#1093114394].
-2016-06-07 16:06:14 INFO  FlinkMiniCluster:318 - Stopping FlinkMiniCluster.
-2016-06-07 16:06:14 INFO  TaskManager:128 - Stopping TaskManager akka://flink/user/taskmanager_1#1007010377.
-2016-06-07 16:06:14 INFO  JobManager:128 - Stopping JobManager akka://flink/user/jobmanager_1.
-2016-06-07 16:06:14 INFO  TaskManager:128 - Disassociating from JobManager
-2016-06-07 16:06:14 INFO  BlobCache:206 - Shutting down BlobCache
-2016-06-07 16:06:14 INFO  BlobServer:321 - Stopped BLOB server at 0.0.0.0:48649
-2016-06-07 16:06:14 INFO  IOManager:109 - I/O manager removed spill file directory /tmp/flink-io-37c5aea0-ac07-4791-8e32-18eba7894c95
-2016-06-07 16:06:14 INFO  TaskManager:128 - Task manager akka://flink/user/taskmanager_1 is completely shut down.
-2016-06-07 16:06:14 INFO  Main:109 - Finished!!
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(3/8) switched to SCHEDULED 
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (3/8) (f32b5b06f5fca04c4d20c8e6d631c30b) switched from SCHEDULED to DEPLOYING
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(3/8) switched to DEPLOYING 
+2016-06-24 18:14:56 INFO  ExecutionGraph:363 - Deploying CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (3/8) (attempt #0) to localhost
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (4/8) (6de92d8f938db895e4ed36a14a7de33e) switched from CREATED to SCHEDULED
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(4/8) switched to SCHEDULED 
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (4/8) (6de92d8f938db895e4ed36a14a7de33e) switched from SCHEDULED to DEPLOYING
+2016-06-24 18:14:56 INFO  ExecutionGraph:363 - Deploying CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (4/8) (attempt #0) to localhost
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(4/8) switched to DEPLOYING 
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (5/8) (56ad01fedf32beb64adc4d6d23986166) switched from CREATED to SCHEDULED
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(5/8) switched to SCHEDULED 
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (5/8) (56ad01fedf32beb64adc4d6d23986166) switched from SCHEDULED to DEPLOYING
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(5/8) switched to DEPLOYING 
+2016-06-24 18:14:56 INFO  ExecutionGraph:363 - Deploying CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (5/8) (attempt #0) to localhost
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6/8) (494aa7b911f2e84735240bd11d1a2a29) switched from CREATED to SCHEDULED
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(6/8) switched to SCHEDULED 
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6/8) (494aa7b911f2e84735240bd11d1a2a29) switched from SCHEDULED to DEPLOYING
+2016-06-24 18:14:56 INFO  ExecutionGraph:363 - Deploying CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6/8) (attempt #0) to localhost
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(6/8) switched to DEPLOYING 
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (7/8) (62ca7a173ae239c4717f5f662371edb0) switched from CREATED to SCHEDULED
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(7/8) switched to SCHEDULED 
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (7/8) (62ca7a173ae239c4717f5f662371edb0) switched from SCHEDULED to DEPLOYING
+2016-06-24 18:14:56 INFO  ExecutionGraph:363 - Deploying CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (7/8) (attempt #0) to localhost
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(7/8) switched to DEPLOYING 
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (8/8) (d12b6ae6782eff0d602d7359711f8c28) switched from CREATED to SCHEDULED
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(8/8) switched to SCHEDULED 
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (8/8) (d12b6ae6782eff0d602d7359711f8c28) switched from SCHEDULED to DEPLOYING
+2016-06-24 18:14:56 INFO  ExecutionGraph:363 - Deploying CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (8/8) (attempt #0) to localhost
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(8/8) switched to DEPLOYING 
+2016-06-24 18:14:56 INFO  TaskManager:128 - Received task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (1/8)
+2016-06-24 18:14:56 INFO  Task:451 - Loading JAR files for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (1/8)
+2016-06-24 18:14:56 INFO  TaskManager:128 - Received task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (2/8)
+2016-06-24 18:14:56 INFO  Task:468 - Registering task at network: CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (1/8) [DEPLOYING]
+2016-06-24 18:14:56 INFO  Task:451 - Loading JAR files for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (2/8)
+2016-06-24 18:14:56 INFO  TaskManager:128 - Received task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (3/8)
+2016-06-24 18:14:56 INFO  Task:468 - Registering task at network: CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (2/8) [DEPLOYING]
+2016-06-24 18:14:56 INFO  TaskManager:128 - Received task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (4/8)
+2016-06-24 18:14:56 INFO  Task:451 - Loading JAR files for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (3/8)
+2016-06-24 18:14:56 INFO  Task:468 - Registering task at network: CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (3/8) [DEPLOYING]
+2016-06-24 18:14:56 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (1/8) switched to RUNNING
+2016-06-24 18:14:56 INFO  TaskManager:128 - Received task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (5/8)
+2016-06-24 18:14:56 INFO  Task:451 - Loading JAR files for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (4/8)
+2016-06-24 18:14:56 INFO  Task:468 - Registering task at network: CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (4/8) [DEPLOYING]
+2016-06-24 18:14:56 INFO  Task:451 - Loading JAR files for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (5/8)
+2016-06-24 18:14:56 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (3/8) switched to RUNNING
+2016-06-24 18:14:56 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (2/8) switched to RUNNING
+2016-06-24 18:14:56 INFO  TaskManager:128 - Received task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6/8)
+2016-06-24 18:14:56 INFO  Task:468 - Registering task at network: CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (5/8) [DEPLOYING]
+2016-06-24 18:14:56 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (4/8) switched to RUNNING
+2016-06-24 18:14:56 INFO  Task:451 - Loading JAR files for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6/8)
+2016-06-24 18:14:56 INFO  Task:468 - Registering task at network: CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6/8) [DEPLOYING]
+2016-06-24 18:14:56 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (5/8) switched to RUNNING
+2016-06-24 18:14:56 INFO  TaskManager:128 - Received task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (7/8)
+2016-06-24 18:14:56 INFO  TaskManager:128 - Received task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (8/8)
+2016-06-24 18:14:56 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6/8) switched to RUNNING
+2016-06-24 18:14:56 INFO  Task:451 - Loading JAR files for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (7/8)
+2016-06-24 18:14:56 INFO  Task:468 - Registering task at network: CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (7/8) [DEPLOYING]
+2016-06-24 18:14:56 INFO  Task:451 - Loading JAR files for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (8/8)
+2016-06-24 18:14:56 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (7/8) switched to RUNNING
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6/8) (494aa7b911f2e84735240bd11d1a2a29) switched from DEPLOYING to RUNNING
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (4/8) (6de92d8f938db895e4ed36a14a7de33e) switched from DEPLOYING to RUNNING
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (5/8) (56ad01fedf32beb64adc4d6d23986166) switched from DEPLOYING to RUNNING
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (7/8) (62ca7a173ae239c4717f5f662371edb0) switched from DEPLOYING to RUNNING
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (2/8) (988f0c74ae7c26a73917f64c32347b2d) switched from DEPLOYING to RUNNING
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (3/8) (f32b5b06f5fca04c4d20c8e6d631c30b) switched from DEPLOYING to RUNNING
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (1/8) (c9ccaadbe5468a56cc53f2f55050a086) switched from DEPLOYING to RUNNING
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(6/8) switched to RUNNING 
+2016-06-24 18:14:56 INFO  Task:468 - Registering task at network: CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (8/8) [DEPLOYING]
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(4/8) switched to RUNNING 
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(5/8) switched to RUNNING 
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(2/8) switched to RUNNING 
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(7/8) switched to RUNNING 
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(3/8) switched to RUNNING 
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(1/8) switched to RUNNING 
+2016-06-24 18:14:56 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (8/8) switched to RUNNING
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (8/8) (d12b6ae6782eff0d602d7359711f8c28) switched from DEPLOYING to RUNNING
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(8/8) switched to RUNNING 
+2016-06-24 18:14:56 INFO  LocatableInputSplitAssigner:186 - Assigning remote split to host localhost
+2016-06-24 18:14:56 INFO  LocatableInputSplitAssigner:186 - Assigning remote split to host localhost
+2016-06-24 18:14:56 INFO  LocatableInputSplitAssigner:186 - Assigning remote split to host localhost
+2016-06-24 18:14:56 INFO  LocatableInputSplitAssigner:186 - Assigning remote split to host localhost
+2016-06-24 18:14:56 INFO  LocatableInputSplitAssigner:186 - Assigning remote split to host localhost
+2016-06-24 18:14:56 INFO  LocatableInputSplitAssigner:186 - Assigning remote split to host localhost
+2016-06-24 18:14:56 INFO  LocatableInputSplitAssigner:186 - Assigning remote split to host localhost
+2016-06-24 18:14:56 INFO  LocatableInputSplitAssigner:186 - Assigning remote split to host localhost
+2016-06-24 18:14:56 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (4/8) switched to FINISHED
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - DataSink (collect()) (4/8) (d4e34e4a54de3c7ad758c3f6a97fc5b4) switched from CREATED to SCHEDULED
+2016-06-24 18:14:56 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (5/8) switched to FINISHED
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	DataSink (collect())(4/8) switched to SCHEDULED 
+2016-06-24 18:14:56 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (7/8) switched to FINISHED
+2016-06-24 18:14:56 INFO  Task:647 - Freeing task resources for CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (7/8)
+2016-06-24 18:14:56 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6/8) switched to FINISHED
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - DataSink (collect()) (7/8) (1e4df4ab9c1c12ad7981b30ad7bc0d71) switched from CREATED to SCHEDULED
+2016-06-24 18:14:56 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (1/8) switched to FINISHED
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - DataSink (collect()) (8/8) (0d72605c43dfe65f2c1c7da68fe8a386) switched from CREATED to SCHEDULED
+2016-06-24 18:14:56 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (62ca7a173ae239c4717f5f662371edb0)
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - DataSink (collect()) (3/8) (8514a9078bee2084105a8613079f3810) switched from CREATED to SCHEDULED
+2016-06-24 18:14:56 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (8/8) switched to FINISHED
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - DataSink (collect()) (3/8) (8514a9078bee2084105a8613079f3810) switched from SCHEDULED to DEPLOYING
+2016-06-24 18:14:56 INFO  ExecutionGraph:363 - Deploying DataSink (collect()) (3/8) (attempt #0) to localhost
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - DataSink (collect()) (8/8) (0d72605c43dfe65f2c1c7da68fe8a386) switched from SCHEDULED to DEPLOYING
+2016-06-24 18:14:56 INFO  ExecutionGraph:363 - Deploying DataSink (collect()) (8/8) (attempt #0) to localhost
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - DataSink (collect()) (7/8) (1e4df4ab9c1c12ad7981b30ad7bc0d71) switched from SCHEDULED to DEPLOYING
+2016-06-24 18:14:56 INFO  Task:647 - Freeing task resources for CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (1/8)
+2016-06-24 18:14:56 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (c9ccaadbe5468a56cc53f2f55050a086)
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (7/8) (62ca7a173ae239c4717f5f662371edb0) switched from RUNNING to FINISHED
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - DataSink (collect()) (6/8) (2a36d33da9c1cdd2701dad6041b9c1b6) switched from CREATED to SCHEDULED
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	DataSink (collect())(7/8) switched to SCHEDULED 
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - DataSink (collect()) (6/8) (2a36d33da9c1cdd2701dad6041b9c1b6) switched from SCHEDULED to DEPLOYING
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	DataSink (collect())(8/8) switched to SCHEDULED 
+2016-06-24 18:14:56 INFO  Task:647 - Freeing task resources for CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6/8)
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - DataSink (collect()) (5/8) (8a21a3577bdcf5c486f6353d46f5f6fd) switched from CREATED to SCHEDULED
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - DataSink (collect()) (2/8) (e46bdce49a35d3e8391c4eed6a409243) switched from CREATED to SCHEDULED
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - DataSink (collect()) (4/8) (d4e34e4a54de3c7ad758c3f6a97fc5b4) switched from SCHEDULED to DEPLOYING
+2016-06-24 18:14:56 INFO  Task:647 - Freeing task resources for CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (5/8)
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - DataSink (collect()) (1/8) (915a1bac11d7ad3e9c01e9a95fc5cefe) switched from CREATED to SCHEDULED
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - DataSink (collect()) (1/8) (915a1bac11d7ad3e9c01e9a95fc5cefe) switched from SCHEDULED to DEPLOYING
+2016-06-24 18:14:56 INFO  ExecutionGraph:363 - Deploying DataSink (collect()) (1/8) (attempt #0) to localhost
+2016-06-24 18:14:56 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (3/8) switched to FINISHED
+2016-06-24 18:14:56 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (2/8) switched to FINISHED
+2016-06-24 18:14:56 INFO  Task:647 - Freeing task resources for CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (2/8)
+2016-06-24 18:14:56 INFO  Task:647 - Freeing task resources for CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (4/8)
+2016-06-24 18:14:56 INFO  Task:647 - Freeing task resources for CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (3/8)
+2016-06-24 18:14:56 INFO  ExecutionGraph:363 - Deploying DataSink (collect()) (4/8) (attempt #0) to localhost
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - DataSink (collect()) (2/8) (e46bdce49a35d3e8391c4eed6a409243) switched from SCHEDULED to DEPLOYING
+2016-06-24 18:14:56 INFO  TaskManager:128 - Received task DataSink (collect()) (3/8)
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - DataSink (collect()) (5/8) (8a21a3577bdcf5c486f6353d46f5f6fd) switched from SCHEDULED to DEPLOYING
+2016-06-24 18:14:56 INFO  ExecutionGraph:363 - Deploying DataSink (collect()) (5/8) (attempt #0) to localhost
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	DataSink (collect())(3/8) switched to SCHEDULED 
+2016-06-24 18:14:56 INFO  ExecutionGraph:363 - Deploying DataSink (collect()) (6/8) (attempt #0) to localhost
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (1/8) (c9ccaadbe5468a56cc53f2f55050a086) switched from RUNNING to FINISHED
+2016-06-24 18:14:56 INFO  ExecutionGraph:363 - Deploying DataSink (collect()) (7/8) (attempt #0) to localhost
+2016-06-24 18:14:56 INFO  Task:647 - Freeing task resources for CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (8/8)
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	DataSink (collect())(3/8) switched to DEPLOYING 
+2016-06-24 18:14:56 INFO  TaskManager:128 - Received task DataSink (collect()) (8/8)
+2016-06-24 18:14:56 INFO  Task:451 - Loading JAR files for task DataSink (collect()) (3/8)
+2016-06-24 18:14:56 INFO  ExecutionGraph:363 - Deploying DataSink (collect()) (2/8) (attempt #0) to localhost
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	DataSink (collect())(8/8) switched to DEPLOYING 
+2016-06-24 18:14:56 INFO  Task:451 - Loading JAR files for task DataSink (collect()) (8/8)
+2016-06-24 18:14:56 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (494aa7b911f2e84735240bd11d1a2a29)
+2016-06-24 18:14:56 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (56ad01fedf32beb64adc4d6d23986166)
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	DataSink (collect())(7/8) switched to DEPLOYING 
+2016-06-24 18:14:56 INFO  TaskManager:128 - Received task DataSink (collect()) (1/8)
+2016-06-24 18:14:56 INFO  Task:468 - Registering task at network: DataSink (collect()) (8/8) [DEPLOYING]
+2016-06-24 18:14:56 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (988f0c74ae7c26a73917f64c32347b2d)
+2016-06-24 18:14:56 INFO  Task:468 - Registering task at network: DataSink (collect()) (3/8) [DEPLOYING]
+2016-06-24 18:14:56 INFO  Task:859 - DataSink (collect()) (8/8) switched to RUNNING
+2016-06-24 18:14:56 INFO  Task:451 - Loading JAR files for task DataSink (collect()) (1/8)
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(7/8) switched to FINISHED 
+2016-06-24 18:14:56 INFO  Task:468 - Registering task at network: DataSink (collect()) (1/8) [DEPLOYING]
+2016-06-24 18:14:56 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6de92d8f938db895e4ed36a14a7de33e)
+2016-06-24 18:14:56 INFO  Task:859 - DataSink (collect()) (3/8) switched to RUNNING
+2016-06-24 18:14:56 INFO  Task:859 - DataSink (collect()) (1/8) switched to RUNNING
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	DataSink (collect())(6/8) switched to SCHEDULED 
+2016-06-24 18:14:56 INFO  TaskManager:128 - Received task DataSink (collect()) (4/8)
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	DataSink (collect())(6/8) switched to DEPLOYING 
+2016-06-24 18:14:56 INFO  Task:451 - Loading JAR files for task DataSink (collect()) (4/8)
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	DataSink (collect())(5/8) switched to SCHEDULED 
+2016-06-24 18:14:56 INFO  Task:468 - Registering task at network: DataSink (collect()) (4/8) [DEPLOYING]
+2016-06-24 18:14:56 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (f32b5b06f5fca04c4d20c8e6d631c30b)
+2016-06-24 18:14:56 INFO  Task:859 - DataSink (collect()) (4/8) switched to RUNNING
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	DataSink (collect())(2/8) switched to SCHEDULED 
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	DataSink (collect())(4/8) switched to DEPLOYING 
+2016-06-24 18:14:56 INFO  TaskManager:128 - Received task DataSink (collect()) (5/8)
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	DataSink (collect())(1/8) switched to SCHEDULED 
+2016-06-24 18:14:56 INFO  Task:451 - Loading JAR files for task DataSink (collect()) (5/8)
+2016-06-24 18:14:56 INFO  TaskManager:128 - Received task DataSink (collect()) (6/8)
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	DataSink (collect())(1/8) switched to DEPLOYING 
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	DataSink (collect())(2/8) switched to DEPLOYING 
+2016-06-24 18:14:56 INFO  Task:468 - Registering task at network: DataSink (collect()) (5/8) [DEPLOYING]
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	DataSink (collect())(5/8) switched to DEPLOYING 
+2016-06-24 18:14:56 INFO  Task:859 - DataSink (collect()) (5/8) switched to RUNNING
+2016-06-24 18:14:56 INFO  TaskManager:128 - Received task DataSink (collect()) (7/8)
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(1/8) switched to FINISHED 
+2016-06-24 18:14:56 INFO  Task:451 - Loading JAR files for task DataSink (collect()) (6/8)
+2016-06-24 18:14:56 INFO  Task:451 - Loading JAR files for task DataSink (collect()) (7/8)
+2016-06-24 18:14:56 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (d12b6ae6782eff0d602d7359711f8c28)
+2016-06-24 18:14:56 INFO  Task:468 - Registering task at network: DataSink (collect()) (7/8) [DEPLOYING]
+2016-06-24 18:14:56 INFO  Task:468 - Registering task at network: DataSink (collect()) (6/8) [DEPLOYING]
+2016-06-24 18:14:56 INFO  Task:859 - DataSink (collect()) (7/8) switched to RUNNING
+2016-06-24 18:14:56 INFO  TaskManager:128 - Received task DataSink (collect()) (2/8)
+2016-06-24 18:14:56 INFO  Task:859 - DataSink (collect()) (6/8) switched to RUNNING
+2016-06-24 18:14:56 INFO  Task:451 - Loading JAR files for task DataSink (collect()) (2/8)
+2016-06-24 18:14:56 INFO  Task:468 - Registering task at network: DataSink (collect()) (2/8) [DEPLOYING]
+2016-06-24 18:14:56 INFO  Task:859 - DataSink (collect()) (2/8) switched to RUNNING
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6/8) (494aa7b911f2e84735240bd11d1a2a29) switched from RUNNING to FINISHED
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(6/8) switched to FINISHED 
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (5/8) (56ad01fedf32beb64adc4d6d23986166) switched from RUNNING to FINISHED
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(5/8) switched to FINISHED 
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (2/8) (988f0c74ae7c26a73917f64c32347b2d) switched from RUNNING to FINISHED
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(2/8) switched to FINISHED 
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - DataSink (collect()) (8/8) (0d72605c43dfe65f2c1c7da68fe8a386) switched from DEPLOYING to RUNNING
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - DataSink (collect()) (1/8) (915a1bac11d7ad3e9c01e9a95fc5cefe) switched from DEPLOYING to RUNNING
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (4/8) (6de92d8f938db895e4ed36a14a7de33e) switched from RUNNING to FINISHED
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - DataSink (collect()) (4/8) (d4e34e4a54de3c7ad758c3f6a97fc5b4) switched from DEPLOYING to RUNNING
+2016-06-24 18:14:56 INFO  Task:859 - DataSink (collect()) (4/8) switched to FINISHED
+2016-06-24 18:14:56 INFO  Task:647 - Freeing task resources for DataSink (collect()) (4/8)
+2016-06-24 18:14:56 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task DataSink (collect()) (d4e34e4a54de3c7ad758c3f6a97fc5b4)
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (8/8) (d12b6ae6782eff0d602d7359711f8c28) switched from RUNNING to FINISHED
+2016-06-24 18:14:56 INFO  Task:859 - DataSink (collect()) (5/8) switched to FINISHED
+2016-06-24 18:14:56 INFO  Task:859 - DataSink (collect()) (2/8) switched to FINISHED
+2016-06-24 18:14:56 INFO  Task:859 - DataSink (collect()) (1/8) switched to FINISHED
+2016-06-24 18:14:56 INFO  Task:859 - DataSink (collect()) (6/8) switched to FINISHED
+2016-06-24 18:14:56 INFO  Task:647 - Freeing task resources for DataSink (collect()) (6/8)
+2016-06-24 18:14:56 INFO  Task:859 - DataSink (collect()) (8/8) switched to FINISHED
+2016-06-24 18:14:56 INFO  Task:647 - Freeing task resources for DataSink (collect()) (1/8)
+2016-06-24 18:14:56 INFO  Task:647 - Freeing task resources for DataSink (collect()) (2/8)
+2016-06-24 18:14:56 INFO  Task:647 - Freeing task resources for DataSink (collect()) (5/8)
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (3/8) (f32b5b06f5fca04c4d20c8e6d631c30b) switched from RUNNING to FINISHED
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - DataSink (collect()) (2/8) (e46bdce49a35d3e8391c4eed6a409243) switched from DEPLOYING to RUNNING
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - DataSink (collect()) (6/8) (2a36d33da9c1cdd2701dad6041b9c1b6) switched from DEPLOYING to RUNNING
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - DataSink (collect()) (7/8) (1e4df4ab9c1c12ad7981b30ad7bc0d71) switched from DEPLOYING to RUNNING
+2016-06-24 18:14:56 INFO  Task:859 - DataSink (collect()) (7/8) switched to FINISHED
+2016-06-24 18:14:56 INFO  Task:647 - Freeing task resources for DataSink (collect()) (7/8)
+2016-06-24 18:14:56 INFO  Task:859 - DataSink (collect()) (3/8) switched to FINISHED
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - DataSink (collect()) (5/8) (8a21a3577bdcf5c486f6353d46f5f6fd) switched from DEPLOYING to RUNNING
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	DataSink (collect())(8/8) switched to RUNNING 
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - DataSink (collect()) (3/8) (8514a9078bee2084105a8613079f3810) switched from DEPLOYING to RUNNING
+2016-06-24 18:14:56 INFO  Task:647 - Freeing task resources for DataSink (collect()) (3/8)
+2016-06-24 18:14:56 INFO  Task:647 - Freeing task resources for DataSink (collect()) (8/8)
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	DataSink (collect())(1/8) switched to RUNNING 
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(4/8) switched to FINISHED 
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	DataSink (collect())(4/8) switched to RUNNING 
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(8/8) switched to FINISHED 
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(3/8) switched to FINISHED 
+2016-06-24 18:14:56 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task DataSink (collect()) (2a36d33da9c1cdd2701dad6041b9c1b6)
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	DataSink (collect())(2/8) switched to RUNNING 
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	DataSink (collect())(6/8) switched to RUNNING 
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	DataSink (collect())(7/8) switched to RUNNING 
+2016-06-24 18:14:56 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task DataSink (collect()) (915a1bac11d7ad3e9c01e9a95fc5cefe)
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	DataSink (collect())(5/8) switched to RUNNING 
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	DataSink (collect())(3/8) switched to RUNNING 
+2016-06-24 18:14:56 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task DataSink (collect()) (e46bdce49a35d3e8391c4eed6a409243)
+2016-06-24 18:14:56 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task DataSink (collect()) (8a21a3577bdcf5c486f6353d46f5f6fd)
+2016-06-24 18:14:56 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task DataSink (collect()) (1e4df4ab9c1c12ad7981b30ad7bc0d71)
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - DataSink (collect()) (4/8) (d4e34e4a54de3c7ad758c3f6a97fc5b4) switched from RUNNING to FINISHED
+2016-06-24 18:14:56 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task DataSink (collect()) (8514a9078bee2084105a8613079f3810)
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	DataSink (collect())(4/8) switched to FINISHED 
+2016-06-24 18:14:56 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task DataSink (collect()) (0d72605c43dfe65f2c1c7da68fe8a386)
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - DataSink (collect()) (6/8) (2a36d33da9c1cdd2701dad6041b9c1b6) switched from RUNNING to FINISHED
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - DataSink (collect()) (1/8) (915a1bac11d7ad3e9c01e9a95fc5cefe) switched from RUNNING to FINISHED
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	DataSink (collect())(6/8) switched to FINISHED 
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - DataSink (collect()) (3/8) (8514a9078bee2084105a8613079f3810) switched from RUNNING to FINISHED
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	DataSink (collect())(1/8) switched to FINISHED 
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - DataSink (collect()) (2/8) (e46bdce49a35d3e8391c4eed6a409243) switched from RUNNING to FINISHED
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - DataSink (collect()) (7/8) (1e4df4ab9c1c12ad7981b30ad7bc0d71) switched from RUNNING to FINISHED
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - DataSink (collect()) (8/8) (0d72605c43dfe65f2c1c7da68fe8a386) switched from RUNNING to FINISHED
+2016-06-24 18:14:56 INFO  ExecutionGraph:978 - DataSink (collect()) (5/8) (8a21a3577bdcf5c486f6353d46f5f6fd) switched from RUNNING to FINISHED
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	DataSink (collect())(3/8) switched to FINISHED 
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	DataSink (collect())(2/8) switched to FINISHED 
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	DataSink (collect())(7/8) switched to FINISHED 
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	DataSink (collect())(8/8) switched to FINISHED 
+2016-06-24 18:14:56 INFO  JobClientActor:281 - 06/24/2016 18:14:56	DataSink (collect())(5/8) switched to FINISHED 
+2016-06-24 18:14:56 INFO  JobManager:137 - Status of job c8780123dea0f1aa2d033c530ff0de47 (Flink Java Job at Fri Jun 24 18:14:55 CEST 2016) changed to FINISHED.
+2016-06-24 18:14:56 INFO  JobClientActor:291 - 06/24/2016 18:14:56	Job execution switched to status FINISHED.
+2016-06-24 18:14:56 INFO  JobClientActor:406 - Terminate JobClientActor.
+2016-06-24 18:14:56 INFO  JobClient:150 - Job execution complete
+2016-06-24 18:14:56 INFO  JobClientActor:318 - Disconnect from JobManager Actor[akka://flink/user/jobmanager_1#871447897].
+2016-06-24 18:14:56 INFO  FlinkMiniCluster:318 - Stopping FlinkMiniCluster.
+2016-06-24 18:14:56 INFO  TaskManager:128 - Stopping TaskManager akka://flink/user/taskmanager_1#468248449.
+2016-06-24 18:14:56 INFO  JobManager:128 - Stopping JobManager akka://flink/user/jobmanager_1.
+2016-06-24 18:14:56 INFO  TaskManager:128 - Disassociating from JobManager
+2016-06-24 18:14:56 INFO  BlobCache:206 - Shutting down BlobCache
+2016-06-24 18:14:56 INFO  BlobServer:321 - Stopped BLOB server at 0.0.0.0:38996
+2016-06-24 18:14:56 INFO  IOManager:109 - I/O manager removed spill file directory /tmp/flink-io-0db01877-d159-4c47-b13a-423dbc4262a4
+2016-06-24 18:14:56 INFO  TaskManager:128 - Task manager akka://flink/user/taskmanager_1 is completely shut down.
+2016-06-24 18:14:56 INFO  DateResolution:53 - Inside DateResolution
+2016-06-24 18:14:56 INFO  Main:109 - Finished!!
+2016-06-24 18:15:53 INFO  DatasetLoader:61 - In dataset loader class
+2016-06-24 18:15:53 INFO  DatasetLoader:72 - Old file hashes loaded
+2016-06-24 18:15:53 INFO  Bootstrap:78 - -------------Stats-------------
+2016-06-24 18:15:53 INFO  Bootstrap:80 - Total datasets tried loading: 1
+2016-06-24 18:15:53 INFO  Bootstrap:81 - Success: 1	Fail: 0
+2016-06-24 18:15:53 INFO  Bootstrap:85 - Success rate: 100 %
+2016-06-24 18:15:53 INFO  Main:80 - Mapping stage complete!
+2016-06-24 18:15:53 INFO  RMLmapper:133 - Deleting old output file to replace with new one
+2016-06-24 18:15:53 INFO  RMLmapper:101 - Shell command: $rm /home/kilt/SDW/examples/grid20.ttl
+2016-06-24 18:15:53 INFO  JenaModel:128 - Shell command: $rm -rf /home/kilt/SDW/examples/database/
+2016-06-24 18:15:53 INFO  RMLmapper:101 - Shell command: $java -jar /home/kilt/SDW/lib/RML-Mapper.jar -m /home/kilt/SDW/examples/grid.rml.ttl -o /home/kilt/SDW/examples/grid20.ttl -f nquads
+2016-06-24 18:15:53 INFO  JenaModel:128 - Shell command: $mkdir -p /home/kilt/SDW/examples/database/
+2016-06-24 18:15:54 INFO  RMLmapper:89 - -------------------------------------------------
+RML Processor
+-------------------------------------------------
+
+0 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+1 [main] INFO be.ugent.mmlab.rml.main.Main  - Retrieving the RML Mapping Document...
+1 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+14 [main] DEBUG org.openrdf.sail.memory.MemoryStore  - Initializing MemoryStore...
+25 [main] DEBUG org.openrdf.sail.memory.MemoryStore  - MemoryStore initialized
+57 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.trig.TriGParserFactory
+57 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.turtle.TurtleParserFactory
+58 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.ntriples.NTriplesParserFactory
+58 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.binary.BinaryRDFParserFactory
+59 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.n3.N3ParserFactory
+59 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.trix.TriXParserFactory
+59 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.rdfxml.RDFXMLParserFactory
+60 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.nquads.NQuadsParserFactory
+60 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.rdfjson.RDFJSONParserFactory
+60 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.jsonld.JSONLDParserFactory
+83 [main] DEBUG org.openrdf.rio.DatatypeHandlerRegistry  - Registered service class org.openrdf.rio.datatypes.XMLSchemaDatatypeHandler
+83 [main] DEBUG org.openrdf.rio.DatatypeHandlerRegistry  - Registered service class org.openrdf.rio.datatypes.RDFDatatypeHandler
+84 [main] DEBUG org.openrdf.rio.DatatypeHandlerRegistry  - Registered service class org.openrdf.rio.datatypes.DBPediaDatatypeHandler
+84 [main] DEBUG org.openrdf.rio.DatatypeHandlerRegistry  - Registered service class org.openrdf.rio.datatypes.VirtuosoGeometryDatatypeHandler
+85 [main] DEBUG org.openrdf.rio.DatatypeHandlerRegistry  - Registered service class org.openrdf.rio.datatypes.GeoSPARQLDatatypeHandler
+87 [main] DEBUG org.openrdf.rio.LanguageHandlerRegistry  - Registered service class org.openrdf.rio.languages.RFC3066LanguageHandler
+126 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.retrieval.RMLDocRetrieval  - Number of RML triples in the repository /home/kilt/SDW/examples/grid.rml.ttl : 15 from local file
+126 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+126 [main] INFO be.ugent.mmlab.rml.main.Main  - Extracting the RML Mapping Definitions..
+127 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+127 [main] INFO be.ugent.mmlab.rml.mapdochandler.extraction.RMLMappingFactory  - Replacing Mapping Document shortcuts..
+132 [main] INFO be.ugent.mmlab.rml.mapdochandler.extraction.RMLMappingFactory  - Extracting Triples Maps..
+133 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.std.StdRMLMappingExtractor  - Triples Map statements were retrieved: true
+134 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.RMLMappingFactory  - Number of RML triples with type TriplesMap in file: 1
+135 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Extract TriplesMap subject : file:/home/kilt/SDW/examples/grid.rml.ttl#InstituteMapping
+138 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Reference Formulation JSONPath
+138 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Iterator $.institutes.[*]
+138 [main] INFO be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Literal-valued Input Source
+140 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Query null
+141 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Triples Map extracted
+141 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Logical source extracted : [StdLogicalSource : iterator = $.institutes.[*]; source be.ugent.mmlab.rml.model.source.std.StdLocalFileSource@38082d64; referenceFormulation = JSONPath]
+142 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.SubjectMapExtractor  - Extract subject map...
+143 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.SubjectMapExtractor  - Found subject map : node1am1j4dgnx2
+145 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - extractLiteralFromTermMap: Extracted template : http://sdw.org/{id}
+146 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - referenceValueStr null
+147 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - refMap.getReferenceValue(referenceValueStr) null
+151 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - extractURIsFromTermMap: class : http://schema.org/Education
+153 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - Extracted graphMap : node1am1j4dgnx3
+157 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.GraphMapExtractor  - Extract graph map...
+158 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - Extracted constant : http://www.example.com/#Graph
+165 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - referenceValueStr null
+166 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - refMap.getReferenceValue(referenceValueStr) null
+170 [main] DEBUG be.ugent.mmlab.rml.model.RDFTerm.AbstractTermMap  - setTermType: [AbstractTermMap:setTermType] No term type specified : use IRI by default.null
+171 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.GraphMapExtractor  - Graph map extracted.
+171 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.SubjectMapExtractor  - Graph Maps returned [be.ugent.mmlab.rml.model.std.StdGraphMap@1753acfe]
+171 [main] DEBUG be.ugent.mmlab.rml.model.RDFTerm.AbstractTermMap  - setTermType: [AbstractTermMap:setTermType] No term type specified : use IRI by default.null
+172 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.SubjectMapExtractor  - Subject map extracted.
+175 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateObjectMapExtractor  - More Predicate Map statements: true
+176 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - Extracted constant : http://schema.org/name
+177 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - referenceValueStr null
+178 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - refMap.getReferenceValue(referenceValueStr) null
+178 [main] DEBUG be.ugent.mmlab.rml.model.RDFTerm.AbstractTermMap  - setTermType: [AbstractTermMap:setTermType] No term type specified : use IRI by default.null
+178 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateMapExtractor  - Extracting predicate map done.
+178 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateObjectMapExtractor  - Object Map statements found: org.openrdf.repository.RepositoryResult@7d9d1a19
+179 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateObjectMapExtractor  - Extracting Referencing Object Maps..
+180 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Extracting Referencing Object Map..
+180 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Parent Triples Maps were found null
+180 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Extract join conditions..
+180 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Extract join conditions done.
+182 [main] DEBUG be.ugent.mmlab.rml.condition.extractor.BindingConditionExtractor  - Extracting Binding Conditions..
+183 [main] DEBUG be.ugent.mmlab.rml.condition.extractor.BindingConditionExtractor  - Extract bind condition done.
+183 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Current Triples Map resource file:/home/kilt/SDW/examples/grid.rml.ttl#InstituteMapping
+183 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Not a Referencing Object Map.
+183 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateObjectMapExtractor  - Referencing Object Map statements found: []
+184 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ObjectMapExtractor  - Extract object map..
+186 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - extractLiteralFromTermMap: Extracted reference : name
+186 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - referenceValueStr name
+186 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - refMap.getReferenceValue(referenceValueStr) be.ugent.mmlab.rml.model.std.StdReferenceMap@60c6f5b
+187 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ObjectMapExtractor  - reference value be.ugent.mmlab.rml.model.std.StdReferenceMap@2038ae61
+187 [main] DEBUG be.ugent.mmlab.rml.model.RDFTerm.AbstractTermMap  - setTermType: [AbstractTermMap:setTermType] No term type specified : use Literal by default.
+189 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - Extracted graphMap : node1am1j4dgnx6
+189 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.GraphMapExtractor  - Extract graph map...
+189 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - Extracted constant : http://www.example.com/#Graph
+192 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - referenceValueStr null
+192 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - refMap.getReferenceValue(referenceValueStr) null
+193 [main] DEBUG be.ugent.mmlab.rml.model.RDFTerm.AbstractTermMap  - setTermType: [AbstractTermMap:setTermType] No term type specified : use IRI by default.null
+193 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.GraphMapExtractor  - Graph map extracted.
+193 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.GraphMapExtractor  - Gtraph Maps returned [be.ugent.mmlab.rml.model.std.StdGraphMap@7d907bac]
+194 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateObjectMapExtractor  - Extract predicate-object map done.
+194 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Number of extracted predicate-object maps : 1
+194 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Extract of TriplesMap subject : file:/home/kilt/SDW/examples/grid.rml.ttl#InstituteMapping done.
+195 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+195 [main] INFO be.ugent.mmlab.rml.main.Main  - Running the RML Mapping..
+195 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+195 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Running RML mapping... 
+195 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Using direct file /home/kilt/SDW/examples/grid20.ttl
+197 [main] DEBUG org.openrdf.sail.memory.MemoryStore  - Initializing MemoryStore...
+197 [main] DEBUG org.openrdf.sail.memory.MemoryStore  - MemoryStore initialized
+202 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.trig.TriGWriterFactory
+203 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.turtle.TurtleWriterFactory
+205 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.ntriples.NTriplesWriterFactory
+206 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.binary.BinaryRDFWriterFactory
+207 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.n3.N3WriterFactory
+207 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.trix.TriXWriterFactory
+208 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.rdfxml.RDFXMLWriterFactory
+209 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.nquads.NQuadsWriterFactory
+209 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.rdfjson.RDFJSONWriterFactory
+210 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.jsonld.JSONLDWriterFactory
+211 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Dataset repository generated
+211 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Generating triples..
+211 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Generate RDF triples... 
+Generating RDF triples for file:/home/kilt/SDW/examples/grid.rml.ttl#InstituteMapping
+212 [main] INFO be.ugent.mmlab.rml.core.RMLEngine  - Generating RML Processor..
+213 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Logical Source: [StdLogicalSource : iterator = $.institutes.[*]; source be.ugent.mmlab.rml.model.source.std.StdLocalFileSource@38082d64; referenceFormulation = JSONPath]
+213 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Reference formulation: JSONPath
+218 [main] INFO be.ugent.mmlab.rml.core.RMLEngine  - Generating Data Retrieval Processor..
+219 [main] DEBUG be.ugent.mmlab.rml.input.ConcreteLogicalSourceProcessorFactory  - Resource-valued Input Source
+219 [main] DEBUG be.ugent.mmlab.rml.input.ConcreteLogicalSourceProcessorFactory  - source type StdLocalFileSource
+219 [main] DEBUG be.ugent.mmlab.rml.input.ConcreteLogicalSourceProcessorFactory  - Processor for Local File Source.
+220 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Generating Input Stream..
+221 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Generating Performer..
+221 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Executing Mapping Processor..
+296 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['institutes'][*]
+300 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+301 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+302 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1001.0, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+303 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+303 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1001.0, http://schema.org/name, Australian National University).
+304 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+304 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+304 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+304 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1002.3, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+304 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+304 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+304 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1002.3, http://schema.org/name, Monash University).
+305 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+305 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+305 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+305 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1003.2, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+305 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+305 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+305 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1003.2, http://schema.org/name, University of Queensland).
+305 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+306 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+306 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+306 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1004.5, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+306 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+306 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+306 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1004.5, http://schema.org/name, Macquarie University).
+306 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+306 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+306 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+307 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1005.4, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+307 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+307 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+307 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1005.4, http://schema.org/name, UNSW Australia).
+307 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+307 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+307 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+307 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1006.7, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+308 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+308 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+308 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1006.7, http://schema.org/name, Newcastle University).
+308 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+308 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+308 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+308 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1007.6, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+308 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+308 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+308 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1007.6, http://schema.org/name, University of Wollongong).
+309 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+309 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+309 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+309 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1008.9, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+309 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+309 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+309 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1008.9, http://schema.org/name, University of Melbourne).
+309 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+309 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+309 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+309 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1009.8, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+310 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+310 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+310 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1009.8, http://schema.org/name, University of Tasmania).
+310 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+310 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+310 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+310 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1010.0, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+310 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+310 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+310 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1010.0, http://schema.org/name, University of Adelaide).
+310 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+311 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+311 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+311 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1011.1, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+311 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+311 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+311 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1011.1, http://schema.org/name, James Cook University).
+311 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+311 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+311 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+311 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1012.2, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+314 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+314 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+315 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1012.2, http://schema.org/name, University of Western Australia).
+315 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+315 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+315 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+315 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1013.3, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+315 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+315 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+315 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1013.3, http://schema.org/name, University of Sydney).
+315 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+315 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+315 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+316 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1014.4, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+316 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+316 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+316 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1014.4, http://schema.org/name, Flinders University).
+316 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+316 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+316 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+316 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1016.6, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+316 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+316 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+316 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1016.6, http://schema.org/name, Commonwealth Scientific and Industrial Research Organisation (CSIRO)).
+317 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+317 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+317 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+317 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1017.7, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+317 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+317 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+317 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1017.7, http://schema.org/name, Royal Melbourne Institute of Technology University).
+317 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+317 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+317 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+318 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1018.8, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+318 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+318 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+318 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1018.8, http://schema.org/name, La Trobe University).
+318 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+318 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+318 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+318 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1019.9, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+318 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+318 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+318 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1019.9, http://schema.org/name, Victoria University).
+319 [main] INFO be.ugent.mmlab.rml.core.RMLEngine  - 36 triples were generated for file:/home/kilt/SDW/examples/grid.rml.ttl#InstituteMapping
+319 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Generating metadata..
+319 [main] INFO be.ugent.mmlab.rml.core.RMLEngine  - RML mapping done! Generated 36 in 0.123471087s . 
+319 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Closing file...
+
+2016-06-24 18:15:54 INFO  JenaModel:78 - RDF dataset loaded to memory
+2016-06-24 18:15:54 INFO  NameResolution:54 - Inside NameResolution
+2016-06-24 18:15:55 INFO  ExecutionEnvironment:1037 - The job has 0 registered types and 0 default Kryo serializers
+2016-06-24 18:15:55 INFO  FlinkMiniCluster:240 - Starting FlinkMiniCluster.
+2016-06-24 18:15:55 INFO  Slf4jLogger:80 - Slf4jLogger started
+2016-06-24 18:15:55 INFO  BlobServer:97 - Created BLOB server storage directory /tmp/blobStore-72446928-6c56-4215-bc77-d274387212e8
+2016-06-24 18:15:55 INFO  BlobServer:164 - Started BLOB server at 0.0.0.0:44906 - max concurrent requests: 50 - max backlog: 1000
+2016-06-24 18:15:55 INFO  SavepointStoreFactory:63 - Using job manager savepoint state backend.
+2016-06-24 18:15:56 INFO  MemoryArchivist:128 - Started memory archivist akka://flink/user/archive_1
+2016-06-24 18:15:56 INFO  JobManager:128 - Starting JobManager at akka://flink/user/jobmanager_1.
+2016-06-24 18:15:56 INFO  JobManager:128 - JobManager akka://flink/user/jobmanager_1 was granted leadership with leader session ID None.
+2016-06-24 18:15:56 INFO  TaskManager:128 - Messages between TaskManager and JobManager have a max timeout of 10000 milliseconds
+2016-06-24 18:15:56 INFO  TaskManager:128 - Temporary file directory '/tmp': total 226 GB, usable 185 GB (81.86% usable)
+2016-06-24 18:15:56 INFO  NetworkBufferPool:121 - Allocated 64 MB for network buffer pool (number of memory segments: 2048, bytes per segment: 32768).
+2016-06-24 18:15:56 INFO  TaskManager:128 - Limiting managed memory to 562 MB, memory will be allocated lazily.
+2016-06-24 18:15:56 INFO  IOManager:94 - I/O manager uses directory /tmp/flink-io-3d9cdaab-1310-4e20-b6da-a2f58ae66e88 for spill files.
+2016-06-24 18:15:56 INFO  FileCache:88 - User file cache uses directory /tmp/flink-dist-cache-44eb6429-0f8b-43a9-880a-8d7b7816eba6
+2016-06-24 18:15:56 INFO  TaskManager:128 - Starting TaskManager actor at akka://flink/user/taskmanager_1#1267262948.
+2016-06-24 18:15:56 INFO  TaskManager:128 - TaskManager data connection information: localhost (dataPort=38501)
+2016-06-24 18:15:56 INFO  TaskManager:128 - TaskManager has 8 task slot(s).
+2016-06-24 18:15:56 INFO  TaskManager:128 - Memory usage stats: [HEAP: 144/278/1755 MB, NON HEAP: 60/63/-1 MB (used/committed/max)]
+2016-06-24 18:15:56 INFO  TaskManager:128 - Trying to register at JobManager akka://flink/user/jobmanager_1 (attempt 1, timeout: 500 milliseconds)
+2016-06-24 18:15:56 INFO  InstanceManager:179 - Registered TaskManager at localhost (akka://flink/user/taskmanager_1) as d652c38e93ffc84ac080d9c86a764c29. Current number of registered hosts is 1. Current number of alive task slots is 8.
+2016-06-24 18:15:56 INFO  TaskManager:128 - Successful registration at JobManager (akka://flink/user/jobmanager_1), starting network stack and library cache.
+2016-06-24 18:15:56 INFO  TaskManager:128 - Determined BLOB server address to be localhost/127.0.0.1:44906. Starting BLOB cache.
+2016-06-24 18:15:56 INFO  BlobCache:70 - Created BLOB cache storage directory /tmp/blobStore-b35d7252-ffaf-4688-8f25-853136144482
+2016-06-24 18:15:56 INFO  JobClientActor:318 - Disconnect from JobManager null.
+2016-06-24 18:15:56 INFO  JobClientActor:168 - Received job Flink Java Job at Fri Jun 24 18:15:55 CEST 2016 (bcf00c9174fa2d5ae0c85beccfb4cfce).
+2016-06-24 18:15:56 INFO  JobClientActor:389 - Could not submit job Flink Java Job at Fri Jun 24 18:15:55 CEST 2016 (bcf00c9174fa2d5ae0c85beccfb4cfce), because there is no connection to a JobManager.
+2016-06-24 18:15:56 INFO  JobClientActor:326 - Connect to JobManager Actor[akka://flink/user/jobmanager_1#960697562].
+2016-06-24 18:15:56 INFO  JobClientActor:331 - Connected to new JobManager akka://flink/user/jobmanager_1.
+2016-06-24 18:15:56 INFO  JobClientActor:341 - Sending message to JobManager akka://flink/user/jobmanager_1 to submit job Flink Java Job at Fri Jun 24 18:15:55 CEST 2016 (bcf00c9174fa2d5ae0c85beccfb4cfce) and wait for progress
+2016-06-24 18:15:56 INFO  JobClientActor:349 - Upload jar files to job manager akka://flink/user/jobmanager_1.
+2016-06-24 18:15:56 INFO  JobClientActor:367 - Submit job to the job manager akka://flink/user/jobmanager_1.
+2016-06-24 18:15:56 INFO  JobManager:128 - Submitting job bcf00c9174fa2d5ae0c85beccfb4cfce (Flink Java Job at Fri Jun 24 18:15:55 CEST 2016).
+2016-06-24 18:15:56 INFO  JobManager:128 - Using restart strategy NoRestartStrategy for bcf00c9174fa2d5ae0c85beccfb4cfce.
+2016-06-24 18:15:56 INFO  JobManager:128 - Scheduling job bcf00c9174fa2d5ae0c85beccfb4cfce (Flink Java Job at Fri Jun 24 18:15:55 CEST 2016).
+2016-06-24 18:15:56 INFO  JobClientActor:211 - Job was successfully submitted to the JobManager akka://flink/user/jobmanager_1.
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (1/8) (ffcf3f750d995c491286c26b575c9734) switched from CREATED to SCHEDULED
+2016-06-24 18:15:56 INFO  JobClientActor:291 - 06/24/2016 18:15:56	Job execution switched to status RUNNING.
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(1/8) switched to SCHEDULED 
+2016-06-24 18:15:56 INFO  JobManager:137 - Status of job bcf00c9174fa2d5ae0c85beccfb4cfce (Flink Java Job at Fri Jun 24 18:15:55 CEST 2016) changed to RUNNING.
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (1/8) (ffcf3f750d995c491286c26b575c9734) switched from SCHEDULED to DEPLOYING
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(1/8) switched to DEPLOYING 
+2016-06-24 18:15:56 INFO  ExecutionGraph:363 - Deploying CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (1/8) (attempt #0) to localhost
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (2/8) (549aeaf6dfb34462ae5c9fc39cb5c02f) switched from CREATED to SCHEDULED
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(2/8) switched to SCHEDULED 
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (2/8) (549aeaf6dfb34462ae5c9fc39cb5c02f) switched from SCHEDULED to DEPLOYING
+2016-06-24 18:15:56 INFO  ExecutionGraph:363 - Deploying CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (2/8) (attempt #0) to localhost
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(2/8) switched to DEPLOYING 
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (3/8) (b24a1d401fa783b9b363ef02326cfa8d) switched from CREATED to SCHEDULED
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (3/8) (b24a1d401fa783b9b363ef02326cfa8d) switched from SCHEDULED to DEPLOYING
+2016-06-24 18:15:56 INFO  ExecutionGraph:363 - Deploying CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (3/8) (attempt #0) to localhost
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(3/8) switched to SCHEDULED 
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(3/8) switched to DEPLOYING 
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (4/8) (630cb674fc467e70e20d0833a100a856) switched from CREATED to SCHEDULED
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(4/8) switched to SCHEDULED 
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (4/8) (630cb674fc467e70e20d0833a100a856) switched from SCHEDULED to DEPLOYING
+2016-06-24 18:15:56 INFO  ExecutionGraph:363 - Deploying CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (4/8) (attempt #0) to localhost
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(4/8) switched to DEPLOYING 
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (5/8) (885dab1d47da1f3b2cdf8870c4892649) switched from CREATED to SCHEDULED
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(5/8) switched to SCHEDULED 
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (5/8) (885dab1d47da1f3b2cdf8870c4892649) switched from SCHEDULED to DEPLOYING
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(5/8) switched to DEPLOYING 
+2016-06-24 18:15:56 INFO  ExecutionGraph:363 - Deploying CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (5/8) (attempt #0) to localhost
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6/8) (b483aca4c15095e6e4d46e51eab1ee5a) switched from CREATED to SCHEDULED
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(6/8) switched to SCHEDULED 
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6/8) (b483aca4c15095e6e4d46e51eab1ee5a) switched from SCHEDULED to DEPLOYING
+2016-06-24 18:15:56 INFO  ExecutionGraph:363 - Deploying CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6/8) (attempt #0) to localhost
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (7/8) (774e61dd179065cc07274672e8c48a2e) switched from CREATED to SCHEDULED
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (7/8) (774e61dd179065cc07274672e8c48a2e) switched from SCHEDULED to DEPLOYING
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(6/8) switched to DEPLOYING 
+2016-06-24 18:15:56 INFO  ExecutionGraph:363 - Deploying CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (7/8) (attempt #0) to localhost
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(7/8) switched to SCHEDULED 
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (8/8) (b3122f7924cfc4601e7067f64c2f55a1) switched from CREATED to SCHEDULED
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(7/8) switched to DEPLOYING 
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (8/8) (b3122f7924cfc4601e7067f64c2f55a1) switched from SCHEDULED to DEPLOYING
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(8/8) switched to SCHEDULED 
+2016-06-24 18:15:56 INFO  ExecutionGraph:363 - Deploying CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (8/8) (attempt #0) to localhost
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(8/8) switched to DEPLOYING 
+2016-06-24 18:15:56 INFO  TaskManager:128 - Received task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (1/8)
+2016-06-24 18:15:56 INFO  Task:451 - Loading JAR files for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (1/8)
+2016-06-24 18:15:56 INFO  TaskManager:128 - Received task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (2/8)
+2016-06-24 18:15:56 INFO  Task:451 - Loading JAR files for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (2/8)
+2016-06-24 18:15:56 INFO  Task:468 - Registering task at network: CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (1/8) [DEPLOYING]
+2016-06-24 18:15:56 INFO  Task:468 - Registering task at network: CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (2/8) [DEPLOYING]
+2016-06-24 18:15:56 INFO  TaskManager:128 - Received task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (3/8)
+2016-06-24 18:15:56 INFO  TaskManager:128 - Received task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (4/8)
+2016-06-24 18:15:56 INFO  Task:451 - Loading JAR files for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (3/8)
+2016-06-24 18:15:56 INFO  Task:451 - Loading JAR files for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (4/8)
+2016-06-24 18:15:56 INFO  TaskManager:128 - Received task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (5/8)
+2016-06-24 18:15:56 INFO  Task:468 - Registering task at network: CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (4/8) [DEPLOYING]
+2016-06-24 18:15:56 INFO  Task:468 - Registering task at network: CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (3/8) [DEPLOYING]
+2016-06-24 18:15:56 INFO  TaskManager:128 - Received task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6/8)
+2016-06-24 18:15:56 INFO  Task:451 - Loading JAR files for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (5/8)
+2016-06-24 18:15:56 INFO  Task:451 - Loading JAR files for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6/8)
+2016-06-24 18:15:56 INFO  TaskManager:128 - Received task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (7/8)
+2016-06-24 18:15:56 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (4/8) switched to RUNNING
+2016-06-24 18:15:56 INFO  Task:468 - Registering task at network: CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (5/8) [DEPLOYING]
+2016-06-24 18:15:56 INFO  TaskManager:128 - Received task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (8/8)
+2016-06-24 18:15:56 INFO  Task:451 - Loading JAR files for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (7/8)
+2016-06-24 18:15:56 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (2/8) switched to RUNNING
+2016-06-24 18:15:56 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (1/8) switched to RUNNING
+2016-06-24 18:15:56 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (3/8) switched to RUNNING
+2016-06-24 18:15:56 INFO  Task:468 - Registering task at network: CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6/8) [DEPLOYING]
+2016-06-24 18:15:56 INFO  Task:468 - Registering task at network: CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (7/8) [DEPLOYING]
+2016-06-24 18:15:56 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (5/8) switched to RUNNING
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (1/8) (ffcf3f750d995c491286c26b575c9734) switched from DEPLOYING to RUNNING
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (2/8) (549aeaf6dfb34462ae5c9fc39cb5c02f) switched from DEPLOYING to RUNNING
+2016-06-24 18:15:56 INFO  Task:451 - Loading JAR files for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (8/8)
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (4/8) (630cb674fc467e70e20d0833a100a856) switched from DEPLOYING to RUNNING
+2016-06-24 18:15:56 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6/8) switched to RUNNING
+2016-06-24 18:15:56 INFO  Task:468 - Registering task at network: CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (8/8) [DEPLOYING]
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (5/8) (885dab1d47da1f3b2cdf8870c4892649) switched from DEPLOYING to RUNNING
+2016-06-24 18:15:56 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (7/8) switched to RUNNING
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(1/8) switched to RUNNING 
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (3/8) (b24a1d401fa783b9b363ef02326cfa8d) switched from DEPLOYING to RUNNING
+2016-06-24 18:15:56 INFO  LocatableInputSplitAssigner:186 - Assigning remote split to host localhost
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (7/8) (774e61dd179065cc07274672e8c48a2e) switched from DEPLOYING to RUNNING
+2016-06-24 18:15:56 INFO  LocatableInputSplitAssigner:186 - Assigning remote split to host localhost
+2016-06-24 18:15:56 INFO  LocatableInputSplitAssigner:186 - Assigning remote split to host localhost
+2016-06-24 18:15:56 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (8/8) switched to RUNNING
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6/8) (b483aca4c15095e6e4d46e51eab1ee5a) switched from DEPLOYING to RUNNING
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(2/8) switched to RUNNING 
+2016-06-24 18:15:56 INFO  LocatableInputSplitAssigner:186 - Assigning remote split to host localhost
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(4/8) switched to RUNNING 
+2016-06-24 18:15:56 INFO  LocatableInputSplitAssigner:186 - Assigning remote split to host localhost
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(5/8) switched to RUNNING 
+2016-06-24 18:15:56 INFO  LocatableInputSplitAssigner:186 - Assigning remote split to host localhost
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(3/8) switched to RUNNING 
+2016-06-24 18:15:56 INFO  LocatableInputSplitAssigner:186 - Assigning remote split to host localhost
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(7/8) switched to RUNNING 
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(6/8) switched to RUNNING 
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (8/8) (b3122f7924cfc4601e7067f64c2f55a1) switched from DEPLOYING to RUNNING
+2016-06-24 18:15:56 INFO  LocatableInputSplitAssigner:186 - Assigning remote split to host localhost
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(8/8) switched to RUNNING 
+2016-06-24 18:15:56 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (3/8) switched to FINISHED
+2016-06-24 18:15:56 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (4/8) switched to FINISHED
+2016-06-24 18:15:56 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6/8) switched to FINISHED
+2016-06-24 18:15:56 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (7/8) switched to FINISHED
+2016-06-24 18:15:56 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (5/8) switched to FINISHED
+2016-06-24 18:15:56 INFO  Task:647 - Freeing task resources for CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (7/8)
+2016-06-24 18:15:56 INFO  Task:647 - Freeing task resources for CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6/8)
+2016-06-24 18:15:56 INFO  Task:647 - Freeing task resources for CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (4/8)
+2016-06-24 18:15:56 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (8/8) switched to FINISHED
+2016-06-24 18:15:56 INFO  Task:647 - Freeing task resources for CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (8/8)
+2016-06-24 18:15:56 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (1/8) switched to FINISHED
+2016-06-24 18:15:56 INFO  Task:647 - Freeing task resources for CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (1/8)
+2016-06-24 18:15:56 INFO  Task:647 - Freeing task resources for CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (3/8)
+2016-06-24 18:15:56 INFO  Task:859 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (2/8) switched to FINISHED
+2016-06-24 18:15:56 INFO  Task:647 - Freeing task resources for CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (2/8)
+2016-06-24 18:15:56 INFO  Task:647 - Freeing task resources for CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (5/8)
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - DataSink (collect()) (5/8) (9842e93c789b9b39a27879c1e8f2a79f) switched from CREATED to SCHEDULED
+2016-06-24 18:15:56 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (774e61dd179065cc07274672e8c48a2e)
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - DataSink (collect()) (7/8) (322a73c83e52d1ecd1e3c303a4305d5c) switched from CREATED to SCHEDULED
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - DataSink (collect()) (5/8) (9842e93c789b9b39a27879c1e8f2a79f) switched from SCHEDULED to DEPLOYING
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	DataSink (collect())(5/8) switched to SCHEDULED 
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - DataSink (collect()) (1/8) (89b476e52dc3edde542845d4c222132d) switched from CREATED to SCHEDULED
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - DataSink (collect()) (4/8) (335aff2193e7e4bca783b339669a44cf) switched from CREATED to SCHEDULED
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - DataSink (collect()) (1/8) (89b476e52dc3edde542845d4c222132d) switched from SCHEDULED to DEPLOYING
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - DataSink (collect()) (8/8) (ee654a11188d43188a30c673c8ff15cb) switched from CREATED to SCHEDULED
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	DataSink (collect())(7/8) switched to SCHEDULED 
+2016-06-24 18:15:56 INFO  ExecutionGraph:363 - Deploying DataSink (collect()) (5/8) (attempt #0) to localhost
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - DataSink (collect()) (7/8) (322a73c83e52d1ecd1e3c303a4305d5c) switched from SCHEDULED to DEPLOYING
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - DataSink (collect()) (6/8) (1e4e6c8b3fc43e4ccc61804ea0b971c5) switched from CREATED to SCHEDULED
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - DataSink (collect()) (3/8) (5a7ba6071ae98dd7d2652e7d2155ee50) switched from CREATED to SCHEDULED
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - DataSink (collect()) (2/8) (6d249092010947a8d11a40feeb321140) switched from CREATED to SCHEDULED
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - DataSink (collect()) (3/8) (5a7ba6071ae98dd7d2652e7d2155ee50) switched from SCHEDULED to DEPLOYING
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - DataSink (collect()) (6/8) (1e4e6c8b3fc43e4ccc61804ea0b971c5) switched from SCHEDULED to DEPLOYING
+2016-06-24 18:15:56 INFO  ExecutionGraph:363 - Deploying DataSink (collect()) (7/8) (attempt #0) to localhost
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	DataSink (collect())(5/8) switched to DEPLOYING 
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - DataSink (collect()) (8/8) (ee654a11188d43188a30c673c8ff15cb) switched from SCHEDULED to DEPLOYING
+2016-06-24 18:15:56 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (b3122f7924cfc4601e7067f64c2f55a1)
+2016-06-24 18:15:56 INFO  ExecutionGraph:363 - Deploying DataSink (collect()) (1/8) (attempt #0) to localhost
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - DataSink (collect()) (4/8) (335aff2193e7e4bca783b339669a44cf) switched from SCHEDULED to DEPLOYING
+2016-06-24 18:15:56 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (630cb674fc467e70e20d0833a100a856)
+2016-06-24 18:15:56 INFO  ExecutionGraph:363 - Deploying DataSink (collect()) (8/8) (attempt #0) to localhost
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	DataSink (collect())(1/8) switched to SCHEDULED 
+2016-06-24 18:15:56 INFO  ExecutionGraph:363 - Deploying DataSink (collect()) (6/8) (attempt #0) to localhost
+2016-06-24 18:15:56 INFO  ExecutionGraph:363 - Deploying DataSink (collect()) (3/8) (attempt #0) to localhost
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - DataSink (collect()) (2/8) (6d249092010947a8d11a40feeb321140) switched from SCHEDULED to DEPLOYING
+2016-06-24 18:15:56 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (b483aca4c15095e6e4d46e51eab1ee5a)
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	DataSink (collect())(4/8) switched to SCHEDULED 
+2016-06-24 18:15:56 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (ffcf3f750d995c491286c26b575c9734)
+2016-06-24 18:15:56 INFO  ExecutionGraph:363 - Deploying DataSink (collect()) (4/8) (attempt #0) to localhost
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	DataSink (collect())(1/8) switched to DEPLOYING 
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	DataSink (collect())(8/8) switched to SCHEDULED 
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	DataSink (collect())(7/8) switched to DEPLOYING 
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	DataSink (collect())(6/8) switched to SCHEDULED 
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	DataSink (collect())(3/8) switched to SCHEDULED 
+2016-06-24 18:15:56 INFO  ExecutionGraph:363 - Deploying DataSink (collect()) (2/8) (attempt #0) to localhost
+2016-06-24 18:15:56 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (b24a1d401fa783b9b363ef02326cfa8d)
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	DataSink (collect())(2/8) switched to SCHEDULED 
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	DataSink (collect())(3/8) switched to DEPLOYING 
+2016-06-24 18:15:56 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (549aeaf6dfb34462ae5c9fc39cb5c02f)
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	DataSink (collect())(6/8) switched to DEPLOYING 
+2016-06-24 18:15:56 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (885dab1d47da1f3b2cdf8870c4892649)
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	DataSink (collect())(8/8) switched to DEPLOYING 
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	DataSink (collect())(4/8) switched to DEPLOYING 
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	DataSink (collect())(2/8) switched to DEPLOYING 
+2016-06-24 18:15:56 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (7/8) (774e61dd179065cc07274672e8c48a2e) switched from RUNNING to FINISHED
+2016-06-24 18:15:56 INFO  JobClientActor:281 - 06/24/2016 18:15:56	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(7/8) switched to FINISHED 
+2016-06-24 18:15:56 INFO  TaskManager:128 - Received task DataSink (collect()) (5/8)
+2016-06-24 18:15:56 INFO  Task:451 - Loading JAR files for task DataSink (collect()) (5/8)
+2016-06-24 18:15:56 INFO  TaskManager:128 - Received task DataSink (collect()) (7/8)
+2016-06-24 18:15:57 INFO  Task:451 - Loading JAR files for task DataSink (collect()) (7/8)
+2016-06-24 18:15:57 INFO  TaskManager:128 - Received task DataSink (collect()) (1/8)
+2016-06-24 18:15:57 INFO  Task:451 - Loading JAR files for task DataSink (collect()) (1/8)
+2016-06-24 18:15:57 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (8/8) (b3122f7924cfc4601e7067f64c2f55a1) switched from RUNNING to FINISHED
+2016-06-24 18:15:57 INFO  JobClientActor:281 - 06/24/2016 18:15:57	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(8/8) switched to FINISHED 
+2016-06-24 18:15:57 INFO  Task:468 - Registering task at network: DataSink (collect()) (7/8) [DEPLOYING]
+2016-06-24 18:15:57 INFO  Task:468 - Registering task at network: DataSink (collect()) (5/8) [DEPLOYING]
+2016-06-24 18:15:57 INFO  Task:859 - DataSink (collect()) (7/8) switched to RUNNING
+2016-06-24 18:15:57 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (4/8) (630cb674fc467e70e20d0833a100a856) switched from RUNNING to FINISHED
+2016-06-24 18:15:57 INFO  TaskManager:128 - Received task DataSink (collect()) (8/8)
+2016-06-24 18:15:57 INFO  Task:468 - Registering task at network: DataSink (collect()) (1/8) [DEPLOYING]
+2016-06-24 18:15:57 INFO  Task:451 - Loading JAR files for task DataSink (collect()) (8/8)
+2016-06-24 18:15:57 INFO  JobClientActor:281 - 06/24/2016 18:15:57	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(4/8) switched to FINISHED 
+2016-06-24 18:15:57 INFO  Task:859 - DataSink (collect()) (5/8) switched to RUNNING
+2016-06-24 18:15:57 INFO  TaskManager:128 - Received task DataSink (collect()) (6/8)
+2016-06-24 18:15:57 INFO  Task:468 - Registering task at network: DataSink (collect()) (8/8) [DEPLOYING]
+2016-06-24 18:15:57 INFO  Task:859 - DataSink (collect()) (1/8) switched to RUNNING
+2016-06-24 18:15:57 INFO  TaskManager:128 - Received task DataSink (collect()) (3/8)
+2016-06-24 18:15:57 INFO  Task:451 - Loading JAR files for task DataSink (collect()) (6/8)
+2016-06-24 18:15:57 INFO  TaskManager:128 - Received task DataSink (collect()) (4/8)
+2016-06-24 18:15:57 INFO  Task:859 - DataSink (collect()) (8/8) switched to RUNNING
+2016-06-24 18:15:57 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (6/8) (b483aca4c15095e6e4d46e51eab1ee5a) switched from RUNNING to FINISHED
+2016-06-24 18:15:57 INFO  Task:451 - Loading JAR files for task DataSink (collect()) (3/8)
+2016-06-24 18:15:57 INFO  JobClientActor:281 - 06/24/2016 18:15:57	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(6/8) switched to FINISHED 
+2016-06-24 18:15:57 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (1/8) (ffcf3f750d995c491286c26b575c9734) switched from RUNNING to FINISHED
+2016-06-24 18:15:57 INFO  TaskManager:128 - Received task DataSink (collect()) (2/8)
+2016-06-24 18:15:57 INFO  Task:451 - Loading JAR files for task DataSink (collect()) (4/8)
+2016-06-24 18:15:57 INFO  Task:468 - Registering task at network: DataSink (collect()) (4/8) [DEPLOYING]
+2016-06-24 18:15:57 INFO  Task:468 - Registering task at network: DataSink (collect()) (6/8) [DEPLOYING]
+2016-06-24 18:15:57 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (3/8) (b24a1d401fa783b9b363ef02326cfa8d) switched from RUNNING to FINISHED
+2016-06-24 18:15:57 INFO  Task:451 - Loading JAR files for task DataSink (collect()) (2/8)
+2016-06-24 18:15:57 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (5/8) (885dab1d47da1f3b2cdf8870c4892649) switched from RUNNING to FINISHED
+2016-06-24 18:15:57 INFO  ExecutionGraph:978 - DataSink (collect()) (8/8) (ee654a11188d43188a30c673c8ff15cb) switched from DEPLOYING to RUNNING
+2016-06-24 18:15:57 INFO  JobClientActor:281 - 06/24/2016 18:15:57	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(1/8) switched to FINISHED 
+2016-06-24 18:15:57 INFO  Task:468 - Registering task at network: DataSink (collect()) (3/8) [DEPLOYING]
+2016-06-24 18:15:57 INFO  JobClientActor:281 - 06/24/2016 18:15:57	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(3/8) switched to FINISHED 
+2016-06-24 18:15:57 INFO  JobClientActor:281 - 06/24/2016 18:15:57	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(5/8) switched to FINISHED 
+2016-06-24 18:15:57 INFO  JobClientActor:281 - 06/24/2016 18:15:57	DataSink (collect())(8/8) switched to RUNNING 
+2016-06-24 18:15:57 INFO  Task:468 - Registering task at network: DataSink (collect()) (2/8) [DEPLOYING]
+2016-06-24 18:15:57 INFO  ExecutionGraph:978 - DataSink (collect()) (5/8) (9842e93c789b9b39a27879c1e8f2a79f) switched from DEPLOYING to RUNNING
+2016-06-24 18:15:57 INFO  ExecutionGraph:978 - DataSink (collect()) (1/8) (89b476e52dc3edde542845d4c222132d) switched from DEPLOYING to RUNNING
+2016-06-24 18:15:57 INFO  ExecutionGraph:978 - DataSink (collect()) (7/8) (322a73c83e52d1ecd1e3c303a4305d5c) switched from DEPLOYING to RUNNING
+2016-06-24 18:15:57 INFO  ExecutionGraph:978 - CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60)) (2/8) (549aeaf6dfb34462ae5c9fc39cb5c02f) switched from RUNNING to FINISHED
+2016-06-24 18:15:57 INFO  JobClientActor:281 - 06/24/2016 18:15:57	DataSink (collect())(5/8) switched to RUNNING 
+2016-06-24 18:15:57 INFO  Task:859 - DataSink (collect()) (4/8) switched to RUNNING
+2016-06-24 18:15:57 INFO  JobClientActor:281 - 06/24/2016 18:15:57	DataSink (collect())(1/8) switched to RUNNING 
+2016-06-24 18:15:57 INFO  JobClientActor:281 - 06/24/2016 18:15:57	DataSink (collect())(7/8) switched to RUNNING 
+2016-06-24 18:15:57 INFO  JobClientActor:281 - 06/24/2016 18:15:57	CHAIN DataSource (at run(NameResolution.java:59) (org.apache.flink.api.java.io.TupleCsvInputFormat)) -> Map (Map at run(NameResolution.java:60))(2/8) switched to FINISHED 
+2016-06-24 18:15:57 INFO  ExecutionGraph:978 - DataSink (collect()) (4/8) (335aff2193e7e4bca783b339669a44cf) switched from DEPLOYING to RUNNING
+2016-06-24 18:15:57 INFO  Task:859 - DataSink (collect()) (6/8) switched to RUNNING
+2016-06-24 18:15:57 INFO  JobClientActor:281 - 06/24/2016 18:15:57	DataSink (collect())(4/8) switched to RUNNING 
+2016-06-24 18:15:57 INFO  Task:859 - DataSink (collect()) (2/8) switched to RUNNING
+2016-06-24 18:15:57 INFO  ExecutionGraph:978 - DataSink (collect()) (6/8) (1e4e6c8b3fc43e4ccc61804ea0b971c5) switched from DEPLOYING to RUNNING
+2016-06-24 18:15:57 INFO  Task:859 - DataSink (collect()) (8/8) switched to FINISHED
+2016-06-24 18:15:57 INFO  JobClientActor:281 - 06/24/2016 18:15:57	DataSink (collect())(6/8) switched to RUNNING 
+2016-06-24 18:15:57 INFO  Task:859 - DataSink (collect()) (1/8) switched to FINISHED
+2016-06-24 18:15:57 INFO  Task:859 - DataSink (collect()) (5/8) switched to FINISHED
+2016-06-24 18:15:57 INFO  Task:647 - Freeing task resources for DataSink (collect()) (5/8)
+2016-06-24 18:15:57 INFO  Task:859 - DataSink (collect()) (4/8) switched to FINISHED
+2016-06-24 18:15:57 INFO  Task:647 - Freeing task resources for DataSink (collect()) (4/8)
+2016-06-24 18:15:57 INFO  Task:859 - DataSink (collect()) (6/8) switched to FINISHED
+2016-06-24 18:15:57 INFO  Task:859 - DataSink (collect()) (7/8) switched to FINISHED
+2016-06-24 18:15:57 INFO  ExecutionGraph:978 - DataSink (collect()) (2/8) (6d249092010947a8d11a40feeb321140) switched from DEPLOYING to RUNNING
+2016-06-24 18:15:57 INFO  Task:859 - DataSink (collect()) (3/8) switched to RUNNING
+2016-06-24 18:15:57 INFO  JobClientActor:281 - 06/24/2016 18:15:57	DataSink (collect())(2/8) switched to RUNNING 
+2016-06-24 18:15:57 INFO  Task:647 - Freeing task resources for DataSink (collect()) (7/8)
+2016-06-24 18:15:57 INFO  Task:647 - Freeing task resources for DataSink (collect()) (6/8)
+2016-06-24 18:15:57 INFO  Task:859 - DataSink (collect()) (2/8) switched to FINISHED
+2016-06-24 18:15:57 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task DataSink (collect()) (9842e93c789b9b39a27879c1e8f2a79f)
+2016-06-24 18:15:57 INFO  Task:647 - Freeing task resources for DataSink (collect()) (1/8)
+2016-06-24 18:15:57 INFO  Task:647 - Freeing task resources for DataSink (collect()) (8/8)
+2016-06-24 18:15:57 INFO  Task:647 - Freeing task resources for DataSink (collect()) (2/8)
+2016-06-24 18:15:57 INFO  Task:859 - DataSink (collect()) (3/8) switched to FINISHED
+2016-06-24 18:15:57 INFO  Task:647 - Freeing task resources for DataSink (collect()) (3/8)
+2016-06-24 18:15:57 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task DataSink (collect()) (335aff2193e7e4bca783b339669a44cf)
+2016-06-24 18:15:57 INFO  ExecutionGraph:978 - DataSink (collect()) (3/8) (5a7ba6071ae98dd7d2652e7d2155ee50) switched from DEPLOYING to RUNNING
+2016-06-24 18:15:57 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task DataSink (collect()) (322a73c83e52d1ecd1e3c303a4305d5c)
+2016-06-24 18:15:57 INFO  JobClientActor:281 - 06/24/2016 18:15:57	DataSink (collect())(3/8) switched to RUNNING 
+2016-06-24 18:15:57 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task DataSink (collect()) (1e4e6c8b3fc43e4ccc61804ea0b971c5)
+2016-06-24 18:15:57 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task DataSink (collect()) (89b476e52dc3edde542845d4c222132d)
+2016-06-24 18:15:57 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task DataSink (collect()) (6d249092010947a8d11a40feeb321140)
+2016-06-24 18:15:57 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task DataSink (collect()) (ee654a11188d43188a30c673c8ff15cb)
+2016-06-24 18:15:57 INFO  TaskManager:128 - Un-registering task and sending final execution state FINISHED to JobManager for task DataSink (collect()) (5a7ba6071ae98dd7d2652e7d2155ee50)
+2016-06-24 18:15:57 INFO  ExecutionGraph:978 - DataSink (collect()) (4/8) (335aff2193e7e4bca783b339669a44cf) switched from RUNNING to FINISHED
+2016-06-24 18:15:57 INFO  ExecutionGraph:978 - DataSink (collect()) (5/8) (9842e93c789b9b39a27879c1e8f2a79f) switched from RUNNING to FINISHED
+2016-06-24 18:15:57 INFO  ExecutionGraph:978 - DataSink (collect()) (7/8) (322a73c83e52d1ecd1e3c303a4305d5c) switched from RUNNING to FINISHED
+2016-06-24 18:15:57 INFO  JobClientActor:281 - 06/24/2016 18:15:57	DataSink (collect())(4/8) switched to FINISHED 
+2016-06-24 18:15:57 INFO  ExecutionGraph:978 - DataSink (collect()) (6/8) (1e4e6c8b3fc43e4ccc61804ea0b971c5) switched from RUNNING to FINISHED
+2016-06-24 18:15:57 INFO  JobClientActor:281 - 06/24/2016 18:15:57	DataSink (collect())(5/8) switched to FINISHED 
+2016-06-24 18:15:57 INFO  ExecutionGraph:978 - DataSink (collect()) (1/8) (89b476e52dc3edde542845d4c222132d) switched from RUNNING to FINISHED
+2016-06-24 18:15:57 INFO  ExecutionGraph:978 - DataSink (collect()) (2/8) (6d249092010947a8d11a40feeb321140) switched from RUNNING to FINISHED
+2016-06-24 18:15:57 INFO  ExecutionGraph:978 - DataSink (collect()) (3/8) (5a7ba6071ae98dd7d2652e7d2155ee50) switched from RUNNING to FINISHED
+2016-06-24 18:15:57 INFO  JobClientActor:281 - 06/24/2016 18:15:57	DataSink (collect())(7/8) switched to FINISHED 
+2016-06-24 18:15:57 INFO  JobClientActor:281 - 06/24/2016 18:15:57	DataSink (collect())(6/8) switched to FINISHED 
+2016-06-24 18:15:57 INFO  JobClientActor:281 - 06/24/2016 18:15:57	DataSink (collect())(1/8) switched to FINISHED 
+2016-06-24 18:15:57 INFO  JobClientActor:281 - 06/24/2016 18:15:57	DataSink (collect())(2/8) switched to FINISHED 
+2016-06-24 18:15:57 INFO  JobClientActor:281 - 06/24/2016 18:15:57	DataSink (collect())(3/8) switched to FINISHED 
+2016-06-24 18:15:57 INFO  ExecutionGraph:978 - DataSink (collect()) (8/8) (ee654a11188d43188a30c673c8ff15cb) switched from RUNNING to FINISHED
+2016-06-24 18:15:57 INFO  JobClientActor:281 - 06/24/2016 18:15:57	DataSink (collect())(8/8) switched to FINISHED 
+2016-06-24 18:15:57 INFO  JobManager:137 - Status of job bcf00c9174fa2d5ae0c85beccfb4cfce (Flink Java Job at Fri Jun 24 18:15:55 CEST 2016) changed to FINISHED.
+2016-06-24 18:15:57 INFO  JobClientActor:291 - 06/24/2016 18:15:57	Job execution switched to status FINISHED.
+2016-06-24 18:15:57 INFO  JobClientActor:406 - Terminate JobClientActor.
+2016-06-24 18:15:57 INFO  JobClient:150 - Job execution complete
+2016-06-24 18:15:57 INFO  JobClientActor:318 - Disconnect from JobManager Actor[akka://flink/user/jobmanager_1#960697562].
+2016-06-24 18:15:57 INFO  FlinkMiniCluster:318 - Stopping FlinkMiniCluster.
+2016-06-24 18:15:57 INFO  TaskManager:128 - Stopping TaskManager akka://flink/user/taskmanager_1#1267262948.
+2016-06-24 18:15:57 INFO  JobManager:128 - Stopping JobManager akka://flink/user/jobmanager_1.
+2016-06-24 18:15:57 INFO  TaskManager:128 - Disassociating from JobManager
+2016-06-24 18:15:57 INFO  BlobCache:206 - Shutting down BlobCache
+2016-06-24 18:15:57 INFO  BlobServer:321 - Stopped BLOB server at 0.0.0.0:44906
+2016-06-24 18:15:57 INFO  IOManager:109 - I/O manager removed spill file directory /tmp/flink-io-3d9cdaab-1310-4e20-b6da-a2f58ae66e88
+2016-06-24 18:15:57 INFO  TaskManager:128 - Task manager akka://flink/user/taskmanager_1 is completely shut down.
+2016-06-24 18:15:57 INFO  DateResolution:53 - Inside DateResolution
+2016-06-24 18:15:57 INFO  Main:109 - Finished!!

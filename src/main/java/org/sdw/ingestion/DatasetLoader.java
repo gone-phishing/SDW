@@ -75,6 +75,7 @@ public class DatasetLoader
 		{
 			if(validate(cfg, invalidDatasets))
 			{
+				// TODO Add enable/ diable switch for this
 //				if(filter(cfg.getString("sourceFile")))
 //				{
 //					validDatasets.put(cfg, cfg.getString("sourceFile"));
