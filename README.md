@@ -29,6 +29,8 @@ Smart Data Web is a BMWi funded project. The central goal of the Smart Data Web 
 
 `java -cp ".:target/sdw-1.0.jar:./lib/*" org.sdw.Main`
 
+`mvn exec:java -Dexec.mainClass="org.sdw.Main"`
+
 **Docker build:** 
 
 `sudo docker build -t gonephishing/sdw .` 
