@@ -75,16 +75,26 @@ public class DatasetLoader
 		{
 			if(validate(cfg, invalidDatasets))
 			{
-				// TODO Add enable/ diable switch for this
-//				if(filter(cfg.getString("sourceFile")))
-//				{
-//					validDatasets.put(cfg, cfg.getString("sourceFile"));
-//				}
-//				else
-//				{
-//					invalidDatasets.put(cfg, "Dataset already loaded");
-//				}
-				validDatasets.put(cfg, cfg.getString("sourceFile"));
+				if(ic.datasetHashing.equals("true"))
+				{
+					if(filter(cfg.getString("sourceFile")))
+					{
+						validDatasets.put(cfg, cfg.getString("sourceFile"));
+					}
+					else
+					{
+						invalidDatasets.put(cfg, "Dataset already loaded");
+					}	
+				}
+				else if (ic.datasetHashing.equals("false"))
+				{
+					validDatasets.put(cfg, cfg.getString("sourceFile"));
+				}
+				else
+				{
+					LOG.error("Invalid value for datasetHashing in ingestion config file");
+				}
+				
 			}
 		}
 		if(invalidDatasets.size() > 0) 

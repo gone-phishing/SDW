@@ -33,6 +33,7 @@ public class IngestionConfig extends ConfigReader
 	public final String[] datasetPaths;
 	public final String hashFile;
 	public final String hashFunction;
+	public final String datasetHashing;
 	public final String[] mappingLanguage;
 	public final String[] updateIntervals;
 	public final String[] validTypes;
@@ -52,6 +53,7 @@ public class IngestionConfig extends ConfigReader
 		validTypes = config.getStringArray("validTypes");
 		commonRdfFormat = config.getString("commonRdfFormat");
 		hashFunction = config.getString("hashFunction");
+		datasetHashing = config.getString("datasetHashing");
 		hashFile = config.getString("hashFile");
 		jenaTDBDatabase = config.getString("jenaTDBDatabase");
 		queryDumpDirectory = config.getString("queryDumpDirectory");

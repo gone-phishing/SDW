@@ -848,3 +848,1357 @@ Generating RDF triples for file:/home/kilt/SDW/examples/grid.rml.ttl#InstituteMa
 2016-06-24 18:15:57 INFO  TaskManager:128 - Task manager akka://flink/user/taskmanager_1 is completely shut down.
 2016-06-24 18:15:57 INFO  DateResolution:53 - Inside DateResolution
 2016-06-24 18:15:57 INFO  Main:109 - Finished!!
+2016-08-03 09:21:05 WARN  Main:46 - $RML_HOME is not set. Expect mapping failure
+2016-08-03 09:21:05 WARN  Main:46 - $FLINK_HOME is not set. Flow operatos can't work
+2016-08-03 09:21:05 WARN  Main:46 - $CLOUDAMQP_URL is not set. RabbitMQ shared queue can't be created
+2016-08-03 09:21:05 WARN  Main:46 - $JENA_HOME is not set. Memory model can't be created
+2016-08-03 09:21:05 INFO  DatasetLoader:61 - In dataset loader class
+2016-08-03 09:21:05 INFO  DatasetLoader:72 - Old file hashes loaded
+2016-08-03 09:21:05 INFO  Bootstrap:78 - -------------Stats-------------
+2016-08-03 09:21:05 INFO  Bootstrap:80 - Total datasets tried loading: 1
+2016-08-03 09:21:05 INFO  Bootstrap:81 - Success: 1	Fail: 0
+2016-08-03 09:21:05 INFO  Bootstrap:85 - Success rate: 100 %
+2016-08-03 09:21:05 INFO  Main:80 - Mapping stage complete!
+2016-08-03 09:21:05 INFO  RMLmapper:133 - Deleting old output file to replace with new one
+2016-08-03 09:21:05 INFO  RMLmapper:101 - Shell command: $rm /Users/rsingh22/SDW/examples/grid20.ttl
+2016-08-03 09:21:05 INFO  JenaModel:128 - Shell command: $rm -rf /Users/rsingh22/SDW/examples/database/
+2016-08-03 09:21:05 INFO  JenaModel:128 - Shell command: $mkdir -p /Users/rsingh22/SDW/examples/database/
+2016-08-03 09:21:05 INFO  RMLmapper:101 - Shell command: $java -jar /Users/rsingh22/SDW/lib/RML-Mapper.jar -m /Users/rsingh22/SDW/examples/grid.rml.ttl -o /Users/rsingh22/SDW/examples/grid20.ttl -f nquads
+2016-08-03 09:21:05 INFO  RMLmapper:89 - -------------------------------------------------
+RML Processor
+-------------------------------------------------
+
+0 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+1 [main] INFO be.ugent.mmlab.rml.main.Main  - Retrieving the RML Mapping Document...
+1 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+14 [main] DEBUG org.openrdf.sail.memory.MemoryStore  - Initializing MemoryStore...
+20 [main] DEBUG org.openrdf.sail.memory.MemoryStore  - MemoryStore initialized
+45 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.trig.TriGParserFactory
+46 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.turtle.TurtleParserFactory
+46 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.ntriples.NTriplesParserFactory
+46 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.binary.BinaryRDFParserFactory
+46 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.n3.N3ParserFactory
+47 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.trix.TriXParserFactory
+47 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.rdfxml.RDFXMLParserFactory
+47 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.nquads.NQuadsParserFactory
+47 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.rdfjson.RDFJSONParserFactory
+47 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.jsonld.JSONLDParserFactory
+63 [main] DEBUG org.openrdf.rio.DatatypeHandlerRegistry  - Registered service class org.openrdf.rio.datatypes.XMLSchemaDatatypeHandler
+64 [main] DEBUG org.openrdf.rio.DatatypeHandlerRegistry  - Registered service class org.openrdf.rio.datatypes.RDFDatatypeHandler
+64 [main] DEBUG org.openrdf.rio.DatatypeHandlerRegistry  - Registered service class org.openrdf.rio.datatypes.DBPediaDatatypeHandler
+64 [main] DEBUG org.openrdf.rio.DatatypeHandlerRegistry  - Registered service class org.openrdf.rio.datatypes.VirtuosoGeometryDatatypeHandler
+64 [main] DEBUG org.openrdf.rio.DatatypeHandlerRegistry  - Registered service class org.openrdf.rio.datatypes.GeoSPARQLDatatypeHandler
+66 [main] DEBUG org.openrdf.rio.LanguageHandlerRegistry  - Registered service class org.openrdf.rio.languages.RFC3066LanguageHandler
+93 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.retrieval.RMLDocRetrieval  - Number of RML triples in the repository /Users/rsingh22/SDW/examples/grid.rml.ttl : 15 from local file
+94 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+94 [main] INFO be.ugent.mmlab.rml.main.Main  - Extracting the RML Mapping Definitions..
+94 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+94 [main] INFO be.ugent.mmlab.rml.mapdochandler.extraction.RMLMappingFactory  - Replacing Mapping Document shortcuts..
+99 [main] INFO be.ugent.mmlab.rml.mapdochandler.extraction.RMLMappingFactory  - Extracting Triples Maps..
+99 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.std.StdRMLMappingExtractor  - Triples Map statements were retrieved: true
+100 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.RMLMappingFactory  - Number of RML triples with type TriplesMap in file: 1
+101 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Extract TriplesMap subject : file:/Users/rsingh22/SDW/examples/grid.rml.ttl#InstituteMapping
+104 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Reference Formulation JSONPath
+104 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Iterator $.institutes.[*]
+104 [main] INFO be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Literal-valued Input Source
+106 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Query null
+106 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Triples Map extracted
+106 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Logical source extracted : [StdLogicalSource : iterator = $.institutes.[*]; source be.ugent.mmlab.rml.model.source.std.StdLocalFileSource@42d3bd8b; referenceFormulation = JSONPath]
+107 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.SubjectMapExtractor  - Extract subject map...
+107 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.SubjectMapExtractor  - Found subject map : node1ap78dccux2
+108 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - extractLiteralFromTermMap: Extracted template : http://sdw.org/{id}
+109 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - referenceValueStr null
+109 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - refMap.getReferenceValue(referenceValueStr) null
+109 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - extractURIsFromTermMap: class : http://schema.org/Education
+109 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - Extracted graphMap : node1ap78dccux3
+110 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.GraphMapExtractor  - Extract graph map...
+110 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - Extracted constant : http://www.example.com/#Graph
+111 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - referenceValueStr null
+111 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - refMap.getReferenceValue(referenceValueStr) null
+113 [main] DEBUG be.ugent.mmlab.rml.model.RDFTerm.AbstractTermMap  - setTermType: [AbstractTermMap:setTermType] No term type specified : use IRI by default.null
+113 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.GraphMapExtractor  - Graph map extracted.
+113 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.SubjectMapExtractor  - Graph Maps returned [be.ugent.mmlab.rml.model.std.StdGraphMap@2a2d45ba]
+113 [main] DEBUG be.ugent.mmlab.rml.model.RDFTerm.AbstractTermMap  - setTermType: [AbstractTermMap:setTermType] No term type specified : use IRI by default.null
+113 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.SubjectMapExtractor  - Subject map extracted.
+114 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateObjectMapExtractor  - More Predicate Map statements: true
+115 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - Extracted constant : http://schema.org/name
+115 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - referenceValueStr null
+115 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - refMap.getReferenceValue(referenceValueStr) null
+116 [main] DEBUG be.ugent.mmlab.rml.model.RDFTerm.AbstractTermMap  - setTermType: [AbstractTermMap:setTermType] No term type specified : use IRI by default.null
+116 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateMapExtractor  - Extracting predicate map done.
+116 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateObjectMapExtractor  - Object Map statements found: org.openrdf.repository.RepositoryResult@1794d431
+116 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateObjectMapExtractor  - Extracting Referencing Object Maps..
+117 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Extracting Referencing Object Map..
+117 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Parent Triples Maps were found null
+117 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Extract join conditions..
+117 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Extract join conditions done.
+118 [main] DEBUG be.ugent.mmlab.rml.condition.extractor.BindingConditionExtractor  - Extracting Binding Conditions..
+118 [main] DEBUG be.ugent.mmlab.rml.condition.extractor.BindingConditionExtractor  - Extract bind condition done.
+118 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Current Triples Map resource file:/Users/rsingh22/SDW/examples/grid.rml.ttl#InstituteMapping
+118 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Not a Referencing Object Map.
+118 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateObjectMapExtractor  - Referencing Object Map statements found: []
+119 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ObjectMapExtractor  - Extract object map..
+120 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - extractLiteralFromTermMap: Extracted reference : name
+120 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - referenceValueStr name
+120 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - refMap.getReferenceValue(referenceValueStr) be.ugent.mmlab.rml.model.std.StdReferenceMap@3c0f93f1
+120 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ObjectMapExtractor  - reference value be.ugent.mmlab.rml.model.std.StdReferenceMap@31dc339b
+120 [main] DEBUG be.ugent.mmlab.rml.model.RDFTerm.AbstractTermMap  - setTermType: [AbstractTermMap:setTermType] No term type specified : use Literal by default.
+121 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - Extracted graphMap : node1ap78dccux6
+121 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.GraphMapExtractor  - Extract graph map...
+121 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - Extracted constant : http://www.example.com/#Graph
+122 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - referenceValueStr null
+122 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - refMap.getReferenceValue(referenceValueStr) null
+122 [main] DEBUG be.ugent.mmlab.rml.model.RDFTerm.AbstractTermMap  - setTermType: [AbstractTermMap:setTermType] No term type specified : use IRI by default.null
+122 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.GraphMapExtractor  - Graph map extracted.
+122 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.GraphMapExtractor  - Gtraph Maps returned [be.ugent.mmlab.rml.model.std.StdGraphMap@3a5ed7a6]
+122 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateObjectMapExtractor  - Extract predicate-object map done.
+122 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Number of extracted predicate-object maps : 1
+122 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Extract of TriplesMap subject : file:/Users/rsingh22/SDW/examples/grid.rml.ttl#InstituteMapping done.
+123 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+123 [main] INFO be.ugent.mmlab.rml.main.Main  - Running the RML Mapping..
+123 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+123 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Running RML mapping... 
+123 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Using direct file /Users/rsingh22/SDW/examples/grid20.ttl
+123 [main] DEBUG org.openrdf.sail.memory.MemoryStore  - Initializing MemoryStore...
+124 [main] DEBUG org.openrdf.sail.memory.MemoryStore  - MemoryStore initialized
+128 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.trig.TriGWriterFactory
+128 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.turtle.TurtleWriterFactory
+129 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.ntriples.NTriplesWriterFactory
+129 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.binary.BinaryRDFWriterFactory
+129 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.n3.N3WriterFactory
+130 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.trix.TriXWriterFactory
+130 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.rdfxml.RDFXMLWriterFactory
+130 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.nquads.NQuadsWriterFactory
+131 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.rdfjson.RDFJSONWriterFactory
+131 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.jsonld.JSONLDWriterFactory
+133 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Dataset repository generated
+133 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Generating triples..
+133 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Generate RDF triples... 
+Generating RDF triples for file:/Users/rsingh22/SDW/examples/grid.rml.ttl#InstituteMapping
+134 [main] INFO be.ugent.mmlab.rml.core.RMLEngine  - Generating RML Processor..
+134 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Logical Source: [StdLogicalSource : iterator = $.institutes.[*]; source be.ugent.mmlab.rml.model.source.std.StdLocalFileSource@42d3bd8b; referenceFormulation = JSONPath]
+134 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Reference formulation: JSONPath
+138 [main] INFO be.ugent.mmlab.rml.core.RMLEngine  - Generating Data Retrieval Processor..
+139 [main] DEBUG be.ugent.mmlab.rml.input.ConcreteLogicalSourceProcessorFactory  - Resource-valued Input Source
+139 [main] DEBUG be.ugent.mmlab.rml.input.ConcreteLogicalSourceProcessorFactory  - source type StdLocalFileSource
+139 [main] DEBUG be.ugent.mmlab.rml.input.ConcreteLogicalSourceProcessorFactory  - Processor for Local File Source.
+140 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Generating Input Stream..
+140 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Generating Performer..
+140 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Executing Mapping Processor..
+189 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['institutes'][*]
+193 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+194 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+195 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1001.0, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+197 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+197 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1001.0, http://schema.org/name, Australian National University).
+197 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+197 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+197 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+198 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1002.3, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+198 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+198 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+198 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1002.3, http://schema.org/name, Monash University).
+198 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+198 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+198 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+198 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1003.2, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+199 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+199 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+199 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1003.2, http://schema.org/name, University of Queensland).
+199 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+199 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+199 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+199 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1004.5, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+199 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+199 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+200 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1004.5, http://schema.org/name, Macquarie University).
+200 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+200 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+200 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+200 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1005.4, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+200 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+200 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+200 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1005.4, http://schema.org/name, UNSW Australia).
+200 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+200 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+200 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+201 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1006.7, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+201 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+201 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+201 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1006.7, http://schema.org/name, Newcastle University).
+201 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+201 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+201 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+201 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1007.6, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+202 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+202 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+202 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1007.6, http://schema.org/name, University of Wollongong).
+202 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+202 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+202 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+202 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1008.9, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+202 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+202 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+202 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1008.9, http://schema.org/name, University of Melbourne).
+203 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+203 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+203 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+203 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1009.8, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+203 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+203 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+203 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1009.8, http://schema.org/name, University of Tasmania).
+203 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+204 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+204 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+204 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1010.0, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+204 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+204 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+204 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1010.0, http://schema.org/name, University of Adelaide).
+204 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+204 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+204 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+204 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1011.1, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+204 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+205 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+205 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1011.1, http://schema.org/name, James Cook University).
+207 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+207 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+207 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+207 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1012.2, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+207 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+208 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+208 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1012.2, http://schema.org/name, University of Western Australia).
+208 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+208 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+208 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+208 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1013.3, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+208 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+208 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+208 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1013.3, http://schema.org/name, University of Sydney).
+208 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+208 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+208 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+209 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1014.4, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+209 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+209 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+209 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1014.4, http://schema.org/name, Flinders University).
+209 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+209 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+209 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+209 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1016.6, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+209 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+209 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+209 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1016.6, http://schema.org/name, Commonwealth Scientific and Industrial Research Organisation (CSIRO)).
+210 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+210 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+210 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+210 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1017.7, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+210 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+210 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+210 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1017.7, http://schema.org/name, Royal Melbourne Institute of Technology University).
+210 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+210 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+210 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+210 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1018.8, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+211 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+211 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+211 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1018.8, http://schema.org/name, La Trobe University).
+211 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+211 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+211 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+211 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1019.9, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+211 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+211 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+211 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1019.9, http://schema.org/name, Victoria University).
+211 [main] INFO be.ugent.mmlab.rml.core.RMLEngine  - 36 triples were generated for file:/Users/rsingh22/SDW/examples/grid.rml.ttl#InstituteMapping
+211 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Generating metadata..
+211 [main] INFO be.ugent.mmlab.rml.core.RMLEngine  - RML mapping done! Generated 36 in 0.088659125s . 
+211 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Closing file...
+
+2016-08-03 09:21:05 INFO  JenaModel:78 - RDF dataset loaded to memory
+2016-08-03 09:32:27 WARN  Main:46 - $RML_HOME is not set. Expect mapping failure
+2016-08-03 09:32:27 WARN  Main:46 - $FLINK_HOME is not set. Flow operatos can't work
+2016-08-03 09:32:27 WARN  Main:46 - $CLOUDAMQP_URL is not set. RabbitMQ shared queue can't be created
+2016-08-03 09:32:27 WARN  Main:46 - $JENA_HOME is not set. Memory model can't be created
+2016-08-03 09:32:27 INFO  DatasetLoader:61 - In dataset loader class
+2016-08-03 09:32:27 INFO  DatasetLoader:72 - Old file hashes loaded
+2016-08-03 09:32:27 INFO  Bootstrap:78 - -------------Stats-------------
+2016-08-03 09:32:27 INFO  Bootstrap:80 - Total datasets tried loading: 1
+2016-08-03 09:32:27 INFO  Bootstrap:81 - Success: 1	Fail: 0
+2016-08-03 09:32:27 INFO  Bootstrap:85 - Success rate: 100 %
+2016-08-03 09:32:27 INFO  Main:80 - Mapping stage complete!
+2016-08-03 09:32:27 INFO  RMLmapper:133 - Deleting old output file to replace with new one
+2016-08-03 09:32:27 INFO  RMLmapper:101 - Shell command: $rm /Users/rsingh22/SDW/examples/grid20.ttl
+2016-08-03 09:32:27 INFO  JenaModel:128 - Shell command: $rm -rf /Users/rsingh22/SDW/examples/database/
+2016-08-03 09:32:27 INFO  RMLmapper:101 - Shell command: $java -jar /Users/rsingh22/SDW/lib/RML-Mapper.jar -m /Users/rsingh22/SDW/examples/grid.rml.ttl -o /Users/rsingh22/SDW/examples/grid20.ttl -f nquads
+2016-08-03 09:32:27 INFO  JenaModel:128 - Shell command: $mkdir -p /Users/rsingh22/SDW/examples/database/
+2016-08-03 09:32:27 INFO  RMLmapper:89 - -------------------------------------------------
+RML Processor
+-------------------------------------------------
+
+0 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+1 [main] INFO be.ugent.mmlab.rml.main.Main  - Retrieving the RML Mapping Document...
+1 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+11 [main] DEBUG org.openrdf.sail.memory.MemoryStore  - Initializing MemoryStore...
+18 [main] DEBUG org.openrdf.sail.memory.MemoryStore  - MemoryStore initialized
+42 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.trig.TriGParserFactory
+42 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.turtle.TurtleParserFactory
+43 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.ntriples.NTriplesParserFactory
+43 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.binary.BinaryRDFParserFactory
+43 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.n3.N3ParserFactory
+43 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.trix.TriXParserFactory
+44 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.rdfxml.RDFXMLParserFactory
+44 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.nquads.NQuadsParserFactory
+44 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.rdfjson.RDFJSONParserFactory
+44 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.jsonld.JSONLDParserFactory
+59 [main] DEBUG org.openrdf.rio.DatatypeHandlerRegistry  - Registered service class org.openrdf.rio.datatypes.XMLSchemaDatatypeHandler
+59 [main] DEBUG org.openrdf.rio.DatatypeHandlerRegistry  - Registered service class org.openrdf.rio.datatypes.RDFDatatypeHandler
+59 [main] DEBUG org.openrdf.rio.DatatypeHandlerRegistry  - Registered service class org.openrdf.rio.datatypes.DBPediaDatatypeHandler
+59 [main] DEBUG org.openrdf.rio.DatatypeHandlerRegistry  - Registered service class org.openrdf.rio.datatypes.VirtuosoGeometryDatatypeHandler
+60 [main] DEBUG org.openrdf.rio.DatatypeHandlerRegistry  - Registered service class org.openrdf.rio.datatypes.GeoSPARQLDatatypeHandler
+61 [main] DEBUG org.openrdf.rio.LanguageHandlerRegistry  - Registered service class org.openrdf.rio.languages.RFC3066LanguageHandler
+86 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.retrieval.RMLDocRetrieval  - Number of RML triples in the repository /Users/rsingh22/SDW/examples/grid.rml.ttl : 15 from local file
+87 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+87 [main] INFO be.ugent.mmlab.rml.main.Main  - Extracting the RML Mapping Definitions..
+87 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+87 [main] INFO be.ugent.mmlab.rml.mapdochandler.extraction.RMLMappingFactory  - Replacing Mapping Document shortcuts..
+91 [main] INFO be.ugent.mmlab.rml.mapdochandler.extraction.RMLMappingFactory  - Extracting Triples Maps..
+92 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.std.StdRMLMappingExtractor  - Triples Map statements were retrieved: true
+92 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.RMLMappingFactory  - Number of RML triples with type TriplesMap in file: 1
+93 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Extract TriplesMap subject : file:/Users/rsingh22/SDW/examples/grid.rml.ttl#InstituteMapping
+96 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Reference Formulation JSONPath
+96 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Iterator $.institutes.[*]
+96 [main] INFO be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Literal-valued Input Source
+98 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Query null
+98 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Triples Map extracted
+98 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Logical source extracted : [StdLogicalSource : iterator = $.institutes.[*]; source be.ugent.mmlab.rml.model.source.std.StdLocalFileSource@42d3bd8b; referenceFormulation = JSONPath]
+99 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.SubjectMapExtractor  - Extract subject map...
+99 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.SubjectMapExtractor  - Found subject map : node1ap7926lrx2
+100 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - extractLiteralFromTermMap: Extracted template : http://sdw.org/{id}
+100 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - referenceValueStr null
+101 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - refMap.getReferenceValue(referenceValueStr) null
+101 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - extractURIsFromTermMap: class : http://schema.org/Education
+101 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - Extracted graphMap : node1ap7926lrx3
+101 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.GraphMapExtractor  - Extract graph map...
+102 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - Extracted constant : http://www.example.com/#Graph
+102 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - referenceValueStr null
+102 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - refMap.getReferenceValue(referenceValueStr) null
+104 [main] DEBUG be.ugent.mmlab.rml.model.RDFTerm.AbstractTermMap  - setTermType: [AbstractTermMap:setTermType] No term type specified : use IRI by default.null
+104 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.GraphMapExtractor  - Graph map extracted.
+104 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.SubjectMapExtractor  - Graph Maps returned [be.ugent.mmlab.rml.model.std.StdGraphMap@2a2d45ba]
+104 [main] DEBUG be.ugent.mmlab.rml.model.RDFTerm.AbstractTermMap  - setTermType: [AbstractTermMap:setTermType] No term type specified : use IRI by default.null
+104 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.SubjectMapExtractor  - Subject map extracted.
+105 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateObjectMapExtractor  - More Predicate Map statements: true
+106 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - Extracted constant : http://schema.org/name
+106 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - referenceValueStr null
+106 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - refMap.getReferenceValue(referenceValueStr) null
+107 [main] DEBUG be.ugent.mmlab.rml.model.RDFTerm.AbstractTermMap  - setTermType: [AbstractTermMap:setTermType] No term type specified : use IRI by default.null
+107 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateMapExtractor  - Extracting predicate map done.
+107 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateObjectMapExtractor  - Object Map statements found: org.openrdf.repository.RepositoryResult@1794d431
+107 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateObjectMapExtractor  - Extracting Referencing Object Maps..
+108 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Extracting Referencing Object Map..
+108 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Parent Triples Maps were found null
+108 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Extract join conditions..
+108 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Extract join conditions done.
+109 [main] DEBUG be.ugent.mmlab.rml.condition.extractor.BindingConditionExtractor  - Extracting Binding Conditions..
+109 [main] DEBUG be.ugent.mmlab.rml.condition.extractor.BindingConditionExtractor  - Extract bind condition done.
+109 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Current Triples Map resource file:/Users/rsingh22/SDW/examples/grid.rml.ttl#InstituteMapping
+109 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Not a Referencing Object Map.
+109 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateObjectMapExtractor  - Referencing Object Map statements found: []
+110 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ObjectMapExtractor  - Extract object map..
+111 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - extractLiteralFromTermMap: Extracted reference : name
+111 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - referenceValueStr name
+111 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - refMap.getReferenceValue(referenceValueStr) be.ugent.mmlab.rml.model.std.StdReferenceMap@3c0f93f1
+111 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ObjectMapExtractor  - reference value be.ugent.mmlab.rml.model.std.StdReferenceMap@31dc339b
+111 [main] DEBUG be.ugent.mmlab.rml.model.RDFTerm.AbstractTermMap  - setTermType: [AbstractTermMap:setTermType] No term type specified : use Literal by default.
+111 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - Extracted graphMap : node1ap7926lrx6
+111 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.GraphMapExtractor  - Extract graph map...
+112 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - Extracted constant : http://www.example.com/#Graph
+112 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - referenceValueStr null
+112 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - refMap.getReferenceValue(referenceValueStr) null
+112 [main] DEBUG be.ugent.mmlab.rml.model.RDFTerm.AbstractTermMap  - setTermType: [AbstractTermMap:setTermType] No term type specified : use IRI by default.null
+112 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.GraphMapExtractor  - Graph map extracted.
+112 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.GraphMapExtractor  - Gtraph Maps returned [be.ugent.mmlab.rml.model.std.StdGraphMap@3a5ed7a6]
+112 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateObjectMapExtractor  - Extract predicate-object map done.
+113 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Number of extracted predicate-object maps : 1
+113 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Extract of TriplesMap subject : file:/Users/rsingh22/SDW/examples/grid.rml.ttl#InstituteMapping done.
+113 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+113 [main] INFO be.ugent.mmlab.rml.main.Main  - Running the RML Mapping..
+113 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+113 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Running RML mapping... 
+113 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Using direct file /Users/rsingh22/SDW/examples/grid20.ttl
+113 [main] DEBUG org.openrdf.sail.memory.MemoryStore  - Initializing MemoryStore...
+114 [main] DEBUG org.openrdf.sail.memory.MemoryStore  - MemoryStore initialized
+118 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.trig.TriGWriterFactory
+118 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.turtle.TurtleWriterFactory
+119 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.ntriples.NTriplesWriterFactory
+119 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.binary.BinaryRDFWriterFactory
+119 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.n3.N3WriterFactory
+120 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.trix.TriXWriterFactory
+120 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.rdfxml.RDFXMLWriterFactory
+120 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.nquads.NQuadsWriterFactory
+121 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.rdfjson.RDFJSONWriterFactory
+121 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.jsonld.JSONLDWriterFactory
+122 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Dataset repository generated
+122 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Generating triples..
+123 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Generate RDF triples... 
+Generating RDF triples for file:/Users/rsingh22/SDW/examples/grid.rml.ttl#InstituteMapping
+123 [main] INFO be.ugent.mmlab.rml.core.RMLEngine  - Generating RML Processor..
+124 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Logical Source: [StdLogicalSource : iterator = $.institutes.[*]; source be.ugent.mmlab.rml.model.source.std.StdLocalFileSource@42d3bd8b; referenceFormulation = JSONPath]
+124 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Reference formulation: JSONPath
+127 [main] INFO be.ugent.mmlab.rml.core.RMLEngine  - Generating Data Retrieval Processor..
+127 [main] DEBUG be.ugent.mmlab.rml.input.ConcreteLogicalSourceProcessorFactory  - Resource-valued Input Source
+127 [main] DEBUG be.ugent.mmlab.rml.input.ConcreteLogicalSourceProcessorFactory  - source type StdLocalFileSource
+127 [main] DEBUG be.ugent.mmlab.rml.input.ConcreteLogicalSourceProcessorFactory  - Processor for Local File Source.
+128 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Generating Input Stream..
+128 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Generating Performer..
+129 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Executing Mapping Processor..
+172 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['institutes'][*]
+175 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+177 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+178 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1001.0, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+180 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+180 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1001.0, http://schema.org/name, Australian National University).
+180 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+180 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+180 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+181 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1002.3, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+181 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+181 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+181 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1002.3, http://schema.org/name, Monash University).
+181 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+181 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+181 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+181 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1003.2, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+182 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+182 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+182 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1003.2, http://schema.org/name, University of Queensland).
+182 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+182 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+182 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+182 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1004.5, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+182 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+182 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+182 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1004.5, http://schema.org/name, Macquarie University).
+183 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+183 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+183 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+183 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1005.4, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+183 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+183 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+183 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1005.4, http://schema.org/name, UNSW Australia).
+183 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+183 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+183 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+184 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1006.7, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+184 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+184 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+184 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1006.7, http://schema.org/name, Newcastle University).
+184 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+184 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+184 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+184 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1007.6, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+184 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+184 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+184 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1007.6, http://schema.org/name, University of Wollongong).
+185 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+185 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+185 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+185 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1008.9, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+185 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+185 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+185 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1008.9, http://schema.org/name, University of Melbourne).
+185 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+185 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+185 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+185 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1009.8, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+185 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+186 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+186 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1009.8, http://schema.org/name, University of Tasmania).
+186 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+186 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+186 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+186 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1010.0, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+186 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+186 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+186 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1010.0, http://schema.org/name, University of Adelaide).
+186 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+186 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+187 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+187 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1011.1, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+187 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+187 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+189 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1011.1, http://schema.org/name, James Cook University).
+189 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+189 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+189 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+190 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1012.2, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+190 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+190 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+190 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1012.2, http://schema.org/name, University of Western Australia).
+190 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+190 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+190 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+190 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1013.3, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+190 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+190 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+190 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1013.3, http://schema.org/name, University of Sydney).
+191 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+191 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+191 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+191 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1014.4, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+191 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+191 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+191 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1014.4, http://schema.org/name, Flinders University).
+191 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+191 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+191 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+191 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1016.6, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+192 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+192 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+192 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1016.6, http://schema.org/name, Commonwealth Scientific and Industrial Research Organisation (CSIRO)).
+192 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+192 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+192 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+192 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1017.7, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+192 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+192 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+192 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1017.7, http://schema.org/name, Royal Melbourne Institute of Technology University).
+192 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+192 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+193 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+193 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1018.8, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+193 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+193 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+193 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1018.8, http://schema.org/name, La Trobe University).
+193 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+193 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+193 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+193 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1019.9, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+193 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+193 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+194 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1019.9, http://schema.org/name, Victoria University).
+194 [main] INFO be.ugent.mmlab.rml.core.RMLEngine  - 36 triples were generated for file:/Users/rsingh22/SDW/examples/grid.rml.ttl#InstituteMapping
+194 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Generating metadata..
+194 [main] INFO be.ugent.mmlab.rml.core.RMLEngine  - RML mapping done! Generated 36 in 0.080721539s . 
+194 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Closing file...
+
+2016-08-03 09:32:28 INFO  JenaModel:78 - RDF dataset loaded to memory
+2016-08-03 09:33:02 WARN  Main:46 - $RML_HOME is not set. Expect mapping failure
+2016-08-03 09:33:02 WARN  Main:46 - $FLINK_HOME is not set. Flow operatos can't work
+2016-08-03 09:33:02 WARN  Main:46 - $CLOUDAMQP_URL is not set. RabbitMQ shared queue can't be created
+2016-08-03 09:33:02 WARN  Main:46 - $JENA_HOME is not set. Memory model can't be created
+2016-08-03 09:33:02 INFO  DatasetLoader:61 - In dataset loader class
+2016-08-03 09:33:02 INFO  DatasetLoader:72 - Old file hashes loaded
+2016-08-03 09:33:02 INFO  Bootstrap:78 - -------------Stats-------------
+2016-08-03 09:33:02 INFO  Bootstrap:80 - Total datasets tried loading: 1
+2016-08-03 09:33:02 INFO  Bootstrap:81 - Success: 1	Fail: 0
+2016-08-03 09:33:02 INFO  Bootstrap:85 - Success rate: 100 %
+2016-08-03 09:33:02 INFO  Main:80 - Mapping stage complete!
+2016-08-03 09:33:02 INFO  RMLmapper:133 - Deleting old output file to replace with new one
+2016-08-03 09:33:02 INFO  RMLmapper:101 - Shell command: $rm /Users/rsingh22/SDW/examples/grid20.ttl
+2016-08-03 09:33:02 INFO  JenaModel:128 - Shell command: $rm -rf /Users/rsingh22/SDW/examples/database/
+2016-08-03 09:33:02 INFO  RMLmapper:101 - Shell command: $java -jar /Users/rsingh22/SDW/lib/RML-Mapper.jar -m /Users/rsingh22/SDW/examples/grid.rml.ttl -o /Users/rsingh22/SDW/examples/grid20.ttl -f nquads
+2016-08-03 09:33:02 INFO  JenaModel:128 - Shell command: $mkdir -p /Users/rsingh22/SDW/examples/database/
+2016-08-03 09:33:02 INFO  RMLmapper:89 - -------------------------------------------------
+RML Processor
+-------------------------------------------------
+
+0 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+1 [main] INFO be.ugent.mmlab.rml.main.Main  - Retrieving the RML Mapping Document...
+1 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+11 [main] DEBUG org.openrdf.sail.memory.MemoryStore  - Initializing MemoryStore...
+17 [main] DEBUG org.openrdf.sail.memory.MemoryStore  - MemoryStore initialized
+43 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.trig.TriGParserFactory
+44 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.turtle.TurtleParserFactory
+44 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.ntriples.NTriplesParserFactory
+44 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.binary.BinaryRDFParserFactory
+44 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.n3.N3ParserFactory
+45 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.trix.TriXParserFactory
+45 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.rdfxml.RDFXMLParserFactory
+45 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.nquads.NQuadsParserFactory
+45 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.rdfjson.RDFJSONParserFactory
+46 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.jsonld.JSONLDParserFactory
+60 [main] DEBUG org.openrdf.rio.DatatypeHandlerRegistry  - Registered service class org.openrdf.rio.datatypes.XMLSchemaDatatypeHandler
+60 [main] DEBUG org.openrdf.rio.DatatypeHandlerRegistry  - Registered service class org.openrdf.rio.datatypes.RDFDatatypeHandler
+60 [main] DEBUG org.openrdf.rio.DatatypeHandlerRegistry  - Registered service class org.openrdf.rio.datatypes.DBPediaDatatypeHandler
+61 [main] DEBUG org.openrdf.rio.DatatypeHandlerRegistry  - Registered service class org.openrdf.rio.datatypes.VirtuosoGeometryDatatypeHandler
+61 [main] DEBUG org.openrdf.rio.DatatypeHandlerRegistry  - Registered service class org.openrdf.rio.datatypes.GeoSPARQLDatatypeHandler
+62 [main] DEBUG org.openrdf.rio.LanguageHandlerRegistry  - Registered service class org.openrdf.rio.languages.RFC3066LanguageHandler
+87 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.retrieval.RMLDocRetrieval  - Number of RML triples in the repository /Users/rsingh22/SDW/examples/grid.rml.ttl : 15 from local file
+88 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+88 [main] INFO be.ugent.mmlab.rml.main.Main  - Extracting the RML Mapping Definitions..
+88 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+88 [main] INFO be.ugent.mmlab.rml.mapdochandler.extraction.RMLMappingFactory  - Replacing Mapping Document shortcuts..
+92 [main] INFO be.ugent.mmlab.rml.mapdochandler.extraction.RMLMappingFactory  - Extracting Triples Maps..
+93 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.std.StdRMLMappingExtractor  - Triples Map statements were retrieved: true
+93 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.RMLMappingFactory  - Number of RML triples with type TriplesMap in file: 1
+94 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Extract TriplesMap subject : file:/Users/rsingh22/SDW/examples/grid.rml.ttl#InstituteMapping
+97 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Reference Formulation JSONPath
+97 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Iterator $.institutes.[*]
+97 [main] INFO be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Literal-valued Input Source
+99 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Query null
+99 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Triples Map extracted
+99 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Logical source extracted : [StdLogicalSource : iterator = $.institutes.[*]; source be.ugent.mmlab.rml.model.source.std.StdLocalFileSource@42d3bd8b; referenceFormulation = JSONPath]
+100 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.SubjectMapExtractor  - Extract subject map...
+100 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.SubjectMapExtractor  - Found subject map : node1ap7938lgx2
+101 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - extractLiteralFromTermMap: Extracted template : http://sdw.org/{id}
+101 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - referenceValueStr null
+102 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - refMap.getReferenceValue(referenceValueStr) null
+102 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - extractURIsFromTermMap: class : http://schema.org/Education
+102 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - Extracted graphMap : node1ap7938lgx3
+103 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.GraphMapExtractor  - Extract graph map...
+103 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - Extracted constant : http://www.example.com/#Graph
+103 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - referenceValueStr null
+103 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - refMap.getReferenceValue(referenceValueStr) null
+105 [main] DEBUG be.ugent.mmlab.rml.model.RDFTerm.AbstractTermMap  - setTermType: [AbstractTermMap:setTermType] No term type specified : use IRI by default.null
+105 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.GraphMapExtractor  - Graph map extracted.
+105 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.SubjectMapExtractor  - Graph Maps returned [be.ugent.mmlab.rml.model.std.StdGraphMap@2a2d45ba]
+105 [main] DEBUG be.ugent.mmlab.rml.model.RDFTerm.AbstractTermMap  - setTermType: [AbstractTermMap:setTermType] No term type specified : use IRI by default.null
+105 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.SubjectMapExtractor  - Subject map extracted.
+106 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateObjectMapExtractor  - More Predicate Map statements: true
+107 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - Extracted constant : http://schema.org/name
+107 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - referenceValueStr null
+108 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - refMap.getReferenceValue(referenceValueStr) null
+108 [main] DEBUG be.ugent.mmlab.rml.model.RDFTerm.AbstractTermMap  - setTermType: [AbstractTermMap:setTermType] No term type specified : use IRI by default.null
+108 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateMapExtractor  - Extracting predicate map done.
+108 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateObjectMapExtractor  - Object Map statements found: org.openrdf.repository.RepositoryResult@1794d431
+108 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateObjectMapExtractor  - Extracting Referencing Object Maps..
+109 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Extracting Referencing Object Map..
+109 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Parent Triples Maps were found null
+109 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Extract join conditions..
+109 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Extract join conditions done.
+110 [main] DEBUG be.ugent.mmlab.rml.condition.extractor.BindingConditionExtractor  - Extracting Binding Conditions..
+111 [main] DEBUG be.ugent.mmlab.rml.condition.extractor.BindingConditionExtractor  - Extract bind condition done.
+111 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Current Triples Map resource file:/Users/rsingh22/SDW/examples/grid.rml.ttl#InstituteMapping
+111 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Not a Referencing Object Map.
+111 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateObjectMapExtractor  - Referencing Object Map statements found: []
+111 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ObjectMapExtractor  - Extract object map..
+113 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - extractLiteralFromTermMap: Extracted reference : name
+113 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - referenceValueStr name
+113 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - refMap.getReferenceValue(referenceValueStr) be.ugent.mmlab.rml.model.std.StdReferenceMap@3c0f93f1
+113 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ObjectMapExtractor  - reference value be.ugent.mmlab.rml.model.std.StdReferenceMap@31dc339b
+113 [main] DEBUG be.ugent.mmlab.rml.model.RDFTerm.AbstractTermMap  - setTermType: [AbstractTermMap:setTermType] No term type specified : use Literal by default.
+114 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - Extracted graphMap : node1ap7938lgx6
+114 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.GraphMapExtractor  - Extract graph map...
+114 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - Extracted constant : http://www.example.com/#Graph
+115 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - referenceValueStr null
+115 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - refMap.getReferenceValue(referenceValueStr) null
+115 [main] DEBUG be.ugent.mmlab.rml.model.RDFTerm.AbstractTermMap  - setTermType: [AbstractTermMap:setTermType] No term type specified : use IRI by default.null
+115 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.GraphMapExtractor  - Graph map extracted.
+115 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.GraphMapExtractor  - Gtraph Maps returned [be.ugent.mmlab.rml.model.std.StdGraphMap@3a5ed7a6]
+115 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateObjectMapExtractor  - Extract predicate-object map done.
+115 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Number of extracted predicate-object maps : 1
+115 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Extract of TriplesMap subject : file:/Users/rsingh22/SDW/examples/grid.rml.ttl#InstituteMapping done.
+116 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+116 [main] INFO be.ugent.mmlab.rml.main.Main  - Running the RML Mapping..
+116 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+116 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Running RML mapping... 
+116 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Using direct file /Users/rsingh22/SDW/examples/grid20.ttl
+116 [main] DEBUG org.openrdf.sail.memory.MemoryStore  - Initializing MemoryStore...
+117 [main] DEBUG org.openrdf.sail.memory.MemoryStore  - MemoryStore initialized
+121 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.trig.TriGWriterFactory
+121 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.turtle.TurtleWriterFactory
+122 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.ntriples.NTriplesWriterFactory
+123 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.binary.BinaryRDFWriterFactory
+124 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.n3.N3WriterFactory
+124 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.trix.TriXWriterFactory
+124 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.rdfxml.RDFXMLWriterFactory
+124 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.nquads.NQuadsWriterFactory
+125 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.rdfjson.RDFJSONWriterFactory
+125 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.jsonld.JSONLDWriterFactory
+126 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Dataset repository generated
+126 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Generating triples..
+126 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Generate RDF triples... 
+Generating RDF triples for file:/Users/rsingh22/SDW/examples/grid.rml.ttl#InstituteMapping
+127 [main] INFO be.ugent.mmlab.rml.core.RMLEngine  - Generating RML Processor..
+127 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Logical Source: [StdLogicalSource : iterator = $.institutes.[*]; source be.ugent.mmlab.rml.model.source.std.StdLocalFileSource@42d3bd8b; referenceFormulation = JSONPath]
+127 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Reference formulation: JSONPath
+130 [main] INFO be.ugent.mmlab.rml.core.RMLEngine  - Generating Data Retrieval Processor..
+131 [main] DEBUG be.ugent.mmlab.rml.input.ConcreteLogicalSourceProcessorFactory  - Resource-valued Input Source
+131 [main] DEBUG be.ugent.mmlab.rml.input.ConcreteLogicalSourceProcessorFactory  - source type StdLocalFileSource
+131 [main] DEBUG be.ugent.mmlab.rml.input.ConcreteLogicalSourceProcessorFactory  - Processor for Local File Source.
+132 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Generating Input Stream..
+132 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Generating Performer..
+132 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Executing Mapping Processor..
+174 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['institutes'][*]
+177 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+179 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+180 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1001.0, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+182 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+182 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1001.0, http://schema.org/name, Australian National University).
+182 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+182 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+182 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+182 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1002.3, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+182 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+182 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+183 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1002.3, http://schema.org/name, Monash University).
+183 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+183 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+183 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+183 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1003.2, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+183 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+183 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+183 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1003.2, http://schema.org/name, University of Queensland).
+183 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+183 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+183 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+184 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1004.5, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+184 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+184 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+184 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1004.5, http://schema.org/name, Macquarie University).
+184 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+184 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+184 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+184 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1005.4, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+184 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+185 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+185 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1005.4, http://schema.org/name, UNSW Australia).
+185 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+185 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+185 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+185 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1006.7, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+185 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+185 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+185 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1006.7, http://schema.org/name, Newcastle University).
+185 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+185 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+185 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+186 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1007.6, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+186 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+186 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+186 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1007.6, http://schema.org/name, University of Wollongong).
+186 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+186 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+186 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+186 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1008.9, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+186 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+186 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+187 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1008.9, http://schema.org/name, University of Melbourne).
+187 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+187 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+187 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+187 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1009.8, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+187 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+187 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+187 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1009.8, http://schema.org/name, University of Tasmania).
+187 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+187 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+187 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+188 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1010.0, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+188 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+188 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+188 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1010.0, http://schema.org/name, University of Adelaide).
+188 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+188 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+188 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+188 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1011.1, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+188 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+188 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+188 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1011.1, http://schema.org/name, James Cook University).
+188 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+188 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+188 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+188 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1012.2, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+188 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+188 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+189 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1012.2, http://schema.org/name, University of Western Australia).
+189 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+189 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+189 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+189 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1013.3, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+189 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+189 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+189 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1013.3, http://schema.org/name, University of Sydney).
+189 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+189 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+189 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+189 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1014.4, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+189 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+189 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+189 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1014.4, http://schema.org/name, Flinders University).
+189 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+189 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+189 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+190 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1016.6, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+190 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+190 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+190 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1016.6, http://schema.org/name, Commonwealth Scientific and Industrial Research Organisation (CSIRO)).
+190 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+190 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+190 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+190 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1017.7, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+190 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+190 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+190 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1017.7, http://schema.org/name, Royal Melbourne Institute of Technology University).
+190 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+190 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+190 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+190 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1018.8, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+190 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+190 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+191 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1018.8, http://schema.org/name, La Trobe University).
+191 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+191 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+191 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+191 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1019.9, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+191 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+191 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+191 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1019.9, http://schema.org/name, Victoria University).
+191 [main] INFO be.ugent.mmlab.rml.core.RMLEngine  - 36 triples were generated for file:/Users/rsingh22/SDW/examples/grid.rml.ttl#InstituteMapping
+191 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Generating metadata..
+191 [main] INFO be.ugent.mmlab.rml.core.RMLEngine  - RML mapping done! Generated 36 in 0.075119179s . 
+191 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Closing file...
+
+2016-08-03 09:33:02 INFO  JenaModel:78 - RDF dataset loaded to memory
+2016-08-03 09:33:13 WARN  Main:46 - $RML_HOME is not set. Expect mapping failure
+2016-08-03 09:33:13 WARN  Main:46 - $FLINK_HOME is not set. Flow operatos can't work
+2016-08-03 09:33:13 WARN  Main:46 - $CLOUDAMQP_URL is not set. RabbitMQ shared queue can't be created
+2016-08-03 09:33:13 WARN  Main:46 - $JENA_HOME is not set. Memory model can't be created
+2016-08-03 09:33:13 INFO  DatasetLoader:61 - In dataset loader class
+2016-08-03 09:33:13 INFO  DatasetLoader:72 - Old file hashes loaded
+2016-08-03 09:33:13 INFO  Bootstrap:78 - -------------Stats-------------
+2016-08-03 09:33:13 INFO  Bootstrap:80 - Total datasets tried loading: 1
+2016-08-03 09:33:13 INFO  Bootstrap:81 - Success: 1	Fail: 0
+2016-08-03 09:33:13 INFO  Bootstrap:85 - Success rate: 100 %
+2016-08-03 09:33:13 INFO  Main:80 - Mapping stage complete!
+2016-08-03 09:33:13 INFO  RMLmapper:133 - Deleting old output file to replace with new one
+2016-08-03 09:33:13 INFO  RMLmapper:101 - Shell command: $rm /Users/rsingh22/SDW/examples/grid20.ttl
+2016-08-03 09:33:13 INFO  JenaModel:128 - Shell command: $rm -rf /Users/rsingh22/SDW/examples/database/
+2016-08-03 09:33:13 INFO  RMLmapper:101 - Shell command: $java -jar /Users/rsingh22/SDW/lib/RML-Mapper.jar -m /Users/rsingh22/SDW/examples/grid.rml.ttl -o /Users/rsingh22/SDW/examples/grid20.ttl -f nquads
+2016-08-03 09:33:13 INFO  JenaModel:128 - Shell command: $mkdir -p /Users/rsingh22/SDW/examples/database/
+2016-08-03 09:33:13 INFO  RMLmapper:89 - -------------------------------------------------
+RML Processor
+-------------------------------------------------
+
+0 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+0 [main] INFO be.ugent.mmlab.rml.main.Main  - Retrieving the RML Mapping Document...
+0 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+13 [main] DEBUG org.openrdf.sail.memory.MemoryStore  - Initializing MemoryStore...
+19 [main] DEBUG org.openrdf.sail.memory.MemoryStore  - MemoryStore initialized
+42 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.trig.TriGParserFactory
+42 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.turtle.TurtleParserFactory
+42 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.ntriples.NTriplesParserFactory
+42 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.binary.BinaryRDFParserFactory
+43 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.n3.N3ParserFactory
+43 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.trix.TriXParserFactory
+43 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.rdfxml.RDFXMLParserFactory
+43 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.nquads.NQuadsParserFactory
+44 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.rdfjson.RDFJSONParserFactory
+44 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.jsonld.JSONLDParserFactory
+60 [main] DEBUG org.openrdf.rio.DatatypeHandlerRegistry  - Registered service class org.openrdf.rio.datatypes.XMLSchemaDatatypeHandler
+60 [main] DEBUG org.openrdf.rio.DatatypeHandlerRegistry  - Registered service class org.openrdf.rio.datatypes.RDFDatatypeHandler
+60 [main] DEBUG org.openrdf.rio.DatatypeHandlerRegistry  - Registered service class org.openrdf.rio.datatypes.DBPediaDatatypeHandler
+61 [main] DEBUG org.openrdf.rio.DatatypeHandlerRegistry  - Registered service class org.openrdf.rio.datatypes.VirtuosoGeometryDatatypeHandler
+61 [main] DEBUG org.openrdf.rio.DatatypeHandlerRegistry  - Registered service class org.openrdf.rio.datatypes.GeoSPARQLDatatypeHandler
+62 [main] DEBUG org.openrdf.rio.LanguageHandlerRegistry  - Registered service class org.openrdf.rio.languages.RFC3066LanguageHandler
+88 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.retrieval.RMLDocRetrieval  - Number of RML triples in the repository /Users/rsingh22/SDW/examples/grid.rml.ttl : 15 from local file
+88 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+88 [main] INFO be.ugent.mmlab.rml.main.Main  - Extracting the RML Mapping Definitions..
+88 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+88 [main] INFO be.ugent.mmlab.rml.mapdochandler.extraction.RMLMappingFactory  - Replacing Mapping Document shortcuts..
+93 [main] INFO be.ugent.mmlab.rml.mapdochandler.extraction.RMLMappingFactory  - Extracting Triples Maps..
+93 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.std.StdRMLMappingExtractor  - Triples Map statements were retrieved: true
+94 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.RMLMappingFactory  - Number of RML triples with type TriplesMap in file: 1
+95 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Extract TriplesMap subject : file:/Users/rsingh22/SDW/examples/grid.rml.ttl#InstituteMapping
+98 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Reference Formulation JSONPath
+98 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Iterator $.institutes.[*]
+98 [main] INFO be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Literal-valued Input Source
+99 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Query null
+100 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Triples Map extracted
+100 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Logical source extracted : [StdLogicalSource : iterator = $.institutes.[*]; source be.ugent.mmlab.rml.model.source.std.StdLocalFileSource@42d3bd8b; referenceFormulation = JSONPath]
+101 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.SubjectMapExtractor  - Extract subject map...
+101 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.SubjectMapExtractor  - Found subject map : node1ap793j96x2
+102 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - extractLiteralFromTermMap: Extracted template : http://sdw.org/{id}
+102 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - referenceValueStr null
+103 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - refMap.getReferenceValue(referenceValueStr) null
+103 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - extractURIsFromTermMap: class : http://schema.org/Education
+103 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - Extracted graphMap : node1ap793j96x3
+103 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.GraphMapExtractor  - Extract graph map...
+104 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - Extracted constant : http://www.example.com/#Graph
+104 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - referenceValueStr null
+104 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - refMap.getReferenceValue(referenceValueStr) null
+106 [main] DEBUG be.ugent.mmlab.rml.model.RDFTerm.AbstractTermMap  - setTermType: [AbstractTermMap:setTermType] No term type specified : use IRI by default.null
+106 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.GraphMapExtractor  - Graph map extracted.
+106 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.SubjectMapExtractor  - Graph Maps returned [be.ugent.mmlab.rml.model.std.StdGraphMap@2a2d45ba]
+106 [main] DEBUG be.ugent.mmlab.rml.model.RDFTerm.AbstractTermMap  - setTermType: [AbstractTermMap:setTermType] No term type specified : use IRI by default.null
+106 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.SubjectMapExtractor  - Subject map extracted.
+107 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateObjectMapExtractor  - More Predicate Map statements: true
+108 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - Extracted constant : http://schema.org/name
+108 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - referenceValueStr null
+108 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - refMap.getReferenceValue(referenceValueStr) null
+109 [main] DEBUG be.ugent.mmlab.rml.model.RDFTerm.AbstractTermMap  - setTermType: [AbstractTermMap:setTermType] No term type specified : use IRI by default.null
+109 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateMapExtractor  - Extracting predicate map done.
+109 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateObjectMapExtractor  - Object Map statements found: org.openrdf.repository.RepositoryResult@1794d431
+109 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateObjectMapExtractor  - Extracting Referencing Object Maps..
+110 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Extracting Referencing Object Map..
+110 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Parent Triples Maps were found null
+110 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Extract join conditions..
+110 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Extract join conditions done.
+111 [main] DEBUG be.ugent.mmlab.rml.condition.extractor.BindingConditionExtractor  - Extracting Binding Conditions..
+111 [main] DEBUG be.ugent.mmlab.rml.condition.extractor.BindingConditionExtractor  - Extract bind condition done.
+111 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Current Triples Map resource file:/Users/rsingh22/SDW/examples/grid.rml.ttl#InstituteMapping
+111 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Not a Referencing Object Map.
+112 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateObjectMapExtractor  - Referencing Object Map statements found: []
+112 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ObjectMapExtractor  - Extract object map..
+113 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - extractLiteralFromTermMap: Extracted reference : name
+113 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - referenceValueStr name
+113 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - refMap.getReferenceValue(referenceValueStr) be.ugent.mmlab.rml.model.std.StdReferenceMap@3c0f93f1
+113 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ObjectMapExtractor  - reference value be.ugent.mmlab.rml.model.std.StdReferenceMap@31dc339b
+113 [main] DEBUG be.ugent.mmlab.rml.model.RDFTerm.AbstractTermMap  - setTermType: [AbstractTermMap:setTermType] No term type specified : use Literal by default.
+114 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - Extracted graphMap : node1ap793j96x6
+114 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.GraphMapExtractor  - Extract graph map...
+114 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - Extracted constant : http://www.example.com/#Graph
+114 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - referenceValueStr null
+114 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - refMap.getReferenceValue(referenceValueStr) null
+115 [main] DEBUG be.ugent.mmlab.rml.model.RDFTerm.AbstractTermMap  - setTermType: [AbstractTermMap:setTermType] No term type specified : use IRI by default.null
+115 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.GraphMapExtractor  - Graph map extracted.
+115 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.GraphMapExtractor  - Gtraph Maps returned [be.ugent.mmlab.rml.model.std.StdGraphMap@3a5ed7a6]
+115 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateObjectMapExtractor  - Extract predicate-object map done.
+115 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Number of extracted predicate-object maps : 1
+115 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Extract of TriplesMap subject : file:/Users/rsingh22/SDW/examples/grid.rml.ttl#InstituteMapping done.
+115 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+115 [main] INFO be.ugent.mmlab.rml.main.Main  - Running the RML Mapping..
+115 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+115 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Running RML mapping... 
+115 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Using direct file /Users/rsingh22/SDW/examples/grid20.ttl
+116 [main] DEBUG org.openrdf.sail.memory.MemoryStore  - Initializing MemoryStore...
+116 [main] DEBUG org.openrdf.sail.memory.MemoryStore  - MemoryStore initialized
+120 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.trig.TriGWriterFactory
+121 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.turtle.TurtleWriterFactory
+121 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.ntriples.NTriplesWriterFactory
+121 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.binary.BinaryRDFWriterFactory
+122 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.n3.N3WriterFactory
+122 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.trix.TriXWriterFactory
+122 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.rdfxml.RDFXMLWriterFactory
+122 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.nquads.NQuadsWriterFactory
+123 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.rdfjson.RDFJSONWriterFactory
+123 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.jsonld.JSONLDWriterFactory
+124 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Dataset repository generated
+124 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Generating triples..
+124 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Generate RDF triples... 
+Generating RDF triples for file:/Users/rsingh22/SDW/examples/grid.rml.ttl#InstituteMapping
+125 [main] INFO be.ugent.mmlab.rml.core.RMLEngine  - Generating RML Processor..
+125 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Logical Source: [StdLogicalSource : iterator = $.institutes.[*]; source be.ugent.mmlab.rml.model.source.std.StdLocalFileSource@42d3bd8b; referenceFormulation = JSONPath]
+125 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Reference formulation: JSONPath
+129 [main] INFO be.ugent.mmlab.rml.core.RMLEngine  - Generating Data Retrieval Processor..
+130 [main] DEBUG be.ugent.mmlab.rml.input.ConcreteLogicalSourceProcessorFactory  - Resource-valued Input Source
+130 [main] DEBUG be.ugent.mmlab.rml.input.ConcreteLogicalSourceProcessorFactory  - source type StdLocalFileSource
+130 [main] DEBUG be.ugent.mmlab.rml.input.ConcreteLogicalSourceProcessorFactory  - Processor for Local File Source.
+131 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Generating Input Stream..
+131 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Generating Performer..
+131 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Executing Mapping Processor..
+174 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['institutes'][*]
+178 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+179 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+181 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1001.0, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+183 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+183 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1001.0, http://schema.org/name, Australian National University).
+183 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+183 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+183 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+184 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1002.3, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+184 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+184 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+184 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1002.3, http://schema.org/name, Monash University).
+184 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+184 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+184 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+185 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1003.2, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+185 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+185 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+185 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1003.2, http://schema.org/name, University of Queensland).
+185 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+185 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+185 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+185 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1004.5, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+185 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+185 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+186 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1004.5, http://schema.org/name, Macquarie University).
+186 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+186 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+186 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+186 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1005.4, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+186 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+186 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+186 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1005.4, http://schema.org/name, UNSW Australia).
+186 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+186 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+186 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+187 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1006.7, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+187 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+187 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+187 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1006.7, http://schema.org/name, Newcastle University).
+187 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+187 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+187 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+187 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1007.6, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+188 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+188 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+188 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1007.6, http://schema.org/name, University of Wollongong).
+188 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+188 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+188 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+188 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1008.9, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+188 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+188 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+188 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1008.9, http://schema.org/name, University of Melbourne).
+188 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+189 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+189 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+189 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1009.8, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+189 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+189 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+189 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1009.8, http://schema.org/name, University of Tasmania).
+189 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+189 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+189 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+189 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1010.0, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+189 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+189 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+189 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1010.0, http://schema.org/name, University of Adelaide).
+190 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+190 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+190 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+190 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1011.1, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+190 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+190 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+190 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1011.1, http://schema.org/name, James Cook University).
+192 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+192 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+193 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+193 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1012.2, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+193 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+193 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+193 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1012.2, http://schema.org/name, University of Western Australia).
+193 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+193 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+193 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+193 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1013.3, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+194 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+194 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+194 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1013.3, http://schema.org/name, University of Sydney).
+194 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+194 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+194 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+194 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1014.4, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+194 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+194 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+194 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1014.4, http://schema.org/name, Flinders University).
+195 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+195 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+195 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+195 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1016.6, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+195 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+195 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+195 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1016.6, http://schema.org/name, Commonwealth Scientific and Industrial Research Organisation (CSIRO)).
+195 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+195 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+195 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+195 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1017.7, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+195 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+195 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+196 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1017.7, http://schema.org/name, Royal Melbourne Institute of Technology University).
+196 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+196 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+196 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+196 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1018.8, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+196 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+196 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+196 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1018.8, http://schema.org/name, La Trobe University).
+196 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+196 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+196 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+196 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1019.9, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+196 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+196 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+197 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1019.9, http://schema.org/name, Victoria University).
+197 [main] INFO be.ugent.mmlab.rml.core.RMLEngine  - 36 triples were generated for file:/Users/rsingh22/SDW/examples/grid.rml.ttl#InstituteMapping
+197 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Generating metadata..
+197 [main] INFO be.ugent.mmlab.rml.core.RMLEngine  - RML mapping done! Generated 36 in 0.081446308s . 
+197 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Closing file...
+
+2016-08-03 09:33:13 INFO  JenaModel:78 - RDF dataset loaded to memory
+2016-08-03 09:33:56 WARN  Main:46 - $RML_HOME is not set. Expect mapping failure
+2016-08-03 09:33:56 WARN  Main:46 - $FLINK_HOME is not set. Flow operatos can't work
+2016-08-03 09:33:56 WARN  Main:46 - $CLOUDAMQP_URL is not set. RabbitMQ shared queue can't be created
+2016-08-03 09:33:56 WARN  Main:46 - $JENA_HOME is not set. Memory model can't be created
+2016-08-03 09:33:56 INFO  DatasetLoader:61 - In dataset loader class
+2016-08-03 09:33:56 INFO  DatasetLoader:72 - Old file hashes loaded
+2016-08-03 09:33:56 INFO  DatasetLoader:112 - New hashes written
+2016-08-03 09:33:56 INFO  Bootstrap:78 - -------------Stats-------------
+2016-08-03 09:33:56 INFO  Bootstrap:80 - Total datasets tried loading: 1
+2016-08-03 09:33:56 INFO  Bootstrap:81 - Success: 1	Fail: 0
+2016-08-03 09:33:56 INFO  Bootstrap:85 - Success rate: 100 %
+2016-08-03 09:33:56 INFO  Main:80 - Mapping stage complete!
+2016-08-03 09:33:56 INFO  RMLmapper:133 - Deleting old output file to replace with new one
+2016-08-03 09:33:56 INFO  RMLmapper:101 - Shell command: $rm /Users/rsingh22/SDW/examples/grid20.ttl
+2016-08-03 09:33:56 INFO  JenaModel:128 - Shell command: $rm -rf /Users/rsingh22/SDW/examples/database/
+2016-08-03 09:33:56 INFO  RMLmapper:101 - Shell command: $java -jar /Users/rsingh22/SDW/lib/RML-Mapper.jar -m /Users/rsingh22/SDW/examples/grid.rml.ttl -o /Users/rsingh22/SDW/examples/grid20.ttl -f nquads
+2016-08-03 09:33:56 INFO  JenaModel:128 - Shell command: $mkdir -p /Users/rsingh22/SDW/examples/database/
+2016-08-03 09:33:56 INFO  RMLmapper:89 - -------------------------------------------------
+RML Processor
+-------------------------------------------------
+
+0 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+1 [main] INFO be.ugent.mmlab.rml.main.Main  - Retrieving the RML Mapping Document...
+1 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+9 [main] DEBUG org.openrdf.sail.memory.MemoryStore  - Initializing MemoryStore...
+16 [main] DEBUG org.openrdf.sail.memory.MemoryStore  - MemoryStore initialized
+42 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.trig.TriGParserFactory
+43 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.turtle.TurtleParserFactory
+43 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.ntriples.NTriplesParserFactory
+43 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.binary.BinaryRDFParserFactory
+43 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.n3.N3ParserFactory
+43 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.trix.TriXParserFactory
+44 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.rdfxml.RDFXMLParserFactory
+44 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.nquads.NQuadsParserFactory
+44 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.rdfjson.RDFJSONParserFactory
+44 [main] DEBUG org.openrdf.rio.RDFParserRegistry  - Registered service class org.openrdf.rio.jsonld.JSONLDParserFactory
+59 [main] DEBUG org.openrdf.rio.DatatypeHandlerRegistry  - Registered service class org.openrdf.rio.datatypes.XMLSchemaDatatypeHandler
+59 [main] DEBUG org.openrdf.rio.DatatypeHandlerRegistry  - Registered service class org.openrdf.rio.datatypes.RDFDatatypeHandler
+60 [main] DEBUG org.openrdf.rio.DatatypeHandlerRegistry  - Registered service class org.openrdf.rio.datatypes.DBPediaDatatypeHandler
+60 [main] DEBUG org.openrdf.rio.DatatypeHandlerRegistry  - Registered service class org.openrdf.rio.datatypes.VirtuosoGeometryDatatypeHandler
+60 [main] DEBUG org.openrdf.rio.DatatypeHandlerRegistry  - Registered service class org.openrdf.rio.datatypes.GeoSPARQLDatatypeHandler
+62 [main] DEBUG org.openrdf.rio.LanguageHandlerRegistry  - Registered service class org.openrdf.rio.languages.RFC3066LanguageHandler
+90 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.retrieval.RMLDocRetrieval  - Number of RML triples in the repository /Users/rsingh22/SDW/examples/grid.rml.ttl : 15 from local file
+91 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+91 [main] INFO be.ugent.mmlab.rml.main.Main  - Extracting the RML Mapping Definitions..
+91 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+91 [main] INFO be.ugent.mmlab.rml.mapdochandler.extraction.RMLMappingFactory  - Replacing Mapping Document shortcuts..
+95 [main] INFO be.ugent.mmlab.rml.mapdochandler.extraction.RMLMappingFactory  - Extracting Triples Maps..
+96 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.std.StdRMLMappingExtractor  - Triples Map statements were retrieved: true
+97 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.RMLMappingFactory  - Number of RML triples with type TriplesMap in file: 1
+98 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Extract TriplesMap subject : file:/Users/rsingh22/SDW/examples/grid.rml.ttl#InstituteMapping
+100 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Reference Formulation JSONPath
+101 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Iterator $.institutes.[*]
+101 [main] INFO be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Literal-valued Input Source
+102 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Query null
+103 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Triples Map extracted
+103 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Logical source extracted : [StdLogicalSource : iterator = $.institutes.[*]; source be.ugent.mmlab.rml.model.source.std.StdLocalFileSource@42d3bd8b; referenceFormulation = JSONPath]
+103 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.SubjectMapExtractor  - Extract subject map...
+104 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.SubjectMapExtractor  - Found subject map : node1ap794tclx2
+105 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - extractLiteralFromTermMap: Extracted template : http://sdw.org/{id}
+106 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - referenceValueStr null
+106 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - refMap.getReferenceValue(referenceValueStr) null
+106 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - extractURIsFromTermMap: class : http://schema.org/Education
+106 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - Extracted graphMap : node1ap794tclx3
+107 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.GraphMapExtractor  - Extract graph map...
+107 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - Extracted constant : http://www.example.com/#Graph
+108 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - referenceValueStr null
+108 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - refMap.getReferenceValue(referenceValueStr) null
+109 [main] DEBUG be.ugent.mmlab.rml.model.RDFTerm.AbstractTermMap  - setTermType: [AbstractTermMap:setTermType] No term type specified : use IRI by default.null
+110 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.GraphMapExtractor  - Graph map extracted.
+110 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.SubjectMapExtractor  - Graph Maps returned [be.ugent.mmlab.rml.model.std.StdGraphMap@2a2d45ba]
+110 [main] DEBUG be.ugent.mmlab.rml.model.RDFTerm.AbstractTermMap  - setTermType: [AbstractTermMap:setTermType] No term type specified : use IRI by default.null
+110 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.SubjectMapExtractor  - Subject map extracted.
+111 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateObjectMapExtractor  - More Predicate Map statements: true
+112 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - Extracted constant : http://schema.org/name
+113 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - referenceValueStr null
+113 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - refMap.getReferenceValue(referenceValueStr) null
+113 [main] DEBUG be.ugent.mmlab.rml.model.RDFTerm.AbstractTermMap  - setTermType: [AbstractTermMap:setTermType] No term type specified : use IRI by default.null
+113 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateMapExtractor  - Extracting predicate map done.
+113 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateObjectMapExtractor  - Object Map statements found: org.openrdf.repository.RepositoryResult@1794d431
+113 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateObjectMapExtractor  - Extracting Referencing Object Maps..
+114 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Extracting Referencing Object Map..
+114 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Parent Triples Maps were found null
+114 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Extract join conditions..
+114 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Extract join conditions done.
+115 [main] DEBUG be.ugent.mmlab.rml.condition.extractor.BindingConditionExtractor  - Extracting Binding Conditions..
+116 [main] DEBUG be.ugent.mmlab.rml.condition.extractor.BindingConditionExtractor  - Extract bind condition done.
+116 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Current Triples Map resource file:/Users/rsingh22/SDW/examples/grid.rml.ttl#InstituteMapping
+116 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ReferencingObjectMapExtractor  - Not a Referencing Object Map.
+116 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateObjectMapExtractor  - Referencing Object Map statements found: []
+116 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ObjectMapExtractor  - Extract object map..
+117 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - extractLiteralFromTermMap: Extracted reference : name
+117 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - referenceValueStr name
+117 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - refMap.getReferenceValue(referenceValueStr) be.ugent.mmlab.rml.model.std.StdReferenceMap@3c0f93f1
+117 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.ObjectMapExtractor  - reference value be.ugent.mmlab.rml.model.std.StdReferenceMap@31dc339b
+117 [main] DEBUG be.ugent.mmlab.rml.model.RDFTerm.AbstractTermMap  - setTermType: [AbstractTermMap:setTermType] No term type specified : use Literal by default.
+118 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - Extracted graphMap : node1ap794tclx6
+118 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.GraphMapExtractor  - Extract graph map...
+118 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - Extracted constant : http://www.example.com/#Graph
+119 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - referenceValueStr null
+119 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TermMapExtractor  - refMap.getReferenceValue(referenceValueStr) null
+119 [main] DEBUG be.ugent.mmlab.rml.model.RDFTerm.AbstractTermMap  - setTermType: [AbstractTermMap:setTermType] No term type specified : use IRI by default.null
+119 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.GraphMapExtractor  - Graph map extracted.
+119 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.GraphMapExtractor  - Gtraph Maps returned [be.ugent.mmlab.rml.model.std.StdGraphMap@3a5ed7a6]
+119 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.PredicateObjectMapExtractor  - Extract predicate-object map done.
+119 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Number of extracted predicate-object maps : 1
+119 [main] DEBUG be.ugent.mmlab.rml.mapdochandler.extraction.concrete.TriplesMapExtractor  - Extract of TriplesMap subject : file:/Users/rsingh22/SDW/examples/grid.rml.ttl#InstituteMapping done.
+120 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+120 [main] INFO be.ugent.mmlab.rml.main.Main  - Running the RML Mapping..
+120 [main] INFO be.ugent.mmlab.rml.main.Main  - ========================================
+120 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Running RML mapping... 
+120 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Using direct file /Users/rsingh22/SDW/examples/grid20.ttl
+120 [main] DEBUG org.openrdf.sail.memory.MemoryStore  - Initializing MemoryStore...
+121 [main] DEBUG org.openrdf.sail.memory.MemoryStore  - MemoryStore initialized
+127 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.trig.TriGWriterFactory
+127 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.turtle.TurtleWriterFactory
+127 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.ntriples.NTriplesWriterFactory
+127 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.binary.BinaryRDFWriterFactory
+128 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.n3.N3WriterFactory
+128 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.trix.TriXWriterFactory
+128 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.rdfxml.RDFXMLWriterFactory
+129 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.nquads.NQuadsWriterFactory
+129 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.rdfjson.RDFJSONWriterFactory
+129 [main] DEBUG org.openrdf.rio.RDFWriterRegistry  - Registered service class org.openrdf.rio.jsonld.JSONLDWriterFactory
+130 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Dataset repository generated
+130 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Generating triples..
+130 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Generate RDF triples... 
+Generating RDF triples for file:/Users/rsingh22/SDW/examples/grid.rml.ttl#InstituteMapping
+131 [main] INFO be.ugent.mmlab.rml.core.RMLEngine  - Generating RML Processor..
+132 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Logical Source: [StdLogicalSource : iterator = $.institutes.[*]; source be.ugent.mmlab.rml.model.source.std.StdLocalFileSource@42d3bd8b; referenceFormulation = JSONPath]
+132 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Reference formulation: JSONPath
+135 [main] INFO be.ugent.mmlab.rml.core.RMLEngine  - Generating Data Retrieval Processor..
+136 [main] DEBUG be.ugent.mmlab.rml.input.ConcreteLogicalSourceProcessorFactory  - Resource-valued Input Source
+136 [main] DEBUG be.ugent.mmlab.rml.input.ConcreteLogicalSourceProcessorFactory  - source type StdLocalFileSource
+136 [main] DEBUG be.ugent.mmlab.rml.input.ConcreteLogicalSourceProcessorFactory  - Processor for Local File Source.
+137 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Generating Input Stream..
+137 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Generating Performer..
+138 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Executing Mapping Processor..
+185 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['institutes'][*]
+189 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+190 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+191 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1001.0, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+193 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+193 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1001.0, http://schema.org/name, Australian National University).
+193 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+194 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+194 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+194 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1002.3, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+194 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+194 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+194 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1002.3, http://schema.org/name, Monash University).
+194 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+195 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+195 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+195 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1003.2, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+195 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+195 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+195 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1003.2, http://schema.org/name, University of Queensland).
+195 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+195 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+195 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+196 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1004.5, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+196 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+196 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+196 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1004.5, http://schema.org/name, Macquarie University).
+196 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+196 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+196 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+196 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1005.4, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+196 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+196 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+196 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1005.4, http://schema.org/name, UNSW Australia).
+196 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+197 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+197 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+197 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1006.7, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+197 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+197 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+197 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1006.7, http://schema.org/name, Newcastle University).
+197 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+197 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+197 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+197 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1007.6, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+198 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+198 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+198 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1007.6, http://schema.org/name, University of Wollongong).
+198 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+198 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+198 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+198 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1008.9, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+198 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+198 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+198 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1008.9, http://schema.org/name, University of Melbourne).
+198 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+198 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+198 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+199 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1009.8, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+199 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+199 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+199 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1009.8, http://schema.org/name, University of Tasmania).
+199 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+199 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+199 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+199 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1010.0, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+199 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+199 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+199 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1010.0, http://schema.org/name, University of Adelaide).
+199 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+199 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+199 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+199 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1011.1, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+200 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+200 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+200 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1011.1, http://schema.org/name, James Cook University).
+200 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+200 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+200 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+200 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1012.2, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+200 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+200 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+200 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1012.2, http://schema.org/name, University of Western Australia).
+200 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+200 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+200 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+200 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1013.3, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+200 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+200 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+200 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1013.3, http://schema.org/name, University of Sydney).
+200 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+201 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+201 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+201 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1014.4, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+201 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+201 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+201 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1014.4, http://schema.org/name, Flinders University).
+201 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+201 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+201 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+201 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1016.6, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+201 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+201 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+201 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1016.6, http://schema.org/name, Commonwealth Scientific and Industrial Research Organisation (CSIRO)).
+201 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+201 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+201 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+202 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1017.7, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+202 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+202 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+202 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1017.7, http://schema.org/name, Royal Melbourne Institute of Technology University).
+202 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+202 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+202 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+202 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1018.8, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+202 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+202 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+202 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1018.8, http://schema.org/name, La Trobe University).
+203 [main] DEBUG be.ugent.mmlab.rml.model.std.StdTemplateMap  - extractVariablesFromStringTemplate: Extracted variable id from string template http://sdw.org/{id}
+203 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.idtrue[]
+203 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['id']
+203 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1019.9, http://www.w3.org/1999/02/22-rdf-syntax-ns#type, http://schema.org/Education).
+203 [main] DEBUG com.jayway.jsonpath.internal.PathCompiler  - Using cached path: $.nametrue[]
+203 [main] DEBUG com.jayway.jsonpath.internal.CompiledPath  - Evaluating path: $['name']
+203 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Add triple (http://sdw.org/grid.1019.9, http://schema.org/name, Victoria University).
+203 [main] INFO be.ugent.mmlab.rml.core.RMLEngine  - 36 triples were generated for file:/Users/rsingh22/SDW/examples/grid.rml.ttl#InstituteMapping
+203 [main] DEBUG be.ugent.mmlab.rml.core.RMLEngine  - Generating metadata..
+203 [main] INFO be.ugent.mmlab.rml.core.RMLEngine  - RML mapping done! Generated 36 in 0.083484803s . 
+203 [main] DEBUG be.ugent.mmlab.rml.model.dataset.FileDataset  - Closing file...
+
+2016-08-03 09:33:56 INFO  JenaModel:78 - RDF dataset loaded to memory
+2016-08-03 09:34:05 WARN  Main:46 - $RML_HOME is not set. Expect mapping failure
+2016-08-03 09:34:05 WARN  Main:46 - $FLINK_HOME is not set. Flow operatos can't work
+2016-08-03 09:34:05 WARN  Main:46 - $CLOUDAMQP_URL is not set. RabbitMQ shared queue can't be created
+2016-08-03 09:34:05 WARN  Main:46 - $JENA_HOME is not set. Memory model can't be created
+2016-08-03 09:34:06 INFO  DatasetLoader:61 - In dataset loader class
+2016-08-03 09:34:06 INFO  DatasetLoader:72 - Old file hashes loaded
+2016-08-03 09:34:06 WARN  DatasetLoader:105 - [WARN] Grid20 Dataset : Dataset already loaded
+2016-08-03 09:34:06 INFO  Bootstrap:78 - -------------Stats-------------
+2016-08-03 09:34:06 INFO  Bootstrap:80 - Total datasets tried loading: 1
+2016-08-03 09:34:06 INFO  Bootstrap:81 - Success: 0	Fail: 1
+2016-08-03 09:34:06 INFO  Bootstrap:85 - Success rate: 0 %
+2016-08-03 09:34:06 INFO  Main:80 - Mapping stage complete!
+2016-08-03 09:34:06 INFO  Main:109 - Finished!!
