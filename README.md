@@ -23,7 +23,7 @@ Smart Data Web is a BMWi funded project. The central goal of the Smart Data Web 
  
 **Project build:**
 
-`mvn clean install -Pbuild-jar -Dmaven.test.skip=true`
+`mvn clean install -DskipTests`
 
 **Running the framework from command line:**
 
