@@ -3,3 +3,4 @@
 .project
 .sonar
 logs/
+examples/database
