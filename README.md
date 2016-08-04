@@ -20,6 +20,7 @@ Smart Data Web is a BMWi funded project. The central goal of the Smart Data Web 
  - R2RML mapping language
  - Docker
  - Sonarqube
+ - Redis
  
 **Project build:**
 

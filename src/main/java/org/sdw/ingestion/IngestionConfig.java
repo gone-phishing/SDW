@@ -28,6 +28,7 @@ import org.apache.commons.configuration2.ex.ConfigurationException;
  */
 public class IngestionConfig extends ConfigReader
 {
+	public final int maxFileSize;
 	public final String commonRdfFormat;
 	public final Configuration config;
 	public final String[] datasetPaths;
@@ -54,6 +55,7 @@ public class IngestionConfig extends ConfigReader
 		commonRdfFormat = config.getString("commonRdfFormat");
 		hashFunction = config.getString("hashFunction");
 		datasetHashing = config.getString("datasetHashing");
+		maxFileSize = config.getInt("maxFileSize");
 		hashFile = config.getString("hashFile");
 		jenaTDBDatabase = config.getString("jenaTDBDatabase");
 		queryDumpDirectory = config.getString("queryDumpDirectory");
