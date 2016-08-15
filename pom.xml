@@ -1,23 +1,17 @@
-<!--
-Licensed to the Apache Software Foundation (ASF) under one
-or more contributor license agreements.  See the NOTICE file
-distributed with this work for additional information
-regarding copyright ownership.  The ASF licenses this file
-to you under the Apache License, Version 2.0 (the
-"License"); you may not use this file except in compliance
-with the License.  You may obtain a copy of the License at
-  http://www.apache.org/licenses/LICENSE-2.0
-Unless required by applicable law or agreed to in writing,
-software distributed under the License is distributed on an
-"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, either express or implied.  See the License for the
-specific language governing permissions and limitations
-under the License.
--->
+<!-- Licensed to the Apache Software Foundation (ASF) under one or more contributor 
+	license agreements. See the NOTICE file distributed with this work for additional 
+	information regarding copyright ownership. The ASF licenses this file to 
+	you under the Apache License, Version 2.0 (the "License"); you may not use 
+	this file except in compliance with the License. You may obtain a copy of 
+	the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required 
+	by applicable law or agreed to in writing, software distributed under the 
+	License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS 
+	OF ANY KIND, either express or implied. See the License for the specific 
+	language governing permissions and limitations under the License. -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	
+
 	<groupId>org.sdw</groupId>
 	<artifactId>sdw</artifactId>
 	<version>1.0</version>
@@ -31,25 +25,18 @@ under the License.
 		<sonar.language>java</sonar.language>
 	</properties>
 
-	
-	<!-- 
-		
-		Execute "mvn clean package -Pbuild-jar"
-		to build a jar file out of this project!
-		How to use the Flink Quickstart pom:
-		a) Adding new dependencies:
-			You can add dependencies to the list below.
-			Please check if the maven-shade-plugin below is filtering out your dependency
-			and remove the exclude from there.
-		b) Build a jar for running on the cluster:
-			There are two options for creating a jar from this project
-			b.1) "mvn clean package" -> this will create a fat jar which contains all
-					dependencies necessary for running the jar created by this pom in a cluster.
-					The "maven-shade-plugin" excludes everything that is provided on a running Flink cluster.
-			b.2) "mvn clean package -Pbuild-jar" -> This will also create a fat-jar, but with much
-					nicer dependency exclusion handling. This approach is preferred and leads to
-					much cleaner jar files.
-	-->
+
+	<!-- Execute "mvn clean package -Pbuild-jar" to build a jar file out of 
+		this project! How to use the Flink Quickstart pom: a) Adding new dependencies: 
+		You can add dependencies to the list below. Please check if the maven-shade-plugin 
+		below is filtering out your dependency and remove the exclude from there. 
+		b) Build a jar for running on the cluster: There are two options for creating 
+		a jar from this project b.1) "mvn clean package" -> this will create a fat 
+		jar which contains all dependencies necessary for running the jar created 
+		by this pom in a cluster. The "maven-shade-plugin" excludes everything that 
+		is provided on a running Flink cluster. b.2) "mvn clean package -Pbuild-jar" 
+		-> This will also create a fat-jar, but with much nicer dependency exclusion 
+		handling. This approach is preferred and leads to much cleaner jar files. -->
 
 	<dependencies>
 		<dependency>
@@ -77,38 +64,38 @@ under the License.
 			<artifactId>flink-clients_2.11</artifactId>
 			<version>${flink.version}</version>
 		</dependency>
-		
+
 		<!-- http://mvnrepository.com/artifact/org.apache.commons/commons-configuration2 -->
 		<dependency>
-		    <groupId>org.apache.commons</groupId>
-		    <artifactId>commons-configuration2</artifactId>
-		    <version>2.0</version>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-configuration2</artifactId>
+			<version>2.0</version>
 		</dependency>
-				
+
 		<dependency>
 			<groupId>org.apache.commons</groupId>
-  			<artifactId>commons-lang3</artifactId>
-  			<version>3.4</version>
-  		</dependency>
-		
+			<artifactId>commons-lang3</artifactId>
+			<version>3.4</version>
+		</dependency>
+
 		<dependency>
 			<groupId>commons-beanutils</groupId>
 			<artifactId>commons-beanutils</artifactId>
 			<version>1.9.2</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.quartz-scheduler</groupId>
 			<artifactId>quartz</artifactId>
 			<version>2.2.1</version>
 		</dependency>
-		
+
 		<dependency>
-    		<groupId>com.rabbitmq</groupId>
-    		<artifactId>amqp-client</artifactId>
-    		<version>2.8.2</version>
+			<groupId>com.rabbitmq</groupId>
+			<artifactId>amqp-client</artifactId>
+			<version>2.8.2</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.apache.jena</groupId>
 			<artifactId>apache-jena-libs</artifactId>
@@ -116,38 +103,39 @@ under the License.
 			<type>pom</type>
 		</dependency>
 
-		
+
 		<dependency>
-    		<groupId>com.jayway.jsonpath</groupId>
-    		<artifactId>json-path</artifactId>
-    		<version>2.2.0</version>
+			<groupId>com.jayway.jsonpath</groupId>
+			<artifactId>json-path</artifactId>
+			<version>2.2.0</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>xom</groupId>
 			<artifactId>xom</artifactId>
 			<version>1.2.5</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>1.7.21</version>
 		</dependency>
-		
+
 		<dependency>
-  			<groupId>biz.paluch.redis</groupId>
-  			<artifactId>lettuce</artifactId>
-  			<version>4.1.2.Final</version>
+			<groupId>biz.paluch.redis</groupId>
+			<artifactId>lettuce</artifactId>
+			<version>4.1.2.Final</version>
 		</dependency>
-		
+
 	</dependencies>
 
 	<build>
 		<plugins>
-			<!-- We use the maven-shade plugin to create a fat jar that contains all dependencies
-			except flink and it's transitive dependencies. The resulting fat-jar can be executed
-			on a cluster. Change the value of Program-Class if your program entry point changes. -->
+			<!-- We use the maven-shade plugin to create a fat jar that contains all 
+				dependencies except flink and it's transitive dependencies. The resulting 
+				fat-jar can be executed on a cluster. Change the value of Program-Class if 
+				your program entry point changes. -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-shade-plugin</artifactId>
@@ -162,26 +150,24 @@ under the License.
 						<configuration>
 							<artifactSet>
 								<excludes>
-									<!-- This list contains all dependencies of flink-dist	Everything else will be packaged into the fat-jar-->
-									<!--<exclude>org.apache.flink:flink-shaded-hadoop</exclude>
-									<exclude>org.apache.flink:flink-core</exclude>
-									<exclude>org.apache.flink:flink-java</exclude> 
-									<exclude>org.apache.flink:flink-streaming-java</exclude> -->
-									<exclude>org.apache.flink:flink-streaming-examples</exclude> 
+									<!-- This list contains all dependencies of flink-dist Everything 
+										else will be packaged into the fat-jar -->
+									<!--<exclude>org.apache.flink:flink-shaded-hadoop</exclude> <exclude>org.apache.flink:flink-core</exclude> 
+										<exclude>org.apache.flink:flink-java</exclude> <exclude>org.apache.flink:flink-streaming-java</exclude> -->
+									<exclude>org.apache.flink:flink-streaming-examples</exclude>
 									<exclude>org.apache.flink:flink-scala</exclude>
 									<exclude>org.apache.flink:flink-runtime</exclude>
 									<exclude>org.apache.flink:flink-optimizer</exclude>
-									<exclude>org.apache.flink:flink-clients</exclude> 
+									<exclude>org.apache.flink:flink-clients</exclude>
 									<exclude>org.apache.flink:flink-avro</exclude>
 									<exclude>org.apache.flink:flink-java-examples</exclude>
-									<exclude>org.apache.flink:flink-scala-examples</exclude> 
-									
-									
-									<!-- Also exclude very big transitive dependencies of Flink
-									WARNING: You have to remove these excludes if your code relies on other
-									versions of these dependencies.
-									-->
-									
+									<exclude>org.apache.flink:flink-scala-examples</exclude>
+
+
+									<!-- Also exclude very big transitive dependencies of Flink WARNING: 
+										You have to remove these excludes if your code relies on other versions of 
+										these dependencies. -->
+
 									<exclude>org.scala-lang:scala-library</exclude>
 									<exclude>org.scala-lang:scala-compiler</exclude>
 									<exclude>org.scala-lang:scala-reflect</exclude>
@@ -213,7 +199,7 @@ under the License.
 									<exclude>junit:junit</exclude>
 									<exclude>de.javakaffee:kryo-serializers</exclude>
 									<exclude>joda-time:joda-time</exclude>
-									
+
 									<exclude>org.apache.commons:commons-math</exclude>
 									<exclude>org.apache.sling:org.apache.sling.commons.json</exclude>
 									<exclude>commons-logging:commons-logging</exclude>
@@ -226,20 +212,20 @@ under the License.
 									<exclude>org.uncommons.maths:uncommons-maths</exclude>
 									<exclude>com.github.scopt:scopt_*</exclude>
 									<exclude>commons-io:commons-io</exclude>
-									<exclude>commons-cli:commons-cli</exclude> 
+									<exclude>commons-cli:commons-cli</exclude>
 								</excludes>
 							</artifactSet>
 							<filters>
-								 <filter>
+								<filter>
 									<artifact>org.apache.flink:*</artifact>
 									<excludes>
 										<exclude>org/apache/flink/shaded/**</exclude>
 										<exclude>web-docs/**</exclude>
 									</excludes>
-								</filter>  
+								</filter>
 								<filter>
-									<!-- Do not copy the signatures in the META-INF folder.
-									Otherwise, this might cause SecurityExceptions when using the JAR. -->
+									<!-- Do not copy the signatures in the META-INF folder. Otherwise, 
+										this might cause SecurityExceptions when using the JAR. -->
 									<artifact>*:*</artifact>
 									<excludes>
 										<exclude>META-INF/*.SF</exclude>
@@ -250,21 +236,25 @@ under the License.
 							</filters>
 							<transformers>
 								<!-- add Main-Class to manifest file -->
-								<transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+								<transformer
+									implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
 									<mainClass>org.sdw.Main</mainClass>
 								</transformer>
-								<transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
-            					<transformer implementation="org.apache.maven.plugins.shade.resource.ApacheLicenseResourceTransformer" />
-            					<transformer implementation="org.apache.maven.plugins.shade.resource.ApacheNoticeResourceTransformer">
-              						<addHeader>false</addHeader>
-              					</transformer>
+								<transformer
+									implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
+								<transformer
+									implementation="org.apache.maven.plugins.shade.resource.ApacheLicenseResourceTransformer" />
+								<transformer
+									implementation="org.apache.maven.plugins.shade.resource.ApacheNoticeResourceTransformer">
+									<addHeader>false</addHeader>
+								</transformer>
 							</transformers>
 							<createDependencyReducedPom>false</createDependencyReducedPom>
 						</configuration>
 					</execution>
 				</executions>
 			</plugin>
-			
+
 			<!-- Configure the jar plugin to add the main class as a manifest entry -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -289,10 +279,11 @@ under the License.
 				</configuration>
 			</plugin>
 		</plugins>
-		
-			
-		<!-- If you want to use Java 8 Lambda Expressions uncomment the following lines -->
-		
+
+
+		<!-- If you want to use Java 8 Lambda Expressions uncomment the following 
+			lines -->
+
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -310,7 +301,7 @@ under the License.
 						</dependency>
 					</dependencies>
 				</plugin>
-		
+
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>
@@ -328,7 +319,7 @@ under the License.
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<ignore/>
+										<ignore />
 									</action>
 								</pluginExecution>
 								<pluginExecution>
@@ -342,7 +333,7 @@ under the License.
 										</goals>
 									</pluginExecutionFilter>
 									<action>
-										<ignore/>
+										<ignore />
 									</action>
 								</pluginExecution>
 							</pluginExecutions>
@@ -351,10 +342,10 @@ under the License.
 				</plugin>
 			</plugins>
 		</pluginManagement>
-		
-		
+
+
 	</build>
-	
+
 	<name>Smart Data Web</name>
 	<organization>
 		<name>AKSW/KILT Research Group</name>

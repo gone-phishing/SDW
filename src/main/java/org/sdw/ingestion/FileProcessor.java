@@ -18,6 +18,8 @@
  *******************************************************************************/
 package org.sdw.ingestion;
 
+import java.io.File;
+
 /**
  * @author Ritesh Kumar Singh
  *
@@ -27,8 +29,8 @@ public class FileProcessor
 	public FileProcessor(int maxSize, String sourceFile)
 	{
 		File file = new File(sourceFile);
-		int fileSize = file.length();
-		int requiredPartitions = 1;
+		long fileSize = file.length();
+		long requiredPartitions = 1;
 		if(fileSize > maxSize)
 		{
 			requiredPartitions = (fileSize/maxSize) + 1;
