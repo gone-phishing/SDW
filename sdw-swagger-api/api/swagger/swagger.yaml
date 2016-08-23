@@ -1,0 +1,81 @@
+# Example YAML to get you started quickly.
+# Be aware that YAML has indentation based scoping.
+# Code completion support is available so start typing for available options.
+swagger: '2.0'
+
+# This is your document metadata
+info:
+  description: |
+    This is first version of Smart Data Web project.
+    
+    [Learn about SDW](http://smartdataweb.de) or look at the `Github` [codebase](https://github.com/gone-phishing/SDW)
+
+
+  version: "1.0.0"
+  title: Smart Data Web
+  termsOfService: http://helloreverb.com/terms/
+  contact:
+    name: Ritesh Kumar Singh
+    email: riteshoneinamillion@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+host: 127.0.0.1:10010
+basePath: /v1
+# 
+schemes:
+  # tip: remove http to make production-grade
+  - http
+  - https
+# format of bodies a client can send (Content-Type)
+consumes:
+  - application/json
+# format of the responses to the client (Accepts)
+produces:
+  - application/json
+  - text/html
+paths:
+  /datasets:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: dataset_list
+    get:
+      description: Returns list of datasets to the caller
+      # used as the method name of the controller
+      operationId: getDatasets
+      parameters:
+        - name: limit
+          in: query
+          description: Number of datasets to be returned
+          required: false
+          type: number
+          format: int
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            title: ArrayOfDatasets
+            type: array
+            items:
+              $ref: '#/definitions/dataset'
+        default:
+          description: Unexpected Error
+          schema:
+            $ref: '#/definitions/errorModel'
+  /swagger:
+    x-swagger-pipe: swagger_raw
+            
+definitions:
+  dataset:
+    type: string
+  errorModel:
+    type: object
+    required:
+      - code
+      - message
+    properties:
+      code: 
+        type: integer
+        format: int32
+      message:
+        type: string
+  
