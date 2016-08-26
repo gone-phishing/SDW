@@ -49,19 +49,21 @@
 	</div>
 	<script>
 	function authenticate() {
-		var authEndpoint = "http://127.0.0.1:8001";
+		var authEndpoint = "http://127.0.0.1:10010/v1/authentication";
 		var method = "POST";
-		var async = "true";
+		var async = "false";
 		
 		var username = document.getElementById("username").value;
 		var passwd = document.getElementById("passwd").value;
-		var authData = username+":"+passwd;
+		var authData = "{\"username\": \""+username+"\", \"password\": \""+passwd+"\"}";
 		
 		var request = new XMLHttpRequest();
 		
 		request.onload = function () {
 			var status = request.status;
 			var data = request.responseText;
+
+			if (status == 200) {window.location.href = "http://127.0.0.1:8000/index.html"};
 		}
 		
 		request.open(method, authEndpoint, async);

@@ -61,12 +61,47 @@ paths:
           description: Unexpected Error
           schema:
             $ref: '#/definitions/errorModel'
+    
   /swagger:
     x-swagger-pipe: swagger_raw
+  
+  /authentication:
+    x-swagger-router-controller: authentication
+    post:
+      description: Used to validate a user using basic authentication
+      # used as the method name of the controller
+      operationId: validateUser
+      parameters:
+        - name: credentials
+          in: body
+          description: Credentials of the user
+          required: true
+          schema:
+            $ref: '#/definitions/credentials'
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            title: authMessage
+            type: string
+        default:
+          description: Unexpected Error
+          schema:
+            $ref: '#/definitions/errorModel'
             
 definitions:
   dataset:
     type: string
+  credentials:
+    type: object
+    required:
+      - username
+      - password
+    properties:
+      username:
+        type: string
+      password:
+        type: string
   errorModel:
     type: object
     required:
