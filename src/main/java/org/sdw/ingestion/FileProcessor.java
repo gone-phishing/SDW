@@ -19,22 +19,34 @@
 package org.sdw.ingestion;
 
 import java.io.File;
+import java.util.ArrayList;
+import org.apache.commons.configuration2.Configuration;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author Ritesh Kumar Singh
  *
  */
-public class FileProcessor
+public class FileProcessor extends FileParams
 {
-	public FileProcessor(int maxSize, String sourceFile)
+	public static final Logger LOG = LoggerFactory.getLogger(FileProcessor.class);
+	private Configuration cfg;
+	
+	public FileProcessor(long maxSize, Configuration cfg)
 	{
-		File file = new File(sourceFile);
-		long fileSize = file.length();
-		long requiredPartitions = 1;
-		if(fileSize > maxSize)
+		super(cfg);
+		if(getNumberOfPartitions(maxSize) > 1)
 		{
-			requiredPartitions = (fileSize/maxSize) + 1;
+			makePartFiles(getPartFileNames());
 		}
-		
+	}
+	
+	public void makePartFiles(ArrayList<String> partFileNames)
+	{
+		for(String str : partFileNames)
+		{
+			LOG.info("File name: "+str);
+		}
 	}
 }

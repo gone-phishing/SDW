@@ -2583,3 +2583,108 @@ Generating RDF triples for file:/Users/rsingh22/SDW/examples/grid.rml.ttl#Instit
 2016-08-13 22:59:19 INFO  JenaModel:78 - RDF dataset loaded to memory
 2016-08-13 22:59:19 INFO  DateResolution:53 - Inside DateResolution
 2016-08-13 22:59:19 INFO  Main:109 - Finished!!
+2016-09-09 18:37:34 WARN  Main:46 - $RML_HOME is not set. Expect mapping failure
+2016-09-09 18:37:34 WARN  Main:46 - $FLINK_HOME is not set. Flow operatos can't work
+2016-09-09 18:37:34 WARN  Main:46 - $CLOUDAMQP_URL is not set. RabbitMQ shared queue can't be created
+2016-09-09 18:37:34 WARN  Main:46 - $JENA_HOME is not set. Memory model can't be created
+2016-09-09 18:37:34 INFO  DatasetLoader:61 - In dataset loader class
+2016-09-09 18:37:34 INFO  DatasetLoader:72 - Old file hashes loaded
+2016-09-09 18:37:34 INFO  Bootstrap:78 - -------------Stats-------------
+2016-09-09 18:37:34 INFO  Bootstrap:80 - Total datasets tried loading: 1
+2016-09-09 18:37:34 INFO  Bootstrap:81 - Success: 1	Fail: 0
+2016-09-09 18:37:34 INFO  Bootstrap:85 - Success rate: 100 %
+2016-09-09 18:37:34 INFO  Main:109 - Finished!!
+2016-09-09 18:39:58 WARN  Main:46 - $RML_HOME is not set. Expect mapping failure
+2016-09-09 18:39:58 WARN  Main:46 - $FLINK_HOME is not set. Flow operatos can't work
+2016-09-09 18:39:58 WARN  Main:46 - $CLOUDAMQP_URL is not set. RabbitMQ shared queue can't be created
+2016-09-09 18:39:58 WARN  Main:46 - $JENA_HOME is not set. Memory model can't be created
+2016-09-09 18:39:58 INFO  DatasetLoader:61 - In dataset loader class
+2016-09-09 18:39:58 INFO  DatasetLoader:72 - Old file hashes loaded
+2016-09-09 18:39:58 INFO  DatasetLoader:91 - Valid dataset added: /Users/rsingh22/SDW/examples/grid20.json
+2016-09-09 18:39:58 INFO  Bootstrap:78 - -------------Stats-------------
+2016-09-09 18:39:58 INFO  Bootstrap:80 - Total datasets tried loading: 1
+2016-09-09 18:39:58 INFO  Bootstrap:81 - Success: 1	Fail: 0
+2016-09-09 18:39:58 INFO  Bootstrap:85 - Success rate: 100 %
+2016-09-09 18:39:58 INFO  Main:109 - Finished!!
+2016-09-09 20:50:46 WARN  Main:46 - $RML_HOME is not set. Expect mapping failure
+2016-09-09 20:50:46 WARN  Main:46 - $FLINK_HOME is not set. Flow operatos can't work
+2016-09-09 20:50:46 WARN  Main:46 - $CLOUDAMQP_URL is not set. RabbitMQ shared queue can't be created
+2016-09-09 20:50:46 WARN  Main:46 - $JENA_HOME is not set. Memory model can't be created
+2016-09-09 20:50:46 INFO  DatasetLoader:61 - In dataset loader class
+2016-09-09 20:50:46 INFO  DatasetLoader:72 - Old file hashes loaded
+2016-09-09 20:50:46 INFO  DatasetLoader:91 - Valid dataset added: /Users/rsingh22/SDW/examples/grid20.json
+2016-09-09 20:50:46 INFO  Bootstrap:78 - -------------Stats-------------
+2016-09-09 20:50:46 INFO  Bootstrap:80 - Total datasets tried loading: 1
+2016-09-09 20:50:46 INFO  Bootstrap:81 - Success: 1	Fail: 0
+2016-09-09 20:50:46 INFO  Bootstrap:85 - Success rate: 100 %
+2016-09-09 20:50:46 INFO  FileProcessor:49 - File name: grid20.json_part1
+2016-09-09 20:50:46 INFO  FileProcessor:49 - File name: grid20.json_part2
+2016-09-09 20:50:46 INFO  FileProcessor:49 - File name: grid20.json_part3
+2016-09-09 20:50:46 INFO  FileProcessor:49 - File name: grid20.json_part4
+2016-09-09 20:50:46 INFO  FileProcessor:49 - File name: grid20.json_part5
+2016-09-09 20:50:46 INFO  Main:116 - Finished!!
+2016-09-09 21:25:51 WARN  Main:46 - $RML_HOME is not set. Expect mapping failure
+2016-09-09 21:25:51 WARN  Main:46 - $FLINK_HOME is not set. Flow operatos can't work
+2016-09-09 21:25:51 WARN  Main:46 - $CLOUDAMQP_URL is not set. RabbitMQ shared queue can't be created
+2016-09-09 21:25:51 WARN  Main:46 - $JENA_HOME is not set. Memory model can't be created
+2016-09-09 21:25:52 INFO  DatasetLoader:71 - Old file hashes loaded
+2016-09-09 21:25:52 INFO  DatasetLoader:90 - Valid dataset added: /Users/rsingh22/SDW/examples/grid20.json
+2016-09-09 21:25:52 INFO  Bootstrap:78 - -------------Stats-------------
+2016-09-09 21:25:52 INFO  Bootstrap:80 - Total datasets tried loading: 1
+2016-09-09 21:25:52 INFO  Bootstrap:81 - Success: 1	Fail: 0
+2016-09-09 21:25:52 INFO  Bootstrap:85 - Success rate: 100 %
+2016-09-09 21:25:52 INFO  FileProcessor:49 - File name: grid20_part1
+2016-09-09 21:25:52 INFO  FileProcessor:49 - File name: grid20_part2
+2016-09-09 21:25:52 INFO  FileProcessor:49 - File name: grid20_part3
+2016-09-09 21:25:52 INFO  FileProcessor:49 - File name: grid20_part4
+2016-09-09 21:25:52 INFO  FileProcessor:49 - File name: grid20_part5
+2016-09-09 21:25:52 INFO  Main:116 - Finished!!
+2016-09-09 21:36:12 WARN  Main:46 - $RML_HOME is not set. Expect mapping failure
+2016-09-09 21:36:12 WARN  Main:46 - $FLINK_HOME is not set. Flow operatos can't work
+2016-09-09 21:36:12 WARN  Main:46 - $CLOUDAMQP_URL is not set. RabbitMQ shared queue can't be created
+2016-09-09 21:36:12 WARN  Main:46 - $JENA_HOME is not set. Memory model can't be created
+2016-09-09 21:36:12 INFO  DatasetLoader:71 - Old file hashes loaded
+2016-09-09 21:36:12 INFO  DatasetLoader:90 - Valid dataset added: /Users/rsingh22/SDW/examples/grid20.json
+2016-09-09 21:36:12 INFO  Bootstrap:78 - -------------Stats-------------
+2016-09-09 21:36:12 INFO  Bootstrap:80 - Total datasets tried loading: 1
+2016-09-09 21:36:12 INFO  Bootstrap:81 - Success: 1	Fail: 0
+2016-09-09 21:36:12 INFO  Bootstrap:85 - Success rate: 100 %
+2016-09-09 21:36:12 INFO  FileProcessor:49 - File name: grid20_part1.JSON
+2016-09-09 21:36:12 INFO  FileProcessor:49 - File name: grid20_part2.JSON
+2016-09-09 21:36:12 INFO  FileProcessor:49 - File name: grid20_part3.JSON
+2016-09-09 21:36:12 INFO  FileProcessor:49 - File name: grid20_part4.JSON
+2016-09-09 21:36:12 INFO  FileProcessor:49 - File name: grid20_part5.JSON
+2016-09-09 21:36:12 INFO  Main:116 - Finished!!
+2016-09-09 21:36:34 WARN  Main:46 - $RML_HOME is not set. Expect mapping failure
+2016-09-09 21:36:34 WARN  Main:46 - $FLINK_HOME is not set. Flow operatos can't work
+2016-09-09 21:36:34 WARN  Main:46 - $CLOUDAMQP_URL is not set. RabbitMQ shared queue can't be created
+2016-09-09 21:36:34 WARN  Main:46 - $JENA_HOME is not set. Memory model can't be created
+2016-09-09 21:36:34 INFO  DatasetLoader:71 - Old file hashes loaded
+2016-09-09 21:36:34 INFO  DatasetLoader:90 - Valid dataset added: /Users/rsingh22/SDW/examples/grid20.json
+2016-09-09 21:36:34 INFO  Bootstrap:78 - -------------Stats-------------
+2016-09-09 21:36:34 INFO  Bootstrap:80 - Total datasets tried loading: 1
+2016-09-09 21:36:34 INFO  Bootstrap:81 - Success: 1	Fail: 0
+2016-09-09 21:36:34 INFO  Bootstrap:85 - Success rate: 100 %
+2016-09-09 21:36:34 INFO  FileProcessor:49 - File name: grid20_part1.json
+2016-09-09 21:36:34 INFO  FileProcessor:49 - File name: grid20_part2.json
+2016-09-09 21:36:34 INFO  FileProcessor:49 - File name: grid20_part3.json
+2016-09-09 21:36:34 INFO  FileProcessor:49 - File name: grid20_part4.json
+2016-09-09 21:36:34 INFO  FileProcessor:49 - File name: grid20_part5.json
+2016-09-09 21:36:34 INFO  Main:116 - Finished!!
+2016-09-09 21:43:16 WARN  Main:46 - $RML_HOME is not set. Expect mapping failure
+2016-09-09 21:43:16 WARN  Main:46 - $FLINK_HOME is not set. Flow operatos can't work
+2016-09-09 21:43:16 WARN  Main:46 - $CLOUDAMQP_URL is not set. RabbitMQ shared queue can't be created
+2016-09-09 21:43:16 WARN  Main:46 - $JENA_HOME is not set. Memory model can't be created
+2016-09-09 21:43:16 INFO  DatasetLoader:71 - Old file hashes loaded
+2016-09-09 21:43:16 INFO  DatasetLoader:90 - Valid dataset added: /Users/rsingh22/SDW/examples/grid20.json
+2016-09-09 21:43:16 INFO  Bootstrap:78 - -------------Stats-------------
+2016-09-09 21:43:16 INFO  Bootstrap:80 - Total datasets tried loading: 1
+2016-09-09 21:43:16 INFO  Bootstrap:81 - Success: 1	Fail: 0
+2016-09-09 21:43:16 INFO  Bootstrap:85 - Success rate: 100 %
+2016-09-09 21:43:16 INFO  FileParams:64 - Parent directory: /Users/rsingh22/SDW/examples
+2016-09-09 21:43:16 INFO  FileProcessor:49 - File name: grid20_part1.json
+2016-09-09 21:43:16 INFO  FileProcessor:49 - File name: grid20_part2.json
+2016-09-09 21:43:16 INFO  FileProcessor:49 - File name: grid20_part3.json
+2016-09-09 21:43:16 INFO  FileProcessor:49 - File name: grid20_part4.json
+2016-09-09 21:43:16 INFO  FileProcessor:49 - File name: grid20_part5.json
+2016-09-09 21:43:16 INFO  Main:116 - Finished!!

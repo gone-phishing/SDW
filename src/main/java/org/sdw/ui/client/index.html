@@ -13,35 +13,69 @@
 	<script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
 </head>
 <body>
-<div class="mdl-layout mdl-js-layout">
-	<header class="mdl-layout__header">
-		<div class="mdl-layout-icon"></div>
-		<div class="mdl-layout__header-row">
+	<div class="mdl-layout mdl-js-layout">
+		<header class="mdl-layout__header">
+			<div class="mdl-layout-icon"></div>
+			<div class="mdl-layout__header-row">
+				<span class="mdl-layout__title">Smart Data Web</span>
+				<div class="mdl-layout-spacer"></div>
+				<nav class="mdl-navigation">
+					<a class="mdl-navigation__link" href="javascript:getDatasets();">Datasets</a>
+					<a class="mdl-navigation__link" href="#">Jobs</a>
+					<a class="mdl-navigation__link" href="#">Analytics</a>
+					<a class="mdl-navigation__link" href="#">Settings</a>
+				</nav>
+			</div>
+		</header>
+		<div class="mdl-layout__drawer">
 			<span class="mdl-layout__title">Smart Data Web</span>
-			<div class="mdl-layout-spacer"></div>
-			<nav class="mdl-navigation">
-				<a class="mdl-navigation__link" href="http://127.0.0.1:10010/v1/datasets">Datasets</a>
-				<a class="mdl-navigation__link" href="#">Jobs</a>
-				<a class="mdl-navigation__link" href="#">Analytics</a>
-				<a class="mdl-navigation__link" href="#">Settings</a>
-			</nav>
+				<div class="mdl-layout-spacer"></div>
+				<nav class="mdl-navigation">
+					<a class="mdl-navigation__link" href="http://api.sdw.com:8080/v1/datasets">Datasets</a>
+					<a class="mdl-navigation__link" href="#">Jobs</a>
+					<a class="mdl-navigation__link" href="#">Analytics</a>
+					<a class="mdl-navigation__link" href="#">Settings</a>
+				</nav>
 		</div>
-	</header>
-	<div class="mdl-layout__drawer">
-		<span class="mdl-layout__title">Smart Data Web</span>
-			<div class="mdl-layout-spacer"></div>
-			<nav class="mdl-navigation">
-				<a class="mdl-navigation__link" href="http://api.sdw.com:8080/v1/datasets">Datasets</a>
-				<a class="mdl-navigation__link" href="#">Jobs</a>
-				<a class="mdl-navigation__link" href="#">Analytics</a>
-				<a class="mdl-navigation__link" href="#">Settings</a>
-			</nav>
+		<main class="mdl-layout__content" id ="mainContent">
+			<ul class="mdl-list" id="unorderedList">
+				<li class="mdl-list__item">
+					<span class="mdl-list__item-primary-content">Loaded Paths</span>
+				</li>
+			</ul>
+
+		</main>
 	</div>
-	<main class="mdl-layout__content">
-		<p>This is first para</p>
-		<p>This is second para</p>
-		<p>This is third para</p>
-	</main>
-</div>
+	<script type="text/javascript">
+		function getDatasets() 
+		{
+			var endpoint = "http://127.0.0.1:10010/v1/datasets";
+			var method = "GET";
+			var async = "true";	
+
+			var request = new XMLHttpRequest();
+			
+			request.onload = function () {
+				var status = request.status;
+				var data = request.responseText;
+
+				if (status == 200) 
+				{
+					var jsonObj = JSON.parse(data);
+					for (var i = 0; i < jsonObj.length; i++) 
+					{
+						var newItem = document.createElement("li");
+						newItem.className = 'mdl-list__item';
+						newItem.appendChild(document.createTextNode(jsonObj[i]));
+						document.getElementById("unorderedList").appendChild(newItem);
+					}
+				}
+			}
+			
+			request.open(method, endpoint, async);
+			request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+			request.send();
+		}
+	</script>
 </body>
 </html>
