@@ -87,7 +87,6 @@ public class DatasetLoader
 				}
 				else if (ic.datasetHashing.equals("false"))
 				{
-					LOG.info("Valid dataset added: "+cfg.getString("sourceFile"));
 					validDatasets.put(cfg, cfg.getString("sourceFile"));
 				}
 				else

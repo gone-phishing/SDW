@@ -4,3 +4,4 @@
 .sonar
 logs/
 examples/database
+examples/.DS_Store

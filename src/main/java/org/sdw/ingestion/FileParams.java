@@ -2,9 +2,7 @@ package org.sdw.ingestion;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.List;
 
-import org.sdw.Main;
 import org.apache.commons.configuration2.Configuration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,7 +13,7 @@ public abstract class FileParams
 	
 	private File file;
 	private long numPartitions = 1;    // Default number of file partitions
-	private Configuration cfg;
+	protected Configuration cfg;    // Configuration properties of the parent file
 	
 	/**
 	 * Parametrized constructor
@@ -35,6 +33,15 @@ public abstract class FileParams
 	{
 		String fileNameWithExtension[] = file.getName().split("\\.");
 		return fileNameWithExtension[0];
+	}
+	
+	/**
+	 * Get the source file name with absolute path and the file extension
+	 * @return source file name as defined in the cofigurations
+	 */
+	public String getFileNameWithExtension()
+	{
+		return cfg.getString("sourceFile");
 	}
 	
 	/**

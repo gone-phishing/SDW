@@ -44,6 +44,7 @@ public class JSONIterator implements EntityResolver
 	@Override
 	public List<String> extractEntities(String path, String expression)
 	{
+		LOG.info("Extracting json entities..");
 		try 
 		{
 			if(expression.contains(" "))
@@ -56,7 +57,11 @@ public class JSONIterator implements EntityResolver
 			if (val instanceof JSONArray) 
 			{
 				JSONArray arr = (JSONArray) val;
-				return Arrays.asList(arr.toArray(new String[0]));
+				for(int i=0; i < arr.size(); i++)
+				{
+					list.add(arr.get(i).toString());
+				}
+				return list;
 			}
 			list.add((String) val.toString());
 			return list;
@@ -68,8 +73,16 @@ public class JSONIterator implements EntityResolver
 		} 
 		catch (Exception ex) 
 		{
-			LOG.error("Exception: " + ex);
+			LOG.error(ex.getMessage(), ex);
 			return null;
+		}
+	}
+	
+	public void printArray(String[] a)
+	{
+		for (String str : a)
+		{
+			LOG.info(str);
 		}
 	}
 }

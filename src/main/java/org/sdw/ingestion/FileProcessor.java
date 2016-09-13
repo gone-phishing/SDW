@@ -19,8 +19,15 @@
 package org.sdw.ingestion;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.apache.commons.configuration2.Configuration;
+import org.sdw.ingestion.iterator.EntityResolver;
+import org.sdw.ingestion.iterator.IteratorFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -31,22 +38,63 @@ import org.slf4j.LoggerFactory;
 public class FileProcessor extends FileParams
 {
 	public static final Logger LOG = LoggerFactory.getLogger(FileProcessor.class);
-	private Configuration cfg;
+	
+	private Map<Configuration, ArrayList<String>> validPartedSets = new HashMap<>();
+	private ArrayList<String> partFileAbsolutePaths = new ArrayList<String>();
 	
 	public FileProcessor(long maxSize, Configuration cfg)
 	{
 		super(cfg);
 		if(getNumberOfPartitions(maxSize) > 1)
 		{
-			makePartFiles(getPartFileNames());
+			if( makePartFiles(getPartFileNames()) )
+			{
+				populatePartFiles(getFileExtension());
+			}
+			else
+			{
+				LOG.error("Part files couldn't be created");
+			}
 		}
 	}
 	
-	public void makePartFiles(ArrayList<String> partFileNames)
+	public void populatePartFiles(String format)
 	{
+		IteratorFactory iteratorFactory = new IteratorFactory();
+		EntityResolver entityResolver = iteratorFactory.getEntityResolver(format);
+		List<String> extractedEntities = entityResolver.extractEntities(getFileNameWithExtension(), cfg.getString("iterator"));
+		for (String str : extractedEntities)
+		{
+			LOG.info(str);
+		}
+	}
+	
+	public boolean makePartFiles(ArrayList<String> partFileNames)
+	{
+		String parentDir = getParentDirectory();
 		for(String str : partFileNames)
 		{
-			LOG.info("File name: "+str);
+			File partFile = new File(parentDir, str);
+			if(!partFile.exists())
+			{
+				try 
+				{
+					partFile.createNewFile();
+					partFileAbsolutePaths.add(parentDir + "/" + str);
+					LOG.info("File created: "+parentDir + "/" + str);
+				} 
+				catch (IOException e) 
+				{
+					LOG.error(e.getMessage(), e);
+					return false;
+				}
+			}
+			else
+			{
+				LOG.debug("File already exists!!");
+			}
 		}
+		validPartedSets.put(cfg, partFileAbsolutePaths);
+		return true;
 	}
 }
