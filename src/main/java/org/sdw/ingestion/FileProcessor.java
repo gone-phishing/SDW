@@ -18,10 +18,16 @@
  *******************************************************************************/
 package org.sdw.ingestion;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -41,15 +47,16 @@ public class FileProcessor extends FileParams
 	
 	private Map<Configuration, ArrayList<String>> validPartedSets = new HashMap<>();
 	private ArrayList<String> partFileAbsolutePaths = new ArrayList<String>();
+	private Iterator<PrintWriter> writersIterator;
 	
-	public FileProcessor(long maxSize, Configuration cfg)
+	public FileProcessor(long maxSize, Configuration cfg) 
 	{
 		super(cfg);
 		if(getNumberOfPartitions(maxSize) > 1)
 		{
-			if( makePartFiles(getPartFileNames()) )
-			{
-				populatePartFiles(getFileExtension());
+			if( makePartFiles( getPartFileNames()) )
+			{	
+				populatePartFiles( getFileExtension() );
 			}
 			else
 			{
@@ -58,14 +65,45 @@ public class FileProcessor extends FileParams
 		}
 	}
 	
-	public void populatePartFiles(String format)
+	public void populatePartFiles(String format) 
 	{
 		IteratorFactory iteratorFactory = new IteratorFactory();
 		EntityResolver entityResolver = iteratorFactory.getEntityResolver(format);
 		List<String> extractedEntities = entityResolver.extractEntities(getFileNameWithExtension(), cfg.getString("iterator"));
-		for (String str : extractedEntities)
+		
+		ArrayList<PrintWriter> writers = new ArrayList<PrintWriter>();
+		
+		try
 		{
-			LOG.info(str);
+			for(String str : partFileAbsolutePaths)
+			{
+				writers.add(new PrintWriter(new BufferedWriter( new FileWriter(str, true))));
+			}
+			writersIterator = writers.iterator();
+			
+			for (String entity : extractedEntities)
+			{
+				if(!writersIterator.hasNext())
+				{
+					writersIterator = writers.iterator();
+				}
+				else
+				{
+					PrintWriter pw = writersIterator.next();
+					pw.println(entity);
+				}
+			}
+		}
+		catch(IOException iex)
+		{
+			iex.printStackTrace();
+		}
+		finally
+		{
+			for(PrintWriter pw : writers)
+			{
+				pw.close();
+			}
 		}
 	}
 	

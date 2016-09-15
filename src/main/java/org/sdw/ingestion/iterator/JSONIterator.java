@@ -77,12 +77,4 @@ public class JSONIterator implements EntityResolver
 			return null;
 		}
 	}
-	
-	public void printArray(String[] a)
-	{
-		for (String str : a)
-		{
-			LOG.info(str);
-		}
-	}
 }
