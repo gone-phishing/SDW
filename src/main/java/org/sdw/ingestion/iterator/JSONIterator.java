@@ -25,7 +25,10 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.jayway.jsonpath.JsonPath;
-import net.minidev.json.JSONArray;
+//import net.minidev.json.JSONArray;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 
 /**
  * @author Ritesh Kumar Singh
@@ -53,16 +56,18 @@ public class JSONIterator implements EntityResolver
 			}
 			File jsonFile = new File(path);
 			Object val = JsonPath.read(jsonFile, expression);
+
+			JsonArray jArray = new JsonParser().parse(val.toString()).getAsJsonArray();
 			List<String> list = new ArrayList<>();
-			if (val instanceof JSONArray) 
-			{
-				JSONArray arr = (JSONArray) val;
-				for(int i=0; i < arr.size(); i++)
+			if (jArray.isJsonArray()) 
+			{	
+				for(int i=0; i < jArray.size(); i++)
 				{
-					list.add(arr.get(i).toString());
+					list.add(jArray.get(i).toString());
 				}
 				return list;
 			}
+			LOG.info("JsonArray not found, returning list of elements");
 			list.add((String) val.toString());
 			return list;
 		} 

@@ -129,7 +129,7 @@ public class FileProcessor extends FileParams
 			}
 			else
 			{
-				LOG.debug("File already exists!!");
+				LOG.info("File \""+ str +"\" already exists!!");
 			}
 		}
 		validPartedSets.put(cfg, partFileAbsolutePaths);
