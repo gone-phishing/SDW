@@ -18,10 +18,8 @@
  *******************************************************************************/
 package org.sdw.ingestion;
 
-import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -49,13 +47,22 @@ public class FileProcessor extends FileParams
 	private ArrayList<String> partFileAbsolutePaths = new ArrayList<String>();
 	private Iterator<PrintWriter> writersIterator;
 	
+	/**
+	 * Constructor to make and populate part files
+	 * @param maxSize : Allowed maximum size of a dataset
+	 * @param cfg : Configuration for the supplied dataset
+	 */
 	public FileProcessor(long maxSize, Configuration cfg) 
 	{
 		super(cfg);
+		
+		// Check if number of partitions exceed 1 for the given dataset
 		if(getNumberOfPartitions(maxSize) > 1)
 		{
+			// Check if part files were created successfully
 			if( makePartFiles( getPartFileNames()) )
-			{	
+			{
+				// Populate part files with entities
 				populatePartFiles( getFileExtension() );
 			}
 			else
@@ -65,16 +72,23 @@ public class FileProcessor extends FileParams
 		}
 	}
 	
+	/**
+	 * Populate entities in the part files
+	 * @param format : File format of the part files
+	 */
 	public void populatePartFiles(String format) 
 	{
+		// Iterator Factory design pattern
 		IteratorFactory iteratorFactory = new IteratorFactory();
 		EntityResolver entityResolver = iteratorFactory.getEntityResolver(format);
 		List<String> extractedEntities = entityResolver.extractEntities(getFileNameWithExtension(), cfg.getString("iterator"));
 		
 		ArrayList<PrintWriter> writers = new ArrayList<PrintWriter>();
 		
+		// Round Robin implementation to distribute entities amongst part files
 		try
 		{
+			// Create an iterator over all Print Writers for the part files
 			for(String str : partFileAbsolutePaths)
 			{
 				writers.add(new PrintWriter(new BufferedWriter( new FileWriter(str, true))));
@@ -83,6 +97,7 @@ public class FileProcessor extends FileParams
 			
 			for (String entity : extractedEntities)
 			{
+				// If reached the end of iterator, start again from the first one
 				if(!writersIterator.hasNext())
 				{
 					writersIterator = writers.iterator();
@@ -100,6 +115,7 @@ public class FileProcessor extends FileParams
 		}
 		finally
 		{
+			// Close all the Print Writers
 			for(PrintWriter pw : writers)
 			{
 				pw.close();
@@ -107,6 +123,11 @@ public class FileProcessor extends FileParams
 		}
 	}
 	
+	/**
+	 * Makes the part files based on given names
+	 * @param partFileNames : File name with extensions to be created
+	 * @return boolean based on successful file creation
+	 */
 	public boolean makePartFiles(ArrayList<String> partFileNames)
 	{
 		String parentDir = getParentDirectory();
@@ -129,7 +150,8 @@ public class FileProcessor extends FileParams
 			}
 			else
 			{
-				LOG.info("File \""+ str +"\" already exists!!");
+				LOG.debug("File \""+ str +"\" already exists!!");
+				return false;
 			}
 		}
 		validPartedSets.put(cfg, partFileAbsolutePaths);

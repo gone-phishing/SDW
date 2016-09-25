@@ -1,1 +1,9 @@
+
+org.sdw
 org.sdw.ingestion
+org.sdw.ingestion.iterator
+org.sdw.mapping
+org.sdw.model
+org.sdw.plugins
+org.sdw.scheduler
+org.sdw.util

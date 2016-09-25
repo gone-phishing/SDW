@@ -50,8 +50,8 @@ public class Main
 
 	/**
 	 * Main method to execute the code sequentially
-	 * @param args
-	 * @throws Exception
+	 * @param args Arguments to the main method
+	 * @throws Exception Exceptions generated during execution
 	 */
 	public static void main(String[] args) throws Exception 
 	{
