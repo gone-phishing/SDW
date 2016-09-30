@@ -3,6 +3,7 @@
 .project
 .sonar
 logs/
+.settings/
 examples/database
 examples/.DS_Store
 
