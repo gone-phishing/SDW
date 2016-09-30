@@ -18,19 +18,18 @@
  *******************************************************************************/
 package org.sdw;
 
-import org.apache.commons.configuration2.Configuration;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
+
+import org.sdw.ingestion.DatasetConfig;
 import org.sdw.ingestion.DatasetLoader;
 import org.sdw.ingestion.FileProcessor;
 import org.sdw.ingestion.IngestionConfig;
 import org.sdw.mapping.RMLmapper;
 import org.sdw.model.JenaModel;
 import org.sdw.scheduler.PeriodicScheduler;
-import org.sdw.scheduler.QueueProcessor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 
 /**
  * @author Ritesh Kumar Singh
@@ -68,51 +67,56 @@ public class Main
 		bs.printStats(datasetLoader.validDatasets.size(), datasetLoader.invalidDatasets.size());
 		
 		// Break the datasets to fit into memory
-		for(Configuration cfg : datasetLoader.validDatasets.keySet())
+		FileProcessor fileProcessor = new FileProcessor(ingestionConfig.maxFileSize);
+		
+		// Push to queue for later processing
+		PeriodicScheduler periodicScheduler = new PeriodicScheduler();
+		
+		for(DatasetConfig datasetConfig : datasetLoader.validDatasets.keySet())
 		{
-			FileProcessor fp = new FileProcessor(ingestionConfig.maxFileSize, cfg);
+			fileProcessor.processConfig(datasetConfig.getConfiguration());
+			datasetConfig.setPartFileAbsolutePaths(fileProcessor.getPartFileAbsolutePaths());
+			periodicScheduler.pushToQueue(datasetConfig);
 		}
 		
-		// Push valid datasets to the schedule queue processed by RabbitMQ
-		PeriodicScheduler periodicScheduler = new PeriodicScheduler();
-		periodicScheduler.pushToQueue(datasetLoader.validDatasets);
+		// Make a class with dataset config properties and arraylist getters. Push that to schedule queue and parallel executeor for RML
 		//new Thread(new QueueProcessor()).start();
 		
 		//Convert datasets to RDF format using RML mapper
-//		RMLmapper rmlMapper = new RMLmapper(ingestionConfig.commonRdfFormat);
-//		for (Configuration cfg : PeriodicScheduler.scheduleQueue)
-//		{
-//			rmlMapper.parallelExecutor(cfg,1);
-//		}
-//		LOG.info("Mapping stage complete!");
-//		
-//		// Load datasets to memory using Jena model
-//		for (Configuration cfg : PeriodicScheduler.scheduleQueue)
-//		{
-//			JenaModel jenaModel = new JenaModel(ingestionConfig.jenaTDBDatabase);
-//			jenaModel.loadDirectory(cfg.getString("outputFile"));
-//			String[] flowOperators = cfg.getStringArray("flow");
-//			
-//			// Use java reflection api to resolve flow operators directly at run time
-//			Class params[] = new Class[2];
-//			params[0] = String.class;
-//			params[1] = jenaModel.getClass();
-//			
-//			for(String str : flowOperators)
-//			{
-//				try
-//				{
-//					Class c = Class.forName("org.sdw.plugins."+str);
-//					Object obj = c.newInstance();
-//					Method method = c.getDeclaredMethod("run", params);
-//					method.invoke(obj, ingestionConfig.queryDumpDirectory, jenaModel);
-//				}
-//				catch(SecurityException | NoSuchMethodException | IllegalArgumentException | IllegalAccessException | InvocationTargetException ex)
-//				{
-//					LOG.error(ex.getMessage(), ex);
-//				}
-//			}
-//		}
+		RMLmapper rmlMapper = new RMLmapper(ingestionConfig.commonRdfFormat);
+		for (DatasetConfig datasetConfig : PeriodicScheduler.scheduleQueue)
+		{
+			rmlMapper.parallelExecutor(datasetConfig, datasetConfig.getPartFileAbsolutePaths().size());
+		}
+		LOG.info("Mapping stage complete!");
+
+		// Load datasets to memory using Jena model
+		for (DatasetConfig datasetConfig : PeriodicScheduler.scheduleQueue)
+		{
+			JenaModel jenaModel = new JenaModel(ingestionConfig.jenaTDBDatabase);
+			jenaModel.loadDirectory(datasetConfig.getConfiguration().getString("outputFile"));
+			String[] flowOperators = datasetConfig.getConfiguration().getStringArray("flow");
+			
+			// Use java reflection api to resolve flow operators directly at run time
+			Class params[] = new Class[2];
+			params[0] = String.class;
+			params[1] = jenaModel.getClass();
+			
+			for(String str : flowOperators)
+			{
+				try
+				{
+					Class c = Class.forName("org.sdw.plugins."+str);
+					Object obj = c.newInstance();
+					Method method = c.getDeclaredMethod("run", params);
+					method.invoke(obj, ingestionConfig.queryDumpDirectory, jenaModel);
+				}
+				catch(SecurityException | NoSuchMethodException | IllegalArgumentException | IllegalAccessException | InvocationTargetException ex)
+				{
+					LOG.error(ex.getMessage(), ex);
+				}
+			}
+		}
 		LOG.info("Finished!!");
 		System.exit(0);
 	}

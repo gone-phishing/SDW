@@ -25,6 +25,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 import org.apache.commons.configuration2.Configuration;
+import org.sdw.ingestion.DatasetConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -50,7 +51,7 @@ public class RMLmapper implements RDFmapper
 	 * Calls the interface's execute method with params set
 	 * @param config : Config of the dataset
 	 */
-	public void parallelExecutor(Configuration config, int numThreads)
+	public void parallelExecutor(final DatasetConfig datasetConfig, final int numThreads)
 	{
 		ExecutorService executor = Executors.newCachedThreadPool();
 		for(int i=0; i< numThreads; i++)
@@ -60,7 +61,7 @@ public class RMLmapper implements RDFmapper
 				@Override
 				public void run()
 				{
-					execute(config.getString("sourceFile"), config.getString("mappingFile"), config.getString("outputFile"));
+					execute(datasetConfig.getPartFileAbsolutePaths().get(i), datasetConfig.getConfiguration().getString("mappingFile"), datasetConfig.getConfiguration().getString("outputFile"));
 				}
 			});
 		}

@@ -21,12 +21,14 @@ package org.sdw.scheduler;
 import java.net.URISyntaxException;
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.Queue;
 import org.apache.commons.configuration2.Configuration;
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
+import org.sdw.ingestion.DatasetConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import static org.quartz.JobBuilder.newJob;
@@ -42,7 +44,7 @@ public class PeriodicScheduler
 {
 	public static final Logger LOG = LoggerFactory.getLogger(PeriodicScheduler.class);
 	public static final ConnectionFactory factory = new ConnectionFactory();
-	public static Queue<Configuration> scheduleQueue;
+	public static Queue<DatasetConfig> scheduleQueue;
 
 	/**
 	 * Default constructor to set the triggers
@@ -72,11 +74,8 @@ public class PeriodicScheduler
 	 * Add the valid datasets to the queue
 	 * @param validDatasets : A hashmap containing configuration for datasets to be loaded
 	 */
-	public void pushToQueue(Map<Configuration, String> validDatasets)
+	public void pushToQueue(DatasetConfig datasetConfig)
 	{
-		for(Configuration cfg : validDatasets.keySet())
-		{
-			scheduleQueue.add(cfg);
-		}
+		scheduleQueue.add(datasetConfig);
 	}
 }

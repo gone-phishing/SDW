@@ -7,7 +7,7 @@ import org.apache.commons.configuration2.Configuration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public abstract class FileParams 
+public class FileParams 
 {
 	public static final Logger LOG = LoggerFactory.getLogger(FileParams.class);
 	

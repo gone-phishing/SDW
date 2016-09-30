@@ -43,10 +43,11 @@ import org.apache.commons.configuration2.Configuration;
 public class DatasetLoader
 {
 	public static final Logger LOG = LoggerFactory.getLogger(DatasetLoader.class);
-	public final List<Configuration> configurationList = new ArrayList<>();
-	public final Map<Configuration, String> invalidDatasets = new HashMap<>();
-	public final Map<Configuration, String> validDatasets = new HashMap<>();
+	
 	private final HashFilter hf = new HashFilter("MD5");
+	private final List<Configuration> configurationList = new ArrayList<>();
+	public final Map<Configuration, String> invalidDatasets = new HashMap<>();
+	public final Map<DatasetConfig, String> validDatasets = new HashMap<>();
 	private final Set<String> oldHashes = new HashSet<>();
 	private final Set<String> newHashes = new HashSet<>();
 	private final IngestionConfig ic;
@@ -64,6 +65,7 @@ public class DatasetLoader
 			ConfigReader cfg = new ConfigReader(str);
 			configurationList.add(cfg.getConfig());
 		}
+		
 		/**
 		 * 1. Validate
 		 * 2. Filter
@@ -78,7 +80,7 @@ public class DatasetLoader
 				{
 					if(filter(cfg.getString("sourceFile")))
 					{
-						validDatasets.put(cfg, cfg.getString("sourceFile"));
+						validDatasets.put(new DatasetConfig(cfg), cfg.getString("sourceFile"));
 					}
 					else
 					{
@@ -87,7 +89,7 @@ public class DatasetLoader
 				}
 				else if (ic.datasetHashing.equals("false"))
 				{
-					validDatasets.put(cfg, cfg.getString("sourceFile"));
+					validDatasets.put(new DatasetConfig(cfg), cfg.getString("sourceFile"));
 				}
 				else
 				{
@@ -100,7 +102,7 @@ public class DatasetLoader
 		{
 			for(Configuration cfg : invalidDatasets.keySet())
 			{
-				LOG.warn("[WARN] "+cfg.getString("name")+" : "+invalidDatasets.get(cfg));
+				LOG.warn("[WARN] "+cfg.getString("name")+" : "+ invalidDatasets.get(cfg));
 			}
 		}
 		

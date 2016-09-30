@@ -24,11 +24,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
-
 import org.apache.commons.configuration2.Configuration;
 import org.sdw.ingestion.iterator.EntityResolver;
 import org.sdw.ingestion.iterator.IteratorFactory;
@@ -39,49 +36,58 @@ import org.slf4j.LoggerFactory;
  * @author Ritesh Kumar Singh
  *
  */
-public class FileProcessor extends FileParams
+public class FileProcessor
 {
 	public static final Logger LOG = LoggerFactory.getLogger(FileProcessor.class);
 	
-	private Map<Configuration, ArrayList<String>> validPartedSets = new HashMap<>();
 	private ArrayList<String> partFileAbsolutePaths = new ArrayList<String>();
 	private Iterator<PrintWriter> writersIterator;
+	private long maxSize;
+	private FileParams fileParams;
 	
 	/**
 	 * Constructor to make and populate part files
 	 * @param maxSize : Allowed maximum size of a dataset
 	 * @param cfg : Configuration for the supplied dataset
 	 */
-	public FileProcessor(long maxSize, Configuration cfg) 
+	public FileProcessor(long maxSize) 
 	{
-		super(cfg);
+		this.maxSize = maxSize;
+	}
+	// rather implement interface
+	public void processConfig(Configuration cfg)
+	{
+		fileParams = new FileParams(cfg);
 		
 		// Check if number of partitions exceed 1 for the given dataset
-		if(getNumberOfPartitions(maxSize) > 1)
+		if(fileParams.getNumberOfPartitions(maxSize) > 1)
 		{
 			// Check if part files were created successfully
-			if( makePartFiles( getPartFileNames()) )
+			if( makePartFiles( fileParams.getPartFileNames() ) )
 			{
 				// Populate part files with entities
-				populatePartFiles( getFileExtension() );
+				populatePartFiles( fileParams.getFileExtension(), cfg );
 			}
 			else
 			{
 				LOG.error("Part files couldn't be created");
 			}
 		}
+		else
+		{
+			partFileAbsolutePaths.add(cfg.getString("source"));
+		}
 	}
-	
 	/**
 	 * Populate entities in the part files
 	 * @param format : File format of the part files
 	 */
-	public void populatePartFiles(String format) 
+	public void populatePartFiles(String format, Configuration cfg) 
 	{
 		// Iterator Factory design pattern
 		IteratorFactory iteratorFactory = new IteratorFactory();
 		EntityResolver entityResolver = iteratorFactory.getEntityResolver(format);
-		List<String> extractedEntities = entityResolver.extractEntities(getFileNameWithExtension(), cfg.getString("iterator"));
+		List<String> extractedEntities = entityResolver.extractEntities( fileParams.getFileNameWithExtension(), cfg.getString("iterator"));
 		
 		ArrayList<PrintWriter> writers = new ArrayList<PrintWriter>();
 		
@@ -130,7 +136,7 @@ public class FileProcessor extends FileParams
 	 */
 	public boolean makePartFiles(ArrayList<String> partFileNames)
 	{
-		String parentDir = getParentDirectory();
+		String parentDir = fileParams.getParentDirectory();
 		for(String str : partFileNames)
 		{
 			File partFile = new File(parentDir, str);
@@ -154,7 +160,11 @@ public class FileProcessor extends FileParams
 				return false;
 			}
 		}
-		validPartedSets.put(cfg, partFileAbsolutePaths);
 		return true;
+	}
+	
+	public ArrayList<String> getPartFileAbsolutePaths()
+	{
+		return partFileAbsolutePaths;
 	}
 }
