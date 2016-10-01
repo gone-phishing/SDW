@@ -1,5 +1,5 @@
 language: java
-script: mvn clean package -Pbuild-jar -Dmaven.test.skip=true
+script: mvn clean package -Dmaven.test.skip=true
 jdk: 
   - oraclejdk8
 
