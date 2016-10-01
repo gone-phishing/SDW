@@ -56,14 +56,7 @@ public class RMLmapper implements RDFmapper
 		ExecutorService executor = Executors.newCachedThreadPool();
 		for(int i=0; i< numThreads; i++)
 		{
-			executor.execute(new Runnable() 
-			{
-				@Override
-				public void run()
-				{
-					execute(datasetConfig.getPartFileAbsolutePaths().get(i), datasetConfig.getConfiguration().getString("mappingFile"), datasetConfig.getConfiguration().getString("outputFile"));
-				}
-			});
+			executor.execute(new ParallelExecutor(datasetConfig, i));
 		}
 	}
 	
@@ -141,6 +134,24 @@ public class RMLmapper implements RDFmapper
 			{
 				LOG.error("ERROR: Could not delete file: "+outputFile);
 			}
+		}
+	}
+	
+	private class ParallelExecutor implements Runnable
+	{
+		private int count;
+		private DatasetConfig datasetConfig;
+		
+		ParallelExecutor(DatasetConfig datasetConfig, int count)
+		{
+			this.datasetConfig = datasetConfig;
+			this.count = count;
+		}
+		
+		@Override
+		public void run()
+		{
+			execute(datasetConfig.getPartFileAbsolutePaths().get(count), datasetConfig.getConfiguration().getString("mappingFile"), datasetConfig.getConfiguration().getString("outputFile"));
 		}
 	}
 }
