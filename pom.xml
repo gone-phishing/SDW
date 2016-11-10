@@ -64,6 +64,12 @@
 			<artifactId>flink-clients_2.11</artifactId>
 			<version>${flink.version}</version>
 		</dependency>
+		
+		<dependency>
+	    	<groupId>org.apache.flink</groupId>
+	    	<artifactId>flink-gelly_2.11</artifactId>
+	    	<version>${flink.version}</version>
+		</dependency>
 
 		<!-- http://mvnrepository.com/artifact/org.apache.commons/commons-configuration2 -->
 		<dependency>
