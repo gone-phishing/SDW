@@ -90,6 +90,7 @@ public class Main
 		}
 		LOG.info("Mapping stage complete!");
 
+		/// TODO km: Clean up here!!
 		// Load datasets to memory using Jena model
 		for (DatasetConfig datasetConfig : PeriodicScheduler.scheduleQueue)
 		{

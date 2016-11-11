@@ -92,7 +92,7 @@ public class RMLmapper implements RDFmapper
 	 */
 	private String[] executeCommandShell(String command) 
 	{
-		LOG.info("Shell command: $"+command);
+		LOG.info("Shell command: $" + command);
 		StringBuffer op = new StringBuffer();
 		String out[] = new String[2];
 		Process process;

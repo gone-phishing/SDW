@@ -1,6 +1,6 @@
 package org.sdw.ingestion.backend.flink;
 
-import org.sdw.ingestion.plugin.transformation.backend.FlinkTransformationBackend;
+import org.sdw.ingestion.plugin.transformation.backend.FlinkVertexTransformationBackend;
 
 public class FlinkFactory implements Factory {
 	
@@ -11,7 +11,7 @@ public class FlinkFactory implements Factory {
 	}
 
 	@Override
-	public FlinkTransformationBackend getVertexTransformerBackend() {
-		return new FlinkTransformationBackend(this.backend);
+	public FlinkVertexTransformationBackend getVertexTransformerBackend() {
+		return new FlinkVertexTransformationBackend(this.backend);
 	}
 }

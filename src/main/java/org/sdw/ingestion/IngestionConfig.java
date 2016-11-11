@@ -49,7 +49,7 @@ public class IngestionConfig extends ConfigReader
 	{
 		super("ingestion.properties");
 		
-		config = getConfig();
+		config = getSourceConfig();
 		datasetPaths = config.getStringArray("paths");
 		validTypes = config.getStringArray("validTypes");
 		commonRdfFormat = config.getString("commonRdfFormat");

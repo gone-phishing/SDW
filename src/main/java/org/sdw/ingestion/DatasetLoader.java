@@ -63,7 +63,7 @@ public class DatasetLoader
 		for(String str : datasetPaths)
 		{
 			ConfigReader cfg = new ConfigReader(str);
-			configurationList.add(cfg.getConfig());
+			configurationList.add(cfg.getSourceConfig());
 		}
 		
 		/**

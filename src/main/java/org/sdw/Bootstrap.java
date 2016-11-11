@@ -23,12 +23,6 @@ import java.text.DecimalFormat;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.lambdaworks.redis.RedisClient;
-import com.lambdaworks.redis.RedisConnection;
-import com.lambdaworks.redis.RedisStringsConnection;
-import com.lambdaworks.redis.RedisURI;
-import com.lambdaworks.redis.api.StatefulRedisConnection;
-
 /**
  * @author Ritesh Kumar Singh
  *
@@ -36,12 +30,16 @@ import com.lambdaworks.redis.api.StatefulRedisConnection;
 public class Bootstrap
 {
 	public static final Logger LOG = LoggerFactory.getLogger(Bootstrap.class);
-	RedisClient redisClient = new RedisClient( RedisURI.create("redis://localhost"));
+//	RedisClient redisClient = new RedisClient( RedisURI.create("redis://localhost"));
 	/**
 	 * Default constructor to test the project setup
 	 */
 	public Bootstrap()
 	{
+		if (true) {
+			// turn off bootstrapping now!
+			return;
+		}
 		/**
 		 * TODO : Check system requirements and memory available
 		 * TODO : Check if RML_HOME is set
@@ -83,30 +81,5 @@ public class Bootstrap
 		df.setRoundingMode(RoundingMode.CEILING);
 		
 		LOG.info("Success rate: "+df.format((success*100.0)/total)+" %");
-	}
-	
-	/**
-	 * Create a Redis connection using Lettuce client API
-	 * @return StatefulRedisConnection<String, String> : Connection to a Redis instance
-	 */
-	public StatefulRedisConnection<String, String> redisConnection()
-	{
-		StatefulRedisConnection<String, String> connection = redisClient.connect();
-		LOG.info("Connected to Redis");
-		return connection;
-	}
-	
-	/**
-	 * Close connection to the Redis instance
-	 * @param connection : The redis instance connection to be closed
-	 * @param clientConnection : If set, the client connection will also be shut down
-	 */
-	public void closeRedisConnection(StatefulRedisConnection<String, String> connection, Boolean clientConnection)
-	{
-		connection.close();
-		if(clientConnection)
-		{
-			redisClient.shutdown();
-		}
 	}
 }

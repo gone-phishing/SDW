@@ -19,6 +19,9 @@
 package org.sdw.util;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
 import org.apache.commons.configuration2.Configuration;
 import org.apache.commons.configuration2.FileBasedConfiguration;
@@ -26,7 +29,6 @@ import org.apache.commons.configuration2.PropertiesConfiguration;
 import org.apache.commons.configuration2.builder.FileBasedConfigurationBuilder;
 import org.apache.commons.configuration2.builder.fluent.Parameters;
 import org.apache.commons.configuration2.convert.DefaultListDelimiterHandler;
-import org.apache.commons.configuration2.ex.ConfigurationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,37 +36,73 @@ import org.slf4j.LoggerFactory;
  * @author Ritesh Kumar Singh
  *
  */
-public class ConfigReader
+public class ConfigReader implements Config<Configuration>
 {
 	public static final Logger LOG = LoggerFactory.getLogger(ConfigReader.class);
-	public FileBasedConfigurationBuilder<FileBasedConfiguration> builder;
-	private Configuration config;
+	
+	/** actual config instance */
+	final private Configuration config;
+	
+	FileBasedConfigurationBuilder<FileBasedConfiguration> builder = new FileBasedConfigurationBuilder<FileBasedConfiguration>(PropertiesConfiguration.class);
 	
 	/**
 	 * Single parameter constructor
 	 * @param propertyFile : Absolute/ Relative path of property file to be read
 	 */
-	public ConfigReader(String propertyFile) 
+	public ConfigReader(final String propertyFile) 
 	{
 		Parameters params = new Parameters();
-		builder = new FileBasedConfigurationBuilder<FileBasedConfiguration>(PropertiesConfiguration.class);
-		builder.configure(params.properties().setFileName(propertyFile).setListDelimiterHandler(new DefaultListDelimiterHandler(',')));
+		params.properties().setFileName(propertyFile);
+		params.properties().setListDelimiterHandler(new DefaultListDelimiterHandler(','));
 		
+		this.builder.configure(params.properties());
+		
+		try {
+			this.config = builder.getConfiguration();
+		} catch (Exception e) {
+			throw new RuntimeException("Was not able to get config!");
+		}
+	}
+
+	@Override
+	public Configuration getSourceConfig() {
+		return this.config;
+	}
+
+	@Override
+	public void addProperty(String key, Object property) {
+		if (null == key || null == property) {
+			return;
+		}
+		
+		this.config.addProperty(key, property);		
+	}
+
+	@Override
+	public <T> T getProperty(String key, Class<T> propertyClass) {
+		if (null == key || null == propertyClass) {
+			return null;
+		}
+		
+		T property = this.config.get(propertyClass, key);		
+		return property;
 	}
 	
-	/**
-	 * @return Configuration object
-	 */
-	public Configuration getConfig()
-	{
-		try
-		{
-			config = builder.getConfiguration();
+	@Override
+	public Object getProperty(String key) {
+		if (null == key) {
+			return null;
 		}
-		catch(ConfigurationException cex)
-		{
-			LOG.error(cex.getMessage(), cex);
-		}
-		return config;
+		
+		Object property = this.config.getProperty(key);
+		return property;
+	}	
+
+	@Override
+	public Iterator<String> getKeys() {
+		Iterator<String> iterator = this.config.getKeys();
+		return iterator;
 	}
+
+	
 }

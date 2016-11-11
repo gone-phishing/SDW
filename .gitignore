@@ -4,4 +4,6 @@ logs/
 examples/database
 examples/.DS_Store
 
+RemoteSystemsTempFiles
 .DS_Store
+.metadata
